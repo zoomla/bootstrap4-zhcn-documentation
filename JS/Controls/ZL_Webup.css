@@ -1,0 +1,37 @@
+﻿.uploader{border:1px solid #dadada;height:110px;line-height:100px;border-top:none;display:none;}
+.uploader .filelist{list-style:none;margin:0;padding:0}
+.uploader .filelist li{width:110px;height:110px;text-align:center;position:relative;display:inline;float:left;overflow:hidden;font-size:12px}/*background:url(/Plugins/WebUploader/images/bg.png) no-repeat;*/
+.uploader .filelist li img{width:100px;height:100px;}
+.uploader .filelist div.file-panel{position:absolute;height:0;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000',endColorstr='#80000000')\0;background:rgba(0,0,0,0.5);width:100%;top:0;left:0;overflow:hidden;z-index:300}
+.uploader .filelist div.file-panel span{width:24px;height:24px;display:inline;float:right;text-indent:-9999px;overflow:hidden;background:url(/Plugins/WebUploader/images/icons.png) no-repeat;margin:5px 1px 1px;cursor:pointer}
+.uploader .filelist div.file-panel span.cancel{background-position:-48px -24px}
+.uploader .filelist div.file-panel span.cancel:hover{background-position:-48px 0}
+.uploader .filelist div.file-panel span.down{background-position:-120px -24px}
+.uploader .filelist div.file-panel span.down:hover{background-position:-120px 0}
+.uploader .filelist div.file-panel span.prev{background-position:-90px -24px}
+.uploader .filelist div.file-panel span.prev:hover{background-position:-90px 0}
+.imgview{width:100px;height:100px;display:inline-block;overflow:hidden;cursor:pointer;}
+.imgview .img{width:90px;height:90px;margin:auto;margin-left:3px;}
+.imgview .ext{display:block;width:50px;height:50px;margin:auto;margin-top:20px;background:url(/App_Themes/User/files-icon-big.png) no-repeat 0 0;}
+.imgview .doc ,.imgview .docx{background-position:0 0;}
+.imgview .pdf {background-position:0 -60px;}
+.imgview .ppt {background-position:0 -120px;}
+.imgview .ps  {background-position:0 -180px;}
+.imgview .rar {background-position:0 -240px;}
+.imgview .txt {background-position:0 -300px;}
+.imgview .xls,.imgview .xlsx{background-position:0 -360px;}
+.imgview .zip {background-position:0 -420px;}
+.imgview .mp3 {background-position:0 -480px;}
+.imgview .mp4,.imgview .wmv{background-position:0 -540px;}
+.imgview .undefined {background-position:0 -600px;}
+.imgview .jpg{background-position:0 -660px;}
+.imgview .png{background-position:0 -660px;}
+.imgview .gif{background-position:0 -660px;}
+.imgview .bmp{background-position:0 -660px;}
+.imgview .html {background-position:0 -780px;}
+.imgview .txt {background-position:0 -840px;}
+/*.imgview .doc{background-position:0 -900px;}*/
+.imgview .flv {background-position:0 -960px;}
+.imgview .exe {background-position:0 -1020px;}
+/*.imgview .exe {background-position:0 -1080px;}*/
+.imgview .fname{height:20px;line-height:20px;text-align:center;color:#9a9a9a;}

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+a:active {star:expression(this.onFocus=this.blur());} 
+canvas {-ms-touch-action:double-tap-zoom;}
+body { font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;}
+
+@font-face {
+    font-family: "ZoomlaXingtiJ3"; src: url("https://code.z01.com/font/ZoomlaXingtiJ3.eot"); /* IE9 */
+    src: url("https://code.z01.com/font/ZoomlaXingtiJ3.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://code.z01.com/font/ZoomlaXingtiJ3.woff") format("woff"), /* chrome、firefox */
+    url("https://code.z01.com/font/ZoomlaXingtiJ3.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url("https://code.z01.com/font/ZoomlaXingtiJ3.svg#ZoomlaXingtiJ3") format("svg"); /* iOS 4.1- */
+    font-style: normal;    font-weight: normal;}
+.head{height:30em;}
+.head .font{font-size:10em;}s
+.home_h1 { font-size:10em; font-family:"ZoomlaXingtiJ3" !important;}
+.bs-glyphicons li { padding:0;}
+.bs-glyphicons li a { display:block; padding:10px; color:#333; text-decoration:none; height:115px;}
+.bs-glyphicons li a:hover { background:#563d7c; color:#fff;}
+.bs-glyphicons li i { font-size:50px;}
+.bs-example:after { content: "实例：" !important;}
+.bs-docs-section > p, .bs-docs-section > ul, 
+.bs-docs-section > ol, .bs-callout > p, 
+.bs-callout > ol, .bs-callout > ul { font-size: 16px;line-height: 1.75;margin-bottom: 1em;}
+.bs-callout *:last-child { margin-bottom: 0; }
+#scolls{ width:100%; border-bottom:1px solid #eee; z-index:9999;}
+#scolls .navbar-brand { padding-left:0; padding-right:0;}
+
+#msg_div{ font-size:1.13em; line-height:40px; background:#A8F589; text-align:center;color:#f00;}/*2016切域名提示*/
+
+
+@media screen and (max-width:768px)
+{
+.home_h1 { font-size:1em;}	
+.bs-docs-masthead .btn { margin-bottom:10px;}
+#scolls .navbar-brand { padding-left:15px; padding-right:15px;}
+}
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuWm9vbWxhLmNu */

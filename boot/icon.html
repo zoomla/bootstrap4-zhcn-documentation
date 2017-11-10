@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Font Awesome奥森图标|一套绝佳的图标字体库和CSS框架</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<script src="https://code.z01.com/jquery/jquery-3.2.1.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="style/js/scrolltopcontrol.js"></script>
+<link href="dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="style/css/docs.min.css" rel="stylesheet">
+<link href="dist/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="style/css/font.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top hidden-print" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<i class="fa fa-bars fa-lg"></i>
+</button>
+<a class="navbar-brand hidden-xs" href="https://www.z01.com" target="_blank"><i class="fa fa-home"></i> 逐浪官网</a>
+<a class="navbar-brand" href="#top"><i class="fa fa-flag"></i> Font Awesome</a>
+</div>
+
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav" id="main-nav">
+<li class="hidden-sm"><a href="./font.html#wrap">首页</a></li>
+<li class="hidden-sm">
+<a href="./font.html#why">选我！</a>
+</li>
+<li class="dropdown-split-left"><a href="./font.html#new">图标</a></li>
+<li class="dropdown dropdown-split-right hidden-xs">
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-caret-down"></i>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="dropdown-header"><i class="fa fa-flag fa-fw"></i>&nbsp; 图标</li>
+<li class="divider"></li>
+<li><a href="./font.html#new1"><i class="fa fa-cube fa-fw"></i>&nbsp; 4.7版新增</a></li>
+<li><a href="./font.html#new"><i class="fa fa-cube fa-fw"></i>&nbsp; 4.6版新增</a></li>
+<li><a href="./font.html#web-application"><i class="fa fa-camera-retro fa-fw"></i>&nbsp; 网页</a></li>
+<li><a href="./font.html#file-type"><i class="fa fa-file-image-o fa-fw"></i>&nbsp; 文件类型</a></li>
+<li><a href="./font.html#spinner"><i class="fa fa-spinner fa-fw"></i>&nbsp; 可旋转</a></li>
+<li><a href="./font.html#form-control"><i class="fa fa-check-square fa-fw"></i>&nbsp; 表单</a></li>
+<li><a href="./font.html#payment"><i class="fa fa-paypal fa-fw"></i>&nbsp; 支付</a></li>
+<li><a href="./font.html#chart"><i class="fa fa-line-chart fa-fw"></i>&nbsp; 图表</a></li>
+<li><a href="./font.html#currency"><i class="fa fa-won fa-fw"></i>&nbsp; 货币</a></li>
+<li><a href="./font.html#text-editor"><i class="fa fa-file-text-o fa-fw"></i>&nbsp; 文本编辑</a></li>
+<li><a href="./font.html#directional"><i class="fa fa-hand-o-right fa-fw"></i>&nbsp; 指示方向</a></li>
+<li><a href="./font.html#video-player"><i class="fa fa-play-circle fa-fw"></i>&nbsp; 视频播放</a></li>
+<li><a href="./font.html#brand"><i class="fa fa-github fa-fw"></i>&nbsp; 标志</a></li>
+<li><a href="./font.html#medical"><i class="fa fa-medkit fa-fw"></i>&nbsp; 医疗</a></li>
+</ul>
+</li>
+<li><a href="./font.html#getstart">起步</a></li>
+<li class="dropdown-split-left"><a href="./font.html#basic">示例</a></li>
+<li class="dropdown dropdown-split-right hidden-xs">
+<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-caret-down"></i>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="dropdown-header">示例</li>
+<li class="divider"></li>
+<li><a href="./font.html#basic">基本图标</a></li>
+<li><a href="./font.html#larger">大图标</a></li>
+<li><a href="./font.html#fixed-width">固定宽度</a></li>
+<li><a href="./font.html#list">用于列表</a></li>
+<li><a href="./font.html#bordered-pulled">边框与对齐</a></li>
+<li><a href="./font.html#spinning">可旋转</a></li>
+<li><a href="./font.html#rotated-flipped">旋转与翻转</a></li>
+<li><a href="./font.html#stacked">组合使用</a></li>
+<li><a href="./font.html#bootstrap">Bootstrap 3 示例</a></li>
+<li><a href="./font.html#custom">自定义CSS</a></li>
+</ul>
+</li>
+<li><a href="./font.html#community">交流</a></li>
+<li><a href="./font.html#license">许可协议</a></li>
+<li><a href="https://www.z01.com" target="_blank">下载逐浪CMS</a></li>
+<li><a href="index.html">BootStrap</a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="https://www.z01.com/blog" target="_blank">Blog</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="jumbotron jumbotron-icon" style="margin-top:30px;">
+<div class="container">
+<div class="info-icons">
+<script>
+var url = window.location.search;
+var font = url.substring(url.lastIndexOf('=')+1,url.length);
+//console.log(font)
+document.write("<i class='fa fa-"+font+" fa-6' aria-hidden='true'></i>");
+document.write("<i class='fa fa-"+font+" fa-5' aria-hidden='true'></i>");
+document.write("<i class='fa fa-"+font+" fa-4' aria-hidden='true'></i>");
+document.write("<i class='fa fa-"+font+" fa-3' aria-hidden='true'></i>");
+document.write("<i class='fa fa-"+font+" fa-2' aria-hidden='true'></i>");
+document.write("<i class='fa fa-"+font+" fa-1' aria-hidden='true'></i>");
+</script>
+</div>
+<h1 class="info-class">
+<script>
+document.write("fa fa-"+font);
+</script>
+</h1>
+</div>
+</div>
+<div class="container">
+<section>
+<p>在您启动和运行之前，你可以把奥森图标<code>&lt;i&gt;</code>放到相关的任何地方;</p>
+<div class="well well-transparent">
+<div style="font-size: 24px; line-height: 1.5em;">
+<script>
+document.write("<i class='fa fa-"+font+"'></i> fa fa-"+font);
+</script>
+</div>
+</div>
+<div class="highlight">
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;i</span> <span class="na">class=</span><script>document.write('<span class="s">"fa fa-'+font+'"</span>');</script> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span></code></pre>
+</div>
+<p class="margin-bottom-lg">
+<small class="text-muted">注: 为了提高网站的可访问性，我们建议使用 <strong>aria-hidden="true"</strong> 提高阅读效率，一般用于装饰的图标.</small>
+</p>
+<div class="lead">
+<i class="fa fa-reply" aria-hidden"true"></i> 寻找更多图标?请点击 <a href="./font.html">这里</a> 去寻找图标.
+</div>
+</section>
+</div>
+
+
+
+<footer id="footer" class="footer hidden-print">
+<div class="container text-center">   
+<ul class="list-inline">
+<li class="hidden-sm  active"><a href="#wrap">首页</a></li>
+<li class="hidden-sm"><a href="#why">选我！</a></li>
+<li class="dropdown-split-left"><a href="#new">图标</a></li>
+<li><a href="#getstart">起步</a></li>
+<li class="dropdown-split-left"><a href="#basic">示例</a></li>
+<li><a href="#community">交流</a></li>
+<li><a href="#license">许可协议</a></li>
+</ul>
+<p>&copy;2017 Zoomla!逐浪软件 版权所有  沪ICP备09077823号</p>                   
+</div>
+</footer>
+</body>
+</html>
+<script>
+$("#brand .fontawesome-icon-list a").removeAttr("href");
+</script>
