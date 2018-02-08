@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="72px" viewBox="0 0 55 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4 (15009) - http://www.bohemiancoding.com/sketch -->
+    <title>cup icon</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1-Copy-3" sketch:type="MSArtboardGroup" transform="translate(-907.000000, -4335.000000)">
+            <g id="5.-Free-updates-and-support" sketch:type="MSLayerGroup" transform="translate(210.000000, 4060.000000)">
+                <g id="1/3---icon-list" transform="translate(0.000000, 275.000000)" sketch:type="MSShapeGroup">
+                    <g id="1/3---dev-support" transform="translate(696.000000, 0.000000)">
+                        <g id="cup-icon" transform="translate(1.000000, 0.000000)">
+                            <g id="Group">
+                                <rect id="Rectangle-189" fill="#FFFFFF" x="0" y="0" width="55" height="72"></rect>
+                                <path d="M41.8478261,36.9008621 L44.673913,36.9008621 C49.353913,36.9008621 53.1521739,40.6663793 53.1521739,45.3060345 C53.1521739,49.9456897 49.353913,53.7112069 44.673913,53.7112069 L41.8478261,53.7112069" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                                <path d="M41.8478261,62.1163793 C41.8478261,65.2094828 39.3156522,67.7198276 36.1956522,67.7198276 L10.7608696,67.7198276 C7.64086957,67.7198276 5.10869565,65.2094828 5.10869565,62.1163793 L5.10869565,31.2974138 L41.8478261,31.2974138 L41.8478261,62.1163793 L41.8478261,62.1163793 Z M41.5115217,3.45948276 C44.4308696,7.86939655 40.1097826,10.2844828 39.1008696,12.6547414 C38.0354348,15.1622845 39.0697826,17.5633621 41.6019565,18.6196121 C49.7976087,22.043319 52.2393478,6.03146552 41.5115217,3.45948276 L41.5115217,3.45948276 Z M33.3695652,31.2974138 L40.7428261,18.162931 L33.3695652,31.2974138 Z M43.6593478,19.1267241 L39.0217391,31.2974138 L43.6593478,19.1267241 Z" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                                <path d="M16.4130435,31.2974138 L7.93478261,31.2974138 L3.69565217,22.8922414 L2.2826087,14.487069 L9.34782609,18.6896552 L16.4130435,31.2974138 Z M3.69565217,22.8922414 L9.34782609,18.6896552 L3.69565217,22.8922414 Z" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                                <path d="M19.2391304,3.28017241 L30.5434783,3.28017241 L30.5434783,31.2974138 L19.2391304,31.2974138 L19.2391304,3.28017241 Z" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                                <path d="M30.5434783,25 L27.7173913,25 L30.5434783,25 Z" id="Path" stroke="#6C01A4" stroke-width="1.5"></path>
+                                <path d="M30.5434783,20 L24.8913043,20 L30.5434783,20 Z" id="Path" stroke="#6C01A4" stroke-width="1.5"></path>
+                                <path d="M30.5434783,14 L27.7173913,14 L30.5434783,14 Z" id="Path" stroke="#6C01A4" stroke-width="1.5"></path>
+                                <path d="M30.5434783,8 L24.8913043,8 L30.5434783,8 Z" id="Path" stroke="#6C01A4" stroke-width="1.5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

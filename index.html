@@ -88,12 +88,14 @@
 <main class="bs_docs2017" id="content" role="main">
 <div class="container">
 <a href="v4/"><img src="v4/assets/img/bootstrap-stack.png" alt="Boostrap 4.0"></a>
-<h1 class="home_h1">Bootstrap带来的最优开发体验</h1>
+<h1 class="home_h1">Bootstrap最优前端开发体验<small class="text-muted">以及四大组合利器</small></h1>
 <div class="text-center">
-<a class="btn btn-primary btn-lg" role="button" href="v4/">马上体验 BootStrap 4</a>
-<a class="btn btn-primary btn-lg" role="button" href="/boot/font.html">Font Awesome  奥森图标</a>
+<a class="btn btn-primary " role="button" href="v4/">马上体验BootStrap 4</a>
+<a class="btn btn-info" role="button" href="Sass/">Sass扩展CSS语言</a>
+<a class="btn btn-secondary" role="button" href="Emmet/">Emmet简写Web语法</a>
+<a class="btn btn-light " role="button" href="/boot/font.html">Font Awesome图标</a>
 </div>
-<p class="version" style="margin-top:2em;">翻译： @Zoomla!逐浪CMS发哥 <a href="http://weibo.com/zoomla" target="_blank" ><i class="fa fa-weibo"></i></a> <a href="/boot/" hidden>旧版Bootstrap 3.3.7文档</a></p>
+<p class="version" style="margin-top:1em;">翻译:@Zoomla!逐浪CMS发哥 <a href="http://weibo.com/zoomla" target="_blank" ><i class="fa fa-weibo"></i></a> <a href="/boot/" hidden>旧版Bootstrap 3.3.7文档</a></p>
 
 </div>
 </main>
@@ -179,21 +181,61 @@
 </div>
 
 <div class="container">
-一个快速的框架：
+一个简明的Bootstrap 4框架（只区分pc与手机并基于FlexBox布局）：
+<figure class="alert alert-primary">
 <p>
-  &lt;div class=&quot;container&quot;&gt;<br>
-  &lt;div class=&quot;row&quot;&gt;<br>
-  &lt;div class=&quot;col-lg-6 col-md-6 col-sm-6 col-xs-12&quot;&gt;</p>
+&lt;div class=&quot;container&quot;&gt;<br>
+&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-sm&quot;&gt;<br/><br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;<br>
+&lt;/div&gt;
+</figure>
+<div class="alert alert-primary" role="alert">
+Emment语法：<br/>
+div.container>div.row>div.col-sm
+</div>
+<hr/>
+一个完整的Bootstrap 4全栅格定义框架：
+<figure class="alert alert-info">
+<p>
+&lt;div class=&quot;container&quot;&gt;<br>
+&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12&quot;&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class=&quot;col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12&quot;&gt;</p>
+<p>&lt;/div&gt;<br>
+&lt;/div&gt;<br>
+&lt;/div&gt;</p>
+</figure>
+<div class="alert alert-info" role="alert">
+Emment语法：<br/>
+div.container>div.row>div.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12+div.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-12
+</div>
+<hr/>
+一个快速的Bootstrap 3:框架：
+<figure class="alert alert-danger">
+<p>
+&lt;div class=&quot;container&quot;&gt;<br>
+&lt;div class=&quot;row&quot;&gt;<br>
+&lt;div class=&quot;col-lg-6 col-md-6 col-sm-6 col-xs-12&quot;&gt;</p>
 <p>&lt;/div&gt;</p>
 <p>&lt;div class=&quot;col-lg-6 col-md-6 col-sm-6 col-xs-12&quot;&gt;</p>
 <p>&lt;/div&gt;<br>
-  &lt;/div&gt;<br>
-  &lt;/div&gt;</p>
-  <br/>
-
+&lt;/div&gt;<br>
+&lt;/div&gt;</p>
+</figure>
+<div class="alert alert-danger" role="alert">
 Emment语法：<br/>
 div.container>div.row>div.col-lg-8.col-md-8.col-sm-8.col-xs-12+div.col-lg-4.col-md-4.col-sm-4.col-xs-12
-<br/><br/>
+</div>
+
+<div class="alert alert-danger" role="alert">
+手机与PC区分的响应式简单规则：<br/>
+&lt;div class=&quot;d-block d-sm-none&quot;&gt;谢帅，我只在手机下显啦，宽屏我羞！&lt;/div&gt;<br>
+&lt;div class=&quot;d-none d-sm-block&quot;&gt;哥们，不要太老套，我粗人不喜欢手机屏幕，大方点在PC上给我丢出来！&lt;/div&gt;
+</div>
+
 
 这些是常用的属性<br/>
 隐藏：hidden               清除边界：clearfix<br/><br/>

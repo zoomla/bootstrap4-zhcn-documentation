@@ -18,7 +18,7 @@
 <link rel="manifest" href="../assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="../favicon.ico">
-<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">Map定义与loops循环定义
 <meta name="theme-color" content="#563d7c">
 
 <!-- Meta关键字定义 -->
@@ -60,7 +60,13 @@
       <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
       <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
       <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
-      <li class="nav-item"><a class="nav-link" href="../../V4/themes/" rel="noopener">主题模板</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
       <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
       <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
       <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
@@ -68,18 +74,22 @@
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
     <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>  <a class="dropdown-item" href="/boot/">v3.3.7</a> <a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a> </div>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+</div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
       <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
         <title>GitHub</title>
         <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
-      </svg>
-      </a> </li>
-    <li class="nav-item"> <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter">
-      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false">
-        <title>Twitter</title>
-        <path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/>
       </svg>
       </a> </li>
     <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
@@ -176,8 +186,9 @@
             <li> <a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
           </ul>
         </div>
-        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/icons.html"> 延伸(图标引用) </a>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
           <ul class="nav bd-sidenav">
+            <li><a href="../extend/approach.html"> 方法论 </a> </li>
             <li> <a href="../extend/icons.html"> 图标 </a> </li>
           </ul>
         </div>
@@ -222,8 +233,14 @@
       <ul>
         <li class="toc-entry toc-h3"><a href="#modifiers">修饰符</a></li>
         <li class="toc-entry toc-h3"><a href="#responsive">响应</a></li>
-      </ul>
+      </ul>	
     </li>
+	<li class="toc-entry toc-h2"><a href="#css-variables"> CSS变量</a> 		
+	<ul>
+	<li class="toc-entry toc-h3"><a href="#available-variables">可用变量</a></li>
+	<li class="toc-entry toc-h3"><a href="#examples">实例</a></li>
+	</ul>
+	</li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -274,6 +291,7 @@
   <p>Bootstrap 4中的每个Sass变量都包含<code class="highlighter-rouge">!default</code>标签，这是允许您在自己的Sass中覆盖变量的默认值，而无需修改Bootstrap的源代码。根据需要复制和粘贴变量，修改其值，并删除<code class="highlighter-rouge">!default</code>标志。如果已经分配了一个变量，那么它将不会被Bootstrap中的默认值重新分配。</p>
 <p>相同Sass文件中的变量覆盖可以在默认变量之前或之后。但是，当覆盖Sass文件时，您的覆盖必须在导入Bootstrap的Sass文件之前。</p>
 <p>下面的例子,改变<code class="highlighter-rouge">&lt;body&gt;</code>中的<code class="highlighter-rouge">background-color</code>与<code class="highlighter-rouge">color</code>属性，并通过Nodejs NPM方法引导编译：</p>
+
   <figure class="highlight">
     <pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides </span><span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
 <span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
@@ -285,7 +303,15 @@
   <h3 id="maps-and-loops">Map定义与loops循环定义</h3>
   <p>Sass的第三个版本给我们带来了新的数据类型，叫做<code class="highlighter-rouge">map</code>。虽然你可以不知道这个名称，但在其他的语言中我们使用过map，通常就是关联数组。换句话说，Sass的<code class="highlighter-rouge">map</code>就是用关键名匹配对应值的一个数组(这里译者为大家提供了一个技术普及帖：<a href="http://www.z01.com/help/web/3208.shtml" target="_blank">《使用Sass Maps 的技术普及知识》http://www.z01.com/help/web/3208.shtml</a>)</p>
   <p>Bootstrap 4包括一些Sass map定义，使得更容易产生相关CSS的家庭。我们使用Sass map作为我们的颜色、网格、断点等关键了定义，这就如同Sass变量一样，所有Sass映射都包含<code class="highlighter-rouge">!default</code>标志，可以被覆盖并扩展。</p>
-例如，要修改我们<code class="highlighter-rouge">$theme-colors</code> map的现有颜色，请将以下内容添加到您的自定义Sass文件中：</p>
+  <p>下面是改变了一个例子<code class="highlighter-rouge">background-color</code> ，并<code class="highlighter-rouge">color</code> 为<code class="highlighter-rouge">body</code> 进口，并通过NPM编译引导时：</p>
+  <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides</span>
+<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span><font></font>
+<font></font>
+<span class="c1">// Bootstrap and its default variables</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+  
+<p>例如，要修改我们<code class="highlighter-rouge">$theme-colors</code> map的现有颜色，请将以下内容添加到您的自定义Sass文件中：</p>
   <figure class="highlight">
     <pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"primary"</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="o">,</span>
@@ -299,6 +325,10 @@
 
 <span class="p">);</span></code></pre>
   </figure>
+  
+  <p>要从<code class="highlighter-rouge">$theme-colors</code>任何其他地图中删除颜色，请使用map-remove：</p>
+  <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"success"</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"danger"</span><span class="p">);</span></code></pre></figure>
+  
   <h3 id="functions">函数</h3>
   <p>Bootstrap使用多个Sass函数，但只有一个子集适用于一般主题。我们已经包含三个功能来获取颜色映射的值：</p>
   <figure class="highlight">
@@ -560,6 +590,60 @@
 <span class="p">}</span></code></pre>
   </figure>
   <p>如果您需要修改<code class="highlighter-rouge">$grid-breakpoints</code>，您的更改将适用于遍历该地图的所有循环。</p>
+  
+  <h2 id="css-variables">CSS变量</h2>
+  <p>Bootstrap 4 在其编译的CSS中包含大约二十个CSS<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">自定义属性（变量）</a>。在浏览器的Inspector，代码沙箱或一般原型设计中工作时，可以轻松访问常用的值，例如我们的主题颜色，断点和主要字体堆栈。</p>
+  <h3 id="available-variables">可用变量</h3>
+  <p>这里是我们包含的变量（注意<code cclass="highlighter-rouge">:root</code> 是必需的）。他们位于我们的<code cclass="highlighter-rouge">_root.scss</code>文件。</p>
+  
+  <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:root</span> <span class="p">{</span>
+  <span class="py">--blue</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
+  <span class="py">--indigo</span><span class="p">:</span> <span class="m">#6610f2</span><span class="p">;</span>
+  <span class="py">--purple</span><span class="p">:</span> <span class="m">#6f42c1</span><span class="p">;</span>
+  <span class="py">--pink</span><span class="p">:</span> <span class="m">#e83e8c</span><span class="p">;</span>
+  <span class="py">--red</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
+  <span class="py">--orange</span><span class="p">:</span> <span class="m">#fd7e14</span><span class="p">;</span>
+  <span class="py">--yellow</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--green</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
+  <span class="py">--teal</span><span class="p">:</span> <span class="m">#20c997</span><span class="p">;</span>
+  <span class="py">--cyan</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
+  <span class="py">--white</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+  <span class="py">--gray</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
+  <span class="py">--gray-dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
+  <span class="py">--primary</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
+  <span class="py">--secondary</span><span class="p">:</span> <span class="m">#6c757d</span><span class="p">;</span>
+  <span class="py">--success</span><span class="p">:</span> <span class="m">#28a745</span><span class="p">;</span>
+  <span class="py">--info</span><span class="p">:</span> <span class="m">#17a2b8</span><span class="p">;</span>
+  <span class="py">--warning</span><span class="p">:</span> <span class="m">#ffc107</span><span class="p">;</span>
+  <span class="py">--danger</span><span class="p">:</span> <span class="m">#dc3545</span><span class="p">;</span>
+  <span class="py">--light</span><span class="p">:</span> <span class="m">#f8f9fa</span><span class="p">;</span>
+  <span class="py">--dark</span><span class="p">:</span> <span class="m">#343a40</span><span class="p">;</span>
+  <span class="py">--breakpoint-xs</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="py">--breakpoint-sm</span><span class="p">:</span> <span class="m">576px</span><span class="p">;</span>
+  <span class="py">--breakpoint-md</span><span class="p">:</span> <span class="m">768px</span><span class="p">;</span>
+  <span class="py">--breakpoint-lg</span><span class="p">:</span> <span class="m">992px</span><span class="p">;</span>
+  <span class="py">--breakpoint-xl</span><span class="p">:</span> <span class="m">1200px</span><span class="p">;</span>
+  <span class="py">--font-family-sans-serif</span><span class="p">:</span> <span class="n">-apple-system</span><span class="p">,</span> <span class="n">BlinkMacSystemFont</span><span class="p">,</span> <span class="s1">"Segoe UI"</span><span class="p">,</span> <span class="n">Roboto</span><span class="p">,</span> <span class="s1">"Helvetica Neue"</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">,</span> <span class="s1">"Apple Color Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Emoji"</span><span class="p">,</span> <span class="s1">"Segoe UI Symbol"</span><span class="p">;</span>
+  <span class="py">--font-family-monospace</span><span class="p">:</span> <span class="n">SFMono-Regular</span><span class="p">,</span> <span class="n">Menlo</span><span class="p">,</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="s1">"Liberation Mono"</span><span class="p">,</span> <span class="s1">"Courier New"</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+<h3 id="examples">实例</h3>
+<p>CSS变量为Sass的变量提供了类似的灵活性，但是在被提供给浏览器之前不需要编译。例如，在这里我们用CSS变量重置页面的字体和链接样式。</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">1rem</span><span class="p">/</span><span class="m">1.5</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family-sans-serif</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--blue</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+<p>您也可以在媒体查询中使用我们的断点变量：</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content-secondary</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span><font></font>
+<font></font>
+<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">)))</span> <span class="p">{</span>
+  <span class="nc">.content-secondary</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 </main>
 </div>
 </div>

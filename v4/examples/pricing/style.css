@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+@import url("//code.z01.com/Zfont.css");
+@import url("/dist/css/ZLico.css");
+
+html {font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {font-size: 16px;}
+}
+.container {max-width: 960px;}
+.pricing-header {max-width: 700px;}
+.card-deck .card {min-width: 220px;}
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */

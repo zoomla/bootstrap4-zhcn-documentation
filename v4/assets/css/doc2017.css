@@ -6,11 +6,12 @@ a{color:#563d7c;}
 .bs_docs2017_head{background:#fff; border-bottom:1px solid #ccc; font-size:0.89rem;}
 .bs_docs2017_head .btn{ padding-left:0;font-size:0.89rem;}
 .navbar-toggle {  position: absolute; left: 0;   top: 7px;   border-color: #fff;  color: #293a46;   margin-right: 0;}
-.bs_docs2017{ padding:2rem;background-image: linear-gradient(to bottom,#b88ef9 0,#6f5499  100%); text-align:center;}
-.bs_docs2017 img{ margin-top:3.8rem;height:26rem; }
+.bs_docs2017{ padding:4rem;background-image: linear-gradient(to bottom,#b88ef9 0,#6f5499  100%); text-align:center;}
+.bs_docs2017 img{ margin-top:3.8rem;height:24rem; }
 .bs_docs2017 .version{ color:#9783b9}
 .bs_docs2017 .btn{margin-top:0.5rem;}
-.home_h1{color:#fff; font-size:3.2rem;}
+.home_h1{color:#fff; font-size:3.2rem; font-weight: 100; line-height:4rem;}
+.home_h1 small{font-size:40%;}
 .bs_docs2017footer{ border-top:1px solid #eee; background:#fafafa; font-size:0.88rem; text-align:center;}
 .bs_docs2017footer .btn,.bs_docs2017footer .form-control{font-size:0.88rem;}
 

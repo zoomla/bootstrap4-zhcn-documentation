@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="72px" viewBox="0 0 57 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4 (15009) - http://www.bohemiancoding.com/sketch -->
+    <title>sliders icon</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1-Copy-3" sketch:type="MSArtboardGroup" transform="translate(-564.000000, -1730.000000)">
+            <g id="1.-Themes-built-as-frameworks" sketch:type="MSLayerGroup" transform="translate(211.000000, 1403.000000)">
+                <g id="1/3---icon-list" transform="translate(0.000000, 327.000000)" sketch:type="MSShapeGroup">
+                    <g id="1/3---Variables" transform="translate(348.000000, 0.000000)">
+                        <g id="sliders-icon" transform="translate(5.000000, 0.000000)">
+                            <g id="Group">
+                                <rect id="Rectangle-189" fill="#FFFFFF" x="0" y="0" width="57" height="72"></rect>
+                                <path d="M1,11.0094586 C1,8.79509577 2.79867889,7 4.99976742,7 L52.0002326,7 C54.2092431,7 56,8.79942536 56,11.0094586 L56,60.9905414 C56,63.2049042 54.2013211,65 52.0002326,65 L4.99976742,65 C2.79075687,65 1,63.2005746 1,60.9905414 L1,11.0094586 Z M28.5,42.25 L28.5,24.75 L28.5,42.25 Z M43.4463913,42.25 L43.4463913,37.25 L43.4463913,42.25 Z M13.6304348,27.25 L13.6304348,14.75 L13.6304348,27.25 Z M13.6304348,42.25 L13.6304348,32.25 L13.6304348,42.25 Z M43.4463913,32.25 L43.4463913,14.75 L43.4463913,32.25 Z M28.5,19.75 L28.5,14.75 L28.5,19.75 Z" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                                <path d="M38.4898696,32.25 L48.402913,32.25 L48.402913,37.25 L38.4898696,37.25 L38.4898696,32.25 Z M23.5434783,19.75 L33.4565217,19.75 L33.4565217,24.75 L23.5434783,24.75 L23.5434783,19.75 Z M8.67391304,27.25 L18.5869565,27.25 L18.5869565,32.25 L8.67391304,32.25 L8.67391304,27.25 Z" id="Shape" stroke="#6C01A4" stroke-width="1.5"></path>
+                                <ellipse id="Oval" stroke="#6C01A4" stroke-width="1.5" cx="43.4736522" cy="53.5" rx="3.7173913" ry="3.75"></ellipse>
+                                <ellipse id="Oval" stroke="#6C01A4" stroke-width="1.5" cx="28.5" cy="53.5" rx="3.7173913" ry="3.75"></ellipse>
+                                <ellipse id="Oval" stroke="#6C01A4" stroke-width="1.5" cx="13.6304348" cy="53.5" rx="3.7173913" ry="3.75"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

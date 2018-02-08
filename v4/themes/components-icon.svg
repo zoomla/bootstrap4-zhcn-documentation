@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.4 (15009) - http://www.bohemiancoding.com/sketch -->
+    <title>components icon</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1-Copy-3" sketch:type="MSArtboardGroup" transform="translate(-214.000000, -1730.000000)">
+            <g id="1.-Themes-built-as-frameworks" sketch:type="MSLayerGroup" transform="translate(211.000000, 1403.000000)">
+                <g id="1/3---icon-list" transform="translate(0.000000, 327.000000)" sketch:type="MSShapeGroup">
+                    <g id="1/3---Components">
+                        <g id="components-icon" transform="translate(3.000000, 0.000000)">
+                            <rect id="Rectangle-189" fill="#FFFFFF" x="0" y="0" width="72" height="72"></rect>
+                            <path d="M19.5,11.4970002 C19.5,9.28951796 21.2852131,7.5 23.5018845,7.5 L66.4981155,7.5 C68.7082953,7.5 70.5,9.29765853 70.5,11.4970002 L70.5,36.5029998 C70.5,38.710482 68.7147869,40.5 66.4981155,40.5 L23.5018845,40.5 C21.2917047,40.5 19.5,38.7023415 19.5,36.5029998 L19.5,11.4970002 Z" id="Path" stroke="#6C01A4" stroke-width="2"></path>
+                            <path d="M13.5,19.5 L13.5,19.5 C11.8431458,19.5 10.5,21.2976585 10.5,23.4970002 L10.5,48.5029998 C10.5,50.710482 12.2852131,52.5 14.5018845,52.5 L57.4981155,52.5 C59.7082953,52.5 61.5,50.6998022 61.5,48.4979131 L61.5,46.5" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                            <path d="M4.5,31.5 L4.5,31.5 C2.84314575,31.5 1.5,33.2976585 1.5,35.4970002 L1.5,60.5029998 C1.5,62.710482 3.28521308,64.5 5.50188446,64.5 L48.4981155,64.5 C50.7082953,64.5 52.5,62.6998022 52.5,60.4979131 L52.5,58.5" id="Shape" stroke="#6C01A4" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

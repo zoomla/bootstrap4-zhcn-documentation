@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>flex布局学习</title>
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+</head>
+<body>
+
+
+<div style="margin:auto;display:flex;  width:980px; height:300px; border:4px solid #f00; font-size:1.2em;">
+<div style="display:flex; flex-direction:row; justify-content:space-between;align-items: center;width:200px; height:200px; background:#f00;">
+1111
+
+</div>
+<div style="display:flex;flex-direction:row; justify-content:space-between; width:200px; height:200px; background:#f58; ">
+2222
+</div>
+
+<div style="display:flex; display: flex;    flex-direction: row-reverse;    justify-content: flex-start; width:200px; height:200px; background:#698; ">
+3-垂直居中
+</div>
+
+ justify-content:center;决定空间内属性布局;<br>
+2323
+
+.box2{margin:auto; margin-top:10px;display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; width:980px; height:680px; border:4px solid #f00;}
+.a1{width:98px;height:300px;background:#ccc;order:10;}<br/>
+.a2{width:98px;height:300px;background:#ddd;order:9;}<br/>
+.a3{width:98px;height:300px;background:#eee;order:8;}<br/>
+.a4{width:98px;height:300px;background:#cfffcc;order:7;}<br/>
+.a5{width:98px;height:300px;background:#bbb;order:6;}<br/>
+.a6{width:98px;height:300px;background:#f00;order:5;}<br/>
+.a7{width:98px;height:300px;background:#000;order:4;}<br/>
+.a8{width:98px;height:300px;background:#ffc;order:3;}<br/>
+.a9{width:98px;height:300px;background:#00c; order:2;}<br/>
+.a10{width:98px;height:300px;background:#f88; order:1;}<br>
+在线教程：http://blog.csdn.net/lzx_victory/article/details/53080861<br/>
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+</div>
+
+<style>
+.box2{margin:auto; margin-top:10px;display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; width:980px; height:680px; border:4px solid #f00;}
+.a1{width:98px;height:300px;background:#ccc;order:10;}
+.a2{width:98px;height:300px;background:#ddd;order:9;}
+.a3{width:98px;height:300px;background:#eee;order:8;}
+.a4{width:98px;height:300px;background:#cfffcc;order:7;}
+.a5{width:98px;height:300px;background:#bbb;order:6;}
+.a6{width:98px;height:300px;background:#f00;order:5;}
+.a7{width:98px;height:300px;background:#000;order:4;}
+.a8{width:98px;height:300px;background:#ffc;order:3;}
+.a9{width:98px;height:300px;background:#00c; order:2;}
+.a10{width:98px;height:300px;background:#f88; order:1; align-self:flex-end;}
+</style>
+
+
+
+
+<div class="box2">
+<div class="a1">1</div>
+<div class="a2">2</div>
+<div class="a3">3</div>
+<div class="a4">4</div>
+<div class="a5">5</div>
+<div class="a6">6</div>
+<div class="a7">7</div>
+<div class="a8">8</div>
+<div class="a9">9</div>
+<div class="a10">10</div>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+<div class="col-10">222</div>
+<div class="col-2">111</div>
+</div>
+
+</body>
+</html>

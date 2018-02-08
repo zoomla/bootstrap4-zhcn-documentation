@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Zoomla逐浪CMS z01.com">
-<title>精品模板推荐 &middot;Bootstrap 全球最流行的 HTML、CSS 和 JS 工具库。</title>
+<title>主题模板-Bootstrap Themes</title>
 <!-- Bootstrap 核心CSS -->
 <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- 本文档额外专用css -->
 <link href="../assets/css/docsearch.min.css" rel="stylesheet">
 <link href="../assets/css/docs.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 <!-- Favicons图标定义 -->
 <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -20,11 +20,9 @@
 <link rel="icon" href="../favicon.ico">
 <meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
-
 <!-- Meta关键字定义 -->
 <meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
 <!-- Twitter -->
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
@@ -32,7 +30,6 @@
 <meta name="twitter:title" content="Introduction">
 <meta name="twitter:description" content="Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with the Bootstrap CDN and a template starter page.">
 <meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
-
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
 <meta property="og:title" content="Introduction">
@@ -43,162 +40,260 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<style>
-.jumbo-list { list-style: none; padding: 0; margin: 0 }
-.jumbo-list-item { display:flex; padding-bottom: 40px; margin-bottom: 40px; border-bottom: 1px solid #dcdfe4 }
-.jumbo-list-item:last-child { border-bottom: 0 }
-.jumbo-list-item h3 { margin-top: 0 }
-.jumbo-list-item .btn-set { margin-top: 25px }
-.jumbo-list-item-text { margin-top: 4rem;}
-.jumbo-list-description { color: #697176; font-weight: 300 }
-
-.page-header { margin-top: 50px; border-bottom: 0 }
-.screenshot { display: block; border-radius: 4px; overflow: hidden; background-clip: padding-box; background-color: rgba(41,58,70,0.1); border: 1px solid rgba(41,58,70,0.1) }
-.screenshot>img { width: 100% }
-</style>
 </head>
-<body>
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
-</a>
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
-    <title>Bootstrap</title>
-    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
-    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
-  </svg>
-  </a>
-  <div class="navbar-nav-scroll">
-    <ul class="navbar-nav bd-navbar-nav flex-row">
-      <li class="nav-item"><a class="nav-link" href="/v4/">首页</a></li>
-      <li class="nav-item"><a class="nav-link" href="../../v4/docs/">中文手册</a></li>
-      <li class="nav-item"><a class="nav-link" href="../../v4/examples/">实例</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../../V4/themes/" rel="noopener">主题模板</a></li>
-      <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
-      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+<body class="template-index">
+<div class="container-overflow-wrap">
+<main class="container" role="main">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand m_auto" href="#">Bootstrap Themes</a>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item active"><a class="nav-link" href="live.html">精品模板</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+	  <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
     </ul>
   </div>
-  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a> 
-        <!--  --> 
-        <a class="dropdown-item" href="https://v3.bootcss.com/">v3.3.7</a> <a class="dropdown-item" href="https://v2.bootcss.com/">v2.3.2</a> </div>
-    </li>
-    <li class="nav-item"> <a class="nav-link p-2" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener" aria-label="GitHub">
-      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
-        <title>GitHub</title>
-        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
-      </svg>
-      </a> </li>
-    <li class="nav-item"> <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter">
-      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 416.32" focusable="false">
-        <title>Twitter</title>
-        <path d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92" fill="currentColor"/>
-      </svg>
-      </a> </li>
-    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
-  </ul>
-  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="docs/download.html">下载 Bootstrap</a> </header>
+</nav>
+<div class="hero hero-homepage">
+  <span class="hero-booticon">B</span>
+  <h1 class="hero-header">Bootstrap创作者的官方主题</h1>
+  <h4 class="text-muted">这是官方展示的一个门户框架同时提供了很多使用帮助-此外还可以：</h4>
+  <a class="btn" href="live.html">精选模板</a>
+  <div class="screenshots screenshots-fan clearfix">
+	  <a class="screenshot" href="#">
+		<img src="Themes001.jpg">
+	  </a>
+	  <a class="screenshot" href="#">
+		<img src="Themes002.jpg">
+	  </a>
+	  <a class="screenshot" href="#">
+		<img src="Themes003.jpg">
+	  </a>
+  </div>
+</div>
+<div class="row text-center homepage-xs-grid">
+  <div class="col-12 col-sm-12 col-md-4">
+    <img src="components-icon.svg">
+    <h3>Themes as a framework</h3>
+    <p class="text-muted">Every theme is a collection of well-designed, cohesive components—built on top of Bootstrap.</p>
+  </div>
+  <div class="col-12 col-sm-12 col-md-4">
+    <img src="script-icon.svg">
+    <h3>Rich documentation</h3>
+    <p class="text-muted">Each theme includes custom docs detailing how to compile, new components, and much more.</p>
+  </div>
+  <div class="col-12 col-sm-12 col-md-4">
+    <img src="unlimited-icon.svg">
+    <h3>Unlimited use &amp; updates</h3>
+    <p class="text-muted">Our license allows for unlimited use for you and your clients. Also, free updates for the life of the theme.</p>
+  </div>
+</div>
+<div class="h_content swag-line">
+	<div class="row row-padded">
+		<div class="col-sm-8 offset-2 text-center">
+		  <h2 class="m-b-md">"Each Bootstrap theme provides a comprehensive set of tools that's super easy to get up and running—it gives you a huge leg up when starting a project"</h2>
+		  <h5 class="text-muted">Katie Zhu, Product Engineer at Medium</h5>
+		</div>
+	</div>
+	<div class="row row-backbordered">
+	<div class="col-12 col-sm-12">
+	  <div class="panel panel-default panel-floating panel-floating-inline">
+		<div class="panel-body">
+		  <div class="panel-content">
+			<h5 class="m-b-0"><strong>Interested in new themes and discounts?</strong></h5>
+			<p class="text-muted"><small>We'll notify you and promise never to spam.</small></p>
+		  </div>
+		  <div class="panel-actions">
+			<form class="form-inline float-right" action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+			  <input class="form-control input-lg panel-email-input" id="mce-EMAIL" name="EMAIL" type="email" placeholder="Email">
+			  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e3428dd6b8fda73bc5ba8b6e6_198881a019" tabindex="-1" value=""></div>
+			  <input type="submit" value="Subscribe" name="subscibe" id="mc-embedded-subscribe" class="btn btn-lg m-1">
+			  <div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	</div>
+	<div class="row row-padded row-centered">
+	<div class="col-5 col-sm-5">
+	  <h3><strong>Themes built as frameworks</strong></h3>
+	  <h4 class="m-b-md">
+		Each theme was designed as its own extended version of Bootstrap, built for a specific set of problems—<a href="/products/dashboard">dashboards</a>, <a href="/products/application">web apps</a>, or <a href="/products/application">marketing pages</a>. To do this we've not only extended many of your favorite parts of Bootstrap, but also introduced dozens of completely new utilities, components, and plugins.
+	  </h4>
+	  <a class="btn btn-primary" href="#">View themes</a>
+	</div>
+	<div class="col-6 col-sm-6 col-sm-offset-1">
+	  <img width="150%" src="Themes004.png">
+	</div>
+	</div>
+  <div class="row row-padded homepage-grid row-bordered p-t text-center">
+    <div class="col-4 col-sm-4">
+      <img class="homepage-grid-icon" src="components-icon.svg">
+      <h5><strong>Components and examples</strong></h5>
+      <p class="text-muted">Each theme features new components built to the same level of quality as Bootstrap and highlighted with several example pages.</p>
+    </div>
+    <div class="col-4 col-sm-4">
+      <img class="homepage-grid-icon" src="sliders-icon.svg">
+      <h5><strong>Tons of variables</strong></h5>
+      <p class="text-muted">Theme components inherit much of their style from variables, exactly like Bootstrap. Change a few values and the theme adapts.</p>
+    </div>
+    <div class="col-4 col-sm-4">
+      <img class="homepage-grid-icon" src="wrenches-icon.svg">
+      <h5><strong>Source files and tools</strong></h5>
+      <p class="text-muted">Each Bootstrap theme includes all the source and compiled files you'll need, including npm and Gulp based build tools.</p>
+    </div>
+  </div>
+  <div class="row row-padded row-bordered row-centered">
+    <div class="col-12 col-sm-12">
+      <div class="row m-b-lg">
+        <div class="col-8 col-sm-8 offset-2 text-center">
+          <h3><strong>From the Bootstrap Team</strong></h3>
+          <h4 class="m-b-lg">Bootstrap Themes are built by the team who created Bootstrap itself. We're also responsible for <a href="#" target="_blank">Skeleton</a>, <a href="#" target="_blank">Ratchet</a>, and the front-end architecture for companies like Twitter, GitHub, Medium, and others.</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 m-b-lg">
+          <div class="panel panel-default panel-profile m-b-0">
+            <div class="panel-heading" style="background-image: url(insta-2.jpg);"></div>
+            <div class="panel-body text-center">
+              <img class="panel-profile-img" src="avatar-fat.jpg">
+              <h5 class="panel-title">Jacob Thornton</h5>
+              <p class="m-b">Creator of Bootstrap, engineer at Twitter &amp; Medium. Founder of Bumpers.</p>
+              <a href="#" target="_blank" class="btn btn-primary-outline btn-sm m-b">
+                <span class="icon icon-add-user"></span> View GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 m-b-lg">
+          <div class="panel panel-default panel-profile m-b-0">
+            <div class="panel-heading" style="background-image: url(insta-1.jpg);"></div>
+            <div class="panel-body text-center">
+              <img class="panel-profile-img" src="avatar-mdo.jpg">
+              <h5 class="panel-title">Mark Otto</h5>
+              <p class="m-b">Design at GitHub. Creator of Bootstrap. Previously at Twitter. Huge nerd.</p>
+              <a href="#" target="_blank" class="btn btn-primary-outline btn-sm m-b">
+                <span class="icon icon-add-user"></span> View GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 m-b-lg">
+          <div class="panel panel-default panel-profile m-b-0">
+            <div class="panel-heading" style="background-image: url(insta-3.jpg);"></div>
+            <div class="panel-body text-center">
+              <img class="panel-profile-img" src="avatar-dhg.png">
+              <h5 class="panel-title">Dave Gamache</h5>
+              <p class="m-b">Design at Twitter &amp; Medium. Starting something new soon ;)</p>
+              <a href="#" target="_blank" class="btn btn-primary-outline btn-sm m-b">
+                <span class="icon icon-add-user"></span> View GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-padded row-bordered row-centered">
+    <div class="col-6 col-sm-6">
+      <div class="homepage-terminal-example">
+        <p class="m-b-md">
+          <span class="text-muted">&gt; $ npm install</span><br>
+          Everything installed!
+        </p>
+        <p class="m-b-md">
+          <span class="text-muted">&gt; $ npm start</span><br>
+          Server started http://localhost:9001<br>
+          LiveReload started<br>
+          Opening http://localhost:9001/docs/
+        </p>
+        <p>
+          <span class="text-muted">&gt; $ is that it?</span><br>
+          Yup, it's that simple.
+        </p>
+      </div>
+    </div>
+    <div class="col-5 col-sm-5 col-sm-offset-1">
+      <h3><strong>Documentation and tooling</strong></h3>
+      <h4 class="m-b-md">Every component and plugin is thoroughly documented with live examples and code blocks for easier use and customization—just like Bootstrap itself. Not comfortable diving that deep? No worries, you can get started by double clicking index.html!</h4>
+      <a class="btn btn-primary" target="_blank" href="#">Explore the Dashboard docs</a>
+    </div>
+  </div>
+  <div class="row row-padded text-center">
+    <div class="col-8 col-sm-8 offset-2 text-center">
+      <h3><strong>Free updates and support</strong></h3>
+      <h4 class="m-b-md">Bootstrap Themes all include free updates, including compatibility upgrades for Bootstrap patches and even Bootstrap 4. Need help? Shoot us an email at <a href="mailto:themes@getbootstrap.com">themes@getbootstrap.com</a>.</h4>
+      <a class="btn btn-primary" href="#">Read more in our FAQ</a>
+    </div>
+  </div>
+  <div class="row row-padded homepage-grid p-t text-center">
+    <div class="col-4  col-sm-4">
+      <img class="homepage-grid-icon" src="unlimited-icon.svg">
+      <h5><strong>Free updates</strong></h5>
+      <p class="text-muted">Each theme comes with updates for the life of the theme. This means you'll never pay for any bug-fixes and compatibility upgrades for your theme, ever.</p>
+    </div>
 
-<main class="container my-5" role="main">
-<h1 class="bd-title" id="content">精品模板推荐</h1>
-<p class="bd-lead">由Zoomla!逐浪CMS团队构建的精品模板，完全基于Bootstrap和中国企业应用体验，更多设计作品请移步我们的官网<a href="http://www.z01.com/demo" target="_blank">体验中心</a>和<a href="http://www.z01.com/case" target="_blank">案例中心</a>。</p>
-<p>同时官方有一带3小项的网页（是基于旧Bootstrap 3），我们在此不进行释译引用，如你需要<a href="https://themes.getbootstrap.com" target="_blank">点此访问</a>。</p>
+    <div class="col-4 col-sm-4">
+      <img class="homepage-grid-icon" src="script-icon.svg">
+      <h5><strong>Licenses</strong></h5>
+      <p class="text-muted">All our themes have two simple <a href="#">licenses</a>. Our Multiple Use License is for building sites for yourself and your clients. Our Extended License is for redistrubtion and resale.</p>
+    </div>
 
-<ul class="jumbo-list my-5">
-<li class="jumbo-list-item row row-spaced">
-<div class="col-md-7 ">
-<a class="screenshot" href="http://demo1.z01.com/" target="_blank">
-<img src="theme001.jpg" alt="韩迪个人主页" />
-</a>
+    <div class="col-4 col-sm-4">
+      <img class="homepage-grid-icon" src="cup-icon.svg">
+      <h5><strong>Technical support</strong></h5>
+      <p class="text-muted">We're here to help with your Bootstrap Themes questions. Shoot us an email at <a href="mailto:themes@getbootstrap.com">themes@getbootstrap.com</a> and we'll get back to you ASAP.</p>
+    </div>
+  </div>
+  <div class="row row-backbordered">
+    <div class="col-4 col-sm-12">
+      <div class="panel panel-default panel-floating panel-floating-inline">
+        <div class="panel-body">
+          <a class="panel-thumbnail" href="/collections/all">
+            <img src="mini-theme-fan.jpg">
+          </a>
+          <div class="panel-content">
+            <h5 class="m-b-0 m-t-0"><strong>C'mon, check out the themes!</strong></h5>
+            <p class="text-muted m-b-0"><small>Now you know what we’re about, so peep the goods!</small></p>
+          </div>
+          <div class="panel-actions">
+            <a class="btn btn-lg float-right" href="/collections/all">Explore themes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="homepageNotification" class="panel panel-default panel-floating panel-floating-fixed animated">
+    <div class="panel-body">
+      <button type="button" class="close" aria-label="Close" data-action="dismiss-homepageNotification">
+        <span aria-hidden="true">×</span>
+      </button>
+      <small class="text-uppercase text-muted">Update</small>
+      <h5 class="m-t-0">V4 Beta update! Subscribe for 50% off any theme! 😍</h5>
+      <p class="text-muted m-b">We updated all our themes to Bootstrap 4's latest beta! To celebrate, we're giving 50% off if you sign up to receive updates and discounts.</p>
+      <form class="form" action="//getbootstrap.us13.list-manage.com/subscribe/post?u=e3428dd6b8fda73bc5ba8b6e6&amp;id=198881a019" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+        <input class="form-control input-lg panel-email-input m-b" id="mce-EMAIL" name="EMAIL" type="email" placeholder="Email">
+        <!-- This is to throw off spambots -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e3428dd6b8fda73bc5ba8b6e6_198881a019" tabindex="-1" value=""></div>
+        <input type="submit" value="Get 50% off" name="subscibe" id="mc-embedded-subscribe" class="btn btn-lg btn-block">
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
-<div class="jumbo-list-item-text col-md-4 col-md-offset-1">
-<h3><a href="http://demo1.z01.com/" target="_blank">韩迪个人主页</a></h3>
-<p class="jumbo-list-description">优秀的个人主页展示效果，充分利用了Bootstrap的样式，为中国用户倾心打造的卓越体验。</p>
-<div class="btn-set">
-<a class="btn btn-primary" href="http://demo1.z01.com/" target="_blank">访问体验</a>
-</div>
-<div>
-</div>
-</div>
-</li>
-
-<li class="jumbo-list-item row row-spaced">
-<div class="col-md-7 ">
-<a class="screenshot" href="http://demo1.z01.com/Class_5/Default.aspx" target="_blank">
-<img src="theme003.jpg" alt="精美婚纱主题门户" />
-</a>
-</div>
-<div class="jumbo-list-item-text col-md-4 col-md-offset-1">
-<h3><a href="http://demo1.z01.com/Class_5/Default.aspx" target="_blank">精美婚纱主题门户</a></h3>
-<p class="jumbo-list-description">全屏的业美婚纱主题门户，最优的展示你的产品和作品，并配合CMS电子商务功能。</p>
-<div class="btn-set">
-<a class="btn btn-primary" href="http://demo1.z01.com/Class_5/Default.aspx" target="_blank">访问体验</a>
-</div>
-<div>
-</div>
-</div>
-</li>
-
-<li class="jumbo-list-item row row-spaced">
-<div class="col-md-7 ">
-<a class="screenshot" href="http://demo1.z01.com/Class_7/Default.aspx" target="_blank">
-<img src="theme004.jpg" alt="精美婚纱主题门户" />
-</a>
-</div>
-<div class="jumbo-list-item-text col-md-4 col-md-offset-1">
-<h3><a href="http://demo1.z01.com/Class_7/Default.aspx" target="_blank">科技机器人</a></h3>
-<p class="jumbo-list-description">众多的科技型公司选择逐浪CMS提供的Bootstrap模板设计服务，这是其中的一个示例演示。</p>
-<div class="btn-set">
-<a class="btn btn-primary" href="http://demo1.z01.com/Class_7/Default.aspx" target="_blank">访问体验</a>
-</div>
-<div>
-</div>
-</div>
-</li>
-
-
-<li class="jumbo-list-item row row-spaced">
-<div class="col-md-7 ">
-<a class="screenshot" href="http://x004.2013.hx008.com" target="_blank">
-<img src="theme005.jpg" alt="汀学网" />
-</a></div>
-<div class="jumbo-list-item-text col-md-4 col-md-offset-1">
-<h3><a href="http://x004.2013.hx008.com" target="_blank">汀学网</a></h3>
-<p class="jumbo-list-description">上海卓越的图像培训与电子画图团队，具备国际化的视野和一流的教育水平，其门户也相当赏心悦目。</p>
-<div class="btn-set">
-<a class="btn btn-primary" href="http://x004.2013.hx008.com" target="_blank">访问体验</a>
-</div>
-<div>
-</div>
-</div>
-</li>
-
-
-<li class="jumbo-list-item row row-spaced">
-<div class="jumbo-list-item-text col-md-4 col-md-pull-8">
-<h3><a href="http://x041.2013.hx008.com" target="_blank">律所超凡轻薄门户</a></h3>
-<p class="jumbo-list-description">北京Icourt律所平台法务服务平台，华文法律行业的翘楚，基于逐浪CMS构建轻薄优秀的门户，而且全站界面是基于响应式和ajax，非常值得体验。</p>
-<div class="btn-set">
-<a class="btn btn-primary" href="http://x041.2013.hx008.com" target="_blank">访问体验</a>
-</div>
-<div>
-</div>
-</div>
-<div class="col-md-7 col-md-push-4 col-md-offset-1">
-<a class="screenshot" href="http://x041.2013.hx008.com" target="_blank">
-<img src="theme002.jpg" alt="律所超凡轻薄门户" />
-</a>
-</div>
-</li>
-
-</ul>
-
 </main>
-
 <footer class="bd-footer text-muted">
-  <div class="container-fluid p-3 p-md-5">
+  <div class="container-fluid p-3 p-md-5 text-center">
     <ul class="bd-footer-links">
       <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
@@ -209,6 +304,7 @@
     <p>Currently v4.0.0-beta.2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
   </div>
 </footer>
+</div>
 <script src="/js/jquery-3.2.1.slim.min.js"></script> 
 <script src="../dist/js/popper.min.js"></script> 
 <script src="../dist/js/bootstrap.min.js"></script> 
