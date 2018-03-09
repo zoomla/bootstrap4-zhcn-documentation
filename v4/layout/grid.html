@@ -158,7 +158,7 @@
     <li><a href="../components/jumbotron.html"> Hero大块屏 </a> </li>
     <li><a href="../components/list-group.html"> 列表组 </a> </li>
     <li><a href="../components/modal.html"> 弹出模态框 </a> </li>
-    <li><a href="../components/navs.html"> 导航 </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
     <li><a href="../components/navbar.html"> 导航栏 </a> </li>
     <li><a href="../components/pagination.html"> 分页 </a> </li>
     <li><a href="../components/popovers.html"> POP提示 </a> </li>
@@ -326,9 +326,9 @@
         <th class="text-center"> 超小屏幕<br />
           <small>(新增规格)&lt;576px</small> </th>
         <th class="text-center"> 小屏幕<br />
-          <small>手机&ge;576px</small> </th>
+          <small>次小屏&ge;576px</small> </th>
         <th class="text-center"> 中等屏幕<br />
-          <small>平板&ge;768px</small> </th>
+          <small>窄屏&ge;768px</small> </th>
         <th class="text-center"> 大屏幕<br />
           <small>桌面显示器&ge;992px</small> </th>
         <th class="text-center"> 超大屏幕<br />
@@ -370,7 +370,10 @@
       </tr>
     </tbody>
   </table>
-  <p>在Bootstrap 4中，屏幕的大小其实是真正的“断点”，即如果只定义一个屏幕规格，则向上覆盖所有设备，向下如果没有定义则默认为12栅格占位-译者注。</p>
+  <p>译者注：</p>
+  <p>1、在Bootstrap 4中，屏幕的大小是真正的“断点”，即如果只定义一个屏幕规格即可向上覆盖所有设备，向下如果没有定义则默认为12栅格占位-译者注。</p>
+  <p>2、有版本将540px断点翻译为平板，目前业界平板(如ipad)进入高清屏幕时代，故本翻译不作此处理以符发展需求。</p>
+  <p>3、实践中，一个<code class="highlighter-rouge">&lt;div class=&quot;col&quot;&gt;&lt;/div&gt;</code>或<code class="highlighter-rouge">&lt;div class=&quot;col-N&quot;&gt;&lt;/div&gt;</code>代表手机断点</p>
   <h2 id="auto-layout-columns">自动布局列</h2>
   <p>利用栅格断点特性进行排版，可以简化列的大小，而不需要批定显式的列宽，如强制写为：<code class="highlighter-rouge">.col-sm-6</code>。</p>
   <h3 id="equal-width">等宽布局</h3>
