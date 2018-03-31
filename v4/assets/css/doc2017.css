@@ -11,7 +11,7 @@ a{color:#563d7c;}
 .bs_docs2017 .version{ color:#9783b9}
 .bs_docs2017 .btn{margin-top:0.5rem;}
 .home_h1{color:#fff; font-size:3.2rem; font-weight: 100; line-height:4rem;}
-.home_h1 small{font-size:40%;}
+.home_h1 small{font-size:40%; color: #ccc !important;}
 .bs_docs2017footer{ border-top:1px solid #eee; background:#fafafa; font-size:0.88rem; text-align:center;}
 .bs_docs2017footer .btn,.bs_docs2017footer .form-control{font-size:0.88rem;}
 
