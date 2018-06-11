@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -301,7 +301,19 @@
   <figure class="highlight">
     <pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'bootstrap/dist/css/bootstrap.min.css'</span><span class="p">;</span></code></pre>
   </figure>
-  <p>在这种情况下，您可以使用现有规则，<code class="highlighter-rouge">css</code>无需对webpack配置进行任何特殊修改。</p>
+  <p>在这种情况下，您可以使用现有规则，<code class="highlighter-rouge">css</code>无需对webpack配置进行任何特殊修改。除非你不需要<code>sass-loader</code>只是<a href="https://github.com/webpack-contrib/style-loader">样式装载机</a>和<a href="https://github.com/webpack-contrib/css-loader">CSS-装载机</a>。</p>
+  <figure class="highlight"><pre><code class="language-js" data-lang="js">  <span class="p">...</span>
+  <span class="nx">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="s1">'style-loader'</span><span class="p">,</span> <span class="s1">'css-loader'</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+  <span class="p">...</span></code></pre></figure>
+  
+  
 </main>
 </div>
 </div>

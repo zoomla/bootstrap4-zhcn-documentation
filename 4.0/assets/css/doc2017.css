@@ -1,0 +1,48 @@
+﻿@charset "utf-8";
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+a:active {star:expression(this.onFocus=this.blur());} 
+canvas {-ms-touch-action:double-tap-zoom;}
+a{color:#563d7c;}
+.bs_docs2017_head{background:#fff; border-bottom:1px solid #ccc; font-size:0.89rem;}
+.bs_docs2017_head .btn{ padding-left:0;font-size:0.89rem;}
+.navbar-toggle {  position: absolute; left: 0;   top: 7px;   border-color: #fff;  color: #293a46;   margin-right: 0;}
+.bs_docs2017{ padding:4rem;background-image: linear-gradient(to bottom,#b88ef9 0,#6f5499  100%); text-align:center;}
+.bs_docs2017 img{ margin-top:3.8rem;height:24rem; }
+.bs_docs2017 .version{ color:#9783b9}
+.bs_docs2017 .btn{margin-top:0.5rem;}
+.home_h1{color:#fff; font-size:3.2rem; font-weight: 100; line-height:4rem;}
+.home_h1 small{font-size:40%; color: #ccc !important;}
+.bs_docs2017footer{ border-top:1px solid #eee; background:#fafafa; font-size:0.88rem; text-align:center;}
+.bs_docs2017footer .btn,.bs_docs2017footer .form-control{font-size:0.88rem;}
+
+.bs-glyphicons { margin: 0 -10px 20px;  text-align: center;  }
+.bs-glyphicons-list { padding-left: 0; list-style: none }
+.bs-glyphicons li { float: left; padding-top:12px; width:12.5%;  height:8rem; font-size:3.2rem; background-color: #f9f9f9; border: 1px solid #fff }
+.bs-glyphicons .glyphicon-class { display: block; font-size:1rem; word-wrap: break-word }
+.bs-glyphicons li:hover{ background-color: #563d7c; }
+.bs-glyphicons a{color:#333;}
+.bs-glyphicons li:hover a,.bs-glyphicons a:hover { color: #fff; text-decoration:none;}
+#bd-docs-nav{padding-top:7rem;}
+#bd-docs-nav li{line-height:1.8rem; border-bottom:1px dotted #ccc;}
+
+
+
+@media all and (min-width:1200px)/*大于1200私有*/
+{
+
+}
+@media all and (min-width:992px)/*大于992私有*/
+{
+
+}
+@media screen and (min-width:769px){  /*大于769px私有*/
+
+}
+@media screen and (max-width:768px){ /*小于768px私有*/
+.bs_docs2017 img{ margin-top:5.8rem; width:100%; height:auto; }
+.home_h1{ font-size:3.0rem;}
+.bs-glyphicons li {  padding-top:12px; width:25%;}
+}
+
+
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */

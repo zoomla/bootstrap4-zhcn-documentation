@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,7 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
-		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome图标</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -245,6 +245,22 @@
   <p>Bootstrap几乎支持所有主流操作系统上各浏览器的<strong>最新稳定版本</strong>。<br/>
   针对Windows，则是支持<strong>Internet Explorer 10-11 / Microsoft Edge</strong>浏览器。</p>
   <p>使用最新版本WebKit、Blink或Gecko内核的第三方浏览器（如国产360安全/极速浏览器、搜狗浏览器、QQ浏览器、UCweb浏览器），无论是直接地还是通过Web API接口，虽然BootStrap官方没有针对性的开发支持，但在大多数情况下也都是完美兼容，不会影响视觉呈现和脚本运行。以下提供更具体的支持信息。</p>
+  <p>你可以找到我们支持的浏览器及其版本的范围<a href="https://github.com/twbs/bootstrap/blob/v4-dev/package.json">在我们package.json：</a></p>
+
+<div class="highlight"><pre ><code><span class="s2">"browserslist"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"last 1 major version"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"&gt;= 1%"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Chrome &gt;= 45"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Firefox &gt;= 38"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Edge &gt;= 12"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Explorer &gt;= 10"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"iOS &gt;= 9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Safari &gt;= 9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Android &gt;= 4.4"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Opera &gt;= 30"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+
   <h3 id="mobile-devices">移动设备</h3>
   <p>Bootstrap支持主流移动OS的默认浏览器的最新版本。注意，不支持代理浏览器（如Opera Mini浏览器、 Opera Mobile’s Turbo 模式、 UCweb Mini浏览器、 Amazon Silk浏览器）。</p>
   <table class="table table-bordered table-striped ">

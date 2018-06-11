@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>兼容Bootstrap 4 Flexbox布局的左边抽屉效果</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" href="http://code.z01.com/v4/dist/css/bootstrap.min.css" >
+<link rel="stylesheet" href="http://code.z01.com/boot/dist/css/font-awesome.min.css" >
+<script src="http://code.z01.com/jquery/jquery-3.2.1.min.js" ></script>
+<script src="http://code.z01.com/v4/dist/js/popper.min.js"></script>
+<script src="http://code.z01.com/v4/dist/js/bootstrap.min.js" ></script>
+<script src="http://code.z01.com/JS/bootstrap.offcanvas.min.js" ></script>
+<style>
+/*@import url("https://code.z01.com/Zfont.css");*/
+body{background: rgba(255,0,0,.3);}
+
+ .my_nav{width:100vw;}/*定义父导航宽度不受影响*/
+.navbar-brand img{height: 4rem;}
+
+/*nav_toggler专用于抽屉菜单 */
+.nav_toggler nav{background: #ccc;}
+.nav_toggler .navbar-toggler{display: block;}
+.nav_toggler .navbar-offcanvas { position: fixed; height: 100%; width: 250px; max-width: 100%; left: -250px; top: 0px; z-index: 999; overflow-y: hidden; -webkit-overflow-scrolling: touch; -webkit-transition: all 0.15s ease-in; -moz-transition: all 0.15s ease-in; -o-transition: all 0.15s ease-in; transition: all 0.15s ease-in; }
+.nav_toggler .navbar-offcanvas.in { box-shadow: 0px 0px 20px black; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); }
+.nav_toggler .navbar-offcanvas.navbar-offcanvas-fade { opacity: 0; }
+.nav_toggler .navbar-offcanvas.navbar-offcanvas-fade.in { opacity: 1; }
+.nav_toggler .navbar-offcanvas.offcanvas-transform.in { -webkit-transform: translate3d(250px, 0px, 0px); -moz-transform: translate3d(250px, 0px, 0px); -o-transform: translate3d(250px, 0px, 0px); transform: translate3d(250px, 0px, 0px); }
+.nav_toggler .navbar-offcanvas.offcanvas-position.in { left: 0px; }
+.nav_toggler .navbar-offcanvas.navbar-offcanvas-right { left: auto; right: -250px; }
+.nav_toggler .navbar-offcanvas.navbar-offcanvas-right.offcanvas-transform.in { -webkit-transform: translate3d(-250px, 0px, 0px); -moz-transform: translate3d(-250px, 0px, 0px); -o-transform: translate3d(-250px, 0px, 0px); transform: translate3d(-250px, 0px, 0px); }
+.nav_toggler .navbar-offcanvas.navbar-offcanvas-right.offcanvas-position.in { left: auto; right: 0px; }
+.nav_toggler .navbar-offcanvas .dropdown.active .caret { border-top: 0px; border-bottom: 4px solid; }
+.nav_toggler .navbar-offcanvas .dropdown-menu { position: relative; display: block; width: 100%; background: inherit; border: inherit; box-shadow: none; padding: 0px; overflow: hidden; -webkit-transition: all 0.15s ease-in; -moz-transition: all 0.15s ease-in; -o-transition: all 0.15s ease-in; transition: all 0.15s ease-in; height: 0px; }
+.nav_toggler .navbar-offcanvas .dropdown-menu.shown { height: auto; }
+.nav_toggler .navbar-offcanvas .dropdown-menu > li > a { color: #777; padding: 5px 15px 5px 30px; }
+}nav_toggler .
+.nav_toggler .offcanvas-toggle { background: #f8f8f8; }
+.nav_toggler .offcanvas-toggle .icon-bar { background: #000; }
+.nav_toggler .offcanvas-toggle.offcanvas-toggle-close { margin-right: 0px; }
+.nav_toggler .offcanvas-toggle.offcanvas-toggle-close .icon-bar:nth-child(1) { -webkit-transform: rotate(45deg) translate(5px, 4px); -moz-transform: rotate(45deg) translate(5px, 4px); -o-transform: rotate(45deg) translate(5px, 4px); transform: rotate(45deg) translate(5px, 4px); }
+.nav_toggler .offcanvas-toggle.offcanvas-toggle-close .icon-bar:nth-child(2) { opacity: 0 !important; }
+.nav_toggler .offcanvas-toggle.offcanvas-toggle-close .icon-bar:nth-child(3) { -webkit-transform: rotate(-45deg) translate(4px, -4px); -moz-transform: rotate(-45deg) translate(4px, -4px); -o-transform: rotate(-45deg) translate(4px, -4px); transform: rotate(-45deg) translate(4px, -4px); }
+
+@media (max-width: 767px) {
+.nav_toggler{display: none;}
+.my_nav{width: auto;}
+｝
+</style>
+</head>
+<body class="body-offcanvas">
+
+
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark my_nav"> <a class="navbar-brand" href="#">sm时有MENU</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
+      <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown03"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
+      </li>
+    </ul>
+    <form class="form-inline mr-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search">
+	  </form>
+	 
+	 
+
+<div class="nav_toggler">	  
+<button type="button" class="navbar-toggler offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">
+<span class="navbar-toggler-icon"></span>这只给PC调
+</button>
+
+
+<nav class="navbar navbar-default navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-fade" role="navigation" id="js-bootstrap-offcanvas">
+<div class="container-fluid h-100 d-block">
+<div class="navbar-header">
+	<a class="navbar-brand" href="#">Brand</a>
+	<a class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas" style="float:left;">                        
+		<i class="fa fa-remove" aria-hidden="true"></i>
+	</a>
+</div>
+<div>
+	<ul class="navbar-nav">
+		<li class="nav-item active"><a class="nav-link" href="#">Link</a></li>
+		<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+		<li class="nav-item dropdown">
+			 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-menu"><a class="nav-link" href="#">Action</a>
+				<a class="dropdown-menu"><a class="nav-link" href="#">Another action</a>
+				<a class="dropdown-menu"><a class="nav-link" href="#">Something else here</a>
+				<a class="dropdown-divider"></li>
+				<a class="dropdown-menu"><a class="nav-link" href="#">Separated link</a>
+				<a class="dropdown-menu"><a class="nav-link" href="#">One more separated link</a>
+			</div>
+		</li>
+	</ul>
+	<form class="navbar-form navbar-left" role="search">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Search">
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#">Link</a></li>
+		<li><a href="#">Another Link</a></li>
+	</ul>
+</div>
+</div>
+</nav>
+
+</div>
+  </div>
+</nav>
+
+
+<div class="container mt-5">
+<h1>兼容Bootstrap 4 Flexbox布局的左边抽屉效果-请点击右上角的MENU按钮启动</h1>
+  <div class="text-center"><a href="http://code.z01.com/v4/" class="btn btn-info">-> <i class="fa fa-globe"></i> 访问Bootstrap 4中国站</a></div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

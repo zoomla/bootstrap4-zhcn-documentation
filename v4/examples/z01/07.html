@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>将bootstrap 4默认的下拉菜单与滑动门事件由点击改为鼠标移动滑动激活</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="../../../js/jquery-3.2.1.min.js" ></script>
+<script src="../../dist/js/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js" ></script>
+</head>
+<body>
+
+<h1>将bootstrap 4默认的下拉菜单与滑动门事件由点击改为鼠标移动滑动激活</h1>
+<h2>下拉菜单示例：</h2>
+<div class="my_dropdown">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button </button>
+	  <div class="ab">
+	  <div class="dropdown-menu"  style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+	  <a class="dropdown-item" href="#">Action</a> 
+	  <a class="dropdown-item" href="#">Another action</a> 
+	  <a class="dropdown-item" href="#">Something else here</a> 
+	  </div>
+	  </div>
+    </div></div>
+  </div>
+  
+  
+  <br>  <br>  <br>  <br>  <br>
+<h2>滑动门示例：</h2>  
+<div class="bd-example my_nav_tabs">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">Home</a>
+      <a class="nav-item nav-link active show" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
+      <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    </div>
+  </nav>
+  <div class="tab-content abc" id="nav-tabContent">
+    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <p>Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.</p>
+    </div>
+    <div class="tab-pane fade active show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute laboris nisi. Labore labore veniam irure irure ipsum pariatur mollit magna in cupidatat dolore magna irure esse tempor ad mollit. Dolore commodo nulla minim amet ipsum officia consectetur amet ullamco voluptate nisi commodo ea sit eu.</p>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud magna.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<br/><br/>
+<h2>POP-改为点击交闭</h2>
+
+<div class="bd-example">
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title" aria-describedby="popover308455">标准popover提示框效果</button>
+  </div>
+
+<br>
+
+<div >
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">下次点击消失</a>
+</div>
+<script>
+//下拉菜单避免点击
+    var $dpTimer = null;
+    $(".my_dropdown").mouseover(function () {
+        if ($dpTimer != null) { console.log("end"); clearTimeout($dpTimer); }
+        var $dp = $(this);
+        var $btn = $dp.find(".dropdown-toggle");
+        if ($btn.attr("aria-expanded") == "true") { return; }
+        $dp.find(".dropdown-toggle").click();
+    });
+    $(".my_dropdown").mouseout(function () {
+        var $dp = $(this);
+        $dpTimer = setTimeout(function () {
+            var $btn = $dp.find(".dropdown-toggle");
+            if ($btn.attr("aria-expanded") == "false") { return; }
+            $dp.find(".dropdown-toggle").click();
+        }, 200);
+    });
+
+
+
+//pop默认事件
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+
+
+//滑动门避免点击
+$().ready(function(e) {
+    $(".my_nav_tabs .nav-tabs>a").mouseover(function () {
+        var $a = $(this);
+        if ($a.hasClass("active")) { return; }
+        $a.addClass("active");
+        $a.siblings("a").removeClass("active");
+        var tab = $a.attr("href");
+        //---------------
+        var $tabs = $("#nav-tabContent .tab-pane");
+        $tabs.removeClass("active").removeClass("show");
+        $(tab).addClass("active").addClass("show");
+    })
+})
+
+
+</script>
+<style>
+/*下拉菜单专用*/
+.myshow .dropdown-menu{margin-top: -1px; display: block;}
+
+
+</style>
+
+
+</body>
+</html>

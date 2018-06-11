@@ -67,13 +67,13 @@
 <a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
 </div>
 </li>
-      <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
       <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
       <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,6 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -216,6 +217,7 @@
     <li class="toc-entry toc-h2"><a href="#form-controls">表单控件</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#sizing">大小规格</a></li>
+		<li class="toc-entry toc-h3"><a href="#range-inputs">输入范围</a></li>
         <li class="toc-entry toc-h3"><a href="#readonly">只读属性</a></li>
         <li class="toc-entry toc-h3"><a href="#readonly-plain-text">只读纯文本</a></li>
       </ul>
@@ -281,6 +283,7 @@
           </ul>
         </li>
         <li class="toc-entry toc-h3"><a href="#select-menu">Select menu堆叠</a></li>
+		<li class="toc-entry toc-h3"><a href="#range">范围</a>
         <li class="toc-entry toc-h3"><a href="#file-browser">文件浏览（文件选取）器</a>
           <ul>
             <li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings">Translating or customizing the strings</a></li>
@@ -452,6 +455,23 @@
   <span class="nt">&lt;option&gt;</span>Small select<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre>
   </div>
+  <h3 id="range-inputs">输入范围</h3>
+  <p>使用设置水平滚动范围输入<code>.form-control-range</code>。</p>
+  <div class="bd-example">
+<form>
+  <div class="form-group">
+    <label for="formControlRange">Example Range input</label>
+    <input type="range" class="form-control-range" id="formControlRange">
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>Example Range input<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"form-control-range"</span> <span class="na">id=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+  
   <h3 id="readonly">只读属性</h3>
   <p>在input控件上增加 <code class="highlighter-rouge">readonly</code> （布尔值）标签定义，以防止修改input中的值。仅能阅读的input控件显示较谈（就象禁用的输入框），但保留鼠标效果。</p>
   <div class="bd-example">
@@ -2231,10 +2251,28 @@
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Three<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre></div>
 
-
-
-
-
+  <h3 id="range">范围</h3>
+ <p>创建自定义<code>&lt;input type="range"&gt;</code>与控制<code>.custom-range。</code>轨道（背景）和大拇指（值）都被设置为跨浏览器显示相同。由于只有IE和Firefox支持从拇指的左侧或右侧“填充”它们的轨迹，以作为视觉指示进度的手段，所以我们目前不支持它。</p>
+<div class="bd-example">
+<label for="customRange1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例范围</font></font></label>
+<input type="range" class="custom-range" id="customRange1">
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"customRange1"</span><span class="nt">&gt;</span>Example range<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"custom-range"</span> <span class="na">id=</span><span class="s">"customRange1"</span><span class="nt">&gt;</span></code></pre></figure>
+<p>范围输入分别具有<code>min</code>和<code>max- 0</code>和的隐含值<code>100</code>。您可以为那些使用<code>min</code>和<code>max</code>属性指定新值。</p>
+<div class="bd-example">
+<label for="customRange2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例范围</font></font></label>
+<input type="range" class="custom-range" min="0" max="5" id="customRange2">
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"customRange2"</span><span class="nt">&gt;</span>Example range<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"custom-range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"5"</span> <span class="na">id=</span><span class="s">"customRange2"</span><span class="nt">&gt;</span></code></pre></figure>
+<p>默认情况下，范围输入“捕捉”为整数值。要改变这一点，你可以指定一个<code>step</code> 值。在下面的例子中，我们使用了两倍的步数<code>step="0.5"</code>。</p>
+<div class="bd-example">
+<label for="customRange3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例范围</font></font></label>
+<input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"customRange3"</span><span class="nt">&gt;</span>Example range<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"custom-range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"5"</span> <span class="na">step=</span><span class="s">"0.5"</span> <span class="na">id=</span><span class="s">"customRange3"</span><span class="nt">&gt;</span></code></pre></figure>
 
   <h3 id="file-browser">文件浏览（文件选取）器</h3>
   <p>文件浏览（选取）是比较原始粗糙的，它需要额外的JavaScript定义支持，如果你将<em>Choose file…</em>文件选取和所选文件的名称关联。</p>

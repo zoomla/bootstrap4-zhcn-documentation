@@ -1,0 +1,1021 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>下拉菜单 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="下拉菜单 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="下拉菜单 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../docs/"> 快速入门 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../docs/">关于</a></li>
+    <li><a href="../docs/download.html">下载</a></li>
+    <li><a href="../docs/contents.html">目录结构</a></li>
+    <li><a href="../docs/browsers-devices.html">浏览器与设备调优</a></li>
+    <li><a href="../docs/javaScript.html">JavaScript脚本</a></li>
+    <li><a href="../docs/theming.html">主题化</a></li>
+    <li><a href="../docs/build-tools.html">编译工具</a></li>
+    <li><a href="../docs/webpack.html"> Webpack模块化</a></li>
+    <li><a href="../docs/accessibility.html">无障碍浏览</a></li>
+    </ul>
+  </div>
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html"> 布局 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../layout/overview.html">概述</a></li>
+    <li><a href="../layout/grid.html">栅格</a></li>
+    <li><a href="../layout/media-object.html">媒体对象</a></li>
+    <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+    </ul>
+  </div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+    <li><a href="../content/typography.html"> 排版 </a> </li>
+    <li><a href="../content/code.html"> 代码 </a> </li>
+    <li><a href="../content/images.html"> 图片 </a> </li>
+    <li><a href="../content/tables.html"> 表格 </a> </li>
+    <li><a href="../content/figures.html"> 图文框 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(breadcrumb) </a> </li>
+    <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
+    <li><a href="../components/card.html"> 卡片(card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(collapse) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../components/dropdowns.html"> 下拉菜单(dropdown) </a> </li>
+    <li><a href="../components/forms.html"> 表单(form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(list-group) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(pagination) </a> </li>
+    <li><a href="../components/popovers.html"> POP提示(popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(scroll) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(tooltip) </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../utilities/borders.html"> 边框(border) </a> </li>
+    <li><a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+    <li><a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+    <li><a href="../utilities/colors.html"> 颜色(color) </a> </li>
+    <li><a href="../utilities/display.html"> Display显示属性 </a> </li>
+    <li><a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+    <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+    <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
+    <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+    <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
+    <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+    <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+    <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+    <li><a href="../utilities/text.html"> 文本处理 </a> </li>
+    <li><a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+    <li><a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+  <ul class="nav bd-sidenav">
+	<li> <a href="../extend/approach.html"> 方法论 </a> </li>
+    <li><a href="../extend/icons.html"> 图标 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+  <ul class="nav bd-sidenav">
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+  <ul class="nav bd-sidenav">
+    <li> <a href="../about/history.html"> 成长历史 </a> </li>
+    <li> <a href="../about/team.html"> 项目团队 </a> </li>
+    <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+    <li> <a href="../about/license.html"> 许可授权 </a> </li>
+    <li> <a href="../about/translations.html"> 翻译 </a> </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
+    <li class="toc-entry toc-h2"><a href="#accessibility">无障碍浏览提示(易用性)</a></li>
+    <li class="toc-entry toc-h2"><a href="#examples">示例</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#single-button-dropdowns">单一按钮的下拉菜单</a></li>
+        <li class="toc-entry toc-h3"><a href="#split-button-dropdowns">分裂式按钮下拉菜单</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#sizing">尺寸大小定义</a></li>
+    <li class="toc-entry toc-h2"><a href="#dropup-variation">变形-向上展开</a></li>
+	<li class="toc-entry toc-h2"><a href="#dropright-variation">Dropright右指向下拉菜单</a></li>
+	<li class="toc-entry toc-h2"><a href="#dropleft-variation">Droprleft左指向下拉菜单</a></li>
+    <li class="toc-entry toc-h2"><a href="#menu-items">菜单项</a></li>
+    <li class="toc-entry toc-h2"><a href="#menu-alignment">菜单对齐</a></li>
+    <li class="toc-entry toc-h2"><a href="#menu-headers">菜单标题</a></li>
+    <li class="toc-entry toc-h2"><a href="#menu-dividers">菜单分隔与分割线</a></li>
+    <li class="toc-entry toc-h2"><a href="#menu-forms">菜单表单</a></li>
+	 <li class="toc-entry toc-h2"><a href="#active-menu-items">有效菜单项</a></li>
+    <li class="toc-entry toc-h2"><a href="#disabled-menu-items">禁用菜单项</a></li>
+    <li class="toc-entry toc-h2"><a href="#usage">用例</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#via-data-attributes">通过事件属性</a></li>
+        <li class="toc-entry toc-h3"><a href="#via-javascript">通过JavaScript</a>
+          <ul>
+            <li class="toc-entry toc-h5"><a href="#data-toggledropdown-still-required">data-toggle="dropdown" 需要保留</a></li>
+          </ul>
+        </li>
+        <li class="toc-entry toc-h3"><a href="#options">选项</a></li>
+        <li class="toc-entry toc-h3"><a href="#methods">方法</a></li>
+        <li class="toc-entry toc-h3"><a href="#events">事件</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">下拉菜单 (Dropdowns)</h1>
+  <p class="bd-lead">使用Bootstrap下拉插件用于显示切换你要展示的链接列表和更多内容的，或触发其它内容显示(覆盖）。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="overview">概览</h2>
+  <p>弹出菜单是可触发的、上下文叠加显示链接列表和别的内容。它们可以与Bootstrap内置的弹出菜单JavaScript插件交互。通过点击触发，而不是通过鼠标悬停悬浮，这是<a href="http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">一种设计思维</a>。</p>
+  <p>下拉菜单控件依赖于第三方 <a href="https://popper.js.org/">Popper.js</a>插件实现，<a href="https://popper.js.org/">Popper.js</a>插件提供了动态定痊和viewport浏览器窗口大小监测，使用时请确保<a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js">popper.min.js</a> 文件放在Bootstrap JS之前，或者使用 <code class="highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="highlighter-rouge">bootstrap.bundle.js</code>这两个文件，因为这两个文件中已经包含了Popper.js。</p>
+  <p>如果你要自行编译JS，记得 <a href="/docs/4.0/getting-started/javascript/#util">包含 <code class="highlighter-rouge">util.js</code></a>。</p>
+  <h2 id="accessibility">无障碍浏览提示(易用性)</h2>
+  <p> <a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a>标准定义了 <a href="https://www.w3.org/TR/wai-aria/roles#menu"><code class="highlighter-rouge">role="menu"</code> 插件</a>,
+  但這是專門用於應用程式的功能表，它們觸發動作或功能。 <abbr title="Accessible Rich Internet Applications">ARIA</abbr>菜单只能包含菜单列表、复选框、单选框、单选按钮组和子菜单。</p>
+  <p>Bootstrap的下拉菜单则是设计为通用的，适用于各种情形和标记结构，如可以创建包含其它输入和表单控制项（如搜索栏位或登录表单）的下拉菜单，因此，Bootstrap 不希望（也不能自動添加）与 <abbr title="Accessible Rich Internet Applications">ARIA</abbr>菜单所需要的  <code class="highlighter-rouge">role</code> 和  <code class="highlighter-rouge">aria-</code> 属性，如果有必要请用户自行定义这类属性。</p>
+  <p>然而，BootStrap为大多数标准键盘功能操作加入了支持，如<code class="highlighter-rouge">.dropdown-item</code> 支持光标移动选择单个子项、并使用关闭菜单的 <kbd>ESC</kbd> 快捷键功能。</p>
+  <h2 id="examples">示例</h2>
+  <p>将下拉列表的切换（按钮或链接）和下拉菜单包含在<code class="highlighter-rouge">.dropdown</code>中，或者另外声明<code class="highlighter-rouge">position: relative;</code>元素;可以从<code class="highlighter-rouge">&lt;a&gt;</code> 或 <code class="highlighter-rouge">&lt;button&gt;</code>触发下拉菜单，以适应你的使用的需求。</p>
+  <h3 id="single-button-dropdowns">单一按钮的下拉菜单</h3>
+  <p>任何一个 <code class="highlighter-rouge">.btn</code>块都可以定义变更为下拉菜单，下面是两个使用<code class="highlighter-rouge">&lt;button&gt;</code> 元素做下拉菜单的示例。</p>
+  <div class="bd-example">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p>使用 <code class="highlighter-rouge">&lt;a&gt;</code> 标签的下拉菜单：</p>
+  <div class="bd-example">
+    <div class="dropdown show"> <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown link </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuLink"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown link
+  <span class="nt">&lt;/a&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuLink"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p>还可以自由引用<code class="highlighter-rouge">.btn-prima</code>等颜色及样式类来定义下拉菜单的外在表现：</p>
+  <div class="bd-example">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Secondary</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Success</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Warning</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danger</button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group --> 
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Example single danger button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Action
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <h3 id="split-button-dropdowns">分裂式按钮下拉菜单</h3>
+  <p>同样，可用与单个按钮下拉菜单近似的标记创建分裂式下拉菜单，注意添加了<code class="highlighter-rouge">.dropdown-toggle-split</code> -插入此符号为下拉选项作适当的间隔（距）处理。</p>
+  <p>我们使用这个额外的Class样式，将插入符号两边水平padding减少了25%，并移除了为默认下拉菜单添加的 <code class="highlighter-rouge">margin-left</code> 属性，这些额外的更改将插入符号集中在分裂式按钮中，并在主按钮旁边提供了适合的点击空间。</p>
+  <div class="bd-example">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <!-- /btn-group --> 
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Example split danger button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <h2 id="sizing">尺寸大小定义</h2>
+  <p>下拉菜单有各种大小规格可以选用，包括预设及分裂式按钮下拉菜单。</p>
+  <div class="bd-example">
+    <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Large button </button>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a> </div>
+      </div>
+      <!-- /btn-group -->
+      <div class="btn-group ml-2">
+        <button type="button" class="btn btn-lg btn-secondary">Large split button</button>
+        <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a> </div>
+      </div>
+      <!-- /btn-group --> 
+    </div>
+    <!-- /btn-toolbar -->
+    <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Small button </button>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a> </div>
+      </div>
+      <!-- /btn-group -->
+      <div class="btn-group ml-2">
+        <button type="button" class="btn btn-sm btn-secondary">Small split button</button>
+        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a> </div>
+      </div>
+      <!-- /btn-group --> 
+    </div>
+    <!-- /btn-toolbar --> 
+  </div>
+  <!-- /example -->
+  
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Large button groups (default and split) --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Large button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+    Large button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Small button groups (default and split) --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Small button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+    Small button
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <h2 id="dropup-variation">变形-向上展开</h2>
+  <p>增加<code class="highlighter-rouge">.dropup</code> 样式，使下拉菜单向上展开。</p>
+  <div class="bd-example">
+    <div class="btn-group dropup">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropup </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+    <div class="btn-group dropup">
+      <button type="button" class="btn btn-secondary"> Split dropup </button>
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a> </div>
+    </div>
+  </div>
+  <figure class="highlight">
+ <pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default dropup button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropup
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Split dropup button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropup"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    Split dropup
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  
+   <h2 id="dropright-variation">Dropright 右指向下拉菜单</h2>
+  <p>通过将 <code class="highlighter-rouge">.dropright</code>添加到父元素来触发元素左侧的下拉菜单。</p>
+  <div class="bd-example">
+   <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropright
+    </button>
+    <div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(112px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+   <div class="btn-group dropright">
+    <button type="button" class="btn btn-secondary">
+      Split dropright
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdright</span>
+    </button>
+    <div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(161px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+  </div>
+  <figure class="highlight">
+<pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default dropright button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropright"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropright
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Split dropright button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropright"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    Split dropright
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropright<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  
+     <h2 id="dropleft-variation">Droprleft 左指向下拉菜单</h2>
+  <p>通过将 <code class="highlighter-rouge">.dropleft </code>添加到父元素来触发元素左侧的下拉菜单。</p>
+  <div class="bd-example">
+ <div class="btn-group dropleft">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropleft
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+  <div class="btn-group">
+    <div class="btn-group dropleft" role="group">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropleft</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary">
+      Split dropleft
+    </button>
+  </div>
+  
+  </div>
+  <figure class="highlight">
+<pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default dropleft button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropleft"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropleft
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Split dropleft button --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropleft"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropleft<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Dropdown menu links --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>
+    Split dropleft
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+    
+  <h2 id="menu-items">菜单项</h2>
+  <p>旧版Boostrap(v3)下拉菜单中的子菜单项<em>必须</em>是链接，但v4不再是这种情况，现在你可选择使用<code class="highlighter-rouge">&lt;button&gt;</code>下拉列表中的元素，而不是仅仅 <code class="highlighter-rouge">&lt;a&gt;</code>标签。</p>
+  <div class="bd-example">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu2"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="menu-alignment">菜单对齐</h2>
+  <p>默认情况下，一个下拉菜单自动从顶部和左侧的父级100％定位。添加<code class="highlighter-rouge">.dropdown-menu-right</code> 到<code class="highlighter-rouge">.dropdown-menu</code>右侧轻松对齐下拉菜单。</p>
+  <div class="bd-callout bd-callout-info">
+    <p><strong>Heads up!</strong> Dropdowns are positioned thanks to Popper.js (except when they are contained in a navbar).</p>
+  </div>
+  <div class="bd-example">
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This dropdown's menu is right-aligned </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    This dropdown's menu is right-aligned
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dropdown-menu-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="menu-headers">菜单标题</h2>
+  <p>添加标题来标记任何下拉菜单中的操作部分。</p>
+  <div class="bd-example">
+    <div class="dropdown-menu">
+      <h6 class="dropdown-header">Dropdown header</h6>
+      <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Dropdown header<span class="nt">&lt;/h6&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="menu-dividers">菜单分隔与分割线</h2>
+  <p>使用分隔符分割相关菜单子项，呈现出分组和分割线效果。</p>
+  <div class="bd-example">
+    <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a> </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="menu-forms">菜单表单</h2>
+  <p>将表单放在下拉菜单中，或将其放入下拉菜单中，并使用<a href="/docs/4.0/utilities/spacing/">margin 或 padding </a>通用CSS样式调整空间和位置。</p>
+  <div class="bd-example">
+    <div class="dropdown-menu">
+      <form class="px-4 py-3">
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" />
+        </div>
+        <div class="form-check">
+		<input type="checkbox" class="form-check-input" id="dropdownCheck"/>
+          <label class="form-check-label" for="dropdownCheck">
+            Remember me </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">New around here? Sign up</a> <a class="dropdown-item" href="#">Forgot password?</a> </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"px-4 py-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleDropdownFormEmail1"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleDropdownFormEmail1"</span> <span class="na">placeholder=</span><span class="s">"email@example.com"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleDropdownFormPassword1"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleDropdownFormPassword1"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"form-check-input"</span> <span class="na">id=</span><span class="s">"dropdownCheck"</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-check-label"</span>  <span class="na">for=</span><span class="s">"dropdownCheck"</span> <span class="nt">&gt;</span>
+        Remember me
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>New around here? Sign up<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Forgot password?<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <div class="bd-example">
+    <form class="dropdown-menu p-4">
+      <div class="form-group">
+        <label for="exampleDropdownFormEmail2">Email address</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="exampleDropdownFormPassword2">Password</label>
+        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" />
+      </div>
+      <div class="form-check">
+       <input type="checkbox" class="form-check-input" id="dropdownCheck2"/>
+          <label class="form-check-label" for="dropdownCheck2">
+            Remember me </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"dropdown-menu p-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleDropdownFormEmail2"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleDropdownFormEmail2"</span> <span class="na">placeholder=</span><span class="s">"email@example.com"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleDropdownFormPassword2"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"exampleDropdownFormPassword2"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"form-check-input"</span> <span class="na">id=</span><span class="s">"dropdownCheck2"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-check-label"</span> <span class="na">for=</span><span class="s">"dropdownCheck2"</span> <span class="nt">&gt;</span>
+      Remember me
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre>
+  </div>
+  
+  <h2 id="active-menu-items">有效菜单项</h2>
+  <p>将 <code class="highlighter-rouge">.active</code>添加到下拉菜单中的项目以将其设置为<strong>活动状态</strong>.</p>
+	<div class="bd-example">
+	<div class="dropdown-menu">
+	  <a class="dropdown-item" href="#">Regular link</a>
+	  <a class="dropdown-item active" href="#">Active link</a>
+	  <a class="dropdown-item" href="#">Another link</a>
+	</div>
+	</div>
+  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Regular link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Active link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+  
+  
+  <h2 id="disabled-menu-items">禁用菜单项</h2>
+  <p>添加 <code class="highlighter-rouge">.disabled</code> 样式到下拉菜单中， <strong>将下拉菜单子项用</strong>（禁用后无法发生点击或选择事件，并不影响下拉菜单的其它动作，如下拉、其它子项样式）。</p>
+  <div class="bd-example">
+    <div class="dropdown-menu"> <a class="dropdown-item" href="#">Regular link</a> <a class="dropdown-item disabled" href="#">Disabled link</a> <a class="dropdown-item" href="#">Another link</a> </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Regular link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Disabled link<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="usage">用例</h2>
+  <p> 通过数据属性或JavaScript，下拉插件通过切换<code class="highlighter-rouge">.show</code>父列表项上的类来切换隐藏内容（下拉菜单）。该<code class="highlighter-rouge">data-toggle="dropdown"</code>属性依赖于在应用程序级别关闭下拉菜单，因此始终使用它是一个好主意。</p>
+  <div class="bd-callout bd-callout-info">
+    <p>在可触摸设备上，打开一个下拉菜单会将(<code class="highlighter-rouge">$.noop</code>) <code class="highlighter-rouge">mouseover</code>事件传递给 <code class="highlighter-rouge">&lt;body&gt;</code>，这是移动浏览器针对触屏的特殊处理方法（可见 <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html">quirk in iOS’ event delegation</a>），否则在下拉菜单之外的任何地方点击会无法触发关闭下拉菜单事件。一旦关闭下拉菜单，这些额外的事件会被立即移除。</p>
+  </div>
+  <h3 id="via-data-attributes">通过事件属性</h3>
+  <p>添加 <code class="highlighter-rouge">data-toggle="dropdown"</code> 在A链接或按钮上，以启用下拉菜单组件。</p>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"dLabel"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown trigger
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dLabel"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <h3 id="via-javascript">通过JavaScript</h3>
+  <p>通过JavaScript调用下菜菜单:</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.dropdown-toggle'</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span></code></pre>
+  </figure>
+  <div class="bd-callout bd-callout-info">
+    <h5 id="data-toggledropdown-still-required"><code class="highlighter-rouge">data-toggle="dropdown"</code> 需要保留</h5>
+    <p>无论你是采用JavaScript 或者 data-api调用下拉菜单， <code class="highlighter-rouge">data-toggle="dropdown"</code> 总要保留在下拉列表的触发器元素中。</p>
+  </div>
+  <h3 id="options">选项</h3>
+  <p>可以通过数据属性或JavaScript传递选项。对于数据属性，选项名称追加到 <code class="highlighter-rouge">data-</code>，如： <code class="highlighter-rouge">data-offset=""</code>.</p>
+  <table class="table table-bordered table-striped table-responsive">
+    <thead>
+      <tr>
+        <th style="width: 100px;">名称</th>
+        <th style="width: 100px;">Type类型</th>
+        <th style="width: 50px;">Default默认值</th>
+        <th>描述说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>offset</td>
+        <td>number | string | function</td>
+        <td>0</td>
+        <td>下拉菜单相对于目标的偏移，参考<a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">Popper.js偏移</a>文档。</td>
+      </tr>
+      <tr>
+        <td>flip</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>允许下拉菜单重叠到其相关元素上，参考 <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled">Popper.js触发</a>文档。</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">方法</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">$().dropdown('toggle')</code></td>
+        <td>给导航栏或分页启用下拉菜单功能。</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">$().dropdown('update')</code></td>
+        <td>更新下拉列表的位置。</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">$().dropdown('dispose')</code></td>
+        <td>销毁一个元素的下拉菜单。</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">事件</h3>
+  <p>All dropdown events are fired at the <code class="highlighter-rouge">.dropdown-menu</code>’s parent element and have a <code class="highlighter-rouge">relatedTarget</code> property, whose value is the toggling anchor element.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Event事件</th>
+        <th>描述说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">show.bs.dropdown</code></td>
+        <td>当调用show显示方法时，此事件会立即触发。</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">shown.bs.dropdown</code></td>
+        <td>当下拉菜单对用户可见时，会触发此事件（将等待CSS转换完成）​​。</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">hide.bs.dropdown</code></td>
+        <td>当调用隐藏实例方法时，会立即触发此事件。</td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">hidden.bs.dropdown</code></td>
+        <td>当下拉菜单从用户隐藏完毕时，会触发此事件（将等待CSS转换完成）​​。</td>
+      </tr>
+    </tbody>
+  </table>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myDropdown'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.dropdown'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span></code></pre>
+  </figure>
+</main>
+</div>
+</div>
+
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

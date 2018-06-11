@@ -18,7 +18,7 @@
 <link rel="manifest" href="../assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 <link rel="icon" href="../favicon.ico">
-<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">Map定义与loops循环定义
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
 <!-- Meta关键字定义 -->
@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,7 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
-		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome图标</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -240,6 +240,7 @@
 	<ul>
 	<li class="toc-entry toc-h3"><a href="#available-variables">可用变量</a></li>
 	<li class="toc-entry toc-h3"><a href="#examples">实例</a></li>
+	<li class="toc-entry toc-h3"><a href="#breakpoint-variables">断点变量</a></li>
 	</ul>
 	</li>
   </ul>
@@ -328,7 +329,22 @@
   </figure>
   
   <p>要从<code class="highlighter-rouge">$theme-colors</code>任何其他地图中删除颜色，请使用map-remove：</p>
-  <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"success"</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"danger"</span><span class="p">);</span></code></pre></figure>
+  <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/mixins"</span><span class="p">;</span><font></font>
+<font></font>
+<span class="nv">$theme-colors</span><span class="p">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">"info"</span><span class="o">,</span> <span class="s2">"light"</span><span class="o">,</span> <span class="s2">"dark"</span><span class="p">);</span><font></font>
+<font></font>
+<span class="c1">// Optional</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/root"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+<span class="nc">...</span></code></pre></figure>
+  
+  <h3 id="required-keys">必须的键值</h3>
+  <p>Bootstrap假定在我们使用的Sass地图中存在一些特定的键，并自行扩展它们。在您定制包含的地图时，您可能会遇到使用特定Sass地图密钥的错误。</p>
+  <p>例如，我们使用<code>primary</code>，<code>success</code>以及<code>danger</code>来自键 <code>$theme-colors</code> 的链接，按钮和表单的状态。替换这些键的值应该没有问题，但删除它们可能会导致Sass编译问题。在这些情况下，您需要修改使用这些值的Sass代码。</p>
   
   <h3 id="functions">函数</h3>
   <p>Bootstrap使用多个Sass函数，但只有一个子集适用于一般主题。我们已经包含三个功能来获取颜色映射的值：</p>
@@ -635,14 +651,18 @@
 <span class="nt">a</span> <span class="p">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--blue</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
-<p>您也可以在媒体查询中使用我们的断点变量：</p>
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.content-secondary</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
-<span class="p">}</span><font></font>
-<font></font>
-<span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">)))</span> <span class="p">{</span>
-  <span class="nc">.content-secondary</span> <span class="p">{</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+
+<h3 id="breakpoint-variables">断点变量</h3>
+
+<p>虽然我们原本包含在我们的CSS变量断点（如<code>--breakpoint-md</code>），这些都没有在媒体查询的支持，但他们仍然可以使用内的媒体查询规则集。这些断点变量保留在已编译的CSS中，以便向后兼容，因为它们可以被JavaScript使用。<a href="https://www.w3.org/TR/css-variables-1/#using-variables">在规范中了解更多信息。</a></p>
+<p>以下是不支持的示例：</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--breakpoint-sm</span><span class="p">))</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span></code></pre></figure>
+<p>这里是一个支持的例子：</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.custom-element</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--primary</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 </main>

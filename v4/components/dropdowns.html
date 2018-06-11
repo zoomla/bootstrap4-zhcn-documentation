@@ -67,13 +67,13 @@
 <a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
 </div>
 </li>
-      <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
       <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
       <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,6 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -229,8 +230,10 @@
     <li class="toc-entry toc-h2"><a href="#menu-alignment">菜单对齐</a></li>
     <li class="toc-entry toc-h2"><a href="#menu-headers">菜单标题</a></li>
     <li class="toc-entry toc-h2"><a href="#menu-dividers">菜单分隔与分割线</a></li>
+	<li class="toc-entry toc-h2"><a href="#text">文本</a></li>
     <li class="toc-entry toc-h2"><a href="#menu-forms">菜单表单</a></li>
-	 <li class="toc-entry toc-h2"><a href="#active-menu-items">有效菜单项</a></li>
+    <li class="toc-entry toc-h2"><a href="#dropdown-options">下拉选项</a></li>
+	<li class="toc-entry toc-h2"><a href="#active-menu-items">有效菜单项</a></li>
     <li class="toc-entry toc-h2"><a href="#disabled-menu-items">禁用菜单项</a></li>
     <li class="toc-entry toc-h2"><a href="#usage">用例</a>
       <ul>
@@ -738,13 +741,7 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </div>
-  <h2 id="menu-dividers">菜单分隔与分割线</h2>
-  <p>使用分隔符分割相关菜单子项，呈现出分组和分割线效果。</p>
-  <div class="bd-example">
-    <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a> </div>
-  </div>
+
   <div class="highlight">
     <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
@@ -754,6 +751,31 @@
   <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </div>
+  
+    <h2 id="menu-dividers">菜单分隔与分割线</h2>
+  <p>使用分隔符分割相关菜单子项，呈现出分组和分割线效果。</p>
+  <div class="bd-example">
+    <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a> </div>
+  </div>
+  <h2 id="text">文本</h2>
+  <p>在文本下拉菜单中放置任何自由格式的文本并使用间隔工具。请注意，您可能需要额外的大小调整样式来限制菜单宽度。</p>
+  <div class="bd-example">
+<div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+  <p>一些示例文本在下拉菜单中自由流动。</p>
+  <p class="mb-0">这是更多示例文本。</p>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu p-4 text-muted"</span> <span class="na">style=</span><span class="s">"max-width: 200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span><font></font>
+    Some example text that's free-flowing within the dropdown menu.<font></font>
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span><font></font>
+    And this is more example text.<font></font>
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  
   <h2 id="menu-forms">菜单表单</h2>
   <p>将表单放在下拉菜单中，或将其放入下拉菜单中，并使用<a href="/docs/4.0/utilities/spacing/">margin 或 padding </a>通用CSS样式调整空间和位置。</p>
   <div class="bd-example">
@@ -838,6 +860,61 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre>
   </div>
+  
+  <h2 id="dropdown-options">下拉选项</h2>
+  <p>使用<code>data-offset</code>或<code>data-reference</code>更改下拉菜单的位置。</p>
+  <div class="bd-example">
+<div class="d-flex">
+  <div class="dropdown mr-1">
+    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+      Offset
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(10px, 58px, 0px);">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary">Reference</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+</div>
+</div>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown mr-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">id=</span><span class="s">"dropdownMenuOffset"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">data-offset=</span><span class="s">"10,20"</span><span class="nt">&gt;</span>
+      Offset
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuOffset"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Reference<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle dropdown-toggle-split"</span> <span class="na">id=</span><span class="s">"dropdownMenuReference"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">data-reference=</span><span class="s">"parent"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuReference"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
   
   <h2 id="active-menu-items">有效菜单项</h2>
   <p>将 <code class="highlighter-rouge">.active</code>添加到下拉菜单中的项目以将其设置为<strong>活动状态</strong>.</p>

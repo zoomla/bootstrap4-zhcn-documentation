@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>四叶草客服组件：一款方便的右下角客服代码（适合微站）bootstrap v4 + zico 移动专用版</title>
+<!--IE兼容组件-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
+<link rel="stylesheet" href="../../dist/css/bootstrap.min.css" >
+<link rel="stylesheet" href="../../dist/css/zico.min.css" >
+<script src="../../../js/jquery-3.2.1.min.js" ></script>
+</head>
+<body>
+
+
+<div class="container">
+<h1><i class="zi zi_digg z0_5x" zico="点赞"></i> 四叶草客服组件：一款方便的右下角客服代码（适合微站）bootstrap v4 + zico 移动专用版</h1>
+<h2><a href="http://ico.z01.com">访问zico官网</a></h2>
+(点击右下角图标激活效果）
+</div>
+
+
+<!--menu float begin-->
+<section>
+  <div class="mask_menu" style="display:none;"></div>
+  <div class="menu" id="menufloat"><i class="zi zi_thlarge icon-menu"></i></div>
+  <div class="menu-c" id="menufloat-c" style="display:none;">
+    <div class="menu-c-out">
+	<div class="menu-c-inner"> <a class="a-home" href="/"><i class="zi zi_home" zico="家"></i></a>
+	<a class="a-tel" href="tel://021-50391046"><i class="zi zi_phone zi_rotate90" zico="话筒黑"></i><span>联系</span></a>
+	<a id="serviceUrl" class="a-server" href="https://jq.qq.com/?_wv=1027&k=42Sw47y"><i class="zi zi_service"></i><span>客服</span></a>
+	<a class="a-member" href="/ORG1/Customer/Index""><i class="zi zi_useralt" zico="用户黑"></i><span>会员</span></a>
+	<a class="a-search" href="/ORG1/Product/CategoryList""><i class="zi zi_search" zico="搜索"></i><span>搜索</span></a>
+	<a class="a-cart" href="/ORG1/Cart/Index"><i class="zi zi_shoppingcart" zico="购物车黑"></i><span>结算</span></a>
+	<a class="a-collect" href="/ORG1/Customer/goods_fav" id="collect-link"><i class="zi zi_tmQq" zico="qq"></i><span>QQ</span></a></div>
+	  <!--收藏可以改为留言，指向gesut-->
+    </div>
+  </div>
+</section>
+<!--menu float end--> 
+
+<style>
+/*移动客服CSS定义开始*/
+.mask_menu {position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,.5); z-index: 3; }
+.menu { position: fixed; bottom: 80px; left: 10px; padding:2px; width: 49px; height: 49px; border-radius: 50%; background: rgba(255,255,255,.8); box-shadow: 0 0 5px rgba(0,0,0,.3); z-index: 5; }
+.menu .icon-menu { display: block; width: 45px; height: 45px; line-height: 45px; border-radius: 50%; background: rgba(0,0,0,.8); text-align: center; color: #fff; font-size: 22px; }
+.menu.show { background: rgba(255,255,255,.8) }
+.menu.show .icon-menu { background: rgba(0,0,0,.1); }
+.menu-c { position: fixed; bottom: 120px; left: 30px; padding: 5px; border-radius: 50%; background: rgba(0,0,0,.1); z-index: 4; }
+.menu-c.out { background: rgba(0,0,0,0); }
+.menu-c-out { padding: 5px; border-radius: 50%; background: rgba(255,255,255,1);}
+.menu-c.out .menu-c-out { background: rgba(255,255,255,0); }
+.menu-c-inner { position: relative; border-radius: 50%; background:#f2f2f2; background-size: 100%; }
+.menu-c.notel .menu-c-inner { background: url("../img/menu-default-notel.png") no-repeat; background-size: 100%; }
+.menu-c.noserver .menu-c-inner { background: url("../img/menu-default-noserver.png") no-repeat; background-size: 100%; }
+.menu-c.nost .menu-c-inner { background: url("../img/menu-default-nost.png") no-repeat; background-size: 100%; }
+.menu-c-inner.in { width: 180px; height: 180px; animation: menufloatin .3s; -webkit-animation: menufloatin .3s; -moz-animation: menufloatin .3s; -o-animation: menufloatin .3s; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1; opacity: 1; }
+
+
+.menu-c a { position: absolute; width: 50px; height:50px; text-align: center;font-size:1.8rem;color: #9b9b9b; }
+.menu-c a:hover{opacity: 0.8;}
+.menu-c span{display: block;margin-top: -0.6rem; width: 100%; font-size: 0.8rem;}
+.menu-c .a-home { top: 50px; left:50px; width: 80px;height: 80px;line-height: 80px; text-align: center; font-size:1.6rem; background:#fcfcfc; border-radius: 50%;border: 2px solid #ebecec; }
+.menu-c .a-home i{font-size: 3rem;opacity: 0.2;}
+.menu-c .a-home i:hover{font-size: 3rem;opacity: 0.12;}
+
+.menu-c .a-tel { top: -5px; left: 60px; }
+.menu-c .a-server { top: 30px; right: 5px; }
+.menu-c .a-member { top: 90px; right: 8px; }
+.menu-c .a-search { bottom: 5px; left: 60px; }
+.menu-c .a-cart { top: 90px; left: 8px; }
+.menu-c .a-collect { top: 30px; left:5px; }
+.menu-c.notel a { position: absolute; width: 60px; height: 60px; }
+.menu-c.notel .a-home { top: 60px; left: 60px; }
+.menu-c.notel .a-tel { display: none; }
+.menu-c.notel .a-server { top: 0; left: 60px; }
+.menu-c.notel .a-member { top: 40px; right: 0px; }
+.menu-c.notel .a-search { bottom: 10px; left: 120px; }
+.menu-c.notel .a-cart { top: 120px; left: 30px; }
+.menu-c.notel .a-collect { top: 50px; left: 0px; }
+.menu-c.noserver a { position: absolute; width: 60px; height: 60px; }
+.menu-c.noserver .a-home { top: 60px; left: 60px; }
+.menu-c.noserver .a-tel { top: 10px; left: 60px; }
+.menu-c.noserver .a-server { display: none; }
+.menu-c.noserver .a-member { top: 40px; right: 0px; }
+.menu-c.noserver .a-search { bottom: 10px; left: 120px; }
+.menu-c.noserver .a-cart { top: 120px; left: 30px; }
+.menu-c.noserver .a-collect { top: 50px; left: 0px; }
+.menu-c.nost a { position: absolute; width: 60px; height: 60px; }
+.menu-c.nost .a-home { top: 60px; left: 60px; }
+.menu-c.nost .a-tel { display: none; }
+.menu-c.nost .a-server { display: none; }
+.menu-c.nost .a-member { top: 20px; right: 0px; }
+.menu-c.nost .a-search { bottom: 10px; left: 120px; }
+.menu-c.nost .a-cart { top: 110px; left: 0px; }
+.menu-c.nost .a-collect { top: 10px; left: 0px; }
+
+
+@keyframes menufloatin { /*客服动画*/
+ 0% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+ 100% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+}
+@-webkit-keyframes menufloatin {
+ 0% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+ 100% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+}
+@-moz-keyframes menufloatin {
+ 0% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+ 100% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+}
+@-o-keyframes menufloatin {
+ 0% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+ 100% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+}
+
+.menu-c-inner.outer { width: 0; height: 0; animation: menufloatouter .3s; -webkit-animation: menufloatouter .3s; -moz-animation: menufloatouter .3s; -o-animation: menufloatouter .3s; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; }
+
+@keyframes menufloatouter {
+ 0% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+ 100% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+}
+@-webkit-keyframes menufloatouter {
+ 0% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+ 100% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+}
+@-moz-keyframes menufloatouter {
+ 0% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+ 100% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+}
+@-o-keyframes menufloatouter {
+ 0% {width:180px;height:180px;filter:alpha(opacity=1);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+ 100% {width:0;height:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+}
+</style>
+
+<script>
+// JavaScript Document
+$(window).on('load',function(){
+	$("#loading").hide();
+	})
+$(function(){
+	$("#distribution-apply").click(function(event){
+		event.preventDefault();
+		$("#distribution-tip").fadeIn();
+		setTimeout(function(){
+		$("#distribution-tip").fadeOut();
+			},4000)
+		}   	 
+	);	
+	//close advertisement
+	$("#advertisement-close").click(function(){
+		$("#advertisement-apptip").hide();
+		$("#fromesb-wechat").animate({
+			top:0
+			});
+		})
+	//contact float
+	$("#contFloat").click(function(event){
+		event.preventDefault();
+		$("#contFloat-detail").show();
+		})
+	$("#contFloat-detail-close").click(function(){
+		$("#contFloat-detail").hide();
+		})
+
+
+
+	$("#collect-link").on("click",function(){
+			$("#collect-tip").show();
+			})
+		$("#a-know").on("click",function(){
+			$("#collect-tip").hide();
+			})
+	//share
+	$("#share-link").on("click",function(){
+			$("#share-tip").show();
+			})
+		$("#a-know").on("click",function(){
+			$("#share-tip").hide();
+			})
+	//app download close
+	$("#appdown-close").on("click",function(){
+		$("#apptip").hide();
+		})	
+		
+
+	//ios4 fixed
+	var isIOS = (/iphone|ipad/gi).test(navigator.appVersion);
+	if (isIOS) {
+	$('#s_buy').on('focus', 'input', function () {
+	$('.head').addClass('relative');
+	$('.mod_slider').css("margin-top","10px")
+	}).on('focusout', 'input', function () {
+	$('.head').removeClass('relative');
+	$('.mod_slider').css("margin-top","50px")
+	});
+	}
+    //menu float
+	var menufloatclicknumber=0;
+	  function menufloatin(){
+		  $(".menu-c").removeClass("out");
+		  $("#menufloat").addClass("show")
+		  $(".mask_menu").fadeIn();
+		  $("#menufloat-c").show();
+		  $(".menu-c-inner").removeClass("outer");
+		  $(".menu-c-inner").addClass("in")
+		  $(".menu-c-inner a").show();
+		  menufloatclicknumber=1;
+		  }
+	  function menufloatout(){
+		  $("#menufloat").removeClass("show")
+		  $(".mask_menu").fadeOut();
+		  $(".menu-c-inner").removeClass("in")
+		  $(".menu-c-inner").addClass("outer")
+		  $(".menu-c-inner a").hide();
+		  $(".menu-c").addClass("out");
+		  menufloatclicknumber=0;		
+		  }	   
+	  $("#menufloat").click(function(){
+		  if(menufloatclicknumber==0){
+		     menufloatin();
+			 }
+		  else{
+		  	 menufloatout();
+			  }			 	
+		  })
+		$(".mask_menu").click(function(){
+			menufloatout();
+			})
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../../../favicon.ico">
+<title>仿苹果搜索并提供手机抽屉菜单_Bootstrap模板</title>
+<!-- Bootstrap 核心CSS -->
+<link rel="stylesheet" href="https://code.z01.com/v4/dist/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://code.z01.com/boot/dist/css/font-awesome.min.css" >
+<style>
+.home_nav.active { background:rgba(255,51,51,0.9); box-shadow:2px 4px 10px #333;}  /*顶部导航*/
+.home_nav .navbar-brand img { height:3rem;}
+.home_nav .navbar-brand { font-family:"ZoomlaXingtiJ3";}
+.home_nav .hide_nav { position:relative;}
+.home_nav .home_search { position:absolute; top:50%; transform:translateY(-50%); transition:ease-in-out 0.5s; opacity:0; z-index:-1;}
+.home_nav .home_search form>i { margin-right:1em; margin-left:1em; color:#fff;}
+.home_nav .home_search form{border:1px solid #ddd;}
+.home_nav .home_search input { border:none; background:none; box-shadow:none; padding-left:0; padding-right:0; width:30em; border-radius:0;}
+.home_nav .home_search a { background:none; border:none; text-decoration:none; color:#333; cursor:pointer;}
+.home_nav .home_search input::-webkit-input-placeholder { color:#eee;}
+.home_nav .home_search input::-moz-input-placeholder { color:#eee;}
+.home_nav .home_search input::-mos-input-placeholder { color:#eee;}
+.home_nav .home_search input::input-placeholder { color:#333;}
+.home_nav a { color:#999; text-decoration:none;}
+.home_nav .search_icon { margin-top:0.5rem; margin-left:2rem; color:#333;}
+.home_nav .sign-in { margin-top:0.5rem;margin-left:1rem;color:#eee;}
+.home_nav a:hover { color:#f60;}
+.home_nav .search_close i{ margin-right:1rem; color:#fff;}
+
+.home_banner .carousel-item { height: 56rem; } /*首页banner*/
+.home_banner .carousel-caption img { position:relative; z-index:66; max-width:100%; max-height:100%;}
+.home_banner { position: relative; }
+.home_banner .carousel-item img { height: 100%; }
+.home_banner1 { background: url(home_banner1.jpg) top center no-repeat; background-size: cover; }
+.home_banner2 { background: url(home_banner2.jpg) top center no-repeat; background-size: cover; }
+.home_banner3 { background: url(home_banner1.jpg) top center no-repeat; background-size: cover; }
+/*屏幕小于768px私有*/
+@media screen and (max-width:576px) {
+body { position:absolute; left:0; right:0; overflow-x:hidden; backface-visibility:hidden; transition:all .3s ease-in-out; transition-delay:0s;}/*手机菜单极简风格*/
+body.out { left:-200px; right:200px; overflow:hidden;}
+body.out .navbar-collapse { box-shadow:-10px 0 50px 0 rgba(0,0,0,.75); transform:translate3d(-200px,0,0); text-align:center;}
+body.out .navbar-collapse .navbar-nav {margin-top:2rem; text-align:center;}
+.navbar-collapse { display:block!important; position:fixed; top:0; right:-200px; bottom:0; z-index:100000; width:200px; height:100vh!important; margin:0;    background-color:#fff; border:none; box-shadow:none; border-left:1px solid #e7e7e7; transition:all .3s ease-in-out;}
+.navbar-toggle { transition:all .5s ease-in-out;}
+.home_nav .navbar-light .navbar-toggler { position:absolute; right:0; top:1rem;}
+.navbar-toggle .navbar-toggler-icon { transition:all .5s ease-in-out;}
+body.out .home_nav { left:-200px; right:200px; overflow:hidden;}
+}
+</style>
+</head>
+<body>
+<div class="home_nav fixed-top" id="home_nav">
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light">
+<a class="navbar-brand " href="/">字体网</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto home_top_nav">
+<li class="nav-item active"><a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a></li>
+<li class="nav-item"><a class="nav-link" href="/Class_1/Default.aspx">资讯中心</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.ziti163.com/Down/">字库中心</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.ziti163.com/Class_11/Default.aspx">字体学院</a></li>
+<li class="nav-item"><a class="nav-link" href="/">逐浪字库</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.ziti163.com/photo/">字体墙</a></li>
+<li class="nav-item"><a class="nav-link" href="https://v.ziti163.com/">在线做字</a></li>
+<li class="nav-item"><a class="nav-link" href="https://www.ziti163.com/webfont/">WebFont</a></li>
+<li class="nav-item"><a class="nav-link" href="http://www.sjtzj.com/">瘦金体</a></li>
+<li class="nav-item search_icon d-xl-block"><a href="javascript:;" onClick="isSearch();"><i class="fa fa-search"></i></a></li>
+<li class="nav-item sign-in d-xl-block"><a href="/user/">登录/注册</a></li>
+</ul>
+<ul class="navbar-nav float-right home_search">
+<form class="form-inline my-2 my-lg-0" role="search" action="https://www.z01.com/Search/SearchList" target="_blank">
+<i class="fa fa-search"></i>
+<input type="text" class="form-control" placeholder="输入关键字，回车查询" name="keyword" />
+<a onClick="isClose();" class="search_close"><i class="fa fa-close"></i></a>
+</form>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<!-- hoem_nav end! -->
+<div id="carouselExampleIndicators" class="carousel slide home_banner" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active home_banner1">
+<div class="carousel-caption d-none d-md-block">
+<img src="zi_ku.svg" alt="逐浪字库">
+</div>
+</div>
+<div class="carousel-item home_banner2">
+<div class="carousel-caption d-none d-md-block">
+<img src="zi_ku.svg" alt="逐浪字库">
+</div>
+</div>
+<div class="carousel-item home_banner3">
+<div class="carousel-caption d-none d-md-block">
+<img src="zi_ku.svg" alt="逐浪字库">
+</div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<!-- hoem_banner end! -->
+
+
+
+<!-- Bootstrap 核心 JavaScript --> 
+<script src="https://code.z01.com/jquery/jquery-3.2.1.min.js" ></script>
+<script src="https://code.z01.com/v4/dist/js/popper.min.js"></script>
+<script src="https://code.z01.com/v4/dist/js/bootstrap.min.js" ></script>
+<script>
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_nav").addClass("active");
+        $(".home_nav .navbar-light .navbar-nav .nav-link,.home_nav .navbar-light .navbar-brand").css("color","#333");
+        $(".home_nav form i").css("color","#333");
+        	}
+	else{
+		$(".home_nav").removeClass("active");
+        $(".home_nav .navbar-light .navbar-nav .nav-link,.home_nav .navbar-light .navbar-brand").css("color","#ccc");
+        $(".home_nav form i").css("color","#fff");
+	}
+});
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","0");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+//手机下右侧导航菜单效
+    $('.navbar-toggler').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+
+//字库选项卡图片切换
+$(".home_zi_k li a").click(function(){
+    $(this).parent().addClass("active").siblings().removeClass("active");
+
+ });
+
+</script>
+</body>
+</html>

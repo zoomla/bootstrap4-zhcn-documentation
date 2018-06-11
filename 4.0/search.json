@@ -1,0 +1,1346 @@
+[
+{
+        "hierarchy": {
+            "lvl2": "下载",
+            "lvl3": "编译版",
+            "lvl0": "源码包 cdn在线引用",
+            "lvl1": "程序打包方式 Package managers NodeJS安装方式 NuGet 安装（对于微软.NET开发者）Composer 安装（对于PHP开发者",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/download.html",
+        "content": "",
+        "anchor": "download",
+        "objectID": "1",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "简介Bootstrap是当前世界最受欢迎的响应式、移动设备优先的门户和应用前端框架快速部署JScss组件方法",
+            "lvl3": "关于",
+            "lvl0": "hello,World!模板",
+            "lvl1": "Accessibility",
+            "lvl6": "重要提示",
+            "lvl4": "HTML5 doctype头部规范",
+            "lvl5": "初始化与CSS重置，社区支持"
+        },
+        "url": "https://code.z01.com/v4/docs/",
+        "content": "",
+        "anchor": "docs",
+        "objectID": "2",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "目录结构Bootstrap每次都会以预编译版、源代码两种形式发布。下面我们介绍两种形式的内容和结构。注意无论使用哪种形式，Bootstrap的JavaScript插件都需要jQuery。",
+            "lvl3": " CSS 文件功能对比与清单 资源清单",
+            "lvl0": "Bootstrap 编译引导",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/contents.html",
+        "content": "",
+        "anchor": "contents",
+        "objectID": "3",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "浏览器与设备调优",
+            "lvl3": "支持的浏览器/移动设备/桌面浏览器/Internet Explorer(IE)/移动设备的模态框和下拉组件/Overflow溢出和scroll滚动/iOS文本字段和滚动/Navbar导航栏下拉菜单/浏览器缩放/移动设备上的:hover/:focus 粘性(点选中)状态/打印/Android安卓内置浏览器/Select选择菜单问题/Select选择菜单问题",
+            "lvl0": "使用最新版本WebKit、Blink或Gecko内核的第三方浏览器（如国产360安全/极速浏览器、搜狗浏览器、QQ浏览器、UCweb浏览器），无论是直接地还是通过Web API接口，虽然BootStrap官方没有针对性的开发支持，但在大多数情况下也都是完美兼容，不会影响视觉呈现和脚本运行。以下提供更具体的支持信息。",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/browsers-devices.html",
+        "content": "",
+        "anchor": "browsers-devices",
+        "objectID": "4",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "JavaScript 脚本",
+            "lvl3": "Bootstrap 包括一些 JavaScript 帮助用户做出更加充满生机、活动的项目。欢迎学习更多关于如何去调用动态事件、灵活展示的数据和编程性的API选项等。",
+            "lvl0": "单个引用或者编译/依赖关系/数据属性/JS事件(Events)/编程化的API/异步函数和转换/默认设置/无冲突处理/版本管理/当JavaScript被禁用时，没有特殊的回调机制/第三方库/Util方法",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/javascript.html",
+        "content": "",
+        "anchor": "javascript",
+        "objectID": "5",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "主题化 Bootstrap",
+            "lvl3": "theming",
+            "lvl0": "使用我们新的内置Sass变量自定义Bootstrap 4，用于全局风格偏好，方便的进行主题和组件属性定义",
+            "lvl1": "在Bootstrap 3中，主题主要由LESS决定，自定义CSS中的可能会覆盖项目dist文件中默认的内置的主题样式表，用户通过自定义各种颜色属性，可以完全重新设计Bootstrap 3的外观，而无需触摸核心文件",
+            "lvl6": "利用系统提供的Sass源文件、maps文件、变量、混合等。",
+            "lvl4": "文件结构尽可能避免修改Bootstrap的核心文件。对于Sass，这意味着创建您自己的样式表导入Bootstrap，以便您可以修改和扩展它。假设您已经下载了源文件或正在使用软件包管理器，那么文件结构",
+            "lvl5": "变量缺省值/色彩对比#颜色#颜色盘#主题颜色/修饰符#组件#响应Sass选项#Map定义与loops循环定义"
+        },
+        "url": "https://code.z01.com/v4/docs/theming.html",
+        "content": "",
+        "anchor": "theming",
+        "objectID": "6",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "编译工具build-tools",
+            "lvl3": "npm（nodejs）命令来编译（构建、调试与生成）编译前环境部署#",
+            "lvl0": "Autoprefixer浏览器前缀定义程式本地文档故障排除",
+            "lvl1": "采用Jekyll工具来编译",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/build-tools.html",
+        "content": "",
+        "anchor": "build-tools",
+        "objectID": "7",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Webpack模块化",
+            "lvl3": "款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理导入预编译的Sass#",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/webpack.html",
+        "content": "",
+        "anchor": "webpack",
+        "objectID": "8",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "无障碍浏览accessibility",
+            "lvl3": "可友好访问内容的功能和限制的简要概述",
+            "lvl0": "结构标记# WAI-ARIA 角色和属性，这些组件也应该使用辅助技术（如屏幕阅读器）可以理解和操作",
+            "lvl1": "颜色对比contrast/视觉隐藏内容#扩展资源#",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/docs/accessibility.html",
+        "content": "",
+        "anchor": "accessibility",
+        "objectID": "9",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "布局概念概述overview",
+            "lvl3": "Container容器-启用整个栅格系统必不可少的前置条件，它们分别对应选择一个响应式的、固定宽度的容器，或者选择一个流式自适应浏览器或容器最大合法宽度的窗口（意味着任何时候它的宽度总是100%）",
+            "lvl0": "响应式的分界点",
+            "lvl1": "Z-index 堆叠顺序属性",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/layout/overview.html",
+        "content": "",
+        "anchor": "overview",
+        "objectID": "10",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "栅格系统grid",
+            "lvl3": "移动优先的网格系统，它是基于一个12列的布局、有5种响应尺寸(对应不同的屏幕)，支持Sass mixins自由调用，并结合自己预定义的CSS、Js类，用来创建各种形状和尺寸的布局",
+            "lvl0": "div容器的行、列来布局和对齐内容，不同于旧版3.0，新版是完全基于flexbox流式布局构建的，完全支持响应式标准。下面的示例，可以让我们深入了解网格如何组合在一起",
+            "lvl1": "栅格选项/自动布局列-等宽布局可变宽度的弹性空间",
+            "lvl6": "垂直布局自定义栅格响应式的class选择器",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/layout/grid.html",
+        "content": "",
+        "anchor": "grid",
+        "objectID": "11",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "媒体对象media-object",
+            "lvl3": "媒体对象是一些抽象元素，是用来建立一些略显复杂繁琐同时又高度重复使用的组件（比如说博客评论、推文模块等）之基础。它支持左对齐内容、右对齐内容、内容对齐选项、嵌套",
+            "lvl0": "用于构建复杂、重复的内容列表，左边是一个图、右边是内容且不能转着图、形成两列。由于采用了flexbox流式布局，我们只要两个Class类就能达成",
+            "lvl1": "嵌套#对齐/贴齐/顶部贴齐/垂直对齐/底边贴齐/排序/Media object/列表呈现",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/layout/media-object.html",
+        "content": "",
+        "anchor": "media-object",
+        "objectID": "12",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "布局实施建议utilities-for-layout",
+            "lvl3": "数十个用于显示、隐藏、对齐和间隔的实用工具，可加快移动设备与响应式界面的开发",
+            "lvl0": "display块属性定义/Flexbox 选项/Margin 和 padding间隙定义/可见性切换",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/layout/utilities-for-layout.html",
+        "content": "",
+        "anchor": "utilities-for-layout",
+        "objectID": "13",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "内容-初始化与CSS重置reboot",
+            "lvl3": "系统重置建立新的规范化，只允许元素选择器向各个HTML元素提供了自有的风格，额外的样式只通过明确的.class类来规范。例如，我们重置了一系列<table>样式作为简单的基准，然后提供了.table、 .table-bordered等样式类，从而最小限定的定义、最大程序兼容、最多场景可被引用",
+            "lvl0": "重置浏览器默认值，使用rem作为尺寸规格单位，代替em用于指定可缩放的组件的间隔与缝隙。",
+            "lvl1": "最大化避免使用margin-top,防止使用它造成的垂直外排版（边距）混乱所造成之意想不到结果。更重要的是，一个单一方向的margin是一个简单的构思模型",
+            "lvl6": "•保持font相关属性最小的声明，尽可能地使用inherit属性，不影响容器溢出",
+            "lvl4": "路线方针页面默认值本地字体属性标题段落列表pre预先格式化文本表格Forms表单其它杂项Address地址控件Blockquote引用块效果addr内联元素HTML5 [hidden]属性jQuery冲突点击触摸的延迟优化",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/reboot.html",
+        "content": "",
+        "anchor": "reboot",
+        "objectID": "14",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "排版typography",
+            "lvl3": "包括全局设置、标题、正文列表局显示、排版、以及链接样式，同时提供了一个 通用文本样式示例。",
+            "lvl0": "全局设置标题定义标题备注显式标题Lead中心内容文本内联元素文本实用程序abbr缩略语blockquote 来源引用与备注底部备注来源对齐处理列表列表样式初始化分行或单行多列并排dl表格式水平描述响应式排版",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/typography.html",
+        "content": "",
+        "anchor": "typography",
+        "objectID": "15",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "代码code",
+            "lvl3": "行内嵌入的内联代码和多行代码段",
+            "lvl0": "用<code>包裹内联代码片断，勿忘转义HTML尖括号。",
+            "lvl1": "内嵌代码代码块var变量用户输入（键盘动作提示）示例标注",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/code.html",
+        "content": "",
+        "anchor": "overview-and-limitations",
+        "objectID": "16",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "图片images",
+            "lvl3": "图片处理的示例和文档，由于我们为图片添加了轻量级的无干扰样式和响应式行为，设计中引用图片可以更加方便且不会轻易撑破其它元素。",
+            "lvl0": "响应式图片IE 10问题以及SVG图形的特殊处理缩略图处理图像对齐处理Html 5 标准之Picture元素",
+            "lvl1": "IE10问题以及SVG图形的特殊处理",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/images.html",
+        "content": "",
+        "anchor": "images",
+        "objectID": "17",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "表格tables",
+            "lvl3": "格样式及响应式",
+            "lvl0": "第三方部件例如日历和日期选择器中广泛使用表格，我们设计了视情况需要加入的表格类。只需要向某个<table>添加一个基类.table，然后通过自定义样式或系统提供的class来起作用。",
+            "lvl1": "示例Head表头处理条纹状表格表边框处理行悬停效果紧缩效果语义状态化向使用辅助技术的用户传达用意Captions表格辅助标题响应式表格垂直剪裁/缩减总是响应多屏幕断点设定",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/tables.html",
+        "content": "",
+        "anchor": "tables",
+        "objectID": "18",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "图文框figures",
+            "lvl3": "内容区包括了一个图片和一个可选的标题，可使用.figure样式定义",
+            "lvl0": ".figure以及.figure-caption类，为HTML5的<figure>以及<figcaption>元素提供了一个基准样式处理。默念认的图片系统不会定义明确的大小，因此请务必将该.img-fluid类添加到您的<img>标签中才能实现与响应式的完美结合。",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/content/figures.html",
+        "content": "",
+        "anchor": "figures",
+        "objectID": "19",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "组件-警告提示框alerts",
+            "lvl3": "一组颜色控件（共八个颜色样式），可用于任何长度的文本，以及可选的关闭按钮，系统提供8个可用的正确的样式（如，.alert-success），如你还可以使用jQuery插件方法来解除内联元素",
+            "lvl0": "警告框组件通过提供一些灵活的预定义消息，为常见的用户动作提供常见的上下反馈消息和提示。",
+            "lvl1": "网页中传达辅助技术及其背后的意义链接颜色额外附加内容关闭警告（小贴士效果）JavaScript行为触发方法事件",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/alerts.html",
+        "content": "",
+        "anchor": "alerts",
+        "objectID": "20",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "徽章Badge-徽章样式的使用、数字提示扩展样式以及小规格徽章的示例和使用文档。",
+            "lvl3": "情景变化椭圆形胶囊标签链接它",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/badge.html",
+        "content": "",
+        "anchor": "badge",
+        "objectID": "21",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "面包屑导航breadcrumb-自动添加分隔符、并呈现导航层次和网页结构结构，从而指示当前页面的位置为访客创造优秀用户体验",
+            "lvl3": "分隔符号是通过::before 和 content两个方法定义添加的",
+            "lvl0": "针对面包屑这样具备导航功能的模块，建议添加一个有意义的标签即aria-label= breadcrumb 來描述<nav>元素，以及使用 aria-current= page 到这组导航的最后一个项目，以标明当前页面名称路径",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/breadcrumb.html",
+        "content": "",
+        "anchor": "breadcrumb",
+        "objectID": "22",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "按钮buttons-自定义按钮样式，并广泛用于表单、对话框等场景中的操作，并支持多种大小、状态等一系列变量定义",
+            "lvl3": "示例按钮标签轮廓按钮尺寸规格与大小定义启用状态禁用状态链接功能警告按钮插件切换状态复选框和单选框方法",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/buttons.html",
+        "content": "",
+        "anchor": "buttons",
+        "objectID": "23",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "按钮组button-group-使用按钮组合，可以把一系列按钮编组在一行里，并通过可选的JavaScript插件(方法)赋予按钮单选、复选等强化行为",
+            "lvl3": "将一系列的 .btn 包裹在.btn-group内",
+            "lvl0": "使用正确的标签并引用合法的 role按钮工具栏大小规格和尺寸缩放嵌套垂直排列",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/button-group.html",
+        "content": "",
+        "anchor": "button-group",
+        "objectID": "24",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "card卡片组件-灵活的、可扩展的内容窗口，同时可以做出多种展示效果变体",
+            "lvl3": "使用按钮组合，可以把一系列按钮编组在一行里，并通过可选的JavaScript插件(方法)赋予按钮单选、复选等强化行为。",
+            "lvl0": "内容类型主体标题、文字和链接图片列表组混合样式页眉页脚缩放使用栅格系统使用通用全局属性自定义CSS文本对齐导航图片卡片样式卡片排版",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/card.html",
+        "content": "",
+        "anchor": "card",
+        "objectID": "25",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "轮播效果Carousel-可以使用文本、图象水平不间断滚动，如同旋转木马一般",
+            "lvl3": "轮播效果是一个幻灯片效果，使用CSS 3D变形转换和一些JAvaScript构建一内容循环播放，它适用于一系列图像、文本或自定义标记，还包括对上一个/下一个图的浏览控制和指令支持",
+            "lvl0": "轮播不带幻灯片尺寸标准化处理，因此你可能需要使用其它通用样式可自定义样式来调整其大小使之适当匹配。虽然轮播组件支持上一个/下一个控制和指令，但它们不是必备元素，可根据你的需要添加或自定义展现不同的效果幻灯片",
+            "lvl1": "工作原理经典幻灯片效果带控制器的效果包含状态指示器包含字幕的轮播用法通过数据属性 通过 JavaScript选项方法.carousel dispose-销毁事件",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/carousel.html",
+        "content": "",
+        "anchor": "carousel",
+        "objectID": "26",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "折叠面板collapse-允许你在网页中用一点点JavaScript以及CSS类切换内容，控制内容的可见性。它是一个灵活的插件，使用少量的类-来自必需的过渡插件以方便切换行为",
+            "lvl3": "多目标控制手风琴折叠范例无障碍浏览提示(易用性)用法利用data数据属性利用选项方法",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/collapse.html",
+        "content": "",
+        "anchor": "collapse",
+        "objectID": "27",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "下拉菜单Dropdowns-用于显示切换你要展示的链接列表和更多内容的，或触发其它内容显示覆盖",
+            "lvl3": "弹出菜单是可触发的、上下文叠加显示链接列表和别的内容。它们可以与内置的弹出菜单JavaScript插件交互。通过点击触发，而不是通过鼠标悬停悬浮，这是一种设计思维",
+            "lvl0": "单一按钮的下拉菜单分裂式按钮下拉菜单尺寸大小定义变形-向上展开菜单项菜单对齐菜单标题菜单分隔与分割线菜单表单禁用菜单项用例通过事件属性通过JavaScript选项方法事件",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/dropdowns.html",
+        "content": "",
+        "anchor": "dropdowns",
+        "objectID": "28",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "表单forms-控件样式、布局选项，以及用来创建广泛多样化的的表单的自定义组件",
+            "lvl3": "Bootstrap的表单控件使用了 CSS样式重置，使用这些Class类来自定义显示，以便跨越浏览器和设备获得一致的呈现",
+            "lvl0": "确保在输入框上使用正确的 type 属性如email 用于电子邮件地址或 number 用于数字录入-从而利用较新的录入控制，包括诸如电子邮件验证、号码选择等",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/forms.html",
+        "content": "",
+        "anchor": "forms",
+        "objectID": "29",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "输入框及输入框群组input-group-在文本框的两侧定义文本、按钮或按钮组，轻松扩展表单控件",
+            "lvl3": "规格尺寸定义勾选或单选框组合多类型控件组合按钮组合带下拉列表的按钮组合分裂式按钮与input组合无障碍浏览提示易用性",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/input-group.html",
+        "content": "",
+        "anchor": "input-group",
+        "objectID": "30",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Hero广告大块屏幕jumbotron-实现构建超大的Hreo界面，醒目的在网站上展示关键的营销信息",
+            "lvl3": "想要让广告大屏幕占满当前显示浏览器全屏、不带有圆角，只要添加.jumbotron-fluid CSS修饰符，并在里面添加一个.container 或 .container-fluid 内容空间即可。",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/jumbotron.html",
+        "content": "",
+        "anchor": "jumbotron",
+        "objectID": "31",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "列表组List-group-显示简单的元素列表，还可以通过定义显示复杂的内容",
+            "lvl3": "最基本的列表组就是一个无序列表、带有几个列表项以及适当的样式定义类。在此基础上可以使用下列选项，或根据你自己的需要调整CSS",
+            "lvl0": "Active列表(启用)状态指示Disabled列表(禁用)状态指示链接和按钮上下文语境颜色呈现样式传达辅助技术的意义/易用性指南-引入badge微章自定义内容JavaScript 行为使用数据属性通过 JavaScriptFade淡入淡出效果方法Events事件",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/list-group.html",
+        "content": "",
+        "anchor": "list-group",
+        "objectID": "32",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "弹出模态框Modal-添加醒目的提示和交互，用于通知用户、访客交互、消息警示或自定义的内容交互如考试问答场景-译者注",
+            "lvl3": "弹出模态框是用HTML、CSS和Javascript构建的，它们位于文档中其它表现元素之上，并从body中删除滚动事件，以便模态框自身的内容能得到滚动",
+            "lvl0": "静态例子-动态窗口组件完整示例滚动长内容Tooltips工具提示和弹出提示框使用栅格同框不同文-基于触发按钮的多样化模态框移除动画效果动态高度无障碍易用性处理嵌入 YouTube 视频尺寸大小选项用法使用数据属性使用 JavaScript选项方法事件",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/modal.html",
+        "content": "",
+        "anchor": "modal",
+        "objectID": "33",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "nav导航",
+            "lvl3": "基础的 .nav组件不包含任何的 .active 状态，以下范例包括该类别，主要是为了说明这个class不会触发任何特殊的样式",
+            "lvl0": "基本导航样式可用样式水平对齐垂直排列Tabs标签胶囊式标签页填充和对齐使用Flex弹性布局无障碍易用性处理使用下拉菜单带下拉列表的标签页带下拉列表的胶囊式标签页JavaScript 行为使用数据属性通过 JavaScriptFade 淡入淡出方法.tab dispose事件",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/navs.html",
+        "content": "",
+        "anchor": "navs",
+        "objectID": "34",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "导航栏navbar-将商标、导航以及别的元素简单放置到一个简洁导航页头的容器代码组合，它很容易扩展，而且在折叠板插件的帮助下，它可以轻松与其它内容整合",
+            "lvl3": "navbar导航栏内置支持少量子组件",
+            "lvl0": "支持的内容品牌导航Form表单Text文本处理Color颜色选择器配色方案Container主内容-容器定位响应式行为处理Toggler 切换触发器扩展导航区内容",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/navbar.html",
+        "content": "",
+        "anchor": "navbar",
+        "objectID": "35",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "分页Pagination-使用大规格block块的A链接进行分页样式呈现，使链接难以忽略、易于扩展，且提供更大的点击区域使用户易于上手。分页是使用list列表元素构建的，因此屏幕阅读器可以读出链接的数量，使用nav元素将其识别为屏幕阅读器和其它辅助技术的导航组件并提供辅助支持",
+            "lvl3": "使用图标或符号代替文本的一些分页链接",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/pagination.html",
+        "content": "",
+        "anchor": "pagination",
+        "objectID": "36",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "POP提示Popover-如同iOS的渐变模态提示-添加到网站上的任何元素上",
+            "lvl3": "popover提示框组件依赖 Popper.js",
+            "lvl0": "示例：在任意位置启用弹出窗口-使用 container 容器选项静态提示框现场演示四个方向在下次点击时收回用法选项方法事件",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/popovers.html",
+        "content": "",
+        "anchor": "popovers",
+        "objectID": "37",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "进度条Progress",
+            "lvl3": "支持平行条状堆叠、动画背景和文本标签",
+            "lvl0": "Progress进度条组件由两个HTML元素、一些CSS宽度设置以及一些属性构建。我们不使用 HTML5 progress 元素，确保用户可以方便的平行堆叠进度条、加上动态效果，并在共上放置文本标签",
+            "lvl1": "标签高度背景多进度条-嵌套-条纹进度指示动画条纹进度指示",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/progress.html",
+        "content": "",
+        "anchor": "progress",
+        "objectID": "38",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "滚动监听Scrollspy-根据滚动的位置，自动更新导航条的目标，以指示当前窗口中处于活动的状态/滚动在导航条下面的区域，查看active类的改变。弹出菜单的子项也同样会被高亮",
+            "lvl3": "在navbar导航中的示例嵌套的导航示例列表组示例用法通过数据属性通过 JavaScript方法.scrollspy dispose选项事件",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/scrollspy.html",
+        "content": "",
+        "anchor": "scrollspy",
+        "objectID": "39",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "提示冒泡tooltip-用于本地标题存储的动画和数据属性",
+            "lvl3": "在任何地方启用tooltip提示冒泡插件实际范例静态演示互动演示用法标记选项方法活动",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/components/tooltips.html",
+        "content": "",
+        "anchor": "tooltips",
+        "objectID": "40",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "边框borders-设置元素的边框和边框半径，适用于图像、按钮",
+            "lvl3": "基本边框边框颜色圆角边框",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/borders.html",
+        "content": "",
+        "anchor": "borders",
+        "objectID": "41",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Clearfix清动浮动-清除容器内浮动的内容/使元素换行呈现",
+            "lvl3": "float类样式是通过添加 .clearfix 到父元素上来达达到清除目标，也可以作为Sass mixin使用",
+            "lvl0": "使用cleafix，没有.cleafix清除浮动，外层包裹的DIV不会被覆盖从而导致版位错乱",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/clearfix.html",
+        "content": "",
+        "anchor": "clearfix",
+        "objectID": "42",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "close-icon关闭图标-关闭 modals模态框提示或alert提示组件的内容",
+            "lvl3": "可使用 aria-label标签，为屏幕阅读器用户添加文字定义",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/close-icon.html",
+        "content": "",
+        "anchor": "close-icon",
+        "objectID": "43",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "colors颜色",
+            "lvl3": "背景颜色背景渐变特殊性处理将意义传递给辅助技术",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/colors.html",
+        "content": "",
+        "anchor": "colors",
+        "objectID": "44",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Display显示属性",
+            "lvl3": "display 属性 有很多值，我们提供的通用样式Class定义中支持很多值-不能做到支持所有值",
+            "lvl0": "可以快速、有效地切换组件的显示值和更多，包括对一些更常见的值的支持，以及一些用于在打印时控制显示",
+            "lvl1": "Display运用在打印",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/display.html",
+        "content": "",
+        "anchor": "display",
+        "objectID": "45",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "embed嵌入",
+            "lvl3": "创建响应式的视频、图像、幻灯片，并能在在任何设备上友好的扩展显示。",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/embed.html",
+        "content": "",
+        "anchor": "embed",
+        "objectID": "46",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Flex弹性布局-可以实现通过一整套响应灵活的实用程序，快速管理栅格的列、导航、组件等的布局、对齐和大小。通过进一度的定义CSS，还可以实现更复杂的展示样式",
+            "lvl3": "启用弹性行为方向内容对齐与对准对齐项目自对齐自浮动 Auto margins与align-items结合实现垂直布局Wrap包裹Order排序对齐内容",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/flex.html",
+        "content": "",
+        "anchor": "flex",
+        "objectID": "47",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "Float浮动属性",
+            "lvl3": "这些通用样式定义可定义元素浮动到左侧或右侧，或者 使用 CSS float 属性实现基于当前浏览器窗口禁用浮动。可引入!important 来避免特殊harck，这些属性都使用Bootstrap全局栅格相当的设备断点 屏幕规格定义",
+            "lvl0": "Class样式Mixin引导响应式可选参数",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/float.html",
+        "content": "",
+        "anchor": "float",
+        "objectID": "48",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "图像替image-replacement",
+            "lvl3": "使用 .text-hide class样或sass mixin来隐藏一个元素的文字内容并替换成背景图片",
+            "lvl0": "使用.text-hide class样式可以保持标签的亲和性及SEO优化需求，引入后，需要使用 background-image 属性来提供视觉展示，而不是文字内容文字内容随即隐藏",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/image-replacement.html",
+        "content": "",
+        "anchor": "image-replacement",
+        "objectID": "49",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "position固顶固底定位",
+            "lvl3": "使用.position-样式，可以实现快速定位-虽然它们不包含响应式",
+            "lvl0": "固定在top顶部固定在bottom底部贴齐于top顶部",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/position.html",
+        "content": "",
+        "anchor": "position",
+        "objectID": "50",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "screenreaders读屏器",
+            "lvl3": "隐藏屏幕阅读器不支持的设备元素",
+            "lvl0": "通过 .sr-only可定义 屏幕阅读器支持的元素.sr-only 与 .sr-only-focusable结合，可以防止被键盘激活后再次显示此地素如通过键盘，也可以用作sass mixins",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/screenreaders.html",
+        "content": "",
+        "anchor": "screenreaders",
+        "objectID": "51",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "规格与尺寸Sizing",
+            "lvl3": "使用系统宽度和高度样式",
+            "lvl0": "Sass map 中产生宽度和高度通用属性，默认值包括 25%、50%、75%、 100% ，你可根据整这些值，从而生产出不同的规格属性",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/sizing.html",
+        "content": "",
+        "anchor": "sizing",
+        "objectID": "52",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "spacing间隔规范Margin与Padding间距处理",
+            "lvl3": "系统提供了一组缩写CSS，并赋予 margin 或 padding 值，包括对单个属性、所有 属性以及垂直、水平等属性的支持，距离单位是在采用 0.25rem 到 3rem，Class来源于Sass map定义",
+            "lvl0": "缩写CSS符约定#Spacing 通用样式适用于所有屏幕尺寸，从 xs 到 xl各种规格尺寸。因为这些类是从min-width: 0及以上开始引用的，所以不受媒体查询的约束，然而，其余的屏幕断点（设备解析）包含屏幕尺寸缩写",
+            "lvl1": "水平居中#",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/spacing.html",
+        "content": "",
+        "anchor": "spacing",
+        "objectID": "53",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "文本处理text-于控制文本的对齐、组合、字重等",
+            "lvl3": "使用文本对齐class样式类轻松地将文本重新对齐到组件。",
+            "lvl0": "左对齐、右对齐、居中对齐，可以使用与栅格系统相同的宽度响应式类",
+            "lvl1": "文本包裹和溢出（换行）处理字母大小写转换字体粗细和斜体效果",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/text.html",
+        "content": "",
+        "anchor": "text",
+        "objectID": "54",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "垂直对齐vertical-align-内联、内嵌块、内联表和表格单元格元素的垂直对齐方式",
+            "lvl3": "使用 vertical-alignment 通用样式改变元素的对齐，注意：垂直对齐仅影响 内联inline、 内联块inline-block、 内联表inline-table、 表格单元格table cell 元素",
+            "lvl0": "可选属性有 .align-baseline、 .align-top、 .align-middle、.align-bottom、 .align-text-bottom、 .align-text-top ",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/vertical-align.html",
+        "content": "",
+        "anchor": "vertical-align",
+        "objectID": "55",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "显示或隐藏能见度visibility处理",
+            "lvl3": "使用通用样式的 visibility 元属，这不会改变元素的 display 值，并且有助于大部分使用者隐藏内容，但仍然保留在屏幕阅读器中",
+            "lvl0": "根据需要选用 .visible 或 .invisible 两个Class样式。",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/utilities/visibility.html",
+        "content": "",
+        "anchor": "visibility",
+        "objectID": "56",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "外部图标延伸阅读",
+            "lvl3": "使用了这些图标库：•Iconic•Octicons•Entypo",
+            "lvl0": "•Bytesize•Google Material icons•Ionicons•Feather•Dripicons•Ikons•Glyph",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/extend/icons.html",
+        "content": "",
+        "anchor": "icons",
+        "objectID": "57",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "迁移到BootStrap v4",
+            "lvl3": "",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/migration/",
+        "content": "",
+        "anchor": "migration",
+        "objectID": "58",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "关于-成长历史",
+            "lvl3": "Bootstrap最初由Twitter的设计师和开发人员创建，已经成为世界上最受欢迎的前端框架和开源项目之一",
+            "lvl0": "Bootstrap是由mdo 和 fat于2010年年中在Twitter上创建的，作为一个开源框架之前，Bootstrap被称为Twitter Blueprint（Twitter蓝图），经过几个月发展，Twitter举行了 首个黑客周",
+            "lvl1": "从v2开始，我们将整个框架的响应式功能添加为可选样式表。在v3基础上，我们再次重写了各种类和组件，以便默认的情况下使用移动响应",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/about/history.html",
+        "content": "",
+        "anchor": "history",
+        "objectID": "59",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "team项目团队-创始团队和核心贡献者介绍",
+            "lvl3": "社区支持",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "http",
+        "content": "",
+        "anchor": "https://code.z01.com/v4/about/team.html",
+        "objectID": "60",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "品牌指引-标识LOGO",
+            "lvl3": "",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/about/brand.html",
+        "content": "",
+        "anchor": "brand",
+        "objectID": "61",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "许可常见问题license",
+            "lvl3": "Bootstrap根据MIT许可证发布，版权为copyright 2017 Twitter。拆分整个授权证书理念，可以用以下条件进行描述",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/about/license.html",
+        "content": "",
+        "anchor": "license",
+        "objectID": "62",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "translations翻译",
+            "lvl3": "社区成员将Bootstrap的文档翻译成各种语言。没有官方支持，他们可能不是最新",
+            "lvl0": "",
+            "lvl1": "",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "https://code.z01.com/v4/about/translations.html",
+        "content": "",
+        "anchor": "translations",
+        "objectID": "63",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    },
+{
+        "hierarchy": {
+            "lvl2": "zoomla!逐浪CMS",
+            "lvl3": "领先的CMS与移动互联网平台软件研发厂商、北京-上海-南昌三大研发中心、门户站群商城系统同步支持MSSQL与Oracle优质CMS解决方案服务商",
+            "lvl0": "维护翻译",
+            "lvl1": "中国镜像",
+            "lvl6": "",
+            "lvl4": "",
+            "lvl5": ""
+        },
+        "url": "http://www.z01.com",
+        "content": "",
+        "anchor": "zoomlacms",
+        "objectID": "64",
+        "_snippetResult": {
+            "content": {
+                "value": "",
+                "matchLevel": "full"
+            }
+        }
+    }
+]

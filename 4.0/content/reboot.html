@@ -1,0 +1,577 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>初始化与CSS重置 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="初始化与CSS重置 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="初始化与CSS重置 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../docs/"> 快速入门 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../docs/">关于</a></li>
+    <li><a href="../docs/download.html">下载</a></li>
+    <li><a href="../docs/contents.html">目录结构</a></li>
+    <li><a href="../docs/browsers-devices.html">浏览器与设备调优</a></li>
+    <li><a href="../docs/javaScript.html">JavaScript脚本</a></li>
+    <li><a href="../docs/theming.html">主题化</a></li>
+    <li><a href="../docs/build-tools.html">编译工具</a></li>
+    <li><a href="../docs/webpack.html"> Webpack模块化</a></li>
+    <li><a href="../docs/accessibility.html">无障碍浏览</a></li>
+    </ul>
+  </div>
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html"> 布局 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../layout/overview.html">概述</a></li>
+    <li><a href="../layout/grid.html">栅格</a></li>
+    <li><a href="../layout/media-object.html">媒体对象</a></li>
+    <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+    </ul>
+  </div>
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+  <ul class="nav bd-sidenav">
+    <li class="active bd-sidenav-active"><a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+    <li><a href="../content/typography.html"> 排版 </a> </li>
+    <li><a href="../content/code.html"> 代码 </a> </li>
+    <li><a href="../content/images.html"> 图片 </a> </li>
+    <li><a href="../content/tables.html"> 表格 </a> </li>
+    <li><a href="../content/figures.html"> 图文框 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 提示 </a> </li>
+    <li><a href="../components/badge.html"> 徽章 </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航 </a> </li>
+    <li><a href="../components/buttons.html"> 按钮 </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组 </a> </li>
+    <li><a href="../components/card.html"> 卡片 </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果 </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板 </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单 </a> </li>
+    <li><a href="../components/forms.html"> 表单 </a> </li>
+    <li><a href="../components/input-group.html"> 输入框 </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏 </a> </li>
+    <li><a href="../components/list-group.html"> 列表组 </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框 </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏 </a> </li>
+    <li><a href="../components/pagination.html"> 分页 </a> </li>
+    <li><a href="../components/popovers.html"> POP提示 </a> </li>
+    <li><a href="../components/progress.html"> 进度条 </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听 </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../utilities/borders.html"> 边框(border) </a> </li>
+    <li><a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+    <li><a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+    <li><a href="../utilities/colors.html"> 颜色(color) </a> </li>
+    <li><a href="../utilities/display.html"> Display显示属性 </a> </li>
+    <li><a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+    <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+    <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
+    <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+    <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
+    <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+    <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+    <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+    <li><a href="../utilities/text.html"> 文本处理 </a> </li>
+    <li><a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+    <li><a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/icons.html"> 延伸(图标引用) </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../extend/icons.html"> 图标 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+  <ul class="nav bd-sidenav">
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../about/history.html"> History </a> </li>
+    <li><a href="../about/team.html"> Team </a> </li>
+    <li><a href="../about/brand.html"> Brand </a> </li>
+    <li><a href="../about/license.html"> License </a> </li>
+    <li><a href="../about/translations.html"> Translations </a> </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#approach">路线方针</a></li>
+    <li class="toc-entry toc-h2"><a href="#page-defaults">页面默认值</a></li>
+    <li class="toc-entry toc-h2"><a href="#native-font-stack">本地字体属性</a></li>
+    <li class="toc-entry toc-h2"><a href="#headings-and-paragraphs">标题段落</a></li>
+    <li class="toc-entry toc-h2"><a href="#lists">列表</a></li>
+    <li class="toc-entry toc-h2"><a href="#preformatted-text">pre预先格式化文本</a></li>
+    <li class="toc-entry toc-h2"><a href="#tables">表格</a></li>
+    <li class="toc-entry toc-h2"><a href="#forms">Forms表单</a></li>
+    <li class="toc-entry toc-h2"><a href="#misc-elements">其它杂项</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#address">Address地址控件</a></li>
+        <li class="toc-entry toc-h3"><a href="#blockquote">Blockquote引用块效果</a></li>
+        <li class="toc-entry toc-h3"><a href="#inline-elements">addr内联元素</a></li>
+		<li class="toc-entry toc-h3"><a href="#summary">概要</a></li>	
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#html5-hidden-attribute">HTML5 [hidden]属性</a>
+      <ul>
+        <li class="toc-entry toc-h4"><a href="#jquery-incompatibility">jQuery冲突</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#click-delay-optimization-for-touch">点击触摸的延迟优化</a></li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">初始化与CSS重置</h1>
+  <p class="bd-lead">Bootstrap致力于提供一个简洁、优雅的的基础，以此作为立足点。我们使用Reboot，把一系列元素特征的CSS修改放在一个文件里。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="approach">路线方针</h2>
+  <p> 系统重置建立新的规范化，只允许元素选择器向各个HTML元素提供了自有的风格，额外的样式只通过明确的<code class="highlighter-rouge">.class</code>类来规范。例如，我们重置了一系列<code class="highlighter-rouge">&lt;table&gt;</code>样式作为简单的基准，然后提供了<code class="highlighter-rouge">.table</code>、 <code class="highlighter-rouge">.table-bordered</code>等样式类，从而最小限定的定义、最大程序兼容、最多场景可被引用。</p>
+  <p>以下是是我们在重置CSS中选择覆盖和重定义哪些元素的指导方针和理由：</p>
+  <ul>
+    <li>重置浏览器默认值，使用<code class="highlighter-rouge">rem</code>作为尺寸规格单位，代替<code class="highlighter-rouge">em</code>用于指定可缩放的组件的间隔与缝隙。</li>
+    <li>最大化避免使用<code class="highlighter-rouge">margin-top</code>,防止使用它造成的垂直外排版（边距）混乱所造成之意想不到结果。更重要的是，一个单一方向的<code class="highlighter-rouge">margin</code>是一个简单的构思模型。</li>
+    <li>为了易于跨设备缩放，<code class="highlighter-rouge">block</code>块元素必须使用<code class="highlighter-rouge">rem</code>作为<code class="highlighter-rouge">margin</code>的单位。</li>
+    <li>保持<code class="highlighter-rouge">font</code>相关属性最小的声明，尽可能地使用<code class="highlighter-rouge">inherit</code>属性，不影响容器溢出。</li>
+  </ul>
+  <h2 id="page-defaults">页面默认值</h2>
+  <p>为提供更好的页面展示效果，Bootstrap v4更新了<span class="nt">&lt;html&gt;</span></code> and <code class="highlighter-rouge">&lt;body&gt;</code>元素的一些属性，其中包括：</p>
+  <ul>
+    <li>全局性地将每一个元素的<code class="highlighter-rouge">box-sizing</code>属性(包括<code class="highlighter-rouge">*:before</code>、<code class="highlighter-rouge">*:after</code>都设置为<code class="highlighter-rouge">border-box</code>-以确保DIV元素自身定义的宽度不会因为border或padding而超过。</li>
+    <li><code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code>根元素没有声明<code class="highlighter-rouge">font-size</code>属性，但被假定为<code class="highlighter-rouge">16px</code>大小（这是目前Chrome等浏览器默认值)，然后在此基础上采用<code class="highlighter-rouge">font-size:1rem</code>的比例应用于<code class="highlighter-rouge">&lt;body&gt;</code>上，使媒体查询能够轻松的实现缩放，最大程序保障用户偏好和易于访问。</li>
+    <li><code class="highlighter-rouge">&lt;body&gt;</code>元素被赋予一个全局性的<code class="highlighter-rouge">font-family</code>和 <code class="highlighter-rouge">line-height</code>，其下面的诸多表单元素也继承此属性，以防止字体大小错位冲突。</li>
+    <li>为了安全起见，<code class="highlighter-rouge">&lt;body&gt;</code>的<code class="highlighter-rouge">background-color</code>的默认值赋为<code class="highlighter-rouge">#fff</code>。</li>
+  </ul>
+  <h2 id="native-font-stack">本地字体属性</h2>
+ <p> Bootstrap 4删除了默认的Web字体（Helvetica Neue，Helvetica和Arial），并替换为“本地OS字体引用机制”，以便在每个设备和操作系统上实现最佳文本呈现，参阅关于<a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">本地字体引用</a>文章了解更多 。</p>
+  <figure class="highlight">
+    <pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-sans-serif</span><span class="p">:</span>
+  <span class="c1">// Safari for OS X and iOS (San Francisco)
+</span>  <span class="nt">-apple-system</span><span class="o">,</span>
+  <span class="c1">// Chrome &lt; 56 for OS X (San Francisco)
+</span>  <span class="nt">BlinkMacSystemFont</span><span class="o">,</span>
+  <span class="c1">// Windows
+</span>  <span class="s2">"Segoe UI"</span><span class="o">,</span>
+  <span class="c1">// Android
+</span>  <span class="s2">"Roboto"</span><span class="o">,</span>
+  <span class="c1">// Basic web fallback
+</span>  <span class="s2">"Helvetica Neue"</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">,</span>
+  <span class="c1">// Emoji fonts
+</span>  <span class="s2">"Apple Color Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Symbol"</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre>
+  </figure>
+  <p>这样<code class="highlighter-rouge">font-family</code>适用于<code class="highlighter-rouge">&lt;body&gt;</code>，并被全局并自动继承。切换全局<code class="highlighter-rouge">font-family</code>，只要更新<code class="highlighter-rouge">$font-family-base</code>和重新编译Bootstrap即可。</p>
+  <h2 id="headings-and-paragraphs">标题和段落</h2>
+  <p>所有标题和段落元素(如说<code class="highlighter-rouge">&lt;h1&gt;</code>以及<code class="highlighter-rouge">&lt;p&gt;</code>都被重置，系统移除它们的上外边距<code class="highlighter-rouge">margin-top</code>定义，标题添加外边距为<code class="highlighter-rouge">margin-bottom: .5rem</code>，段落元素<code class="highlighter-rouge">&lt;p&gt;</code>添加了外边距<code class="highlighter-rouge">margin-bottom:1rem</code>以形成简洁行距。</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Heading</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p></td>
+        <td><span class="h1">h1. Bootstrap heading</span></td>
+      </tr>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p></td>
+        <td><span class="h2">h2. Bootstrap heading</span></td>
+      </tr>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p></td>
+        <td><span class="h3">h3. Bootstrap heading</span></td>
+      </tr>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p></td>
+        <td><span class="h4">h4. Bootstrap heading</span></td>
+      </tr>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p></td>
+        <td><span class="h5">h5. Bootstrap heading</span></td>
+      </tr>
+      <tr>
+        <td><p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p></td>
+        <td><span class="h6">h6. Bootstrap heading</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="lists">列表</h2>
+  <p>
+移除所有的列表元素(<code class="highlighter-rouge">&lt;ul&gt;</code>、<code class="highlighter-rouge">&lt;ol&gt;</code>、 and <code class="highlighter-rouge">&lt;dl&gt;</code>）的外边距<code class="highlighter-rouge">margin-top</code>，并设置为<code class="highlighter-rouge">margin-bottom: 1rem</code>，被嵌套的子列表没<code class="highlighter-rouge">margin-bottom</code>值。</p>
+  <div class="bd-example">
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  </div>
+  <p>为了得到更简单的样式、清晰的等级以及更好的间距，描述列表code class="highlighter-rouge">&lt;dd&gt;</code>有一个更优级别的<code class="highlighter-rouge">margin</code>属性定义；其<code class="highlighter-rouge">margin-left</code>被重置为0、并添加<code class="highlighter-rouge">margin-bottom: .5rem</code>值；另一方面<code class="highlighter-rouge">&lt;dt&gt;</code>的字体是<strong>粗体</strong>。</p>
+  <div class="bd-example">
+    <dl>
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    </dl>
+  </div>
+  <h2 id="preformatted-text"><code class="highlighter-rouge">pre</code>预先格式化文本</h2>
+  <p><code class="highlighter-rouge">pre</code>标签可定义预格式化的文本。被包围在<code class="highlighter-rouge">pre</code>>标签元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。<br/>  
+  bootstrap重置了<code class="highlighter-rouge">pre</code>元素，移除了它的<code class="highlighter-rouge">margin-top</code>属性并用<code class="highlighter-rouge">rem</code>作为<code class="highlighter-rouge">margin-bottom</code>的单位。</p>
+  <div class="bd-example">
+    <pre>
+.example-element {
+  margin-bottom: 1rem;
+}
+</pre>
+  </div>
+  <h2 id="tables">表格</h2>
+  <p>微调了表格的样式，样式化了<code class="highlighter-rouge">&lt;caption&gt;</code>，且确保<code class="highlighter-rouge">text-align</code>属性一致。与跟边框、内填充有关的细节，将在<a href="tables.html"><code class="highlighter-rouge">.table</code>表格</a>一章门讲解。</p>
+  <div class="bd-example">
+    <table>
+      <caption>
+      This is an example table, and this is its caption to describe the contents.
+      </caption>
+      <thead>
+        <tr>
+          <th>Table heading</th>
+          <th>Table heading</th>
+          <th>Table heading</th>
+          <th>Table heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+        <tr>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+          <td>Table cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 id="forms">Forms表单</h2>
+  <p>Bootstrap重量置了多种表单元素，得到简化的基本样式，使之简洁易用，显著变化表现在：</p>
+  <ul>
+    <li><code class="highlighter-rouge">&lt;fieldset&gt;</code>去除了边框、内填充、外边距属性，所以它们可以轻松地用作单一的输入框或者输入框组的放入容器中使用。</li>
+    <li><code class="highlighter-rouge">&lt;legend&gt;</code>和fieldset字段集一样，也已被重新设计过，显示为不同种类的标题。</li>
+    <li><code class="highlighter-rouge">&lt;label&gt;</code>加上了 <code class="highlighter-rouge">display: inline-block</code>属性，从而可以被用户赋予 <code class="highlighter-rouge">margin</code> 属性进行布局调用。</li>
+    <li><code class="highlighter-rouge">&lt;input&gt;</code>、 <code class="highlighter-rouge">&lt;select&gt;</code>、 <code class="highlighter-rouge">&lt;textarea&gt;</code>s、 <code class="highlighter-rouge">&lt;button&gt;</code>基本本来都被规范化处理了，同时重置移除了它们的<code class="highlighter-rouge">margin</code>，并且设置了<code class="highlighter-rouge">inline-height: inherit</code>属性。</li>
+    <li><code class="highlighter-rouge">&lt;textarea&gt;</code>被修改为只能竖直方向上调整大小，因为水平方向上调整大小经常会“破坏”页面布局。</li>
+  </ul>
+  <p>可以从下面方示例控件品味细节：</p>
+  <form class="bd-example">
+    <fieldset>
+      <legend>Example legend</legend>
+      <p>
+        <label for="input">Example input</label>
+        <input type="text" id="input" placeholder="Example input" />
+      </p>
+      <p>
+        <label for="select">Example select</label>
+        <select id="select">
+          <option value="">Choose...</option>
+          <optgroup label="Option group 1">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+          </optgroup>
+          <optgroup label="Option group 2">
+          <option value="">Option 4</option>
+          <option value="">Option 5</option>
+          <option value="">Option 6</option>
+          </optgroup>
+        </select>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" value="" />
+          Check this checkbox </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
+          Option one is this and that </label>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+          Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls. </label>
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="" />
+          Option three is disabled </label>
+      </p>
+      <p>
+        <label for="textarea">Example textarea</label>
+        <textarea id="textarea" rows="3"></textarea>
+      </p>
+      <p>
+        <label for="time">Example temporal</label>
+        <input type="datetime-local" id="time" />
+      </p>
+      <p>
+        <label for="output">Example output</label>
+        <output name="result" id="output">100</output>
+      </p>
+      <p>
+        <button type="submit">Button submit</button>
+        <input type="submit" value="Input submit button" />
+        <input type="button" value="Input button" />
+      </p>
+      <p>
+        <button type="submit" disabled="">Button submit</button>
+        <input type="submit" value="Input submit button" disabled="" />
+        <input type="button" value="Input button" disabled="" />
+      </p>
+    </fieldset>
+  </form>
+  <h2 id="misc-elements">其它杂项</h2>
+  <h3 id="address">Address地址控件</h3>
+  <p>
+  
+  
+  BootStrap更新了<code class="highlighter-rouge">&lt;address&gt;</code>元素初始属性，重置了浏览器默认的<code class="highlighter-rouge">font-style</code>，由<code class="highlighter-rouge">italic</code>改为<code class="highlighter-rouge">normal</code>、line-height同样是继承来的，并添加了<code class="highlighter-rouge">margin-bottom: 1rem</code>。<code class="highlighter-rouge">&lt;address&gt;</code>是为最靠近根元素（或整个正文）提供联系信息。用<br>结束行可保持格式。</p>
+  <div class="bd-example">
+    <address>
+    <strong>Twitter, Inc.</strong><br />
+    1355 Market St, Suite 900<br />
+    San Francisco, CA 94103<br />
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+    <strong>Full Name</strong><br />
+    <a href="mailto:#">first.last@example.com</a>
+    </address>
+  </div>
+  <h3 id="blockquote">Blockquote引用块效果</h3>
+  <p><code class="highlighter-rouge">blockquote</code>引用块默认的margin是1em 40px，而BootStrap把它重置为0 0 1rem，使其与其它元素更一致，下方示例：</p>
+  <div class="bd-example">
+    <blockquote class="blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+  <h3 id="inline-elements">addr内联元素</h3>
+  <p><code class="highlighter-rouge">&lt;abbr&gt;</code> 内联元素接受基本的样式，使其在段落文本中突出。</p>
+  <div class="bd-example"> Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue. </div>
+  <h3 id="summary">概要</h3>
+  <p><code class="highlighter-rouge">cursor</code> 摘要上的默认值是 <code class="highlighter-rouge">text</code>，所以我们重置，以 <code class="highlighter-rouge">pointer</code> 通过单击它来传达该元素可以进行交互。</p>
+  <div class="bd-example">
+  <details>
+	<summary>一些细节</summary>
+	<p>更多关于细节的信息。</p>
+  </details>
+  <details open="">
+	<summary>更多细节</summary>
+	<p>这里有更详细的细节。</p>
+  </details>
+ </div>
+  <h2 id="html5-hidden-attribute">HTML5 的<code class="highlighter-rouge">[hidden]</code> 属性</h2>
+  <p>HTML5标准中增加了一个 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">全新的 <code class="highlighter-rouge">[hidden]标签</code></a>, 它的默认值被赋予为 <code class="highlighter-rouge">display: none</code>，借鉴<a href="https://purecss.io/">PureCSS</a>的思路，我们将它重定义为<code class="highlighter-rouge">[hidden] { display: none !important; }</code> ,以防止它的 <code class="highlighter-rouge">display</code> 值被意外覆盖，即使IE10不支持 <code class="highlighter-rouge">[hidden]</code> 属性，但通过引用BootStrap的引入明确解决了此问题。</p>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">hidden</span><span class="nt">&gt;</span></code></pre>
+  </figure>
+  <div class="bd-callout bd-callout-warning">
+    <h4 id="jquery-incompatibility">jQuery冲突</h4>
+    <p><code class="highlighter-rouge">[hidden]</code>与jQuery的两个方法不兼容，分别是：<code class="highlighter-rouge">$(...).hide()</code>、<code class="highlighter-rouge">$(...).show()</code>，目前还没有特别好的<code class="highlighter-rouge">[hidden]</code>其他管理<code class="highlighter-rouge">display</code>元素的技术。</p>
+  </div>
+  <p>仅仅切换元素的可见性，这意味着其<code class="highlighter-rouge">display</code>不被修改和元素还会影响文档的流程，使用<a href="/docs/4.0/utilities/visibility/"> <code class="highlighter-rouge">.invisible</code></a>类来代替。</p>
+  <h2 id="click-delay-optimization-for-touch">点击触摸的延迟优化</h2>
+  <p>传统上，触摸屏设备上的浏览器在“点击”结束（手指/手写笔从屏幕提起的那一刻）和<a href="https://developer.mozilla.org/en-US/docs/Web/Events/click"><code class="highlighter-rouge">click事件</code> </a>被触发之间延迟大约300ms 。这种延迟对于这些浏览器正确处理“双击放大”手势是必要的，而不会在第一个“点击”之后过早触发动作或链接，但它可能会使您的网站感到轻微迟钝和无响应。</p>
+  <p>大多数移动浏览器会自动优化远程使用该width=device-width属性的站点的300ms延迟，作为其响应元标记的一部分（以及禁用缩放的站点，例如user-scalable=no，尽管这种做法对于可访问性和可用性原因非常不鼓励）。这里最大的例外是Windows Phone 8.1上的IE11和iOS 9.3之前的 iOS Safari（以及任何其他基于iOS WebView的浏览器）。</p>
+  <p>在触摸式笔记本电脑/桌面设备上，IE11和Microsoft Edge目前是唯一具有“双击缩放”功能的浏览器。由于响应式元标记被所有桌面浏览器忽略，所以使用width=device-width将对这里的300ms延迟没有影响。</p>
+  <p>为了在IE11和桌面上的Microsoft Edge以及Windows Phone 8.1上的IE11中解决此问题，Bootstrap显式地在所有交互式元素（如按钮和链接）上使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action"><code class="highlighter-rouge">touch-action:manipulation</code> CSS 私有</a>属性。该属性基本上禁用了这些元素的双击功能，从而消除了300ms的延迟。</p>
+   <p>在旧的iOS版本（9.3之前）的情况下，建议的方法是使用其他脚本，如<a href="https://github.com/ftlabs/fastclick">FastClick</a>来明确解决延迟。</p>
+  <p>更多信息请参阅 <a href="https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay">触摸屏交互300秒延迟问题</a>。</p>
+</main>
+</div>
+</div>
+
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

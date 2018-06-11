@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+/*@import url("http://code.z01.com/Zfont.css");*/
+@import url("http://ico.z01.com/dist/css/zico.min.css");
+
+.home_ico{margin-top: 6rem;}
+.home_ico_con{display: inline-block;}
+.home_ico span{font-size: 1.6rem;color:#563d7c;font-weight: 100;}
+.home_ico p{padding-top: 1rem;}
+.home_zoomla{position: relative;margin-top: 5.5rem;}
+.home_zoomla_bg{position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1; min-height: 24rem; transform: skewY(10deg);background-color: #563d7c  !important;}
+.home_zoomla_title{padding-left: 10%; color: #fff;}
+.home_zoomla_title h2{padding-top: 6rem; font-weight: 100; font-size: 1.8rem;}
+.home_zoomla_title h2 a{font-style: normal; color:rgba(255,255,255,0.91); border-bottom: 1px dotted #ccc;}
+.home_zoomla_title h2 a:hover{text-decoration: none;opacity: 0.8;}
+.home_zoomla_title ol{padding-left: 1rem; color: #ccc;}
+.home_zoomla_link {text-align: center;}
+.home_zoomla_link a{display: inline-block;width: 9rem;margin-left: 10%;border-color: #fff;color: #fff;}
+.home_zoomla_link a:hover{background: rgba(255,255,255,0.00);}
+.home_case_warp{margin-top: 9rem;}
+
+
+.home_list h3{font-weight: 100; font-size: 1.28rem;}
+
+.home_list strong.title{font-size: 2rem;color:rgba(86,61,124,1.00);margin-top: .5rem;margin-left: .5rem;display: inline-block; border-bottom: 1px solid rgba(183,183,183,1.00);}
+.home_list ul{list-style:none;padding-left: 0rem;}
+.home_list li{padding-left: 1rem;padding-right: 1rem;}
+.home_list_tiem{border:1px solid rgba(224,224,224,1.00);padding-left: 1rem;padding-right: 1rem;border-radius: .3rem;transition: .6s all ease;}
+.home_list_tiem:hover{transform: translate3d(0,-3px,0);box-shadow: 0px 15px 30px rgba(0,0,0,.1);border:none;}
+.home_list_tiem span.item_title{display: block;line-height: 8rem;text-align: center;padding-bottom: .5rem;font-size: 6rem;color: rgba(86,61,124,1.00);}
+.home_list_tiem strong{display: block;min-height: 4rem; font-size: 1.1rem;color:rgba(102,102,102,1.00);}
+.home_list_tiem small{display: block;color:rgba(126,126,126,1.00);margin-top: .3rem;}
+.home_list_tiem .item_link{text-align: center;}
+.home_list_tiem .item_link a{display: inline-block;width: 80%;margin-top: 1rem;margin-bottom: 1rem;}
+.home_list_warp{margin-top: 3rem;}
+.list_item_hr{margin-top: 2rem;margin-bottom: 2rem;border-bottom: 1px solid rgba(224,224,224,1.00);}
+.bd-footer{margin-top: 3rem;}
+
+
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */    

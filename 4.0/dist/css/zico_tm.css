@@ -1,0 +1,907 @@
+/*!
+* zico-专为CJK汉语用户设计的ICO图标系统
+* 官网 http://icoe.z01.com
+* NPM  https://www.npmjs.com/package/zico
+* Git  http://github.z01.com/zico/
+* Powerd by 上海Zoomla!逐浪CMS团队 www.z01.com
+*/
+@charset "UTF-8";
+.zi_tm73ic:before, .zi_tm73:before { content: "\e870"; }
+
+.zi_tmZiti163:before, .zi_tmZt:before { content: "\e871"; }
+
+.zi_tmZoomla:before, .zi_tmZl:before { content: "\e872"; }
+
+.zi_tmZoomlacms:before, .zi_tmZlc:before { content: "\e873"; }
+
+.zi_tmZoomlasoft:before, .zi_tmZls:before { content: "\e874"; }
+
+.zi_tmPepsi:before, .zi_tmPp:before { content: "\e875"; }
+
+.zi_tmLexus:before, .zi_tmLxu:before { content: "\e876"; }
+
+.zi_tmMcdonalds:before, .zi_tmMdl:before { content: "\e877"; }
+
+.zi_tmAudi:before, .zi_tmAd:before { content: "\e878"; }
+
+.zi_tmIbm:before, .zi_tmI:before { content: "\e879"; }
+
+.zi_tmPowerchina:before, .zi_tmZgdj:before { content: "\e87a"; }
+
+.zi_tmFehorizon:before, .zi_tmYdhx:before { content: "\e87b"; }
+
+.zi_tmCocacola:before, .zi_tmKkkl:before { content: "\e87c"; }
+
+.zi_tmKfc:before, .zi_tmKdj:before { content: "\e87d"; }
+
+.zi_tmIkea:before, .zi_tmYj:before { content: "\e87e"; }
+
+.zi_tmz:before, .zi_tmZ:before { content: "\e87f"; }
+
+.zi_tmApple:before, .zi_tmPggs:before { content: "\e880"; }
+
+.zi_tmWeibo:before, .zi_tmWb:before { content: "\e881"; }
+
+.zi_tmWeixin:before, .zi_tmWx:before { content: "\e882"; }
+
+.zi_tmQq:before, .zi_tmQ:before { content: "\e883"; }
+
+.zi_tmWindows:before, .zi_tmWd:before { content: "\e884"; }
+
+.zi_tmApplepay:before, .zi_tmPgzf:before { content: "\e885"; }
+
+.zi_tmAppstore:before, .zi_tmPgsc:before { content: "\e886"; }
+
+.zi_tmAppstoreios:before, .zi_tmPgsch:before { content: "\e887"; }
+
+.zi_tmBluetoothb:before, .zi_tmLy:before { content: "\e888"; }
+
+.zi_tmBluetooth:before, .zi_tmLyh:before { content: "\e889"; }
+
+.zi_tmBtc:before, .zi_tmBt:before { content: "\e88a"; }
+
+.zi_tmCss3Alt:before, .zi_tmC3:before { content: "\e88b"; }
+
+.zi_tmEdge:before, .zi_tmEd:before { content: "\e88c"; }
+
+.zi_tmHtml5:before, .zi_tmH5:before { content: "\e88d"; }
+
+.zi_tmGoogle:before, .zi_tmG:before { content: "\e88e"; }
+
+.zi_tmTencentweibo:before, .zi_tmTxwb:before { content: "\e88f"; }
+
+.zi_tmCss3:before, .tmCs3:before { content: "\e890"; }
+
+.zi_tmFortawesomealt:before, .zi_tmAstd:before { content: "\e891"; }
+
+.zi_tmFortawesome:before, .zi_tmAdcb:before { content: "\e892"; }
+
+.zi_tmForumbee:before, .zi_tmFb:before { content: "\e893"; }
+
+.zi_tmFoursquare:before, .zi_tmFq:before { content: "\e894"; }
+
+.zi_tmFreecamp:before, .zi_tmFd:before { content: "\e895"; }
+
+.zi_tmAndroid:before, .zi_tmAz:before { content: "\e896"; }
+
+.zi_tmCvcsby:before, .zi_tmCb:before { content: "\e897"; }
+
+.zi_tmCvcceu:before, .zi_tmCeu:before { content: "\e898"; }
+
+.zi_tmCvcjp:before, .zi_tmCvc:before { content: "\e899"; }
+
+.zi_tmCvcosnc:before, .zi_tmCvco:before { content: "\e89a"; }
+
+.zi_tmCvcsnd:before, .zi_tmCvs:before { content: "\e89b"; }
+
+.zi_tmCvcdalt:before, .zi_tmCcd:before { content: "\e89c"; }
+
+.zi_tmCvspd:before, .zi_tmCd:before { content: "\e89d"; }
+
+.zi_tmCvmix:before, .zi_tmCm:before { content: "\e89e"; }
+
+.zi_tmCvcsa:before, .zi_tmCs:before { content: "\e89f"; }
+
+.zi_tmCvgplus:before, .zi_tmCp:before { content: "\e8a0"; }
+
+.zi_tmCvmpling:before, .zi_tmCpl:before { content: "\e8a1"; }
+
+.zi_tmCvnsshare:before, .zi_tmCsa:before { content: "\e8a2"; }
+
+.zi_tmDocker:before, .zi_tmRq:before { content: "\e8a3"; }
+
+.zi_tmDropbox:before, .zi_tmDb:before { content: "\e8a4"; }
+
+.zi_tmEnvira:before, .zi_tmDv:before { content: "\e8a5"; }
+
+.zi_tmEthereum:before, .zi_tmEt:before { content: "\e8a6"; }
+
+.zi_tmExpeditedssl:before, .zi_tmEdd:before { content: "\e8a7"; }
+
+.zi_tmChrome:before, .zi_tmCr:before { content: "\e8a8"; }
+
+.zi_tmLess:before, .zi_tmLe:before { content: "\e8a9"; }
+
+.zi_tmMicrosoft:before, .zi_tmWr:before { content: "\e8aa"; }
+
+.zi_tmMixcloud:before, .zi_tmMc:before { content: "\e8ab"; }
+
+.zi_tmSass:before, .zi_tmSa:before { content: "\e8ac"; }
+
+.zi_tmSkype:before, .zi_tmSk:before { content: "\e8ad"; }
+
+.zi_tmJava:before, .zi_tmJa:before { content: "\e8ae"; }
+
+.zi_tmBlackberry:before, .zi_tmLm:before { content: "\e8af"; }
+
+.zi_tmSgcc:before, .zi_tmGjdw:before { content: "\e8b0"; }
+
+.zi_tmSinopecsales:before, .zi_tmZsh:before { content: "\e8b1"; }
+
+.zi_tmCnpc:before, .zi_tmZsy:before { content: "\e8b2"; }
+
+.zi_tmIcbc:before, .zi_tmGsyh:before { content: "\e8b3"; }
+
+.zi_tmCscec:before, .zi_tmZgjzgf:before { content: "\e8b4"; }
+
+.zi_tmCcb:before, .zi_tmJsyh:before { content: "\e8b5"; }
+
+.zi_tmAbchina:before, .zi_tmNyyh:before { content: "\e8b6"; }
+
+.zi_tmPingan:before, .zi_tmPabx:before { content: "\e8b7"; }
+
+.zi_tmSaicgroup:before, .zi_tmShqcjt:before { content: "\e8b8"; }
+
+.zi_tmBoc:before, .zi_tmZgyh:before { content: "\e8b9"; }
+
+.zi_tmChinamobile:before, .zi_tmZgyd:before { content: "\e8ba"; }
+
+.zi_tmChinalife:before, .zi_tmZgrs:before { content: "\e8bb"; }
+
+.zi_tmCrecg:before, .zi_tmZgtlgc :before { content: "\e8bc"; }
+
+.zi_tmCrcc:before, .zi_tmZgtj:before { content: "\e8bd"; }
+
+.zi_tmDfl:before, .zi_tmDf:before { content: "\e8be"; }
+
+.zi_tmHuawei:before, .zi_tmHw:before { content: "\e8bf"; }
+
+.zi_tmCrc:before, .zi_tmHr:before { content: "\e8c0"; }
+
+.zi_tmCsg:before, .zi_tmNfdw:before { content: "\e8c1"; }
+
+.zi_tmChinapost:before, .zi_tmZgyz:before { content: "\e8c2"; }
+
+.zi_tmEpicc:before, .zi_tmRmbx:before { content: "\e8c3"; }
+
+.zi_tmCccc:before, .zi_tmZgjtjsjt:before { content: "\e8c4"; }
+
+.zi_tmCgcg:before, .zi_tmTpyjsjt:before { content: "\e8c5"; }
+
+.zi_tmMinmetals:before, .zi_tmZgwkjt:before { content: "\e8c6"; }
+
+.zi_tmFaw:before, .zi_tmYqjt:before { content: "\e8c7"; }
+
+.zi_tmHongqi:before, .zi_tmHqcb:before { content: "\e8c8"; }
+
+.zi_tmHongqis:before, .zi_tmHqcz:before { content: "\e8c9"; }
+
+.zi_tmTweoo:before, .zi_tmTjwcjt:before { content: "\e8ca"; }
+
+.zi_tmChinatelecom:before, .zi_tmZgdx:before { content: "\e8cb"; }
+
+.zi_tmAnbanggroup:before, .zi_tmAbbx:before { content: "\e8cc"; }
+
+.zi_tmSuning:before, .zi_tmSnyg:before { content: "\e8cd"; }
+
+.zi_tmCofco:before, .zi_tmZljt:before { content: "\e8ce"; }
+
+.zi_tmBaicmotor:before, .zi_tmBjqc:before { content: "\e8cf"; }
+
+.zi_tmSinochem:before, .zi_tmZhjt:before { content: "\e8d0"; }
+
+.zi_tmWeiqiaocy:before, .zi_tmWqjt:before { content: "\e8d1"; }
+
+.zi_tmAvic:before, .zi_tmZghkgyjt:before { content: "\e8d2"; }
+
+.zi_tmHnagroup:before, .zi_tmHhjt:before { content: "\e8d3"; }
+
+.zi_tmBankcomm:before, .zi_tmJtyh:before { content: "\e8d4"; }
+
+.zi_tmCitic:before, .zi_tmZxjt:before { content: "\e8d5"; }
+
+.zi_tmAmer:before, .zi_tmZwjt:before { content: "\e8d6"; }
+
+.zi_tmSinopharm:before, .zi_tmZgyyjt:before { content: "\e8d7"; }
+
+.zi_tmBaowugroup:before, .zi_tmBwgt:before { content: "\e8d8"; }
+
+.zi_tmLenovo:before, .zi_tmLx:before { content: "\e8d9"; }
+
+.zi_tmCmbchina:before, .zi_tmZsyh:before { content: "\e8da"; }
+
+.zi_tmCefc:before, .zi_tmZghxny:before { content: "\e8db"; }
+
+.zi_tmHbis:before, .zi_tmHgjt:before { content: "\e8dc"; }
+
+.zi_tmCib:before, .zi_tmXyyh:before { content: "\e8dd"; }
+
+.zi_tmCsic:before, .zi_tmZczg:before { content: "\e8de"; }
+
+.zi_tmGagc:before, .zi_tmGqjt:before { content: "\e8df"; }
+
+.zi_tmChinaunicom:before, .zi_tmZglt:before { content: "\e8e0"; }
+
+.zi_tmSpdb:before, .zi_tmPfyh:before { content: "\e8e1"; }
+
+.zi_tmCmbc:before, .zi_tmMsyh:before { content: "\e8e2"; }
+
+.zi_tmChinasouth:before, .zi_tmZgbqzbjt:before { content: "\e8e3"; }
+
+.zi_tmCnooc:before, .zi_tmZghysy:before { content: "\e8e4"; }
+
+.zi_tmNorincogroup:before, .zi_tmZgbqjt:before { content: "\e8e5"; }
+
+.zi_tmChalco:before, .zi_tmZgly:before { content: "\e8e6"; }
+
+.zi_tmCpic:before, .zi_tmTpybx:before { content: "\e8e7"; }
+
+.zi_tmCnbm:before, .zi_tmZgjc:before { content: "\e8e8"; }
+
+.zi_tmJd:before, .zi_tmBjjdmy:before { content: "\e8e9"; }
+
+.zi_tmHengli:before, .zi_tmHljt:before { content: "\e8ea"; }
+
+.zi_tmShenhuagroup:before, .zi_tmShjt:before { content: "\e8eb"; }
+
+.zi_tmGreenlandhk:before, .zi_tmLdjt:before { content: "\e8ec"; }
+
+.zi_tmChng:before, .zi_tmHnjt:before { content: "\e8ed"; }
+
+.zi_tmSxycpc:before, .zi_tmYcsy:before { content: "\e8ee"; }
+
+.zi_tmDsjt:before, .zi_tmDj:before { content: "\e8ef"; }
+
+.zi_tmCrrcgc:before, .zi_tmZgzc:before { content: "\e8f0"; }
+
+.zi_tmVanke:before, .zi_tmWkqy:before { content: "\e8f1"; }
+
+.zi_tmCeec:before, .zi_tmZgnj:before { content: "\e8f2"; }
+
+.zi_tmJznyjt:before, .zi_tmJzny:before { content: "\e8f3"; }
+
+.zi_tmXxcig:before, .zi_tmXxjhjt:before { content: "\e8f4"; }
+
+.zi_tmEbchina:before, .zi_tmZggdjt:before { content: "\e8f5"; }
+
+.zi_tmSinomach:before, .zi_tmGjjt:before { content: "\e8f6"; }
+
+.zi_tmSpacechina:before, .zi_tmZghtkj:before { content: "\e8f7"; }
+
+.zi_tmShccig:before, .zi_tmSxmyhg:before { content: "\e8f8"; }
+
+.zi_tmEvergrande:before, .zi_tmHdjt:before { content: "\e8f9"; }
+
+.zi_tmJxcc:before, .zi_tmJtjt:before { content: "\e8fa"; }
+
+.zi_tmPoly:before, .zi_tmBl:before { content: "\e8fb"; }
+
+.zi_tmGeely:before, .zi_tmJljt:before { content: "\e8fc"; }
+
+.zi_tmZjmi:before, .zi_tmWczdjt:before { content: "\e8fd"; }
+
+.zi_tmCasic:before, .zi_tmZghtkg:before { content: "\e8fe"; }
+
+.zi_tmHaier:before, .zi_tmHejt:before { content: "\e8ff"; }
+
+.zi_tmCec:before, .zi_tmZgdz:before { content: "\e900"; }
+
+.zi_tmShasteel:before, .zi_tmSgjt:before { content: "\e901"; }
+
+.zi_tmCosco:before, .zi_tmZgyyhy:before { content: "\e902"; }
+
+.zi_tmSpic:before, .zi_tmGdltzjt:before { content: "\e903"; }
+
+.zi_tmSnjt:before, .zi_tmSdnyjt:before { content: "\e904"; }
+
+.zi_tmJnmc:before, .zi_tmJcjt:before { content: "\e905"; }
+
+.zi_tmWanda:before, .zi_tmWdjt:before { content: "\e906"; }
+
+.zi_tmChd:before, .zi_tmHd:before { content: "\e907"; }
+
+.zi_tmGome:before, .zi_tmGmdq:before { content: "\e908"; }
+
+.zi_tmCetc:before, .zi_tmZgdzkj:before { content: "\e909"; }
+
+.zi_tmCgdc:before, .zi_tmGdjt:before { content: "\e90a"; }
+
+.zi_tmBrillianceauto:before, .zi_tmHcqc:before { content: "\e90b"; }
+
+.zi_tmDtcoalmine:before, .zi_tmDtmkjt:before { content: "\e90c"; }
+
+.zi_tmSxcc:before, .zi_tmSxjmjt:before { content: "\e90d"; }
+
+.zi_tmCnaf:before, .zi_tmZghy:before { content: "\e90e"; }
+
+.zi_tmKailuan:before, .zi_tmKljt:before { content: "\e90f"; }
+
+.zi_tmYmjt:before, .zi_tmYqmy:before { content: "\e910"; }
+
+.zi_tmChinaluan:before, .zi_tmLajt:before { content: "\e911"; }
+
+.zi_tmMidea:before, .zi_tmMdjt:before { content: "\e912"; }
+
+.zi_tmChinacdt:before, .zi_tmDtjt:before { content: "\e913"; }
+
+.zi_tmAlibabagroup:before, .zi_tmAlbb:before { content: "\e914"; }
+
+.zi_tmChinasunglow:before, .zi_tmYgjrtzjt:before { content: "\e915"; }
+
+.zi_tmCedarhd:before, .zi_tmXskg:before { content: "\e916"; }
+
+.zi_tmBrightfood:before, .zi_tmGmsp:before { content: "\e917"; }
+
+.zi_tmBgy:before, .zi_tmGp:before { content: "\e918"; }
+
+.zi_tmJamg:before, .zi_tmJcwymkjt:before { content: "\e919"; }
+
+.zi_tmHailiang:before, .zi_tmHl:before { content: "\e91a"; }
+
+.zi_tmDog:before, .zi_tmJdjoyg:before { content: "\e91b"; }
+
+.zi_tmMi:before, .zi_tmXm:before { content: "\e91c"; }
+
+.zi_tmBaidu:before, .zi_tmBd:before { content: "\e91d"; }
+
+.zi_tmMeituan:before, .zi_tmMt:before { content: "\e91e"; }
+
+.zi_tmGree:before, .zi_tmGl:before { content: "\e91f"; }
+
+.zi_tmCctv:before, .zi_tmZydst:before { content: "\e920"; }
+
+.zi_tmNewchinalife:before, .zi_tmXhrs:before { content: "\e921"; }
+
+.zi_tmShougang:before, .zi_tmSg:before { content: "\e922"; }
+
+.zi_tmScg:before, .zi_tmShjg:before { content: "\e923"; }
+
+.zi_tmSinolife:before, .zi_tmFdsmrs:before { content: "\e924"; }
+
+.zi_tmCntaiping:before, .zi_tmTpbx:before { content: "\e925"; }
+
+.zi_tmTaikang:before, .zi_tmTkrs:before { content: "\e926"; }
+
+.zi_tmAirchinagroup:before, .zi_tmZghkjt:before { content: "\e927"; }
+
+.zi_tmCsair:before, .zi_tmZgnfhk:before { content: "\e928"; }
+
+.zi_tmWanxiang:before, .zi_tmWxjt:before { content: "\e929"; }
+
+.zi_tmChinagoldgroup:before, .zi_tmZghjjt:before { content: "\e92a"; }
+
+.zi_tmHxb:before, .zi_tmHxyh:before { content: "\e92b"; }
+
+.zi_tmByd:before, .zi_tmB:before { content: "\e92c"; }
+
+.zi_tmCeair:before, .zi_tmDfhk:before { content: "\e92d"; }
+
+.zi_tmZte:before, .zi_tmZxtx:before { content: "\e92e"; }
+
+.zi_tmChamc:before, .zi_tmZghr:before { content: "\e92f"; }
+
+.zi_tmBankofbeijing:before, .zi_tmBjyh:before { content: "\e930"; }
+
+.zi_tmBailiangroup:before, .zi_tmBljt:before { content: "\e931"; }
+
+.zi_tmSinosig:before, .zi_tmYgbx:before { content: "\e932"; }
+
+.zi_tmFounder:before, .zi_tmBdfz:before { content: "\e933"; }
+
+.zi_tmChinacoal:before, .zi_tmZmny:before { content: "\e934"; }
+
+.zi_tmXcmg:before, .zi_tmXgjx:before { content: "\e935"; }
+
+.zi_tmGrandtrade:before, .zi_tmYdwc:before { content: "\e936"; }
+
+.zi_tmMacrolink:before, .zi_tmXhljt:before { content: "\e937"; }
+
+.zi_tmInspur:before, .zi_tmLcjt:before { content: "\e938"; }
+
+.zi_tmWuliangye:before, .zi_tmYbwlyjt:before { content: "\e939"; }
+
+.zi_tmBoe:before, .zi_tmJdfkj:before { content: "\e93a"; }
+
+.zi_tmNewhopegroup:before, .zi_tmXxwjt:before { content: "\e93b"; }
+
+.zi_tmCgnpc:before, .zi_tmZgh:before { content: "\e93c"; }
+
+.zi_tmJmc:before, .zi_tmJlqc:before { content: "\e93d"; }
+
+.zi_tmSanygroup:before, .zi_tmSyjt:before { content: "\e93e"; }
+
+.zi_tmKechuanggroup:before, .zi_tmKcjt:before { content: "\e93f"; }
+
+.zi_tmAuxgroup:before, .zi_tmAks:before { content: "\e940"; }
+
+.zi_tmYili:before, .zi_tmYlsy:before { content: "\e941"; }
+
+.zi_tmYoungor:before, .zi_tmYgejt:before { content: "\e942"; }
+
+.zi_tmChinaoct:before, .zi_tmHqcjt:before { content: "\e943"; }
+
+.zi_tmDelixi:before, .zi_tmDlx:before { content: "\e944"; }
+
+.zi_tmWahaha:before, .zi_tmWhh:before { content: "\e945"; }
+
+.zi_tmChinamoutai:before, .zi_tmGzmt:before { content: "\e946"; }
+
+.zi_tmForesealife:before, .zi_tmQhrs:before { content: "\e947"; }
+
+.zi_tmBelleintl:before, .zi_tmBlgj:before { content: "\e948"; }
+
+.zi_tmDigitalchina:before, .zi_tmSzsm:before { content: "\e949"; }
+
+.zi_tmChinapeople:before, .zi_tmRmdq:before { content: "\e94a"; }
+
+.zi_tmLifan:before, .zi_tmCqlf:before { content: "\e94b"; }
+
+.zi_tmTaiji:before, .zi_tmTjjt:before { content: "\e94c"; }
+
+.zi_tmTiens:before, .zi_tmTsjt:before { content: "\e94d"; }
+
+.zi_tmVisualstudio:before, .zi_tmVs:before { content: "\e94e"; }
+
+.zi_tmDotnet:before, .zi_tmNet:before { content: "\e94f"; }
+
+.zi_tmDotnekernel:before, .zi_tmNetk:before { content: "\e950"; }
+
+.zi_tmAccessibleicon:before, .zi_tmAsi:before { content: "\e951"; }
+
+.zi_tmAccusoft:before, .zi_tmAs:before { content: "\e952"; }
+
+.zi_tmAdn:before, .zi_tmA:before { content: "\e953"; }
+
+.zi_tmAdversal:before, .zi_tmAdv:before { content: "\e954"; }
+
+.zi_tmAffiliatetheme:before, .zi_tmAf:before { content: "\e955"; }
+
+.zi_tmAlgolia:before, .zi_tmAl:before { content: "\e956"; }
+
+.zi_tmAmazonpay:before, .zi_tmAmp:before { content: "\e957"; }
+
+.zi_tmAmazon:before, .zi_tmAmz:before { content: "\e958"; }
+
+.zi_tmAngellist:before, .zi_tmAll:before { content: "\e959"; }
+
+.zi_tmAngular:before, .zi_tmAg:before { content: "\e95a"; }
+
+.zi_tmAsymmetrik:before, .zi_tmAy:before { content: "\e95b"; }
+
+.zi_tmAudible:before, .zi_tmAdb:before { content: "\e95c"; }
+
+.zi_tmAws:before, .zi_tmAw:before { content: "\e95d"; }
+
+.zi_tmBandcamp:before, .zi_tmBdc:before { content: "\e95e"; }
+
+.zi_tmBehance:before, .zi_tmBhc:before { content: "\e95f"; }
+
+.zi_tmBitcoin:before, .zi_tmBti:before { content: "\e960"; }
+
+.zi_tmBity:before, .zi_tmBi:before { content: "\e961"; }
+
+.zi_tmBlacktie:before, .zi_tmBc:before { content: "\e962"; }
+
+.zi_tmBlogger:before, .zi_tmBg:before { content: "\e963"; }
+
+.zi_tmBuysellads:before, .zi_tmBs:before { content: "\e964"; }
+
+.zi_tmCcamazonpay:before, .zi_tmCa:before { content: "\e965"; }
+
+.zi_tmCcamex:before, .zi_tmCca:before { content: "\e966"; }
+
+.zi_tmCcapplepay:before, .zi_tmCcap:before { content: "\e967"; }
+
+.zi_tmCcdinersclub:before, .zi_tmCcdi:before { content: "\e968"; }
+
+.zi_tmJcb:before, .zi_tmJ:before { content: "\e969"; }
+
+.zi_tmCcmastercard:before, .zi_tmCsc:before { content: "\e96a"; }
+
+.zi_tmCcpaypal:before, .zi_tmCcp:before { content: "\e96b"; }
+
+.zi_tmCcstripe:before, .zi_tmCst:before { content: "\e96c"; }
+
+.zi_tmVisa:before, .zi_tmVi:before { content: "\e96d"; }
+
+.zi_tmCentercode:before, .zi_tmCen:before { content: "\e96e"; }
+
+.zi_tmCloudscale:before, .zi_tmClo:before { content: "\e96f"; }
+
+.zi_tmCloudsmith:before, .zi_tmClos:before { content: "\e970"; }
+
+.zi_tmCloudversify:before, .zi_tmCpe:before { content: "\e971"; }
+
+.zi_tmCodepen:before, .zi_tmCod:before { content: "\e972"; }
+
+.zi_tmConnectdevelop:before, .zi_tmCcd:before { content: "\e973"; }
+
+.zi_tmDelicious:before, .zi_tmDc:before { content: "\e974"; }
+
+.zi_tmDeskpro:before, .zi_tmDp:before { content: "\e975"; }
+
+.zi_tmDigitalocean:before, .zi_tmDt:before { content: "\e976"; }
+
+.zi_tmDiscord:before, .zi_tmDs:before { content: "\e977"; }
+
+.zi_tmDiscourse:before, .zi_tmDsc:before { content: "\e978"; }
+
+.zi_tmDochub:before, .zi_tmDcu:before { content: "\e979"; }
+
+.zi_tmDribbblesquare:before, .zi_tmDbs:before { content: "\e97a"; }
+
+.zi_tmDribbble:before, .zi_tmDbb:before { content: "\e97b"; }
+
+.zi_tmDrupal:before, .zi_tmDup:before { content: "\e97c"; }
+
+.zi_tmEarlybirds:before, .zi_tmEbs:before { content: "\e97d"; }
+
+.zi_tmEbay:before, .zi_tmEb:before { content: "\e97e"; }
+
+.zi_tmElementor:before, .zi_tmEle:before { content: "\e97f"; }
+
+.zi_tmEmber:before, .zi_tmEm:before { content: "\e980"; }
+
+.zi_tmEmpire:before, .zi_tmEmp:before { content: "\e981"; }
+
+.zi_tmEtsy:before, .zi_tmEs:before { content: "\e982"; }
+
+.zi_tmFacebookf:before, .zi_tmFb1:before { content: "\e983"; }
+
+.zi_tmFacebookmessenger:before, .zi_tmFbm:before { content: "\e984"; }
+
+.zi_tmFacebooksquare:before, .zi_tmFb2:before { content: "\e985"; }
+
+.zi_tmFacebook:before, .zi_tmFb3:before { content: "\e986"; }
+
+.zi_tmFirefox:before, .zi_tmFf:before { content: "\e987"; }
+
+.zi_tmFirstorderalt:before, .zi_tmFo:before { content: "\e988"; }
+
+.zi_tmFirstorder:before, .zi_tmFt:before { content: "\e989"; }
+
+.zi_tmFirstdraft:before, .zi_tmFs:before { content: "\e98a"; }
+
+.zi_tmFlickr:before, .zi_tmFk:before { content: "\e98b"; }
+
+.zi_tmFlipboard:before, .zi_tmFbo:before { content: "\e98c"; }
+
+.zi_tmFly:before, .zi_tmFl:before { content: "\e98d"; }
+
+.zi_tmFreebsd:before, .zi_tmFbs:before { content: "\e98e"; }
+
+.zi_tmGalacticrepublic:before, .zi_tmGcb:before { content: "\e98f"; }
+
+.zi_tmGalacticsenate:before, .zi_tmGcn:before { content: "\e990"; }
+
+.zi_tmGetpocket:before, .zi_tmGpk:before { content: "\e991"; }
+
+.zi_tmGgcircle:before, .zi_tmGcc:before { content: "\e992"; }
+
+.zi_tmGg:before { content: "\e993"; }
+
+.zi_tmGitsquare:before, .zi_tmGis:before { content: "\e994"; }
+
+.zi_tmGit:before { content: "\e995"; }
+
+.zi_tmGithubalt:before, .zi_tmGb:before { content: "\e996"; }
+
+.zi_tmGithubsquare:before, .zi_tmGbs:before { content: "\e997"; }
+
+.zi_tmGithub:before, .zi_tmGith:before { content: "\e998"; }
+
+.zi_tmGitlab:before, .zi_tmGitl:before { content: "\e999"; }
+
+.zi_tmGofore:before, .zi_tmGf:before { content: "\e99a"; }
+
+.zi_tmGoogledrive:before, .zi_tmGd:before { content: "\e99b"; }
+
+.zi_tmGoogleplay:before, .zi_tmGpl:before { content: "\e99c"; }
+
+.zi_tmGoogleplusg:before, .zi_tmGplu:before { content: "\e99d"; }
+
+.zi_tmGooglewallet:before, .zi_tmGw:before { content: "\e99e"; }
+
+.zi_tmGratipay:before, .zi_tmGt:before { content: "\e99f"; }
+
+.zi_tmGrav:before, .zi_tmGra:before { content: "\e9a0"; }
+
+.zi_tmGripfire:before, .zi_tmGpf:before { content: "\e9a1"; }
+
+.zi_tmGrunt:before, .zi_tmGru:before { content: "\e9a2"; }
+
+.zi_tmGulp:before, .zi_tmGul:before { content: "\e9a3"; }
+
+.zi_tmHireahelper:before, .zi_tmHir:before { content: "\e9a4"; }
+
+.zi_tmHotjar:before, .zi_tmHot:before { content: "\e9a5"; }
+
+.zi_tmHouzz:before, .zi_tmHou:before { content: "\e9a6"; }
+
+.zi_tmHubspot:before, .zi_tmHub:before { content: "\e9a7"; }
+
+.zi_tmImdb:before, .zi_tmImd:before { content: "\e9a8"; }
+
+.zi_tmInstagram:before, .zi_tmIns:before { content: "\e9a9"; }
+
+.zi_tmIoxhost:before, .zi_tmIox:before { content: "\e9aa"; }
+
+.zi_tmItunes:before, .zi_tmItu:before { content: "\e9ab"; }
+
+.zi_tmJediorder:before, .zi_tmJed:before { content: "\e9ac"; }
+
+.zi_tmJoget:before, .zi_tmJog:before { content: "\e9ad"; }
+
+.zi_tmJoomla:before, .zi_tmJoo:before { content: "\e9ae"; }
+
+.zi_tmJsfiddle:before, .zi_tmJsf:before { content: "\e9af"; }
+
+.zi_tmLeanpub:before, .zi_tmLea:before { content: "\e9b0"; }
+
+.zi_tmLine:before, .zi_tmL:before { content: "\e9b1"; }
+
+.zi_tmLinkedinin:before, .zi_tmLd:before { content: "\e9b2"; }
+
+.zi_tmLinode:before, .zi_tmLino:before { content: "\e9b3"; }
+
+.zi_tmLinux:before, .zi_tmLin:before { content: "\e9b4"; }
+
+.zi_tmLyft:before, .zi_tmLyf:before { content: "\e9b5"; }
+
+.zi_tmMagento:before, .zi_tmMag:before { content: "\e9b6"; }
+
+.zi_tmMandalorian:before, .zi_tmMan:before { content: "\e9b7"; }
+
+.zi_tmMastodon:before, .zi_tmMas:before { content: "\e9b8"; }
+
+.zi_tmMaxcdn:before, .zi_tmMax:before { content: "\e9b9"; }
+
+.zi_tmMedapps:before, .zi_tmMeda:before { content: "\e9ba"; }
+
+.zi_tmMedrt:before, .zi_tmMed:before { content: "\e9bb"; }
+
+.zi_tmMeetup:before, .zi_tmMee:before { content: "\e9bc"; }
+
+.zi_tmMizuni:before, .zi_tmMiz:before { content: "\e9bd"; }
+
+.zi_tmModx:before, .zi_tmMod:before { content: "\e9be"; }
+
+.zi_tmMonero:before, .zi_tmMon:before { content: "\e9bf"; }
+
+.zi_tmNapster:before, .zi_tmNap:before { content: "\e9c0"; }
+
+.zi_tmNintendoswitch:before, .zi_tmNin:before { content: "\e9c1"; }
+
+.zi_tmNodejs:before, .zi_tmNj:before { content: "\e9c2"; }
+
+.zi_tmNode:before, .zi_tmNod:before { content: "\e9c3"; }
+
+.zi_tmNpm:before, .zi_tmN:before { content: "\e9c4"; }
+
+.zi_tmNs8:before, .zi_tmNs:before { content: "\e9c5"; }
+
+.zi_tmNutritionix:before, .zi_tmNut:before { content: "\e9c6"; }
+
+.zi_tmOdnoklassniki:before, .zi_tmOdn:before { content: "\e9c7"; }
+
+.zi_tmOldrepublic:before, .zi_tmOld:before { content: "\e9c8"; }
+
+.zi_tmOpencart:before, .zi_tmOpe1:before { content: "\e9c9"; }
+
+.zi_tmOpenid:before, .zi_tmOpe2:before { content: "\e9ca"; }
+
+.zi_tmOpera:before, .zi_tmOpe3:before { content: "\e9cb"; }
+
+.zi_tmOptinmonster:before, .zi_tmOpt:before { content: "\e9cc"; }
+
+.zi_tmPage4:before, .zi_tmP4:before { content: "\e9cd"; }
+
+.zi_tmPagelines:before, .zi_tmPag:before { content: "\e9ce"; }
+
+.zi_tmPalfed:before, .zi_tmPal:before { content: "\e9cf"; }
+
+.zi_tmPaypal:before, .zi_tmPay:before { content: "\e9d0"; }
+
+.zi_tmPeriscope:before, .zi_tmPer:before { content: "\e9d1"; }
+
+.zi_tmPhabricator:before, .zi_tmPha:before { content: "\e9d2"; }
+
+.zi_tmPhoenixframework:before, .zi_tmPhof:before { content: "\e9d3"; }
+
+.zi_tmPhoenixsquadron:before, .zi_tmPho:before { content: "\e9d4"; }
+
+.zi_tmPhp:before, .zi_tmP:before { content: "\e9d5"; }
+
+.zi_tmPiedpiperalt:before, .zi_tmPiep:before { content: "\e9d6"; }
+
+.zi_tmPiedpiperhat:before, .zi_tmPieh:before { content: "\e9d7"; }
+
+.zi_tmPiedpiperpp:before, .zi_tmPier:before { content: "\e9d8"; }
+
+.zi_tmPiedpiper:before, .zi_tmPie:before { content: "\e9d9"; }
+
+.zi_tmPinterestp:before, .zi_tmPinr:before { content: "\e9da"; }
+
+.zi_tmPinterestsquare:before, .zi_tmPins:before { content: "\e9db"; }
+
+.zi_tmPinterest:before, .zi_tmPin:before { content: "\e9dc"; }
+
+.zi_tmPlaystation:before, .zi_tmPla:before { content: "\e9dd"; }
+
+.zi_tmProducthunt:before, .zi_tmPro:before { content: "\e9de"; }
+
+.zi_tmPushed:before, .zi_tmPus:before { content: "\e9df"; }
+
+.zi_tmPython:before, .zi_tmPyt:before { content: "\e9e0"; }
+
+.zi_tmQuinscape:before, .zi_tmQui:before { content: "\e9e1"; }
+
+.zi_tmQuora:before, .zi_tmQuo:before { content: "\e9e2"; }
+
+.zi_tmRproject:before, .zi_tmRpr:before { content: "\e9e3"; }
+
+.zi_tmRavelry:before, .zi_tmRav:before { content: "\e9e4"; }
+
+.zi_tmReact:before, .zi_tmRct:before { content: "\e9e5"; }
+
+.zi_tmReadme:before, .zi_tmRea:before { content: "\e9e6"; }
+
+.zi_tmRebel:before, .zi_tmReb:before { content: "\e9e7"; }
+
+.zi_tmRedriver:before, .zi_tmRedr:before { content: "\e9e8"; }
+
+.zi_tmRedditalien:before, .zi_tmRedta:before { content: "\e9e9"; }
+
+.zi_tmRedditsquare:before, .zi_tmRedsq:before { content: "\e9ea"; }
+
+.zi_tmReddit:before, .zi_tmRed:before { content: "\e9eb"; }
+
+.zi_tmRendact:before, .zi_tmRend:before { content: "\e9ec"; }
+
+.zi_tmRenren:before, .zi_tmRen:before { content: "\e9ed"; }
+
+.zi_tmRockrms:before, .zi_tmRoc:before { content: "\e9ee"; }
+
+.zi_tmSafari:before, .zi_tmSaf:before { content: "\e9ef"; }
+
+.zi_tmSchlix:before, .zi_tmSch:before { content: "\e9f0"; }
+
+.zi_tmSellcast:before, .zi_tmSelc:before { content: "\e9f1"; }
+
+.zi_tmSellsy:before, .zi_tmSel:before { content: "\e9f2"; }
+
+.zi_tmShirtsinbulk:before, .zi_tmShi:before { content: "\e9f3"; }
+
+.zi_tmSimplybuilt:before, .zi_tmSim:before { content: "\e9f4"; }
+
+.zi_tmSith:before, .zi_tmSit:before { content: "\e9f5"; }
+
+.zi_tmSkyatlas:before, .zi_tmSky:before { content: "\e9f6"; }
+
+.zi_tmSlackhash:before, .zi_tmSlak:before { content: "\e9f7"; }
+
+.zi_tmSlack:before, .zi_tmSla:before { content: "\e9f8"; }
+
+.zi_tmSlideshare:before, .zi_tmSli:before { content: "\e9f9"; }
+
+.zi_tmSnapchatghost:before, .zi_tmSnat:before { content: "\e9fa"; }
+
+.zi_tmSnapchatsquare:before, .zi_tmSnaq:before { content: "\e9fb"; }
+
+.zi_tmSnapchat:before, .zi_tmSna:before { content: "\e9fc"; }
+
+.zi_tmSoundcloud:before, .zi_tmSou:before { content: "\e9fd"; }
+
+.zi_tmSpeakap:before, .zi_tmSpe:before { content: "\e9fe"; }
+
+.zi_tmSpotify:before, .zi_tmSpo:before { content: "\e9ff"; }
+
+.zi_tmStackexchange:before, .zi_tmStac:before { content: "\ea00"; }
+
+.zi_tmStackoverflow:before, .zi_tmStak:before { content: "\ea01"; }
+
+.zi_tmStaylinked:before, .zi_tmSta:before { content: "\ea02"; }
+
+.zi_tmSteamsquare:before, .zi_tmStes:before { content: "\ea03"; }
+
+.zi_tmSteamsymbol:before, .zi_tmStey:before { content: "\ea04"; }
+
+.zi_tmSteam:before, .zi_tmSte:before { content: "\ea05"; }
+
+.zi_tmStickermule:before, .zi_tmSti:before { content: "\ea06"; }
+
+.zi_tmStrava:before, .zi_tmStv:before { content: "\ea07"; }
+
+.zi_tmStripes:before, .zi_tmStr:before { content: "\ea08"; }
+
+.zi_tmStudiovinari:before, .zi_tmStu:before { content: "\ea09"; }
+
+.zi_tmSuperpowers:before, .zi_tmSuw:before { content: "\ea0a"; }
+
+.zi_tmSupple:before, .zi_tmSup:before { content: "\ea0b"; }
+
+.zi_tmTeamspeak:before, .zi_tmTea:before { content: "\ea0c"; }
+
+.zi_tmThemeisle:before, .zi_tmThe:before { content: "\ea0d"; }
+
+.zi_tmTradefederation:before, .zi_tmTra:before { content: "\ea0e"; }
+
+.zi_tmTrello:before, .zi_tmTre:before { content: "\ea0f"; }
+
+.zi_tmTripadvisor:before, .zi_tmTri:before { content: "\ea10"; }
+
+.zi_tmTumblrsquare:before, .zi_tmTums:before { content: "\ea11"; }
+
+.zi_tmTumblr:before, .zi_tmTum:before { content: "\ea12"; }
+
+.zi_tmTwitch:before, .zi_tmTwit:before { content: "\ea13"; }
+
+.zi_tmTwittersquare:before, .zi_tmTwiq:before { content: "\ea14"; }
+
+.zi_tmTwitter:before, .zi_tmTwi:before { content: "\ea15"; }
+
+.zi_tmTypo3:before, .zi_tmTyp:before { content: "\ea16"; }
+
+.zi_tmUber:before, .zi_tmUbe:before { content: "\ea17"; }
+
+.zi_tmUniregistry:before, .zi_tmUni:before { content: "\ea18"; }
+
+.zi_tmUntappd:before, .zi_tmUnt:before { content: "\ea19"; }
+
+.zi_tmUsb:before { content: "\ea1a"; }
+
+.zi_tmUssunnah:before, .zi_tmUss:before { content: "\ea1b"; }
+
+.zi_tmViadeosquare:before, .zi_tmViaq:before { content: "\ea1c"; }
+
+.zi_tmViadeo:before, .zi_tmVia:before { content: "\ea1d"; }
+
+.zi_tmVimeosquare:before, .zi_tmVimq:before { content: "\ea1e"; }
+
+.zi_tmVimeov:before, .zi_tmVim:before { content: "\ea1f"; }
+
+.zi_tmVimeo:before, .zi_tmVimo:before { content: "\ea20"; }
+
+.zi_tmWhatsappsquare:before, .zi_tmWhaq:before { content: "\ea21"; }
+
+.zi_tmWhatsapp:before, .zi_tmWha:before { content: "\ea22"; }
+
+.zi_tmWhmcs:before, .zi_tmWhm:before { content: "\ea23"; }
+
+.zi_tmWikipediaw:before, .zi_tmWik:before { content: "\ea24"; }
+
+.zi_tmWolfpackbattalion:before, .zi_tmWol:before { content: "\ea25"; }
+
+.zi_tmWordpresssimple:before, .zi_tmWor:before { content: "\ea26"; }
+
+.zi_tmWordpress:before, .zi_tmWpr:before { content: "\ea27"; }
+
+.zi_tmWpbeginner:before, .zi_tmWpb:before { content: "\ea28"; }
+
+.zi_tmWpexplorer:before, .zi_tmWp:before { content: "\ea29"; }
+
+.zi_tmWpforms:before, .zi_tmWf:before { content: "\ea2a"; }
+
+.zi_tmXbox:before, .zi_tmXb:before { content: "\ea2b"; }
+
+.zi_tmXing:before, .zi_tmX:before { content: "\ea2c"; }
+
+.zi_tmYelp:before, .zi_tmYe:before { content: "\ea2d"; }
+
+.zi_tmYoutubesquare:before, .zi_tmYtq:before { content: "\ea2e"; }
+
+.zi_tmYoutube:before, .zi_tmYt:before { content: "\ea2f"; }
+
+.zi_tmWeihaifb:before, .zi_tmWhfb:before { content: "\ea30"; }
+
+/*# sourceMappingURL=zico_tm.css.map */

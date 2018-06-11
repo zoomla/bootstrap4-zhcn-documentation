@@ -1,0 +1,622 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>POP提示 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="POP提示 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="POP提示 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../docs/"> 快速入门 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../docs/">关于</a></li>
+    <li><a href="../docs/download.html">下载</a></li>
+    <li><a href="../docs/contents.html">目录结构</a></li>
+    <li><a href="../docs/browsers-devices.html">浏览器与设备调优</a></li>
+    <li><a href="../docs/javaScript.html">JavaScript脚本</a></li>
+    <li><a href="../docs/theming.html">主题化</a></li>
+    <li><a href="../docs/build-tools.html">编译工具</a></li>
+    <li><a href="../docs/webpack.html"> Webpack模块化</a></li>
+    <li><a href="../docs/accessibility.html">无障碍浏览</a></li>
+    </ul>
+  </div>
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html"> 布局 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../layout/overview.html">概述</a></li>
+    <li><a href="../layout/grid.html">栅格</a></li>
+    <li><a href="../layout/media-object.html">媒体对象</a></li>
+    <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+    </ul>
+  </div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+    <li><a href="../content/typography.html"> 排版 </a> </li>
+    <li><a href="../content/code.html"> 代码 </a> </li>
+    <li><a href="../content/images.html"> 图片 </a> </li>
+    <li><a href="../content/tables.html"> 表格 </a> </li>
+    <li><a href="../content/figures.html"> 图文框 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(breadcrumb) </a> </li>
+    <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
+    <li><a href="../components/card.html"> 卡片(card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(collapse) </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单(dropdown) </a> </li>
+    <li><a href="../components/forms.html"> 表单(form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(list-group) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(pagination) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../components/popovers.html"> POP提示(popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(scroll) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(tooltip) </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../utilities/borders.html"> 边框(border) </a> </li>
+    <li><a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+    <li><a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+    <li><a href="../utilities/colors.html"> 颜色(color) </a> </li>
+    <li><a href="../utilities/display.html"> Display显示属性 </a> </li>
+    <li><a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+    <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+    <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
+    <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+    <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
+    <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+    <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+    <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+    <li><a href="../utilities/text.html"> 文本处理 </a> </li>
+    <li><a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+    <li><a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+  <ul class="nav bd-sidenav">
+	<li> <a href="../extend/approach.html"> 方法论 </a> </li>
+    <li><a href="../extend/icons.html"> 图标 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+  <ul class="nav bd-sidenav">
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+  <ul class="nav bd-sidenav">
+    <li> <a href="../about/history.html"> 成长历史 </a> </li>
+    <li> <a href="../about/team.html"> 项目团队 </a> </li>
+    <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+    <li> <a href="../about/license.html"> 许可授权 </a> </li>
+    <li> <a href="../about/translations.html"> 翻译 </a> </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
+    <li class="toc-entry toc-h2"><a href="#example-enable-popovers-everywhere">示例：在任意位置启用弹出窗口</a></li>
+    <li class="toc-entry toc-h2"><a href="#example-using-the-container-option">示例：使用 container 容器选项</a></li>
+    <li class="toc-entry toc-h2"><a href="#static-popover">静态提示框</a></li>
+    <li class="toc-entry toc-h2"><a href="#live-demo">现场演示</a>
+	
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#four-directions">四个方向</a></li>
+        <li class="toc-entry toc-h3"><a href="#dismiss-on-next-click">在下次点击时收回</a>
+          <ul>
+            <li class="toc-entry toc-h4"><a href="#specific-markup-required-for-dismiss-on-next-click">下一步点击所需要的标记</a></li>
+          </ul>
+        </li>
+		<li class="toc-entry toc-h3"><a href="#disabled-elements">禁用的元素</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#usage">用法</a>
+	
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#options">选项</a>
+          <ul>
+            <li class="toc-entry toc-h4"><a href="#data-attributes-for-individual-popovers">单个popovers的数据属性</a></li>
+          </ul>
+        </li>
+        <li class="toc-entry toc-h3"><a href="#methods">方法</a>
+          <ul>
+            <li class="toc-entry toc-h4"><a href="#asynchronous-methods-and-transitions">异步传输与转换</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoveroptions">$().popover(options)</a></li>
+            <li class="toc-entry toc-h4"><a href="#popovershow">.popover('show')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoverhide">.popover('hide')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popovertoggle">.popover('toggle')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoverdispose">.popover('dispose')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoverenable">.popover('enable')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoverdisable">.popover('disable')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popovertoggleenabled">.popover('toggleEnabled')</a></li>
+            <li class="toc-entry toc-h4"><a href="#popoverupdate">.popover('update')</a></li>
+          </ul>
+        </li>
+        <li class="toc-entry toc-h3"><a href="#events">事件</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">POP提示 (Popover)</h1>
+  <p class="bd-lead">将Bootstrap插件（如同iOS的渐变模态提示）添加到网站上的任何元素上，这是演示实例和设计文档。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="overview">概览</h2>
+  <p>使用popover提示框插件时需要注意的事项：</p>
+  <ul>
+    <li>popover提示框组件依赖 <a href="https://popper.js.org/">Popper.js</a> 进行定位，在必须引入 <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js">popper.min.js</a> 在bootstrap.js脚本之前，或者使用<code class="highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="highlighter-rouge">bootstrap.bundle.js</code>（这两个脚本中已经包含了<a href="https://popper.js.org/">Popper.js</a>可以直接运行弹出提示框）。</li>
+    <li>popover提示框组件依赖于 <a href="tooltips.html">tooltips提示冒泡插件</a> 提供状态提示框。</li>
+    <li>如果你要自行编译JS，请 <a href="../docs/javascript.html#util">包括 <code class="highlighter-rouge">util.js</code></a>脚本文件。</li>
+    <li>由于性能原因，popover提示框组件是可选的，所以 <strong>你必须自己将它们初始化</strong>才能启动生效。</li>
+    <li>零长度的 <code class="highlighter-rouge">title</code> 和 <code class="highlighter-rouge">content</code> 不会显示为一个弹出提示框。</li>
+    <li>指定 <code class="highlighter-rouge">container: 'body'</code>定义，以避免在更复杂的组件（如输入框组、按钮组等）中产生呈现问题。</li>
+    <li>在隐藏元素上触发弹出提示框是无效（不起作用）的。</li>
+    <li><code class="highlighter-rouge">.disabled</code> 或 <code class="highlighter-rouge">disabled</code> 元素的弹出提示框触发点击按钮，必须在在外层父元素上。</li>
+    <li>如果从一个跨多行的链接上触发提示冒泡，提示冒泡将居中。在<code class="highlighter-rouge">&lt;a&gt;</code>上使用<code class="highlighter-rouge">white-space: nowrap;</code>可以避免这种情况。</li>
+    <li>必须先隐藏弹出提示框，然后才能从DOM中删除相应的元素（以完成弹出关闭完整行为）。</li>
+  </ul>
+  <p>都记住了？非常棒，下面让我们通过一系列的实例来了解其运作机理。</p>
+  <h2 id="example-enable-popovers-everywhere">示例：在任意位置启用弹出窗口</h2>
+  <p>One way to initialize all popovers on a page would be to select them by their <code class="highlighter-rouge">data-toggle</code> attribute:</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="popover"]'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
+<span class="p">})</span></code></pre>
+  </figure>
+  <h2 id="example-using-the-container-option">示例：使用 <code class="highlighter-rouge">container</code> 容器选项</h2>
+  <p>当你在一个父元素上有一些样式与提示框产生样式干扰，你可以指定一个自定义的<code class="highlighter-rouge">container</code>容器，这样提示框的HTML将出现在这个元素内部了。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.example-popover'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+    <span class="na">container</span><span class="p">:</span> <span class="s1">'body'</span>
+  <span class="p">})</span>
+<span class="p">})</span></code></pre>
+  </figure>
+  <h2 id="static-popover">静态提示框</h2>
+  <p>可以使用四个选项：顶部、右部、底部、左部对齐（指向）。</p>
+  <div class="bd-example bd-example-popover-static">
+    <div class="popover bs-popover-top bs-popover-top-docs">
+      <div class="arrow"></div>
+      <h3 class="popover-header">Popover top</h3>
+      <div class="popover-body">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+    <div class="popover bs-popover-right bs-popover-right-docs">
+      <div class="arrow"></div>
+      <h3 class="popover-header">Popover right</h3>
+      <div class="popover-body">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+    <div class="popover bs-popover-bottom bs-popover-bottom-docs">
+      <div class="arrow"></div>
+      <h3 class="popover-header">Popover bottom</h3>
+      <div class="popover-body">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+    <div class="popover bs-popover-left bs-popover-left-docs">
+      <div class="arrow"></div>
+      <h3 class="popover-header">Popover left</h3>
+      <div class="popover-body">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <h2 id="live-demo">现场演示</h2>
+  <div class="bd-example">
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">点击体验 popover提示框效果</button>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"And here's some amazing content. It's very engaging. Right?"</span><span class="nt">&gt;</span>点击体验 popover提示框效果<span class="nt">&lt;/button&gt;</span></code></pre>
+  </div>
+  <h3 id="four-directions">四个方向</h3>
+  <div class="bd-example popover-demo">
+    <div class="bd-example-popovers">
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Popover on top </button>
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Popover on right </button>
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Popover on bottom </button>
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> Popover on left </button>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on top
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on right
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">data-content=</span><span class="s">"Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on bottom
+
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+  Popover on left
+<span class="nt">&lt;/button&gt;</span></code></pre>
+  </figure>
+  <h3 id="dismiss-on-next-click">在下次点击时收回</h3>
+  <p>使用<code class="highlighter-rouge">focus</code>触发器，达到提示必须在用户下一次点击时才能收回（移除）提示事件。</p>
+  <div class="bd-callout bd-callout-danger">
+    <h4 id="specific-markup-required-for-dismiss-on-next-click">下一步点击所需要的标记</h4>
+    <p>为正确处理（兼容）跨浏览器和跨平台行为，你必须使用则必须使用<code class="highlighter-rouge">&lt;a&gt;</code> 标签，而 <em>不是</em>标签，你还必须包括一个<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank"><code class="highlighter-rouge">tabindex</code></a>属性。</p>
+  </div>
+  <div class="bd-example"> <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-trigger=</span><span class="s">"focus"</span> <span class="na">title=</span><span class="s">"Dismissible popover"</span> <span class="na">data-content=</span><span class="s">"And here's some amazing content. It's very engaging. Right?"</span><span class="nt">&gt;</span>Dismissible popover<span class="nt">&lt;/a&gt;</span></code></pre>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.popover-dismiss'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+  <span class="na">trigger</span><span class="p">:</span> <span class="s1">'focus'</span>
+<span class="p">})</span></code></pre>
+  </figure>
+  
+  <h3 id="disabled-elements">禁用的元素</h3>
+  <p>具有 <code class="highlighter-rouge">disabled</code> 属性的元素不是交互式的这意味着用户不能悬停或点击它们来触发弹出窗口（或工具提示）。 作为一种解决方法，您需要从包装器<code class="highlighter-rouge">&lt;div&gt;</code> or <code class="highlighter-rouge">&lt;span&gt;</code>中触发弹出窗口，并覆盖disabled元素上的指针事件。</p>
+  
+  <p>对于禁用的弹出式触发器，您也可能更喜欢 <code class="highlighter-rouge">data-trigger="hover"</code> ，以便弹出窗口显示为用户的直接视觉反馈，因为他们可能不希望单击禁用的元素。</p>
+  <div class="bd-example">
+	<span class="d-inline-block" data-toggle="popover" data-content="Disabled popover" data-original-title="" title="">
+	  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled="">Disabled button</button>
+	</span>
+	</div>
+ <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-content=</span><span class="s">"Disabled popover"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></div>
+  
+  <h2 id="usage">用法</h2>
+  <p>利用JavaScript启动提示泡:</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre>
+  </figure>
+  <h3 id="options">选项</h3>
+  <p>可通过数据属性或JavaScript传递选项参数。对于数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>上，如 <code class="highlighter-rouge">data-animation=""</code>。</p>
+  <table class="table table-bordered table-striped table-responsive">
+    <thead>
+      <tr>
+        <th style="width: 100px;">名称</th>
+        <th style="width: 100px;">Type类型</th>
+        <th style="width: 50px;">默认值</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>animation</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>将CSS淡入淡出转换应用于popover提示框。</td>
+      </tr>
+      <tr>
+        <td>container</td>
+        <td>string | element | false</td>
+        <td>false</td>
+        <td>向一个特定元素追加提示框，如<code>container: 'body'</code>。这个选项候特别有用，因为它允许你将弹出提示定位在触发元素附近的内容中--这将防止在窗口调整大小的时候，提示框飘到远离（撑出）触发元素的位置。</td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>string | element | function</td>
+        <td>''</td>
+        <td><p>如果 <code>data-content</code>属性不存在，提供默认的content值。</p>
+          <p>如果提供了一个函数，调用这个函数时，函数的<code>this</code>引用被设置为附加提示框的元素。</p></td>
+      </tr>
+      <tr>
+        <td>delay</td>
+        <td>number | object</td>
+        <td>0</td>
+        <td><p>延迟显示和隐藏弹出（ms） - 不适用于手动触发类型。</p>
+          <p>如果向这个选项提供一个数字值，显示和隐藏都会应用这个延迟。</p>
+          <p>Object对象结构是: <code>delay: { "show": 500, "hide": 100 }</code></p></td>
+      </tr>
+      <tr>
+        <td>html</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>向提示框插入HTML。如果值为false，将使用jQuery的text方法向DOM插入内容。如果你担心跨站脚本攻击的话，请使用<code>text</code>。</td>
+      </tr>
+      <tr>
+        <td>placement</td>
+        <td>string | function</td>
+        <td>'right'</td>
+        <td><p>如何定位提示框：auto | top | bottom | left | right。<br />
+           如果指定了"auto"，它会动态地调整提示框的位置。举个例子，如果placement是"auto left"，提示框将尽可能地显示在左侧，否则显示在右侧。</p>
+          <p>如果用一个函数来决定placement，会调用提示框的DOM节点作为第一个参数，然后触发元素的DOM节点是第二个参数。<code>this</code>将被设置为提示框的实例。</p></td>
+      </tr>
+      <tr>
+        <td>selector</td>
+        <td>string | false</td>
+        <td>false</td>
+        <td>如果提供了一个选择器，提示框将被委派给指定的目标。在实践中，它让动态添加的HTML内容也能附加提示框。请参阅 <a href="https://github.com/twbs/bootstrap/issues/4215">这里文档</a> 以及 <a href="https://jsbin.com/zopod/1/edit">一个翔实的示例</a>。</td>
+      </tr>
+      <tr>
+        <td>template</td>
+        <td>string</td>
+        <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+        <td><p>在创建提示框时使用基本HTML。</p>
+          <p>动态提示框的 <code>title</code> 值将被注入到 <code>.popover-header</code>中。</p>
+          <p>动态提示框的 <code>content</code> 值将被注入到 <code>.popover-body</code>中。</p>
+          <p><code>.arrow</code> 将变成提示框的箭头。</p>
+          <p>最外层的包裹元素必须拥有<code>.popover</code> class样式定义</p></td>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>string | element | function</td>
+        <td>''</td>
+        <td><p>如果 <code>title</code> 属性不存在，提供默认的title值。</p>
+          <p>如果提供了一个函数，调用这个函数时，函数的 <code>this</code>引用被设置为附加提示框的元素。</p></td>
+      </tr>
+      <tr>
+        <td>trigger</td>
+        <td>string</td>
+        <td>'click'</td>
+        <td>如何触发提示框 - click | hover | focus | manual。你可以传递多个触发器，用空格隔开它们。但是`manual`不能与别的触发器结合使用。</td>
+      </tr>
+      <tr>
+        <td>offset</td>
+        <td>number | string</td>
+        <td>0</td>
+        <td>提示框相对于目标的偏移，欲知更多请查询 <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">Tether的偏移文档</a>。</td>
+      </tr>
+      <tr>
+        <td>fallbackPlacement</td>
+        <td>string | array</td>
+        <td>'flip'</td>
+        <td>指定动态提示框在回调时使用哪个位置，有关更多信息请参阅 Popper.js 的 <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">行为属性文档</a>。</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bd-callout bd-callout-info">
+    <h4 id="data-attributes-for-individual-popovers">单个popovers的数据属性</h4>
+    <p>如上所述，可以通过使用数据属性来指定各个提示框的选项。</p>
+  </div>
+  <h3 id="methods">方法</h3>
+  <div class="bd-callout bd-callout-danger">
+    <h4 id="asynchronous-methods-and-transitions">异步传输与转换</h4>
+    <p>所有的API方法都是<strong>异步</strong>的，并开始一个转换。一旦转换开始但在结束之前，它们就返回给调用者。另外，一个转换组件的方法调用将被忽略。</p>
+    <p><a href="/docs/4.0/getting-started/javascript/">请参阅我们的JavaScript文档以获取更多信息</a>。</p>
+  </div>
+  <h4 id="popoveroptions"><code class="highlighter-rouge">$().popover(options)</code></h4>
+  <p>元集集团的弹出提示框初始化。</p>
+  <h4 id="popovershow"><code class="highlighter-rouge">.popover('show')</code></h4>
+  <p>显示一个元素的提示框，在弹出<strong>实际显示之前返回给调用者</strong>（即在<code class="highlighter-rouge">shown.bs.popover</code> 事件发生前)，这被认为是弹出提示框的<strong>手动</strong>触发，标题和内容为弹出提示框不显示。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popoverhide"><code class="highlighter-rouge">.popover('hide')</code></h4>
+  <p>隐藏元素的提示框，在弹出提示框实际被隐藏之前返回给调用者（即在 <code class="highlighter-rouge">hidden.bs.popover</code> 事件发生前），这被认为是弹出提示框的<strong>手动</strong>触发。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popovertoggle"><code class="highlighter-rouge">.popover('toggle')</code></h4>
+  <p>切换元素的提示框，在popver提示框实际显示或隐藏之前返给调用者，即在 <code class="highlighter-rouge">shown.bs.popover</code> 或 <code class="highlighter-rouge">hidden.bs.popover</code> 事件发生前，这被认为是弹出提示框的手<strong>手动</strong>触发触发。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popoverdispose"><code class="highlighter-rouge">.popover('dispose')</code></h4>
+  <p>隐藏和销毁一个元素的提示框，使用委托授权 (使用<a href="#options">the <code class="highlighter-rouge">selector</code> option</a>创建)的提示框不能在后代触发元素不被单独销毁。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'dispose'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 给一个元素的提示框显示能力，提示框在<strong>默认情况下是启用</strong>的。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'enable'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popoverdisable"><code class="highlighter-rouge">.popover('disable')</code></h4>
+  <p>删除要显示元素的提示框，只有在重新启用后，才能显示出提示框。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'disable'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popovertoggleenabled"><code class="highlighter-rouge">.popover('toggleEnabled')</code></h4>
+  <p>切换提示窗口的显示或隐藏功能。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'toggleEnabled'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h4 id="popoverupdate"><code class="highlighter-rouge">.popover('update')</code></h4>
+  <p>更新元素的提示框的位置。</p>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#element'</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="s1">'update'</span><span class="p">)</span></code></pre>
+  </figure>
+  <h3 id="events">Events事件</h3>
+  <table class="table table-bordered table-striped table-responsive">
+    <thead>
+      <tr>
+        <th style="width: 150px;">事件</th>
+        <th>描述</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>show.bs.popover</td>
+        <td>当调用 <code>show</code> 实例方法时，此事件立即触发。</td>
+      </tr>
+      <tr>
+        <td>shown.bs.popover</td>
+        <td>当提示框显示时，会触发此事件（待CSS转换过渡完成）。</td>
+      </tr>
+      <tr>
+        <td>hide.bs.popover</td>
+        <td>当调用 <code>hide</code> 实例方法时，此事件立即触发。</td>
+      </tr>
+      <tr>
+        <td>hidden.bs.popover</td>
+        <td>当提示框隐藏后，会触发此事件（待CSS转换过渡完成）。</td>
+      </tr>
+      <tr>
+        <td>inserted.bs.popover</td>
+        <td>当提示框对用户来说最终完成隐藏时（需要等待CSS转换过渡完成），会触发该事件。
+当事件弹出模板被添加到DOM时，<code>show.bs.popover</code>事件被触发。</td>
+      </tr>
+    </tbody>
+  </table>
+  <figure class="highlight">
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myPopover'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'hidden.bs.popover'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something…</span>
+<span class="p">})</span></code></pre>
+  </figure>
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

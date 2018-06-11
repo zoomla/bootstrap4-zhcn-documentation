@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<title>动动板块</title>
+<style>
+/*头部色块定义*/
+.l-blush { background: linear-gradient(45deg, #dd5e89, #f7bb97) !important; color: #fff !important }
+.l-slategray { background: linear-gradient(45deg, #708090, #7c8ea0) !important; color: #fff !important }
+
+.pricing { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; width: 100%; margin: 0 auto 3em }
+.pricing-item { position: relative; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: stretch; align-items: stretch; text-align: center; -webkit-flex: 0 1 350px; flex: 0 1 350px }
+.pricing-action { color: inherit; border: none; background: none }
+.pricing-action:focus { outline: none }
+.pricing-palden .pricing-item { cursor: default; background: #fff; box-shadow: 0 0 10px rgba(46,59,125,0.23); border-radius: 20px 20px 10px 10px; margin: 1em }
+.pricing-palden .pricing-item:hover .deco-layer--1 { -webkit-transform: translate3d(15px, 0, 0); transform: translate3d(15px, 0, 0) }
+.pricing-palden .pricing-item:hover .deco-layer--2 { -webkit-transform: translate3d(-15px, 0, 0); transform: translate3d(-15px, 0, 0) }
+.pricing-palden .pricing-item .pricing-deco { border-radius: 10px 10px 0 0; padding: 50px 0 160px; position: relative }
+.pricing-palden .pricing-item .pricing-deco .pricing-deco-img { position: absolute; bottom: 0; left: 0; width: 100%; height: 160px }
+.pricing-palden .pricing-item .pricing-deco .deco-layer { -webkit-transition: -webkit-transform 0.5s; transition: transform 0.5s }
+.pricing-palden .pricing-item .pricing-deco .pricing-title { font-size: 18px; margin: 0; text-transform: uppercase; letter-spacing: 2px; color: #fff }
+.pricing-palden .pricing-item .pricing-deco .pricing-price { font-size: 5em; font-weight: bold; padding: 0; color: #fff; margin: 0 0 0.25em 0; line-height: 0.75 }
+.pricing-palden .pricing-item .pricing-deco .pricing-price .pricing-currency { font-size: 15px; vertical-align: top }
+.pricing-palden .pricing-item .pricing-deco .pricing-price .pricing-period { font-size: 15px; padding: 0 0 0 0.5em; font-style: italic }
+.pricing-palden .pricing-item .feature-list { margin: 0; padding: 0.25em 0 2.5em; list-style: none; text-align: center }
+.pricing-palden .pricing-item .feature-list li { padding: 10px 0 }
+.pricing-palden .pricing-action { font-weight: bold; margin: auto 3em 2em 3em; padding: 1em 2em; color: #fff; border-radius: 30px; -webkit-transition: background-color 0.3s; transition: background-color 0.3s }
+
+.pricing-palden .pricing-item { margin: 1em -0.5em }
+.pricing-palden .pricing__item--featured { margin: 0; z-index: 10; box-shadow: 0 0 20px rgba(46,59,125,0.23) }
+
+/*小屏幕宽100%*/
+@media screen and (max-width: 767px) {
+.pricing-palden .pricing-item { flex: 0 1 100%; margin: 15px 0 }
+}
+
+/*重叠位置css*/
+</style>
+</head>
+<body>
+<div class="pricing pricing-palden">
+<div class="pricing-item">
+<div class="pricing-deco l-slategray">
+<svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+<path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--3" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z" fill="#FFFFFF" opacity="0.7"></path>
+<path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+</svg>
+<div class="pricing-price"><span class="pricing-currency">$</span>19 <span class="pricing-period">/ mo</span> </div>
+<h3 class="pricing-title">BASIC</h3>
+</div>
+<ul class="feature-list">
+<li>5GB Disk Space</li>
+<li>10 Domain Names</li>
+<li>5 E-Mail Address</li>
+<li>Fully Support</li>
+</ul>
+<button class="pricing-action l-amber">Choose plan</button>
+</div>
+<div class="pricing-item pricing__item--featured">
+<div class="pricing-deco l-blush">
+<svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+<path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--3" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z" fill="#FFFFFF" opacity="0.7"></path>
+<path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+</svg>
+<div class="pricing-price"><span class="pricing-currency">$</span>33 <span class="pricing-period">/ mo</span> </div>
+<h3 class="pricing-title">PROFESSIONAL</h3>
+</div>
+<ul class="feature-list">
+<li>10GB Disk Space</li>
+<li>20 Domain Names</li>
+<li>10 E-Mail Address</li>
+<li>Fully Support</li>
+</ul>
+<button class="pricing-action l-slategray">Choose plan</button>
+</div>
+<div class="pricing-item">
+<div class="pricing-deco l-slategray">
+<svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+<path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+<path class="deco-layer deco-layer--3" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z" fill="#FFFFFF" opacity="0.7"></path>
+<path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+</svg>
+<div class="pricing-price"><span class="pricing-currency">$</span>99 <span class="pricing-period">/ mo</span> </div>
+<h3 class="pricing-title">ENTERPRISE</h3>
+</div>
+<ul class="feature-list">
+<li>50GB Disk Space</li>
+<li>50 Domain Names</li>
+<li>20 E-Mail Address</li>
+<li>Fully Support</li>
+</ul>
+<button class="pricing-action l-amber">Choose plan</button>
+</div>
+</div>
+</body>
+</html>

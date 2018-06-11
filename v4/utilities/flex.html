@@ -67,13 +67,13 @@
 <a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
 </div>
 </li>
-      <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
       <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
       <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
 	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,6 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
 		<a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -180,6 +181,7 @@
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+	<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
     <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
     <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
     <li><a href="../utilities/text.html"> 文本处理 </a> </li>
@@ -216,6 +218,8 @@
     <li class="toc-entry toc-h2"><a href="#justify-content">内容对齐与对准</a></li>
     <li class="toc-entry toc-h2"><a href="#align-items">对齐项目</a></li>
     <li class="toc-entry toc-h2"><a href="#align-self">自对齐</a></li>
+	<li class="toc-entry toc-h2"><a href="#fill">自相等</a></li>
+	<li class="toc-entry toc-h2"><a href="#grow-and-shrink">等宽变幻</a></li>
     <li class="toc-entry toc-h2"><a href="#auto-margins">自浮动 Auto margins</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#with-align-items">与align-items结合实现垂直布局</a></li>
@@ -531,6 +535,70 @@
     <li><code class="highlighter-rouge">.align-self-xl-baseline</code></li>
     <li><code class="highlighter-rouge">.align-self-xl-stretch</code></li>
   </ul>
+  
+  <h2 id="fill">自相等</h2>
+  <p><code>.flex-fill</code>在一系列兄弟元素上使用该类来强制它们变成相等的宽度，同时占据所有可用的水平空间。<a href="/docs/4.1/components/navs/#working-with-flex-utilities">特别适用于等宽或正确的导航。</a></p> 
+  <div class="bd-example">
+	<div class="d-flex bd-highlight">
+	  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+	  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+	  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+	</div>
+ </div>
+ <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex bd-highlight"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 flex-fill bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 flex-fill bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 flex-fill bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+ <p>响应变化也存在<code>flex-fill</code>。</p>
+ <ul>
+  <li><code class="highlighter-rouge">.flex-fill</code></li>
+  <li><code class="highlighter-rouge">.flex-sm-fill</code></li>
+  <li><code class="highlighter-rouge">.flex-md-fill</code></li>
+  <li><code class="highlighter-rouge">.flex-lg-fill</code></li>
+  <li><code class="highlighter-rouge">.flex-xl-fill</code></li>
+</ul>
+  
+  <h2 id="grow-and-shrink">等宽变幻</h2>
+  <p>使用<code>.flex-grow-*</code>实用程序切换弹性项目的增长能力以填充可用空间。在下面的示例中，<code>.flex-grow-1</code>元素使用它可以使用的所有可用空间，同时允许剩余的两个Flex项目具有必要的空间。</p>
+  <div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Third flex item</div>
+</div>
+</div>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex bd-highlight"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 flex-grow-1 bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 bd-highlight"</span><span class="nt">&gt;</span>Third flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p><code>.flex-shrink-*</code>如有必要，使用实用程序切换弹性项目的缩小能力。在下面的示例中，第二个Flex项目<code>.flex-shrink-1</code>被强制将其内容封装到一个新行中，“缩小”以允许前一个Flex项目具有更多空间<code>.w-100</code>。</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 w-100 bd-highlight">Flex item</div>
+  <div class="p-2 flex-shrink-1 bd-highlight">Flex item</div>
+</div>
+</div>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex bd-highlight"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 w-100 bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2 flex-shrink-1 bd-highlight"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <p>响应变化也存在<code>flex-grow</code>和 flex-shrink。</p>
+  <ul>
+  <li><code class="highlighter-rouge">.flex-{grow|shrink}-0</code></li>
+  <li><code class="highlighter-rouge">.flex-{grow|shrink}-1</code></li>
+  <li><code class="highlighter-rouge">.flex-sm-{grow|shrink}-0</code></li>
+  <li><code class="highlighter-rouge">.flex-sm-{grow|shrink}-1</code></li>
+  <li><code class="highlighter-rouge">.flex-md-{grow|shrink}-0</code></li>
+  <li><code class="highlighter-rouge">.flex-md-{grow|shrink}-1</code></li>
+  <li><code class="highlighter-rouge">.flex-lg-{grow|shrink}-0</code></li>
+  <li><code class="highlighter-rouge">.flex-lg-{grow|shrink}-1</code></li>
+  <li><code class="highlighter-rouge">.flex-xl-{grow|shrink}-0</code></li>
+  <li><code class="highlighter-rouge">.flex-xl-{grow|shrink}-1</code></li>
+</ul>
+
+  
   <h2 id="auto-margins">自浮动Auto margins</h2>
   <p>当你将flex对齐与auto margin混在一起的时候，flexbox也能正常运行。以下是通过自动manrgin来控制flex项目的三种示例，分别是预设（无margin）、向右推两个项目(<code class="highlighter-rouge">.mr-auto</code>)、向左推两个项目 (<code class="highlighter-rouge">.ml-auto</code>)：</p>
   <p><strong>不幸的是，IE10和IE11不能正确支持在父层具有非默认的 <code class="highlighter-rouge">justify-content</code> 值自边距浮动auto margin</strong> ，<a href="https://stackoverflow.com/a/37535548">可查阅 StackOverflow对此现象的解答</a> 了解更多细节。</p>

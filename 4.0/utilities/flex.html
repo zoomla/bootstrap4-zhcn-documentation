@@ -1,0 +1,968 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>Flex弹性布局 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Flex弹性布局 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Flex弹性布局 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+		<a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../docs/"> 快速入门 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../docs/">关于</a></li>
+    <li><a href="../docs/download.html">下载</a></li>
+    <li><a href="../docs/contents.html">目录结构</a></li>
+    <li><a href="../docs/browsers-devices.html">浏览器与设备调优</a></li>
+    <li><a href="../docs/javaScript.html">JavaScript脚本</a></li>
+    <li><a href="../docs/theming.html">主题化</a></li>
+    <li><a href="../docs/build-tools.html">编译工具</a></li>
+    <li><a href="../docs/webpack.html"> Webpack模块化</a></li>
+    <li><a href="../docs/accessibility.html">无障碍浏览</a></li>
+    </ul>
+  </div>
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html"> 布局 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../layout/overview.html">概述</a></li>
+    <li><a href="../layout/grid.html">栅格</a></li>
+    <li><a href="../layout/media-object.html">媒体对象</a></li>
+    <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+    </ul>
+  </div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+    <li><a href="../content/typography.html"> 排版 </a> </li>
+    <li><a href="../content/code.html"> 代码 </a> </li>
+    <li><a href="../content/images.html"> 图片 </a> </li>
+    <li><a href="../content/tables.html"> 表格 </a> </li>
+    <li><a href="../content/figures.html"> 图文框 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框 </a> </li>
+    <li><a href="../components/badge.html"> 徽章 </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航 </a> </li>
+    <li><a href="../components/buttons.html"> 按钮 </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组 </a> </li>
+    <li><a href="../components/card.html"> 卡片 </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果 </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板 </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单 </a> </li>
+    <li><a href="../components/forms.html"> 表单 </a> </li>
+    <li><a href="../components/input-group.html"> 输入框 </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏 </a> </li>
+    <li><a href="../components/list-group.html"> 列表组 </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框 </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏 </a> </li>
+    <li><a href="../components/pagination.html"> 分页 </a> </li>
+    <li><a href="../components/popovers.html"> POP提示 </a> </li>
+    <li><a href="../components/progress.html"> 进度条 </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听 </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../utilities/borders.html"> 边框(border) </a> </li>
+    <li><a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+    <li><a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+    <li><a href="../utilities/colors.html"> 颜色(color) </a> </li>
+    <li><a href="../utilities/display.html"> Display显示属性 </a> </li>
+    <li><a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../utilities/flex.html"> Flex弹性布局 </a></li>
+    <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
+    <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+    <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
+    <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+    <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+    <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+    <li><a href="../utilities/text.html"> 文本处理 </a> </li>
+    <li><a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+    <li><a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/icons.html"> 延伸(图标引用) </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../extend/icons.html"> 图标 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+  <ul class="nav bd-sidenav">
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../about/history.html"> History </a> </li>
+    <li><a href="../about/team.html"> Team </a> </li>
+    <li><a href="../about/brand.html"> Brand </a> </li>
+    <li><a href="../about/license.html"> License </a> </li>
+    <li><a href="../about/translations.html"> Translations </a> </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#enable-flex-behaviors">启用弹性行为</a></li>
+    <li class="toc-entry toc-h2"><a href="#direction">方向</a></li>
+    <li class="toc-entry toc-h2"><a href="#justify-content">内容对齐与对准</a></li>
+    <li class="toc-entry toc-h2"><a href="#align-items">对齐项目</a></li>
+    <li class="toc-entry toc-h2"><a href="#align-self">自对齐</a></li>
+    <li class="toc-entry toc-h2"><a href="#auto-margins">自浮动 Auto margins</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#with-align-items">与align-items结合实现垂直布局</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#wrap">Wrap包裹</a></li>
+    <li class="toc-entry toc-h2"><a href="#order">Order排序</a></li>
+    <li class="toc-entry toc-h2"><a href="#align-content">对齐内容</a></li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">Flex弹性布局</h1>
+  <p class="bd-lead">引入新的Flex弹性布局，可以实现通过一整套响应灵活的实用程序，快速管理栅格的列、导航、组件等的布局、对齐和大小。通过进一度的定义CSS，还可以实现更复杂的展示样式。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="enable-flex-behaviors">启用弹性行为</h2>
+  <p>使用 <code class="highlighter-rouge">display</code> 通用属性来创建一个flxbox容器，并将 <strong>直属内部子元素</strong> 转换为flex属性。 flex元素的容器和子项目可以通过额外的flex属性定义来实现进一步修改。</p>
+    <p>FlexBox布局提供了包括诸多优秀特性，其中包括：</p>
+	<ol>
+	<li>在父元素里面内容的简单的垂直对齐</li>
+	<li>通过使用媒体查询，可以简单的根据设备和屏幕分辨率来对内容重新排序</li>
+	<li>CSS就能实现等高列布局以及垂直处理</li>
+	</ol>
+	<p>中文版的FlexBox布局教程可见：<a href="https://www.z01.com/help/web/3234.shtml" target="_blank">https://www.z01.com/help/web/3234.shtml</a> （译者注）</p>
+  <div class="bd-example">
+    <div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex p-2"</span><span class="nt">&gt;</span>I'm a flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <div class="bd-example">
+    <div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline-flex p-2"</span><span class="nt">&gt;</span>I'm an inline flexbox container!<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p> 响应式变化也存在于<code class="highlighter-rouge">.d-flex</code> and <code class="highlighter-rouge">.d-inline-flex</code>这两个通用Class上。</p>
+  <ul>
+    <li><code class="highlighter-rouge">.d-flex</code></li>
+    <li><code class="highlighter-rouge">.d-inline-flex</code></li>
+    <li><code class="highlighter-rouge">.d-sm-flex</code></li>
+    <li><code class="highlighter-rouge">.d-sm-inline-flex</code></li>
+    <li><code class="highlighter-rouge">.d-md-flex</code></li>
+    <li><code class="highlighter-rouge">.d-md-inline-flex</code></li>
+    <li><code class="highlighter-rouge">.d-lg-flex</code></li>
+    <li><code class="highlighter-rouge">.d-lg-inline-flex</code></li>
+    <li><code class="highlighter-rouge">.d-xl-flex</code></li>
+    <li><code class="highlighter-rouge">.d-xl-inline-flex</code></li>
+  </ul>
+  <h2 id="direction">方向</h2>
+  <p>基于系统提供的通用样式定义，可以设定flex的容器与内部flex元素的方向，在大多数情况下你可以忽略水平的class样式定义，因为浏览器的默认值是 <code class="highlighter-rouge">row</code>-但在比如响应式布局时，可能需要进行显式设定此值。</p>
+  <p>浏览器预默认值下，使用 <code class="highlighter-rouge">.flex-row</code> 可设置子元素水平方向排版呈现，或者使用<code class="highlighter-rouge">.flex-row-reverse</code> 可实现元素在水平上作反方向排列（右对齐、从右到左布局）。</p>
+  <div class="bd-example">
+    <div class="d-flex flex-row bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item 1</div>
+      <div class="p-2 bd-highlight">Flex item 2</div>
+      <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+    <div class="d-flex flex-row-reverse bd-highlight">
+      <div class="p-2 bd-highlight">Flex item 1</div>
+      <div class="p-2 bd-highlight">Flex item 2</div>
+      <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row-reverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p>使用 <code class="highlighter-rouge">.flex-column</code> 设置垂直方向布局，或使用 <code class="highlighter-rouge">.flex-column-reverse</code> 实现垂直方向的反转布局（从底向上铺开）。</p>
+  <div class="bd-example">
+    <div class="d-flex flex-column bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item 1</div>
+      <div class="p-2 bd-highlight">Flex item 2</div>
+      <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+    <div class="d-flex flex-column-reverse bd-highlight">
+      <div class="p-2 bd-highlight">Flex item 1</div>
+      <div class="p-2 bd-highlight">Flex item 2</div>
+      <div class="p-2 bd-highlight">Flex item 3</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-column"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-column-reverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p><code class="highlighter-rouge">flex-direction</code>的响应式属性规范：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.flex-row</code></li>
+    <li><code class="highlighter-rouge">.flex-row-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-column</code></li>
+    <li><code class="highlighter-rouge">.flex-column-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-row</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-row-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-column</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-column-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-md-row</code></li>
+    <li><code class="highlighter-rouge">.flex-md-row-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-md-column</code></li>
+    <li><code class="highlighter-rouge">.flex-md-column-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-row</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-row-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-column</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-column-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-row</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-row-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-column</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-column-reverse</code></li>
+  </ul>
+  <h2 id="justify-content">内容对齐与对准</h2>
+  <p>使用flexbox弹性布局容器上的 <code class="highlighter-rouge">justify-content-*</code> 通用样式可以改变flx项目在主轴上的对齐（x轴开始，如果 <code class="highlighter-rouge">flex-direction: column</code>则为y轴)，或选方向（值）包括： <code class="highlighter-rouge">start</code> (浏览器默认值),、<code class="highlighter-rouge">end</code>、 <code class="highlighter-rouge">center</code>、 <code class="highlighter-rouge">between</code>、 <code class="highlighter-rouge">around</code>。</p>
+  <div class="bd-example">
+    <div class="d-flex justify-content-start bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex justify-content-end bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex justify-content-between bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex justify-content-around bd-highlight">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex justify-content-start"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex justify-content-end"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex justify-content-center"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex justify-content-between"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex justify-content-around"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <p><code class="highlighter-rouge">justify-content-*</code>样式也通用存在响应式属性规范：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.justify-content-start</code></li>
+    <li><code class="highlighter-rouge">.justify-content-end</code></li>
+    <li><code class="highlighter-rouge">.justify-content-center</code></li>
+    <li><code class="highlighter-rouge">.justify-content-between</code></li>
+    <li><code class="highlighter-rouge">.justify-content-around</code></li>
+    <li><code class="highlighter-rouge">.justify-content-sm-start</code></li>
+    <li><code class="highlighter-rouge">.justify-content-sm-end</code></li>
+    <li><code class="highlighter-rouge">.justify-content-sm-center</code></li>
+    <li><code class="highlighter-rouge">.justify-content-sm-between</code></li>
+    <li><code class="highlighter-rouge">.justify-content-sm-around</code></li>
+    <li><code class="highlighter-rouge">.justify-content-md-start</code></li>
+    <li><code class="highlighter-rouge">.justify-content-md-end</code></li>
+    <li><code class="highlighter-rouge">.justify-content-md-center</code></li>
+    <li><code class="highlighter-rouge">.justify-content-md-between</code></li>
+    <li><code class="highlighter-rouge">.justify-content-md-around</code></li>
+    <li><code class="highlighter-rouge">.justify-content-lg-start</code></li>
+    <li><code class="highlighter-rouge">.justify-content-lg-end</code></li>
+    <li><code class="highlighter-rouge">.justify-content-lg-center</code></li>
+    <li><code class="highlighter-rouge">.justify-content-lg-between</code></li>
+    <li><code class="highlighter-rouge">.justify-content-lg-around</code></li>
+    <li><code class="highlighter-rouge">.justify-content-xl-start</code></li>
+    <li><code class="highlighter-rouge">.justify-content-xl-end</code></li>
+    <li><code class="highlighter-rouge">.justify-content-xl-center</code></li>
+    <li><code class="highlighter-rouge">.justify-content-xl-between</code></li>
+    <li><code class="highlighter-rouge">.justify-content-xl-around</code></li>
+  </ul>
+  <h2 id="align-items">对齐项目</h2>
+  <p>使用 <code class="highlighter-rouge">align-items-*</code> 通用样式可以在flxbox容器上实现flex项目的对齐（y轴开始，如果选择<code class="highlighter-rouge">flex-direction: column</code>则从x轴开始)，可选参数有： <code class="highlighter-rouge">start</code>、<code class="highlighter-rouge">end</code>、 <code class="highlighter-rouge">center</code>、<code class="highlighter-rouge">baseline</code>、 <code class="highlighter-rouge">stretch</code> (浏览器默认值)。</p>
+  <div class="bd-example">
+    <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-start"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-end"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-center"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-baseline"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-stretch"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <p> <code class="highlighter-rouge">align-items</code>的响应式属性规范：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.align-items-start</code></li>
+    <li><code class="highlighter-rouge">.align-items-end</code></li>
+    <li><code class="highlighter-rouge">.align-items-center</code></li>
+    <li><code class="highlighter-rouge">.align-items-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-items-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-items-sm-start</code></li>
+    <li><code class="highlighter-rouge">.align-items-sm-end</code></li>
+    <li><code class="highlighter-rouge">.align-items-sm-center</code></li>
+    <li><code class="highlighter-rouge">.align-items-sm-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-items-sm-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-items-md-start</code></li>
+    <li><code class="highlighter-rouge">.align-items-md-end</code></li>
+    <li><code class="highlighter-rouge">.align-items-md-center</code></li>
+    <li><code class="highlighter-rouge">.align-items-md-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-items-md-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-items-lg-start</code></li>
+    <li><code class="highlighter-rouge">.align-items-lg-end</code></li>
+    <li><code class="highlighter-rouge">.align-items-lg-center</code></li>
+    <li><code class="highlighter-rouge">.align-items-lg-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-items-lg-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-items-xl-start</code></li>
+    <li><code class="highlighter-rouge">.align-items-xl-end</code></li>
+    <li><code class="highlighter-rouge">.align-items-xl-center</code></li>
+    <li><code class="highlighter-rouge">.align-items-xl-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-items-xl-stretch</code></li>
+  </ul>
+  <h2 id="align-self">自对齐</h2>
+  <p>使用 <code class="highlighter-rouge">align-self-*</code> 通用样式可以使用flexbox上的项目单独改变在横轴上的对齐方式（y值开始，如果<code class="highlighter-rouge">flex-direction: column</code>则为x轴开始)，其拥有与<code class="highlighter-rouge">align-items</code>相同的可选子项: <code class="highlighter-rouge">start</code>、 <code class="highlighter-rouge">end</code>、<code class="highlighter-rouge">center</code>、 <code class="highlighter-rouge">baseline</code>、 or <code class="highlighter-rouge">stretch</code> (浏览器默认值)。</p>
+  <div class="bd-example">
+    <div class="d-flex bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="align-self-start p-2 bd-highlight">Aligned flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="align-self-end p-2 bd-highlight">Aligned flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="align-self-center p-2 bd-highlight">Aligned flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight mb-3" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="align-self-baseline p-2 bd-highlight">Aligned flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight" style="height: 100px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="align-self-stretch p-2 bd-highlight">Aligned flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"align-self-start"</span><span class="nt">&gt;</span>Aligned flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"align-self-end"</span><span class="nt">&gt;</span>Aligned flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"align-self-center"</span><span class="nt">&gt;</span>Aligned flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"align-self-baseline"</span><span class="nt">&gt;</span>Aligned flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"align-self-stretch"</span><span class="nt">&gt;</span>Aligned flex item<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <p><code class="highlighter-rouge">align-self</code>的响应式属性规范：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.align-self-start</code></li>
+    <li><code class="highlighter-rouge">.align-self-end</code></li>
+    <li><code class="highlighter-rouge">.align-self-center</code></li>
+    <li><code class="highlighter-rouge">.align-self-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-self-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-self-sm-start</code></li>
+    <li><code class="highlighter-rouge">.align-self-sm-end</code></li>
+    <li><code class="highlighter-rouge">.align-self-sm-center</code></li>
+    <li><code class="highlighter-rouge">.align-self-sm-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-self-sm-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-self-md-start</code></li>
+    <li><code class="highlighter-rouge">.align-self-md-end</code></li>
+    <li><code class="highlighter-rouge">.align-self-md-center</code></li>
+    <li><code class="highlighter-rouge">.align-self-md-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-self-md-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-self-lg-start</code></li>
+    <li><code class="highlighter-rouge">.align-self-lg-end</code></li>
+    <li><code class="highlighter-rouge">.align-self-lg-center</code></li>
+    <li><code class="highlighter-rouge">.align-self-lg-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-self-lg-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-self-xl-start</code></li>
+    <li><code class="highlighter-rouge">.align-self-xl-end</code></li>
+    <li><code class="highlighter-rouge">.align-self-xl-center</code></li>
+    <li><code class="highlighter-rouge">.align-self-xl-baseline</code></li>
+    <li><code class="highlighter-rouge">.align-self-xl-stretch</code></li>
+  </ul>
+  <h2 id="auto-margins">自浮动Auto margins</h2>
+  <p>当你将flex对齐与auto margin混在一起的时候，flexbox也能正常运行。以下是通过自动manrgin来控制flex项目的三种示例，分别是预设（无margin）、向右推两个项目(<code class="highlighter-rouge">.mr-auto</code>)、向左推两个项目 (<code class="highlighter-rouge">.ml-auto</code>)：</p>
+  <p><strong>不幸的是，IE10和IE11不能正确支持在父层具有非默认的 <code class="highlighter-rouge">justify-content</code> 值自边距浮动auto margin</strong> ，<a href="https://stackoverflow.com/a/37535548">可查阅 StackOverflow对此现象的解答</a> 了解更多细节。</p>
+  <div class="bd-example">
+    <div class="d-flex bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight mb-3">
+      <div class="mr-auto p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex bd-highlight mb-3">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="ml-auto p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mr-auto p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ml-auto p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h3 id="with-align-items">与align-items结合实现垂直布局</h3>
+  <p>结合 <code class="highlighter-rouge">align-items</code>、 <code class="highlighter-rouge">flex-direction: column</code>、 <code class="highlighter-rouge">margin-top: auto</code> 或 <code class="highlighter-rouge">margin-bottom: auto</code>，可以垂直移动一个flex子容器到顶部或底部。</p>
+  <div class="bd-example">
+    <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+      <div class="mb-auto p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="mt-auto p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-start flex-column"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb-auto p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-items-end flex-column"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mt-auto p-2"</span><span class="nt">&gt;</span>Flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <h2 id="wrap">Wrap包裹</h2>
+  <p>改变flex项目在flex容器中的包裹方式（可以实现弹性布局），其中包括无包裹 <code class="highlighter-rouge">.flex-nowrap</code>（浏览器默认）、包裹 <code class="highlighter-rouge">.flex-wrap</code>,，或者反向包裹 <code class="highlighter-rouge">.flex-wrap-reverse</code>。</p>
+  <div class="bd-example">
+  <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex item</div>
+  </div>
+</div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-nowrap"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex flex-wrap bd-highlight">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex flex-wrap-reverse bd-highlight">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-wrap-reverse"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <p><code class="highlighter-rouge">flex-*-wrap-*</code>的响应式规范：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.flex-nowrap</code></li>
+    <li><code class="highlighter-rouge">.flex-wrap</code></li>
+    <li><code class="highlighter-rouge">.flex-wrap-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-nowrap</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-wrap</code></li>
+    <li><code class="highlighter-rouge">.flex-sm-wrap-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-md-nowrap</code></li>
+    <li><code class="highlighter-rouge">.flex-md-wrap</code></li>
+    <li><code class="highlighter-rouge">.flex-md-wrap-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-nowrap</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-wrap</code></li>
+    <li><code class="highlighter-rouge">.flex-lg-wrap-reverse</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-nowrap</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-wrap</code></li>
+    <li><code class="highlighter-rouge">.flex-xl-wrap-reverse</code></li>
+  </ul>
+  <h2 id="order">Order排序</h2>
+  <p>使用系统提供的通用样式定义可以实现弹性项目的 <em>可视化</em> 排序。我们仅提供将一个特件排在第一或最后，以及重置DOM顺序，由于<code class="highlighter-rouge">order</code>只能使用整数值（如：<code class="highlighter-rouge">5</code>），因此对于需要的任何额外值需要自定义CSS。</p>
+  <div class="bd-example">
+    <div class="d-flex flex-nowrap bd-highlight">
+      <div class="order-3 p-2 bd-highlight">First flex item</div>
+      <div class="order-2 p-2 bd-highlight">Second flex item</div>
+      <div class="order-1 p-2 bd-highlight">Third flex item</div>
+    </div>
+  </div>
+  <div class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-nowrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"order-3 p-2"</span><span class="nt">&gt;</span>First flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"order-2 p-2"</span><span class="nt">&gt;</span>Second flex item<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"order-1 p-2"</span><span class="nt">&gt;</span>Third flex item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </div>
+  <p> <code class="highlighter-rouge">order-*</code>排序方法的响应式属性：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.order-1</code></li>
+    <li><code class="highlighter-rouge">.order-2</code></li>
+    <li><code class="highlighter-rouge">.order-3</code></li>
+    <li><code class="highlighter-rouge">.order-4</code></li>
+    <li><code class="highlighter-rouge">.order-5</code></li>
+    <li><code class="highlighter-rouge">.order-6</code></li>
+    <li><code class="highlighter-rouge">.order-7</code></li>
+    <li><code class="highlighter-rouge">.order-8</code></li>
+    <li><code class="highlighter-rouge">.order-9</code></li>
+    <li><code class="highlighter-rouge">.order-10</code></li>
+    <li><code class="highlighter-rouge">.order-11</code></li>
+    <li><code class="highlighter-rouge">.order-12</code></li>
+    <li><code class="highlighter-rouge">.order-sm-1</code></li>
+    <li><code class="highlighter-rouge">.order-sm-2</code></li>
+    <li><code class="highlighter-rouge">.order-sm-3</code></li>
+    <li><code class="highlighter-rouge">.order-sm-4</code></li>
+    <li><code class="highlighter-rouge">.order-sm-5</code></li>
+    <li><code class="highlighter-rouge">.order-sm-6</code></li>
+    <li><code class="highlighter-rouge">.order-sm-7</code></li>
+    <li><code class="highlighter-rouge">.order-sm-8</code></li>
+    <li><code class="highlighter-rouge">.order-sm-9</code></li>
+    <li><code class="highlighter-rouge">.order-sm-10</code></li>
+    <li><code class="highlighter-rouge">.order-sm-11</code></li>
+    <li><code class="highlighter-rouge">.order-sm-12</code></li>
+    <li><code class="highlighter-rouge">.order-md-1</code></li>
+    <li><code class="highlighter-rouge">.order-md-2</code></li>
+    <li><code class="highlighter-rouge">.order-md-3</code></li>
+    <li><code class="highlighter-rouge">.order-md-4</code></li>
+    <li><code class="highlighter-rouge">.order-md-5</code></li>
+    <li><code class="highlighter-rouge">.order-md-6</code></li>
+    <li><code class="highlighter-rouge">.order-md-7</code></li>
+    <li><code class="highlighter-rouge">.order-md-8</code></li>
+    <li><code class="highlighter-rouge">.order-md-9</code></li>
+    <li><code class="highlighter-rouge">.order-md-10</code></li>
+    <li><code class="highlighter-rouge">.order-md-11</code></li>
+    <li><code class="highlighter-rouge">.order-md-12</code></li>
+    <li><code class="highlighter-rouge">.order-lg-1</code></li>
+    <li><code class="highlighter-rouge">.order-lg-2</code></li>
+    <li><code class="highlighter-rouge">.order-lg-3</code></li>
+    <li><code class="highlighter-rouge">.order-lg-4</code></li>
+    <li><code class="highlighter-rouge">.order-lg-5</code></li>
+    <li><code class="highlighter-rouge">.order-lg-6</code></li>
+    <li><code class="highlighter-rouge">.order-lg-7</code></li>
+    <li><code class="highlighter-rouge">.order-lg-8</code></li>
+    <li><code class="highlighter-rouge">.order-lg-9</code></li>
+    <li><code class="highlighter-rouge">.order-lg-10</code></li>
+    <li><code class="highlighter-rouge">.order-lg-11</code></li>
+    <li><code class="highlighter-rouge">.order-lg-12</code></li>
+    <li><code class="highlighter-rouge">.order-xl-1</code></li>
+    <li><code class="highlighter-rouge">.order-xl-2</code></li>
+    <li><code class="highlighter-rouge">.order-xl-3</code></li>
+    <li><code class="highlighter-rouge">.order-xl-4</code></li>
+    <li><code class="highlighter-rouge">.order-xl-5</code></li>
+    <li><code class="highlighter-rouge">.order-xl-6</code></li>
+    <li><code class="highlighter-rouge">.order-xl-7</code></li>
+    <li><code class="highlighter-rouge">.order-xl-8</code></li>
+    <li><code class="highlighter-rouge">.order-xl-9</code></li>
+    <li><code class="highlighter-rouge">.order-xl-10</code></li>
+    <li><code class="highlighter-rouge">.order-xl-11</code></li>
+    <li><code class="highlighter-rouge">.order-xl-12</code></li>
+  </ul>
+  <h2 id="align-content">对齐内容</h2>
+  <p>使用flexbox容器上的 <code class="highlighter-rouge">align-content</code> 通用样式定义，可以将flex物价于横轴上 <em>一起对齐</em>，可选方向有 <code class="highlighter-rouge">start</code> (浏览器默认值)、 <code class="highlighter-rouge">end</code>、 <code class="highlighter-rouge">center</code>、 <code class="highlighter-rouge">between</code>、 <code class="highlighter-rouge">around</code>、 <code class="highlighter-rouge">stretch</code>。为了展现这些效果，下面实例我们已经实施了<code class="highlighter-rouge">flex-wrap: wrap</code>定义并增加了很多子项目的数量，如下所示：</p>
+  <p><strong>注意!</strong> 此属性对于单行的Flex项目没有影响。</p>
+  <div class="bd-example">
+    <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-start flex-wrap"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-end flex-wrap"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-center flex-wrap"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-between flex-wrap"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-around flex-wrap"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <div class="bd-example">
+    <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+      <div class="p-2 bd-highlight">Flex item</div>
+    </div>
+  </div>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex align-content-stretch flex-wrap"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span></code></pre>
+  </figure>
+  <p><code class="highlighter-rouge">align-content-*</code>方法的响应式属性：</p>
+  <ul>
+    <li><code class="highlighter-rouge">.align-content-start</code></li>
+    <li><code class="highlighter-rouge">.align-content-end</code></li>
+    <li><code class="highlighter-rouge">.align-content-center</code></li>
+    <li><code class="highlighter-rouge">.align-content-around</code></li>
+    <li><code class="highlighter-rouge">.align-content-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-content-sm-start</code></li>
+    <li><code class="highlighter-rouge">.align-content-sm-end</code></li>
+    <li><code class="highlighter-rouge">.align-content-sm-center</code></li>
+    <li><code class="highlighter-rouge">.align-content-sm-around</code></li>
+    <li><code class="highlighter-rouge">.align-content-sm-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-content-md-start</code></li>
+    <li><code class="highlighter-rouge">.align-content-md-end</code></li>
+    <li><code class="highlighter-rouge">.align-content-md-center</code></li>
+    <li><code class="highlighter-rouge">.align-content-md-around</code></li>
+    <li><code class="highlighter-rouge">.align-content-md-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-content-lg-start</code></li>
+    <li><code class="highlighter-rouge">.align-content-lg-end</code></li>
+    <li><code class="highlighter-rouge">.align-content-lg-center</code></li>
+    <li><code class="highlighter-rouge">.align-content-lg-around</code></li>
+    <li><code class="highlighter-rouge">.align-content-lg-stretch</code></li>
+    <li><code class="highlighter-rouge">.align-content-xl-start</code></li>
+    <li><code class="highlighter-rouge">.align-content-xl-end</code></li>
+    <li><code class="highlighter-rouge">.align-content-xl-center</code></li>
+    <li><code class="highlighter-rouge">.align-content-xl-around</code></li>
+    <li><code class="highlighter-rouge">.align-content-xl-stretch</code></li>
+  </ul>
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

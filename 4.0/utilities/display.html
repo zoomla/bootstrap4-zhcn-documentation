@@ -1,0 +1,399 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>Display显示属性 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Display显示属性 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Display显示属性 Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+		<a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../docs/"> 快速入门 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../docs/">关于</a></li>
+    <li><a href="../docs/download.html">下载</a></li>
+    <li><a href="../docs/contents.html">目录结构</a></li>
+    <li><a href="../docs/browsers-devices.html">浏览器与设备调优</a></li>
+    <li><a href="../docs/javaScript.html">JavaScript脚本</a></li>
+    <li><a href="../docs/theming.html">主题化</a></li>
+    <li><a href="../docs/build-tools.html">编译工具</a></li>
+    <li><a href="../docs/webpack.html"> Webpack模块化</a></li>
+    <li><a href="../docs/accessibility.html">无障碍浏览</a></li>
+    </ul>
+  </div>
+  <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html"> 布局 </a>
+    <ul class="nav bd-sidenav">
+    <li><a href="../layout/overview.html">概述</a></li>
+    <li><a href="../layout/grid.html">栅格</a></li>
+    <li><a href="../layout/media-object.html">媒体对象</a></li>
+    <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+    </ul>
+  </div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+    <li><a href="../content/typography.html"> 排版 </a> </li>
+    <li><a href="../content/code.html"> 代码 </a> </li>
+    <li><a href="../content/images.html"> 图片 </a> </li>
+    <li><a href="../content/tables.html"> 表格 </a> </li>
+    <li><a href="../content/figures.html"> 图文框 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框 </a> </li>
+    <li><a href="../components/badge.html"> 徽章 </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航 </a> </li>
+    <li><a href="../components/buttons.html"> 按钮 </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组 </a> </li>
+    <li><a href="../components/card.html"> 卡片 </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果 </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板 </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单 </a> </li>
+    <li><a href="../components/forms.html"> 表单 </a> </li>
+    <li><a href="../components/input-group.html"> 输入框 </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏 </a> </li>
+    <li><a href="../components/list-group.html"> 列表组 </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框 </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏 </a> </li>
+    <li><a href="../components/pagination.html"> 分页 </a> </li>
+    <li><a href="../components/popovers.html"> POP提示 </a> </li>
+    <li><a href="../components/progress.html"> 进度条 </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听 </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item active"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../utilities/borders.html"> 边框(border) </a> </li>
+    <li><a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+    <li><a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+    <li><a href="../utilities/colors.html"> 颜色(color) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../utilities/display.html"> Display显示属性 </a> </li>
+    <li><a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+    <li><a href="../utilities/flex.html"> Flex弹性布局 </a></li>
+    <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
+    <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+    <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
+    <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+    <li><a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+    <li><a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+    <li><a href="../utilities/text.html"> 文本处理 </a> </li>
+    <li><a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+    <li><a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/icons.html"> 延伸(图标引用) </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../extend/icons.html"> 图标 </a> </li>
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+  <ul class="nav bd-sidenav">
+  </ul>
+</div>
+<div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+  <ul class="nav bd-sidenav">
+    <li><a href="../about/history.html"> History </a> </li>
+    <li><a href="../about/team.html"> Team </a> </li>
+    <li><a href="../about/brand.html"> Brand </a> </li>
+    <li><a href="../about/license.html"> License </a> </li>
+    <li><a href="../about/translations.html"> Translations </a> </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#how-it-works">Display运行原理</a></li>
+	<li class="toc-entry toc-h2"><a href="#notation">Display属性</a></li>
+	<li class="toc-entry toc-h2"><a href="#examples">实例</a></li>
+    <li class="toc-entry toc-h2"><a href="#hiding-elements">隐藏元素</a></li>
+    <li class="toc-entry toc-h2"><a href="#display-in-print">面向打印的显示属性控制（处理）</a></li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">Display显示属性</h1>
+  <p class="bd-lead">通过我们的显示实用程序，可以快速、有效地切换组件的显示值和更多，包括对一些更常见的值的支持，以及一些用于在打印时控制显示的附加功能。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  
+  <h2 id="how-it-works">Display运行原理</h2>
+  <p>  使用我们的响应式 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code class="highlighter-rouge">display</code>实用</a>程序类更改显示属性的值。系统默认特意支持<code class="highlighter-rouge">display</code>所有可能值的一个子集。</p>
+  <h2 id="notation">Dislay属性</h2>
+  <p>显示适用于从<code class="highlighter-rouge">xs</code> 到 <code class="highlighter-rouge">xl</code>,的所有 <code class="highlighter-rouge">breakpoints</code>的实用程序类，其中没有<code>breakpoints</code>缩写。 这是因为这些类是从 <code class="highlighter-rouge">min-width: 0;</code> 并且因此不受媒体查询的限制。 然而，其余的断点包含断点缩写。</p>
+  <p>因此，这些类使用以下格式来命名：</p>
+  <ul>
+  <li><code class="highlighter-rouge">.d-{value}</code> 用于小屏幕适配（即手机适配）</li>
+  <li><code class="highlighter-rouge">.d-{breakpoint}-{value}</code> 用于 <code class="highlighter-rouge">sm</code>、<code class="highlighter-rouge">md</code>、<code class="highlighter-rouge">lg</code>、<code class="highlighter-rouge">xl</code>等多设备适配。</li>
+  </ul>
+  <p>display常用属性：</p>
+	<ul>
+	  <li><code class="highlighter-rouge">none</code></li>
+	  <li><code class="highlighter-rouge">inline</code></li>
+	  <li><code class="highlighter-rouge">inline-block</code></li>
+	  <li><code class="highlighter-rouge">block</code></li>
+	  <li><code class="highlighter-rouge">table</code></li>
+	  <li><code class="highlighter-rouge">table-cell</code></li>
+	  <li><code class="highlighter-rouge">table-row</code></li>
+	  <li><code class="highlighter-rouge">flex</code></li>
+	  <li><code class="highlighter-rouge">inline-flex</code></li>
+	</ul>  
+	<p>媒体查询效果屏幕宽度与给定的断点或更大。 例如，<code class="highlighter-rouge">.d-lg-none sets display：none; </code> 在<code class="highlighter-rouge">lg</code>和<code class="highlighter-rouge">xl</code>屏幕上。</p>
+  
+  <h2 id="examples">实例</h2>
+  <div class="bd-example">
+	<div class="d-inline p-2 bg-primary text-white">d-inline</div>
+	<div class="d-inline p-2 bg-dark text-white">d-inline</div>
+  </div>
+	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-2 bg-primary text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-inline p-2 bg-dark text-white"</span><span class="nt">&gt;</span>d-inline<span class="nt">&lt;/div&gt;</span></code></pre></div>
+  <div class="bd-example">
+	<span class="d-block p-2 bg-primary text-white">d-block</span>
+	<span class="d-block p-2 bg-dark text-white">d-block</span>
+	</div>
+      
+	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block p-2 bg-primary text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-block p-2 bg-dark text-white"</span><span class="nt">&gt;</span>d-block<span class="nt">&lt;/span&gt;</span></code></pre></div>
+	  
+<h2 id="hiding-elements">隐藏的元素</h2>
+ <p>为了更快速且友好 的支持移动设备开发，请使用 display classes来显示和隐藏组件，避免创建完全不同版本的一个网站（为移动网站建立一个独立的站点），而不是按照每种屏幕尺寸来隐藏元素。</p>
+  <p>隐藏元素只要使用 <code class="highlighter-rouge">.d-none</code> class或 <code class="highlighter-rouge">.d-{sm,md,lg,xl}-none</code> 的任何变量来支持响应式。</p>
+  <p>如要在指定的屏幕上显示一个元素，则可以将一个<code class="highlighter-rouge">.d-*-none</code> class 样式与 <code class="highlighter-rouge">.d-*-*</code> class样式结合起来，如 <code class="highlighter-rouge">.d-none.d-md-block.d-xl-none</code> 将隐藏除了中型、大型设备以外的所有屏幕中的元素，。</p>
+<table>
+  <thead>
+    <tr>
+      <th>屏幕规格</th>
+      <th>引用样式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>所有屏幕下隐藏</td>
+      <td><code class="highlighter-rouge">.d-none</code></td>
+    </tr>
+    <tr>
+      <td>只在xs屏幕上隐藏（即仅在手机屏幕上隐藏-其它规格屏幕正常显示-译者注）</td>
+      <td><code class="highlighter-rouge">.d-none .d-sm-block</code></td>
+    </tr>
+    <tr>
+      <td>只在sm屏幕上隐藏（其它屏幕规格均显示）</td>
+      <td><code class="highlighter-rouge">.d-sm-none .d-md-block</code></td>
+    </tr>
+    <tr>
+      <td>只在md屏幕时隐藏（其它屏幕规格均显示）</td>
+      <td><code class="highlighter-rouge">.d-md-none .d-lg-block</code></td>
+    </tr>
+    <tr>
+      <td>只在lg屏幕时隐藏（其它屏幕规格均显示）</td>
+      <td><code class="highlighter-rouge">.d-lg-none .d-xl-block</code></td>
+    </tr>
+    <tr>
+      <td>只在xl屏幕时隐藏（其它屏幕规格均显示）</td>
+      <td><code class="highlighter-rouge">.d-xl-none</code></td>
+    </tr>
+    <tr>
+      <td>全部可见</td>
+      <td><code class="highlighter-rouge">.d-block</code></td>
+    </tr>
+    <tr>
+      <td>仅在xs屏幕时可见</td>
+      <td><code class="highlighter-rouge">.d-block .d-sm-none</code></td>
+    </tr>
+    <tr>
+      <td>仅在sm屏幕时可见</td>
+      <td><code class="highlighter-rouge">.d-none .d-sm-block .d-md-none</code></td>
+    </tr>
+    <tr>
+      <td>仅在md屏幕时可见</td>
+      <td><code class="highlighter-rouge">.d-none .d-md-block .d-lg-none</code></td>
+    </tr>
+    <tr>
+      <td>仅在lg屏幕时可见</td>
+      <td><code class="highlighter-rouge">.d-none .d-lg-block .d-xl-none</code></td>
+    </tr>
+    <tr>
+      <td>仅在xl屏幕时可见</td>
+      <td><code class="highlighter-rouge">.d-none .d-xl-block</code></td>
+    </tr>
+  </tbody>
+</table>
+
+	<div class="bd-example">
+	<div class="d-lg-none">hide on screens wider than lg</div>
+	<div class="d-none d-lg-block">hide on screens smaller than lg</div>
+	</div>
+	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-lg-none"</span><span class="nt">&gt;</span>hide on screens wider than lg<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>hide on screens smaller than lg<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+  <h2 id="display-in-print">面向打印的显示属性控制处理</h2>
+  <p>在处理打印样式时，通过<code class="highlighter-rouge">display</code>通用样式来改变相应值处理呈现效果。</p>
+ <ul>
+  <li><code class="highlighter-rouge">.d-print-none</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline-block</code></li>
+  <li><code class="highlighter-rouge">.d-print-block</code></li>
+  <li><code class="highlighter-rouge">.d-print-table</code></li>
+  <li><code class="highlighter-rouge">.d-print-table-row</code></li>
+  <li><code class="highlighter-rouge">.d-print-table-cell</code></li>
+  <li><code class="highlighter-rouge">.d-print-flex</code></li>
+  <li><code class="highlighter-rouge">.d-print-inline-flex</code></li>
+</ul>
+<p>印刷和显示课程可以合并。</p>
+<div class="bd-example">
+<div class="d-print-none">Screen Only (Hide on print only)</div>
+<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
+<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-print-none"</span><span class="nt">&gt;</span>Screen Only (Hide on print only)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-print-block"</span><span class="nt">&gt;</span>Print Only (Hide on screen only)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block d-print-block"</span><span class="nt">&gt;</span>Hide up to large on screen, but always show on print<span class="nt">&lt;/div&gt;</span></code></pre></div>
+</main>
+</div>
+</div>
+
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

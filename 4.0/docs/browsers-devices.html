@@ -1,0 +1,417 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>浏览器与设备调优 &middot; Bootstrap</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Browsers and devices Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Browsers and devices Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrp</a> </header>
+
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+      <nav class="collapse bd-links" id="bd-docs-nav">
+        <div class="bd-toc-item active"> <a class="bd-toc-link" href="../../v4/docs/">快速入门</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../../v4/docs/">关于</a></li>
+            <li><a href="../../v4/docs/download.html">下载</a></li>
+            <li><a href="contents.html">目录结构</a></li>
+            <li class="active bd-sidenav-active"><a href="browsers-devices.html">浏览器与设备调优</a></li>
+            <li><a href="javascript.html">JavaScript脚本</a></li>
+            <li><a href="theming.html">主题化</a></li>
+            <li><a href="build-tools.html">编译工具</a></li>
+            <li><a href="webpack.html"> Webpack模块化</a></li>
+            <li><a href="accessibility.html">无障碍浏览</a></li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html">布局</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../layout/overview.html">概览</a></li>
+            <li><a href="../layout/grid.html">栅格</a></li>
+            <li><a href="../layout/media-object.html">媒体对象</a></li>
+            <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+            <li> <a href="../content/typography.html"> 排版 </a> </li>
+            <li> <a href="../content/code.html"> 代码 </a> </li>
+            <li> <a href="../content/images.html"> 图片 </a> </li>
+            <li> <a href="../content/tables.html"> 表格 </a> </li>
+            <li> <a href="../content/figures.html"> 图文框 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../components/alerts.html"> 提示 </a> </li>
+            <li> <a href="../components/badge.html"> 徽章 </a> </li>
+            <li> <a href="../components/breadcrumb.html"> 面包屑导航 </a> </li>
+            <li> <a href="../components/buttons.html"> 按钮 </a> </li>
+            <li> <a href="../components/button-group.html"> 按钮组 </a> </li>
+            <li> <a href="../components/card.html"> 卡片 </a> </li>
+            <li> <a href="../components/carousel.html">  轮播效果 </a> </li>
+            <li> <a href="../components/collapse.html"> 折叠面板 </a> </li>
+            <li> <a href="../components/dropdowns.html"> 下拉菜单 </a> </li>
+            <li> <a href="../components/forms.html"> 表单 </a> </li>
+            <li> <a href="../components/input-group.html"> 输入框 </a> </li>
+            <li> <a href="../components/jumbotron.html"> Hero大块屏 </a> </li>
+            <li> <a href="../components/list-group.html"> 列表组 </a> </li>
+            <li> <a href="../components/modal.html"> 弹出模态框 </a> </li>
+            <li> <a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
+            <li> <a href="../components/navbar.html"> 导航栏 </a> </li>
+            <li> <a href="../components/pagination.html"> 分页 </a> </li>
+            <li> <a href="../components/popovers.html"> POP提示 </a> </li>
+            <li> <a href="../components/progress.html"> 进度条 </a> </li>
+            <li> <a href="../components/scrollspy.html"> 滚动监听 </a> </li>
+            <li> <a href="../components/tooltips.html"> 提示冒泡 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../utilities/borders.html"> 边框(border) </a> </li>
+            <li> <a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+            <li> <a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+            <li> <a href="../utilities/colors.html"> 颜色(color) </a> </li>
+            <li> <a href="../utilities/display.html"> Display显示属性 </a> </li>
+            <li> <a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+            <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+            <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
+            <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+            <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
+            <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+            <li> <a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+            <li> <a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+            <li> <a href="../utilities/text.html"> 文本处理 </a> </li>
+            <li> <a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+            <li> <a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../extend/approach.html"> 方法论 </a> </li>
+            <li> <a href="../extend/icons.html"> 图标 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+          <ul class="nav bd-sidenav">
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../about/history.html"> 成长历史 </a> </li>
+            <li> <a href="../about/team.html"> 项目团队 </a> </li>
+            <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+            <li> <a href="../about/license.html"> 许可授权 </a> </li>
+            <li> <a href="../about/translations.html"> 翻译 </a> </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#supported-browsers">支持的浏览器</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#mobile-devices">移动设备</a></li>
+        <li class="toc-entry toc-h3"><a href="#desktop-browsers">桌面浏览器</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#internet-explorer">Internet Explorer(IE)</a></li>
+    <li class="toc-entry toc-h2"><a href="#modals-and-dropdowns-on-mobile">移动设备的模态框和下拉组件</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#overflow-and-scrolling">Overflow溢出和scroll滚动</a></li>
+        <li class="toc-entry toc-h3"><a href="#ios-text-fields-and-scrolling">iOS文本字段和滚动</a></li>
+        <li class="toc-entry toc-h3"><a href="#navbar-dropdowns">Navbar导航栏下拉菜单</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#browser-zooming">浏览器缩放</a></li>
+    <li class="toc-entry toc-h2"><a href="#sticky-hoverfocus-on-mobile">移动设备上的:hover/:focus 粘性(点选中)状态</a></li>
+    <li class="toc-entry toc-h2"><a href="#printing">打印</a></li>
+    <li class="toc-entry toc-h2"><a href="#android-stock-browser">Android安卓内置浏览器</a>
+      <ul>
+        <li class="toc-entry toc-h4"><a href="#select-menu">Select选择菜单问题</a></li>
+      </ul>
+    </li>
+    <li class="toc-entry toc-h2"><a href="#validators">Select选择菜单问题</a></li>
+  </ul>
+</div>
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">浏览器与设备调优</h1>
+  <p class="bd-lead">学习BootStrap支持的浏览器和设备，包括旧版兼容问题、BUG和问题边界。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="supported-browsers">支持的浏览器</h2>
+  <p>Bootstrap几乎支持所有主流操作系统上各浏览器的<strong>最新稳定版本</strong>。<br/>
+  针对Windows，则是支持<strong>Internet Explorer 10-11 / Microsoft Edge</strong>浏览器。</p>
+  <p>使用最新版本WebKit、Blink或Gecko内核的第三方浏览器（如国产360安全/极速浏览器、搜狗浏览器、QQ浏览器、UCweb浏览器），无论是直接地还是通过Web API接口，虽然BootStrap官方没有针对性的开发支持，但在大多数情况下也都是完美兼容，不会影响视觉呈现和脚本运行。以下提供更具体的支持信息。</p>
+  <h3 id="mobile-devices">移动设备</h3>
+  <p>Bootstrap支持主流移动OS的默认浏览器的最新版本。注意，不支持代理浏览器（如Opera Mini浏览器、 Opera Mobile’s Turbo 模式、 UCweb Mini浏览器、 Amazon Silk浏览器）。</p>
+  <table class="table table-bordered table-striped ">
+    <thead>
+      <tr>
+        <td></td>
+        <th>Chrome</th>
+        <th>Firefox</th>
+        <th>Safari</th>
+        <th>Android Browser &amp; WebView</th>
+        <th>Microsoft Edge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Android安卓</th>
+        <td class="text-success">支持</td>
+        <td class="text-success">支持</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-success">Android v5.0+ 支持</td>
+        <td class="text-muted">N/A</td>
+      </tr>
+      <tr>
+        <th scope="row">iOS苹果</th>
+        <td class="text-success">支持</td>
+        <td class="text-success">支持</td>
+        <td class="text-success">支持</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-muted">N/A</td>
+      </tr>
+      <tr>
+        <th scope="row">Windows 10 Mobile</th>
+        <td class="text-muted">N/A</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-success">支持</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="desktop-browsers">桌面浏览器</h3>
+  <p>同样，支持大多数桌面浏览器的最新版本。</p>
+  <table class="table table-bordered table-striped ">
+    <thead>
+      <tr>
+        <td></td>
+        <th>Chrome</th>
+        <th>Firefox</th>
+        <th>Internet Explorer</th>
+        <th>Microsoft Edge</th>
+        <th>Opera</th>
+        <th>Safari</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Mac</th>
+        <td class="text-success">Supported</td>
+        <td class="text-success">Supported</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-muted">N/A</td>
+        <td class="text-success">Supported</td>
+        <td class="text-success">Supported</td>
+      </tr>
+      <tr>
+        <th scope="row">Windows</th>
+        <td class="text-success">Supported</td>
+        <td class="text-success">Supported</td>
+        <td class="text-success">Supported, IE10+</td>
+        <td class="text-success">Supported</td>
+        <td class="text-success">Supported</td>
+        <td class="text-danger">Not supported</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>对于 Firefox火狐浏览器, 除了最新的普通稳定版本, 我们也支持Firefox浏览器最新的<a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">扩展支持版本 (ESR)</a>。.</p>
+  <p>大多数情况下，在Chromium和Chrome for Linux、Firefox火狐 for Linux和Internet Explorer 9中，Bootstrap应该看起来和运行良好，尽管它们没有得到官方的支持。</p>
+  <p>针对不同的浏览器，我们有一个<a href="/docs/4.0/browser-bugs/">BUG墙列出了详尽明细</a>。</p>
+  <h2 id="internet-explorer">Internet Explorer(IE)</h2>
+  <p>支持Internet Explorer 10及更高版本，不支持IE9（即使大多兼容，我们依然不推荐）。请注意，IE10中不完全支持某些CSS3属性和HTML5元素，或者需要前缀属性才能实现完整的功能（访问<a href="https://caniuse.com/">https://caniuse.com</a>网站可以了解不同浏览器对CSS3和HTML5功能的支持）。</p>
+<p><strong>如果您需要IE8-9支持</strong>，请使用Bootstrap 3 (<a href="/boot" target="_blank">点此获取</a>)，它是我们代码中最稳定的版本，官方不再发布新版，但仍然支持严重错误修复和文档维护。</p>
+  <h2 id="modals-and-dropdowns-on-mobile">移动设备的模态框和下拉组件</h2>
+  <h3 id="overflow-and-scrolling">Overflow溢出和scroll滚动</h3>
+  <p>IOS和安卓设备中，对于<code class="highlighter-rouge">&lt;body&gt;</code>元素中使用<code class="highlighter-rouge">overflow: hidden;</code>的支持很有限。因此在这两种设备中，当你滚动超过一个模态窗口的顶部或底部，<code class="highlighter-rouge">&lt;body&gt;</code>内容也会开始滚动，请参阅<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=175502">Chrome bug #175502</a> (修复于Chrome v40) 和<a href="https://bugs.webkit.org/show_bug.cgi?id=153852">WebKit bug #153852</a>这两条文献。 </p>
+  <h3 id="ios-text-fields-and-scrolling">iOS文本字段和滚动</h3>
+  <p>从IOS9.2开始，当一个模态启用，如果手势触模在一个<code class="highlighter-rouge">&lt;input&gt;</code>文本或<code class="highlighter-rouge">&lt;textarea&gt;</code>文本框内，则<code class="highlighter-rouge">&lt;body&gt;</code>中的内容将被滚动，而不是模态本身滚动，请参阅<a href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit bug #153856</a></p>
+  <h3 id="navbar-dropdowns">Navbar导航栏下拉菜单</h3>
+  <p><code class="highlighter-rouge">.dropdown-backdrop</code> 在IOS上无法生态（受Z-indexinge属性影响），因此，要关闭导航栏中的下拉列表，必须再次单击下拉元素（或<a href="https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile" target="_blank">iOS中合法的触发点击事件他元素</a>）。</p>
+  <h2 id="browser-zooming">浏览器缩放</h2>
+  <p>页面缩放会影响一些组件的呈现效果，无论是在Bootstrap还是其它Web构造体验中都有这样的问题，我们会尽量解决它（在没有解决之前，建议用户先行检索网上公开的方法优化）。对于大多数用户，我们建议忽略在缩放下的渲染缺陷，因为除了用hacky方法之外，它们往往没有直接的解决方案。</p>
+  <h2 id="sticky-hoverfocus-on-mobile">移动设备上的<code class="highlighter-rouge">:hover</code>/<code class="highlighter-rouge">:focus</code> 粘性(点选中)状态</h2>
+  <p><code class="highlighter-rouge">:hover</code>与<code class="highlighter-rouge">:focus</code>一般用来表达选中、点中、悬停状态。<br/>
+  在移动触屏体验中，并不存在真正的悬停状态，移动浏览器厂商模仿悬停使<code class="highlighter-rouge">:hover</code>具备一定的“粘性”。即，用户屏幕点击一个元素之后，<code class="highlighter-rouge">:hover</code>样式开始应用，在用户触击另一个元素之后停止应用(申明：在移动优先的WEB开发中，这往往是不推荐的，但在诸如政务或特殊应用场景，还是有一定的作用，毕竟客户的需求是第一位-译者注)。</p>
+  <p>所以，你只要在Sass编译时，将 <code class="highlighter-rouge">$enable-hover-media-query</code>设置为 <code class="highlighter-rouge">ture</code>，BootStrap则会调用 <a href="https://github.com/twbs/mq4-hover-shim">mq4-hover-shim</a> 来禁用 <code class="highlighter-rouge">:hover</code>模拟状态，从而防止<code class="highlighter-rouge">:hover</code>的粘性。<br/>
+  这是一种变通方法，有一些注意事项及详细信息参阅Jquery shim文档。</p>
+  <h2 id="printing">打印</h2>
+  <p>打印总会出各种诡异的现象-这在所有现代浏览器中都存在。</p>
+  <p>Safari浏览器从v8.0版开始，使用固定宽度的<code class="highlighter-rouge">.container</code>类可能会导致其在打印时字体非常小。有关详细信息，请参阅<a href="https://github.com/twbs/bootstrap/issues/14868">issue #14868</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=138192">WebKit bug #138192</a>。<br/>
+  解决方法用以下CSS方法定义：</p>
+  <figure class="highlight">
+    <pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+  <span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+  </figure>
+  <h2 id="android-stock-browser">Android安卓内置浏览器</h2>
+  <p>在Android安卓4.1及之后的一些版本中会内置一个浏览器，而不是Chrome，这二者有一定的差异，因此也会造成一些错误呈现和脚本错误，这种情况下推荐在Android安卓系统上部署Chrome浏览器。<br/>
+  这其中包括：</p>
+  <h4 id="select-menu">Select选择菜单问题</h4>
+  <p><code class="highlighter-rouge">&lt;select&gt;</code>元素在安卓内置浏览器（不是Chrome）中，如果其元素内存在<code class="highlighter-rouge">border-radius</code> 和(或） <code class="highlighter-rouge">border</code>,网页上不会显示边缘属性（参阅<a href="https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">this StackOverflow question</a>问题描述）。<br/>
+  推荐用户使用下面的JS代码来移除内置浏览器的这个CSS冲突BUG，并将该<code class="highlighter-rouge">&lt;select&gt;</code>渲染成未样式化元素（这个方法还使用了浏览器的Agent属性嗅探避免了干扰Chrome、Safari 和 Mozilla 浏览器）：</p>
+  <figure class="highlight">
+    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+  <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Mozilla/5.0'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Android '</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'AppleWebKit'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'Chrome'</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isAndroid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'select.form-control'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'form-control'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'width'</span><span class="p">,</span> <span class="s1">'100%'</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre>
+  </figure>
+  <p>实际效果 <a href="http://jsbin.com/OyaqoDO/2" target="_blank">点击jsbin.com上的范例</a>查看。</p>
+  <h2 id="validators">验证器</h2>
+  <p>为了最大化兼容旧版浏览器、尽可能提供最好的体验，Bootstrap在多个不同的地方使用了 <a href="http://browserhacks.com/">browserhacks.com</a>上的方法，以处理不同的浏览器、不同差异性版本的特殊的CSS问题，以克服浏览器自身存在的bug。这些hacks自然是引起了CSS验证器申明它们是不可用的。甚至于还使用了一些尚未完全标准化的最新CSS方法，使系统能够渐进增强。<br/>
+这些验证器的警告在实践中不会影响生产和项目开发，因为我们的CSS的非hacky部分已经充分验证，而且用到的hacky部分不会妨碍非hacky部分的正常功能。因此这就是我们故意忽视特定的警告的原因。<br/>
+HTML进行标准化验证时也能收到一些琐碎而且无关紧要的HTML验证警告，因为整个解决方案包含一些Firefox火狐浏览器Bug，参阅<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>。</p>
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+	inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>

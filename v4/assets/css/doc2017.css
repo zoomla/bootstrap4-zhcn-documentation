@@ -17,10 +17,10 @@ a{color:#563d7c;}
 
 .bs-glyphicons { margin: 0 -10px 20px;  text-align: center;  }
 .bs-glyphicons-list { padding-left: 0; list-style: none }
-.bs-glyphicons li { float: left; padding-top:12px; width:12.5%;  height:8rem; font-size:3.2rem; background-color: #f9f9f9; border: 1px solid #fff }
+.bs-glyphicons li { float: left; padding-top:2px; width:12.5%;  height:8rem; font-size:3.2rem; background-color: #f9f9f9; border: 1px solid #fff }
 .bs-glyphicons .glyphicon-class { display: block; font-size:1rem; word-wrap: break-word }
 .bs-glyphicons li:hover{ background-color: #563d7c; }
-.bs-glyphicons a{color:#333;}
+/*.bs-glyphicons a{color:#333;}*/
 .bs-glyphicons li:hover a,.bs-glyphicons a:hover { color: #fff; text-decoration:none;}
 #bd-docs-nav{padding-top:7rem;}
 #bd-docs-nav li{line-height:1.8rem; border-bottom:1px dotted #ccc;}

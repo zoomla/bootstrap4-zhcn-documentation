@@ -67,13 +67,13 @@
 <a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
 </div>
 </li>
-      <li class="nav-item"><a class="nav-link" href="/boot/font.html" target="_blank" rel="noopener">Font Awesome奥森图标</a></li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
       <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
       <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -84,6 +84,7 @@
         <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
 </div>
     </li>
     <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
@@ -212,6 +213,7 @@
 <div class="d-none d-xl-block col-xl-2 bd-toc">
   <ul class="section-nav">
     <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
+	<li class="toc-entry toc-h2"><a href="#changing-the-separator">更改分隔符</a></li>
     <li class="toc-entry toc-h2"><a href="#accessibility">无障碍处理</a></li>
   </ul>
 </div>
@@ -263,6 +265,16 @@
   <span class="nt">&lt;/ol&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre>
   </div>
+  <h2 id="changing-the-separator">更改分隔符</h2>
+  <p>分隔符通过<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">::before</a>和自动添加到CSS中<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">content</a>。他们可以通过改变来改变$breadcrumb-divider。该报价是需要函数生成围绕一个字符串的报价，所以如果你想>为分隔符，你可以这样做：</p>
+  <div class="highlight"><pre><code><span class="nv">$breadcrumb-divider</span><span class="p">:</span> <span class="nf">quote</span><span class="p">(</span><span class="s2">"&gt;"</span><span class="p">);</span>
+</code></pre></div>
+<p>也可以使用base64嵌入式SVG图标：</p>
+<div class="highlight"><pre><code><span class="nv">$breadcrumb-divider</span><span class="p">:</span> <span class="sx">url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+)</span><span class="p">;</span>
+</code></pre></div>
+<p>分隔符可以通过设置<code>$breadcrumb-divider</code>为<code>none</code>：</p>
+<div class="highlight"><pre><code><span class="nv">$breadcrumb-divider</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+</code></pre></div>
   <h2 id="accessibility">无障碍处理</h2>
   <p>为了为障碍浏览提供方便，针对面包屑这样具备导航功能的模块，建议添加一个有意义的标签即<code class="highlighter-rouge">aria-label="breadcrumb"</code>來描述<code class="highlighter-rouge">&lt;nav&gt;</code>元素，以及使用 <code class="highlighter-rouge">aria-current="page"</code>到这组导航的最后一个项目，以标明当前页面名称（路径）</p>
   <p>更多信息，敬请参阅 <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>（面包屑导航的无障碍研究）。</p>

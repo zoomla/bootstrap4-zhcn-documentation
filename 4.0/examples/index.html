@@ -1,0 +1,281 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Zoomla逐浪CMS z01.com">
+<title>实例 &middot;Bootstrap 全球最流行的 HTML、CSS 和 JS 工具库。</title>
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with the Bootstrap CDN and a template starter page.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Get started with Bootstrap, the world's most popular framework for building responsive, mobile-first sites, with the Bootstrap CDN and a template starter page.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link" href="/v4/">首页</a></li>
+      <li class="nav-item"><a class="nav-link" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+	  
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.0 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="https://github.com/zoomla/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/v4/docs/download.html">下载 Bootstrap</a> </header>
+
+<div class="container-fluid">
+  <main class="bd-content  p-5" role="main">
+  	<div class="d-flex flex-column flex-md-row align-items-md-center  bg-light">
+  	<div class="pt-md-3 pb-md-4">
+    <h1 class="bd-title" id="content">实例展示</h1>
+    <p class="bd-lead">选择我们的示例，快速构建一个项目， 基于Bootstrap提供的自定义组件和布局属性-这其中包括了<strong>Zoomla!逐浪CMS</strong>官方团队在实践开发中的一些插件-它们对中文开发者用户很有用。</p>
+	<p><a target="_blank" class="btn btn-lg btn-bd-primary" href="/v4/docs/download.html">下载Bootstrap源码</a></p>
+	</div>
+    <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+	</div>
+    <h2 id="framework">自定义组件</h2>
+    <p>全新的组件和模板可帮助人们快速入门Bootstrap并展示添加到框架的最佳实践。</p>
+    <div class="row bd-examples">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="album/" target="_blank"> <img class="img-thumbnail" src="screenshots/album.png" alt="" width="800" height="600" />
+        <h4>专辑</h4>
+        </a>
+        <p>简单的单页模板照片转辑、展示组合等。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="pricing/" target="_blank"> <img class="img-thumbnail" src="screenshots/pricing.png" alt="" width="800" height="600" />
+        <h4>价格表</h4>
+        </a>
+        <p>使用.car卡片组件制作的定价页面示例，并具有自定义页眉和页脚。。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="checkout/" target="_blank"> <img class="img-thumbnail" src="screenshots/checkout.png" alt="" width="800" height="600" />
+        <h4>结算表单</h4>
+        </a>
+        <p>显示表单组件及其验证功能的自定义签出表单。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="product/" target="_blank"> <img class="img-thumbnail" src="screenshots/product.png" alt="" width="800" height="600" />
+        <h4>产品展示</h4>
+        </a>
+        <p>精益产品为重点的营销网页与广泛的网格和图像工作。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="cover/" target="_blank"> <img class="img-thumbnail" src="screenshots/cover.png" alt="" width="800" height="600" />
+        <h4>全屏模式</h4>
+        </a>
+        <p>一个简单的全屏效果展示。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="carousel/" target="_blank"> <img class="img-thumbnail" src="screenshots/carousel.png" alt="" width="800" height="600" />
+        <h4>Carousel轮放组件</h4>
+        </a>
+        <p>自定义导航栏和Carousel轮放组件，然后添加一些新的组件。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="blog/" target="_blank"> <img class="img-thumbnail" src="screenshots/blog.png" alt="" width="800" height="600" />
+        <h4>Blog博客效果</h4>
+        </a>
+        <p>杂志类博客模板，标题，导航，特色内容。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="dashboard/" target="_blank"> <img class="img-thumbnail" src="screenshots/dashboard.png" alt="" width="800" height="600" />
+        <h4>仪表盘</h4>
+        </a>
+        <p>经典的Dashboard仪表盘和导航（不兼容IE，EDGE完好）。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="signin/" target="_blank"> <img class="img-thumbnail" src="screenshots/sign-in.png" alt="" width="800" height="600" />
+        <h4>登录框</h4>
+        </a>
+        <p>一个简单的登录form框。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="sticky-footer/" target="_blank"> <img class="img-thumbnail" src="screenshots/sticky-footer.png" alt="" width="800" height="600" />
+        <h4>粘脚</h4>
+        </a>
+        <p>当内容比它短时，将页脚附加到视口的底部。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="sticky-footer-navbar/" target="_blank"> <img class="img-thumbnail" src="screenshots/sticky-footer-navbar.png" alt="" width="800" height="600" />
+        <h4>粘头且粘脚</h4>
+        </a>
+        <p>页头与页脚都固定随浏览器滚动固定在上下方。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="justified-nav/" target="_blank"> <img class="img-thumbnail" src="screenshots/justified-nav.jpg" alt="" width="800" height="600" />
+        <h4>nav-justified方法自定义导航</h4>
+        </a>
+        <p>除了系统默认导航外的自定义导航方法（safri旧版不太友好）。</p>
+      </div>
+    </div>
+    <h2 id="framework">框架布局</h2>
+    <p>Bootstrap栅格布局示例。</p>
+    <div class="row bd-examples">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="starter-template/" target="_blank"> <img class="img-thumbnail" src="screenshots/starter-template.jpg" alt="" width="800" height="600" />
+        <h4>入门示例（基本模板）</h4>
+        </a>
+        <p>只有最基本的框架和2行CSS。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="grid/" target="_blank"> <img class="img-thumbnail" src="screenshots/grid.jpg" alt="" width="800" height="600" />
+        <h4>栅格系统</h4>
+        </a>
+        <p>栅格的各种（所有）布局，包括嵌套示例。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="jumbotron/" target="_blank"> <img class="img-thumbnail" src="screenshots/jumbotron.jpg" alt="" width="800" height="600" />
+        <h4>大屏主页</h4>
+        </a>
+        <p>包括一个导航栏和一个大屏欢迎的栅格系统。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="narrow-jumbotron/" target="_blank"> <img class="img-thumbnail" src="screenshots/jumbotron-narrow.jpg" alt="" width="800" height="600" />
+        <h4>超窄屏（窄屏网页）</h4>
+        </a>
+        <p>通过缩小默容器和主屏幕来构建自定义页面。</p>
+      </div>
+    </div>
+    <h2 id="navbars">导航栏</h2>
+    <p>采用系统提供的导航栏构建，并显示如何移动，放置和扩展。</p>
+    <div class="row bd-examples">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="navbars/" target="_blank"> <img class="img-thumbnail" src="screenshots/navbars.png" alt="" width="800" height="600" />
+        <h4>导航样式集</h4>
+        </a>
+        <p>各种导航样式集合</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="navbar-top/" target="_blank"> <img class="img-thumbnail" src="screenshots/navbar-static.png" alt="" width="800" height="600" />
+        <h4>静态顶部导航</h4>
+        </a>
+        <p>默认的在顶部静态呈现。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="navbar-top-fixed/" target="_blank"> <img class="img-thumbnail" src="screenshots/navbar-fixed.png" alt="" width="800" height="600" />
+        <h4>固顶导航</h4>
+        </a>
+        <p>固定贴在浏览器的顶部。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="navbar-bottom/" target="_blank"> <img class="img-thumbnail" src="screenshots/navbar-bottom.png" alt="" />
+        <h4>固底导航</h4>
+        </a>
+        <p>固定帖在浏览器的底部。</p>
+      </div>
+    </div>
+    <h2 id="experiments">实验</h2>
+    <p>关注未来友好功能或技术的示例。</p>
+    <div class="row bd-examples">
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="floating-labels/" target="_blank"> <img class="img-thumbnail" src="screenshots/floating-labels.png" alt="" width="800" height="600" />
+        <h4>浮动标签</h4>
+        </a>
+        <p>在输入上有浮动标签的漂亮的简单表单。</p>
+      </div>
+	  <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="offcanvas/" target="_blank"> <img class="img-thumbnail" src="screenshots/offcanvas.png" alt="" width="800" height="600" />
+        <h4>Offcanvas抽屉效果</h4>
+        </a>
+        <p>基于bootstrap中offcanvas抽屉收缩插件的例子。</p>
+      </div>
+    </div>
+    <h2 id="experiments">来自逐浪CMS团队的实例</h2>
+    <p>Zoomla!逐浪CMS官方团队的一些快速实例，作为中国最早引入Bootstrap的CMS厂商他们一直在努力~</p>
+    <div class="row bd-examples">
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="appSearch/" target="_blank"> <img class="img-thumbnail" src="screenshots/appSearch_menuZoomlaCMS.jpg" alt="" width="800" height="600" />
+        <h4>仿苹果搜索并提供手机抽屉菜单</h4>
+        </a>
+        <p>顶部一个搜索按钮，点击弹出|关闭，如apple.com官网样式，且手机模式下有抽屉MENU项。</p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xl-3 mb-3"> <a href="search/" target="_blank"> <img class="img-thumbnail" src="screenshots/search.jpg" alt="" width="800" height="600" />
+        <h4>简易搜索框</h4>
+        </a>
+        <p>小搜索控件人人都需要，应用广泛。</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<footer class="bd-footer text-muted">
+  <div class="container-fluid p-3 p-md-5">
+    <ul class="bd-footer-links">
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="/v4/examples/">Examples</a></li>
+      <li><a href="../about/history.html">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank" rel="noopener">@mdo</a> and <a href="https://twitter.com/fat" target="_blank" rel="noopener">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-beta.2. Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script>
+Holder.addTheme('gray', {
+bg: '#777',
+fg: 'rgba(255,255,255,.75)',
+font: 'Helvetica',
+fontweight: 'normal'
+});
+</script>
+</body>
+</html>
