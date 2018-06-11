@@ -10,7 +10,7 @@
 
 # 维护团队
 由Zoomla!逐浪CMS团队维护
-我们是一个有着12年历史的本土web开发团队，官网[www.z01.com](http://www.z01.com "www.z01.com")
+我们是一个有着12年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
 
 # 图标与webfont引用
 基于zico（一个专为中国开发者而生的跨平台图标解决方案)，官网[ico.z01.com](http://ico.z01.com "ico.z01.com").
