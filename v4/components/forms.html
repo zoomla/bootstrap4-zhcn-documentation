@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.1 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -129,7 +129,6 @@
     <ul class="nav bd-sidenav">
     <li><a href="../layout/overview.html">概述</a></li>
     <li><a href="../layout/grid.html">栅格</a></li>
-    <li><a href="../layout/media-object.html">媒体对象</a></li>
     <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
     </ul>
   </div>
@@ -147,25 +146,28 @@
   <ul class="nav bd-sidenav">
     <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
     <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
-    <li><a href="../components/breadcrumb.html"> 面包屑导航(breadcrumb) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(Breadcrumb) </a> </li>
     <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
     <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
-    <li><a href="../components/card.html"> 卡片(card) </a> </li>
-    <li><a href="../components/carousel.html">  轮播效果(carousell) </a> </li>
-    <li><a href="../components/collapse.html"> 折叠面板(collapse) </a> </li>
-    <li><a href="../components/dropdowns.html"> 下拉菜单(dropdown) </a> </li>
-    <li class="active bd-sidenav-active"><a href="../components/forms.html"> 表单(form) </a> </li>
-    <li><a href="../components/input-group.html"> 输入框(input-group) </a> </li>
-    <li><a href="../components/jumbotron.html"> Hero大块屏(jumbotron) </a> </li>
-    <li><a href="../components/list-group.html"> 列表组(list-group) </a> </li>
-    <li><a href="../components/modal.html"> 弹出模态框(modal) </a> </li>
-    <li><a href="../components/navs.html"> 导航/滑动门(nav) </a> </li>
-    <li><a href="../components/navbar.html"> 导航栏(navbar) </a> </li>
-    <li><a href="../components/pagination.html"> 分页(pagination) </a> </li>
-    <li><a href="../components/popovers.html"> POP提示(popover) </a> </li>
-    <li><a href="../components/progress.html"> 进度条(progress) </a> </li>
-    <li><a href="../components/scrollspy.html"> 滚动监听(scroll) </a> </li>
-    <li><a href="../components/tooltips.html"> 提示冒泡(tooltip) </a> </li>
+    <li><a href="../components/card.html"> 卡片(Card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单(Dropdown) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../components/forms.html"> 表单(Form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(Input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(Jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(List-group) </a> </li>
+    <li><a href="../components/media-object.html"> 媒体对象/图文混排(Media-object) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(Modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(Nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(Navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
+    <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scroll) </a> </li>
+    <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
+    <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
   </ul>
 </div>
 <div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
@@ -252,9 +254,9 @@
         </li>
       </ul>
     </li>
-    <li class="toc-entry toc-h2"><a href="#help-text">表单下方帮助提示文本</a>
+    <li class="toc-entry toc-h2"><a href="#help-text">表单下方文字备注文本</a>
       <ul>
-        <li class="toc-entry toc-h5"><a href="#associating-help-text-with-form-controls">Associating help text with form controls</a></li>
+        <li class="toc-entry toc-h5"><a href="#associating-help-text-with-form-controls">表单控件下方的文字备注排版粘联</a></li>
       </ul>
     </li>
     <li class="toc-entry toc-h2"><a href="#disabled-forms">禁用表单</a>
@@ -273,25 +275,27 @@
 		<li class="toc-entry toc-h3"><a href="#tooltips">提示</a></li>
       </ul>
     </li>
-    <li class="toc-entry toc-h2"><a href="#custom-forms">自定义表单</a>
-      <ul>
-        <li class="toc-entry toc-h3"><a href="#checkboxes-and-radios-1">复选框和单选框自定义</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#checkboxes">Checkbox勾选</a></li>
-            <li class="toc-entry toc-h4"><a href="#radios">单选项</a></li>
-            <li class="toc-entry toc-h4"><a href="#disabled">禁用</a></li>
-            <li class="toc-entry toc-h4"><a href="#stacked">堆叠</a></li>
-          </ul>
-        </li>
-        <li class="toc-entry toc-h3"><a href="#select-menu">Select menu堆叠</a></li>
-		<li class="toc-entry toc-h3"><a href="#range">范围</a>
-        <li class="toc-entry toc-h3"><a href="#file-browser">文件浏览（文件选取）器</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings">Translating or customizing the strings</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+	<li class="toc-entry toc-h2"><a href="#custom-forms">自定义表单</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#checkboxes-and-radios-1">复选框和单选框自定义</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#checkboxes">Checkbox勾选</a></li>
+<li class="toc-entry toc-h4"><a href="#radios">Checkbox勾选</a></li>
+<li class="toc-entry toc-h4"><a href="#inline-1">一致</a></li>
+<li class="toc-entry toc-h4"><a href="#disabled">禁用</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#switches">IOS风格开关</a></li>
+<li class="toc-entry toc-h3"><a href="#select-menu">Select menu下拉选择菜单</a></li>
+<li class="toc-entry toc-h3"><a href="#range">范围</a></li>
+<li class="toc-entry toc-h3"><a href="#file-browser">文件浏览（文件选取）器</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-scss">Translating or customizing the strings with SCSS</a></li>
+<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-html">Translating or customizing the strings with HTML</a></li>
+</ul>
+</li>
+</ul>
+</li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -1332,7 +1336,7 @@
   <h2 id="help-text">表单下方帮助提示文本</h2>
   <p>可以使用.<code class="highlighter-rouge">.form-text</code> t（以前称为<code class="highlighter-rouge">.help-block</code> 在v3中）创建表单中的块级帮助文本。可以使用任何内联HTML元素和通用样式（如<code class="highlighter-rouge">.text-muted</code>）灵活的展示帮助提示文本。</p>
   <div class="bd-callout bd-callout-warning">
-    <h5 id="associating-help-text-with-form-controls">帮助提示文本需要与表单控件关联</h5>
+    <h5 id="associating-help-text-with-form-controls">表单控件下方的文字备注排版粘联</h5>
     <p>帮助提示文本应该与使用该<code class="highlighter-rouge">aria-describedby</code>与表单控制元件相关联，这将确保辅助技术（如读屏器）在用户focus点中或input输入时了解此帮助提示文字。</p>
   </div>
   <p>input 下方的帮助文字可以用  <code class="highlighter-rouge">.form-text</code>.，包括  <code class="highlighter-rouge">display: block</code>并添加一些  <code class="highlighter-rouge">margin-top</code>以便与上面input框有所间隔。</p>
@@ -2145,33 +2149,31 @@
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customRadioDisabled"</span><span class="nt">&gt;</span>Toggle this custom radio<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </div>
-  <h4 id="stacked">堆叠</h4>
-  <p>自訂的核取方塊和單選按鈕原本會以行內樣式排列。加入一個 .custom-controls-stacked 的父級，以確保每個表單控制元件在不同的列上。
-自定义的单选框和复选框，原本会以行内样式水平排列，加入一个 <code class="highlighter-rouge">.custom-controls-stacked</code> 父级，则可以确保每个控件在不同的行上，形成堆叠效果。</p>
-  <div class="bd-example">
-    <div class="custom-controls-stacked">
-      <label class="custom-control custom-radio">
-        <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input" />
-        <span class="custom-control-indicator"></span> <span class="custom-control-description">Toggle this custom radio</span> </label>
-      <label class="custom-control custom-radio">
-        <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input" />
-        <span class="custom-control-indicator"></span> <span class="custom-control-description">Or toggle this other custom radio</span> </label>
-    </div>
-  </div>
-  <div class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-controls-stacked"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioStacked3"</span> <span class="na">name=</span><span class="s">"radio-stacked"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Toggle this custom radio<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control custom-radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioStacked4"</span> <span class="na">name=</span><span class="s">"radio-stacked"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-indicator"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"custom-control-description"</span><span class="nt">&gt;</span>Or toggle this other custom radio<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-  </div>
+
+  <h3 id="switches">IOS风格开关</h3>
+
+<p>开关具有自定义复选框的标记，使用 <code class="highlighter-rouge">.custom-switch</code> 类来呈现切换开关。开关还支持 <code class="highlighter-rouge">disabled</code>属性<sub>(v4.2.1新增组件)</sub>。</p>
+
+<div class="bd-example">
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1" />
+  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" disabled="" id="customSwitch2" />
+  <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customSwitch1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customSwitch1"</span><span class="nt">&gt;</span>Toggle this switch element<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-switch"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">disabled</span> <span class="na">id=</span><span class="s">"customSwitch2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customSwitch2"</span><span class="nt">&gt;</span>Disabled switch element<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  
+  
   <h3 id="select-menu">Select menu下拉选择菜单</h3>
   <p>自定义<code class="highlighter-rouge">&lt;select&gt;</code>下拉选择菜单只需要一个<code class="highlighter-rouge">.custom-select</code>CSS即可触发自定义样式。</p>
   <div class="bd-example">

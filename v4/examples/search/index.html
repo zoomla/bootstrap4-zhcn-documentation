@@ -10,6 +10,7 @@
 <!-- Bootstrap 核心CSS -->
 <link rel="stylesheet" href="https://code.z01.com/v4/dist/css/bootstrap.min.css" >
 <link rel="stylesheet" href="https://code.z01.com/boot/dist/css/font-awesome.min.css" >
+<link rel="stylesheet" href="http://code.z01.com/zico.min.css" >
 <style>
 }
 </style>
@@ -17,6 +18,7 @@
 <body>
 <div class="container">
 <br>
+<h1>基本代码：</h1>
 <form class="form-inline my-2 my-lg-0" role="search" method="get" action="https://www.z01.com/Search/SearchList" target="_blank">
 <div class="input-group">
 <input type="text" class="form-control" name="keyword" placeholder="全站检索">
@@ -25,7 +27,6 @@
 </span>
 </div><!-- /input-group -->
 </form>
-<h1>代码：</h1>
 <p>
 <code>&lt;form class=&quot;form-inline my-2 my-lg-0&quot; role=&quot;search&quot; method=&quot;get&quot; action=&quot;/Search/SearchList&quot; target=&quot;_blank&quot;&gt;<br>
 &lt;div class=&quot;input-group&quot;&gt;<br>
@@ -38,15 +39,13 @@
 </code></p>
 
 <hr/><br>
-
-
+<h1>默认位置代码：</h1>
 <form class="form-inline" role="search" action="https://www.z01.com/Search/SearchList" method="get" target="_blank">
 <div class="form-group">
 <input name="KeyWord" class="form-control mr-sm-2" type="text" placeholder="全站搜索">
 </div>
 <button class="btn  my-2 my-sm-0" type="submit" style="background:none; margin-left:-3rem; color:#ff9d00;" ><i class="fa fa-search" ></i></button>
 </form>
-<h1>代码：</h1>
 <p>
 <code>
 &lt;form class=&quot;form-inline&quot; role=&quot;search&quot; action=&quot;/Search/SearchList&quot; method=&quot;get&quot; target=&quot;_blank&quot;&gt;<br>
@@ -60,16 +59,13 @@
 
 
 <hr/><br>
-
-
-
 <form class="form-inline pull-right" role="search" action="https://www.z01.com/Search/SearchList" method="get" target="_blank">
 <div class="form-group">
 <input name="KeyWord" class="form-control mr-sm-2" type="text" placeholder="全站搜索">
 </div>
 <button class="btn  my-2 my-sm-0" type="submit" style="background:none; margin-left:-3rem; color:#ff9d00;" ><i class="fa fa-search" ></i></button>
 </form>
-<h1>代码：</h1>
+<h1>右对齐代码：</h1>
 <p>
 <code>
 &lt;form class=&quot;form-inline pull-right&quot; role=&quot;search&quot; action=&quot;/Search/SearchList&quot; method=&quot;get&quot; target=&quot;_blank&quot;&gt;<br>
@@ -80,6 +76,33 @@
 &lt;/form&gt;
 </code>
 </p>
+
+
+<hr/><br>
+<h1>组合代码：</h1>
+
+<form class="form-inline" role="search" action="https://www.z01.com/Search/SearchList" method="get" target="_blank">
+<div class="input-group">
+<input name="KeyWord" class="form-control" type="text" placeholder="全站搜索">
+<div class="input-group-append">
+<button class="input-group-text" type="submit" ><i class="zi zi_search" ></i></button>
+</div>
+</div>
+</form>
+<p>
+<code>
+&lt;form class=&quot;form-inline&quot; role=&quot;search&quot; action=&quot;https://www.z01.com/Search/SearchList&quot; method=&quot;get&quot; target=&quot;_blank&quot;&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+&lt;input name=&quot;KeyWord&quot; class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;全站搜索&quot;&gt;
+&lt;div class=&quot;input-group-append&quot;&gt;
+&lt;button class=&quot;input-group-text&quot; type=&quot;submit&quot; &gt;&lt;i class=&quot;zi zi_search&quot; &gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+</code>
+</p>
+
+
 
 
 </div>

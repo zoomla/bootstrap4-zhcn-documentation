@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>动动板块</title>
+<title>基于SVG的响应式价目表-响应鼠标事件移动变幻</title>
 <style>
 /*头部色块定义*/
 .l-blush { background: linear-gradient(45deg, #dd5e89, #f7bb97) !important; color: #fff !important }
@@ -13,7 +13,7 @@
 
 .pricing { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; width: 100%; margin: 0 auto 3em }
 .pricing-item { position: relative; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-align-items: stretch; align-items: stretch; text-align: center; -webkit-flex: 0 1 350px; flex: 0 1 350px }
-.pricing-action { color: inherit; border: none; background: none }
+.pricing-action { color: inherit; border: none; }
 .pricing-action:focus { outline: none }
 .pricing-palden .pricing-item { cursor: default; background: #fff; box-shadow: 0 0 10px rgba(46,59,125,0.23); border-radius: 20px 20px 10px 10px; margin: 1em }
 .pricing-palden .pricing-item:hover .deco-layer--1 { -webkit-transform: translate3d(15px, 0, 0); transform: translate3d(15px, 0, 0) }
@@ -41,6 +41,7 @@
 </style>
 </head>
 <body>
+<h1>基于SVG的响应式价目表-响应鼠标事件移动变幻</h1>
 <div class="pricing pricing-palden">
 <div class="pricing-item">
 <div class="pricing-deco l-slategray">
