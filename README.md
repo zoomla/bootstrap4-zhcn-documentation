@@ -1,16 +1,19 @@
+# Web不死，Zoomla!逐浪CMS筑力中国web开发进程！
 # 更新信息
 本文档在线浏览地址：
 1. [http://code.z01.com/](http://code.z01.com/ "http://code.z01.com/")
 2. [http://github.z01.com/bootstrap4-zhcn-documentation/](http://github.z01.com/bootstrap4-zhcn-documentation/ "http://github.z01.com/bootstrap4-zhcn-documentation/")
 
 
-历史版本：
+中文镜像历史版本：
 1. v4.0版     发布时间：2018-2-10  文档地址：[http://code.z01.com/4.0/index.html](http://code.z01.com/4.0/index.html "http://code.z01.com/4.0/index.html")
 2. v4.1.1.版  发布日期：2018-6-11  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
+3. v4.2.1.版  发布日期：2019-1-25  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
+
 
 # 维护团队
 由Zoomla!逐浪CMS团队维护
-我们是一个有着12年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
+我们是一个有着13年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
 
 # 图标与webfont引用
 基于zico（一个专为中国开发者而生的跨平台图标解决方案)，官网[ico.z01.com](http://ico.z01.com "ico.z01.com").
