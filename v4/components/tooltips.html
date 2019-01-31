@@ -217,27 +217,14 @@
   <ul class="section-nav">
     <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
     <li class="toc-entry toc-h2"><a href="#example-enable-tooltips-everywhere">示例：在任何地方启用tooltip提示冒泡插件</a></li>
-    <li class="toc-entry toc-h2"><a href="#examples">实际范例</a>
-      <ul>
-        <li class="toc-entry toc-h3"><a href="#static-demo">静态演示</a></li>
-        <li class="toc-entry toc-h3"><a href="#interactive-demo">互动演示</a></li>
-      </ul>
-    </li>
+    <li class="toc-entry toc-h2"><a href="#examples">实际范例</a></li>
     <li class="toc-entry toc-h2"><a href="#usage">用法</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#markup">标记</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#making-tooltips-work-for-keyboard-and-assistive-technology-users">使tooltip提示冒泡使用于键盘和辅助技术使用者</a></li>
-          </ul>
-        </li>
-        <li class="toc-entry toc-h3"><a href="#options">选项</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#data-attributes-for-individual-tooltips">单个提示冒泡的数据属性</a></li>
-          </ul>
-        </li>
+		<li class="toc-entry toc-h3"><a href="#disabled-elements">禁用元素</a></li>
+        <li class="toc-entry toc-h3"><a href="#options">选项</a></li>
         <li class="toc-entry toc-h3"><a href="#methods">方法</a>
           <ul>
-            <li class="toc-entry toc-h4"><a href="#asynchronous-methods-and-transitions">异步传输和转换</a></li>
             <li class="toc-entry toc-h4"><a href="#tooltipoptions">$().tooltip(options)</a></li>
             <li class="toc-entry toc-h4"><a href="#tooltipshow">.tooltip('show')</a></li>
             <li class="toc-entry toc-h4"><a href="#tooltiphide">.tooltip('hide')</a></li>
@@ -284,39 +271,18 @@
   <div class="bd-example tooltip-demo">
     <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral. </p>
   </div>
-  <h3 id="static-demo">静态演示</h3>
-  <p>可以使用四个方向：顶部对齐、右对齐、底部对齐、左对齐。</p>
-  <div class="bd-example bd-example-tooltip-static">
-    <div class="tooltip bs-tooltip-top bs-tooltip-top-docs" role="tooltip">
-      <div class="arrow"></div>
-      <div class="tooltip-inner"> 顶部对齐Tooltip on the top </div>
-    </div>
-    <div class="tooltip bs-tooltip-right bs-tooltip-right-docs" role="tooltip">
-      <div class="arrow"></div>
-      <div class="tooltip-inner"> 右对齐Tooltip on the right </div>
-    </div>
-    <div class="tooltip bs-tooltip-bottom bs-tooltip-bottom-docs" role="tooltip">
-      <div class="arrow"></div>
-      <div class="tooltip-inner"> 底对齐Tooltip on the bottom </div>
-    </div>
-    <div class="tooltip bs-tooltip-left bs-tooltip-left-docs" role="tooltip">
-      <div class="arrow"></div>
-      <div class="tooltip-inner"> 左对齐Tooltip on the left </div>
-    </div>
-  </div>
-  <h3 id="interactive-demo">互动演示</h3>
-  <p>用鼠标点击下列按钮可查看实际提示冒泡效果：</p>
+  <p>将鼠标悬停在下面的按钮上，可以看到四个工具提示方向:顶部、右侧、底部和左侧。</p>
   <div class="bd-example tooltip-demo">
-    <div class="bd-example-tooltips">
-      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;">Tooltip with HTML</button>
-    </div>
+  <div class="bd-example-tooltips">
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
   </div>
-  <figure class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
   Tooltip on top
 <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>
@@ -327,9 +293,9 @@
 <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>
   Tooltip on left
-<span class="nt">&lt;/button&gt;</span></code></pre>
-  </figure>
-  <p>而且支持自定义HTML：</p>
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+  <p>并且支持自定义HTML：</p>
   <figure class="highlight">
     <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-html=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span><span class="nt">&gt;</span>
   Tooltip with HTML
@@ -359,9 +325,23 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
+  <h3 id="disabled-elements">禁用元素</h3>
+  <p>具有disabled <code class="highlighter-rouge">disabled</code>属性的元素不是交互式的, 这意味着用户不能集中注意力,、悬停或单击它们来触发工具提示(或弹窗).作为一种解决方案，你将希望从包装器<code class="highlighter-rouge">&lt;div&gt;</code> 或 <code class="highlighter-rouge">&lt;span&gt;</code>,触发工具提示，最好使用 <code class="highlighter-rouge">tabindex="0"</code>, 并覆盖 <code class="highlighter-rouge">pointer-events</code> 禁用元素.</p>
+  <div class="tooltip-demo">
+
+<div class="bd-example">
+<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled="">Disabled button</button>
+</span>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"d-inline-block"</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">title=</span><span class="s">"Disabled tooltip"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></figure>
+
+</div>
   <h3 id="options">选项</h3>
   <p>你可以通过数据属性或JavaScript传递选项，如果使用数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>,如 <code class="highlighter-rouge">data-animation=""</code>。</p>
-  <table class="table table-bordered table-striped table-responsive">
+<table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>
         <th style="width: 100px;">名称</th>
@@ -403,7 +383,7 @@
         <td>placement</td>
         <td>string | function</td>
         <td>'top'</td>
-        <td><p>如何提示冒泡，包括： auto | top | bottom | left | right。<br />
+        <td><p>如何提示冒泡，包括： auto | top | bottom | left | right。<br>
             如何指定为 <code>auto</code> ，它会动态地调整提示冒泡的位置。举个例子，如果placement是`auto left`，提示冒泡将尽可能地显示在左侧，否则显示在右侧。</p>
           <p>如果使用一个函数来定位时，将使用提示冒泡的DMO节点作为其第一个参数并将触发元素的DOM节点作为其第二个参数来调用，<code>this</code> 将被设为弹出提示框实例。</p></td>
       </tr>

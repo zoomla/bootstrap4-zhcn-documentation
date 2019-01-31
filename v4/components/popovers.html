@@ -164,7 +164,7 @@
     <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
     <li class="active bd-sidenav-active"><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
     <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
-    <li><a href="../components/scrollspy.html"> 滚动监听(Scroll) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
     <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
     <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
     <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
@@ -220,15 +220,10 @@
     <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
     <li class="toc-entry toc-h2"><a href="#example-enable-popovers-everywhere">示例：在任意位置启用弹出窗口</a></li>
     <li class="toc-entry toc-h2"><a href="#example-using-the-container-option">示例：使用 container 容器选项</a></li>
-    <li class="toc-entry toc-h2"><a href="#static-popover">静态提示框</a></li>
     <li class="toc-entry toc-h2"><a href="#live-demo">现场演示</a>
-	
       <ul>
         <li class="toc-entry toc-h3"><a href="#four-directions">四个方向</a></li>
         <li class="toc-entry toc-h3"><a href="#dismiss-on-next-click">在下次点击时收回</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#specific-markup-required-for-dismiss-on-next-click">下一步点击所需要的标记</a></li>
-          </ul>
         </li>
 		<li class="toc-entry toc-h3"><a href="#disabled-elements">禁用的元素</a></li>
       </ul>
@@ -237,13 +232,9 @@
 	
       <ul>
         <li class="toc-entry toc-h3"><a href="#options">选项</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#data-attributes-for-individual-popovers">单个popovers的数据属性</a></li>
-          </ul>
         </li>
         <li class="toc-entry toc-h3"><a href="#methods">方法</a>
           <ul>
-            <li class="toc-entry toc-h4"><a href="#asynchronous-methods-and-transitions">异步传输与转换</a></li>
             <li class="toc-entry toc-h4"><a href="#popoveroptions">$().popover(options)</a></li>
             <li class="toc-entry toc-h4"><a href="#popovershow">.popover('show')</a></li>
             <li class="toc-entry toc-h4"><a href="#popoverhide">.popover('hide')</a></li>
@@ -295,39 +286,7 @@
   <span class="p">})</span>
 <span class="p">})</span></code></pre>
   </figure>
-  <h2 id="static-popover">静态提示框</h2>
-  <p>可以使用四个选项：顶部、右部、底部、左部对齐（指向）。</p>
-  <div class="bd-example bd-example-popover-static">
-    <div class="popover bs-popover-top bs-popover-top-docs">
-      <div class="arrow"></div>
-      <h3 class="popover-header">Popover top</h3>
-      <div class="popover-body">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-    </div>
-    <div class="popover bs-popover-right bs-popover-right-docs">
-      <div class="arrow"></div>
-      <h3 class="popover-header">Popover right</h3>
-      <div class="popover-body">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-    </div>
-    <div class="popover bs-popover-bottom bs-popover-bottom-docs">
-      <div class="arrow"></div>
-      <h3 class="popover-header">Popover bottom</h3>
-      <div class="popover-body">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-    </div>
-    <div class="popover bs-popover-left bs-popover-left-docs">
-      <div class="arrow"></div>
-      <h3 class="popover-header">Popover left</h3>
-      <div class="popover-body">
-        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-  </div>
+ 
   <h2 id="live-demo">现场演示</h2>
   <div class="bd-example">
     <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">点击体验 popover提示框效果</button>
@@ -399,100 +358,118 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   </figure>
   <h3 id="options">选项</h3>
   <p>可通过数据属性或JavaScript传递选项参数。对于数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>上，如 <code class="highlighter-rouge">data-animation=""</code>。</p>
-  <table class="table table-bordered table-striped table-responsive">
-    <thead>
-      <tr>
-        <th style="width: 100px;">名称</th>
-        <th style="width: 100px;">Type类型</th>
-        <th style="width: 50px;">默认值</th>
-        <th>描述</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>animation</td>
-        <td>boolean</td>
-        <td>true</td>
-        <td>将CSS淡入淡出转换应用于popover提示框。</td>
-      </tr>
-      <tr>
-        <td>container</td>
-        <td>string | element | false</td>
-        <td>false</td>
-        <td>向一个特定元素追加提示框，如<code>container: 'body'</code>。这个选项候特别有用，因为它允许你将弹出提示定位在触发元素附近的内容中--这将防止在窗口调整大小的时候，提示框飘到远离（撑出）触发元素的位置。</td>
-      </tr>
-      <tr>
-        <td>content</td>
-        <td>string | element | function</td>
-        <td>''</td>
-        <td><p>如果 <code>data-content</code>属性不存在，提供默认的content值。</p>
-          <p>如果提供了一个函数，调用这个函数时，函数的<code>this</code>引用被设置为附加提示框的元素。</p></td>
-      </tr>
-      <tr>
-        <td>delay</td>
-        <td>number | object</td>
-        <td>0</td>
-        <td><p>延迟显示和隐藏弹出（ms） - 不适用于手动触发类型。</p>
-          <p>如果向这个选项提供一个数字值，显示和隐藏都会应用这个延迟。</p>
-          <p>Object对象结构是: <code>delay: { "show": 500, "hide": 100 }</code></p></td>
-      </tr>
-      <tr>
-        <td>html</td>
-        <td>boolean</td>
-        <td>false</td>
-        <td>向提示框插入HTML。如果值为false，将使用jQuery的text方法向DOM插入内容。如果你担心跨站脚本攻击的话，请使用<code>text</code>。</td>
-      </tr>
-      <tr>
-        <td>placement</td>
-        <td>string | function</td>
-        <td>'right'</td>
-        <td><p>如何定位提示框：auto | top | bottom | left | right。<br />
-           如果指定了"auto"，它会动态地调整提示框的位置。举个例子，如果placement是"auto left"，提示框将尽可能地显示在左侧，否则显示在右侧。</p>
-          <p>如果用一个函数来决定placement，会调用提示框的DOM节点作为第一个参数，然后触发元素的DOM节点是第二个参数。<code>this</code>将被设置为提示框的实例。</p></td>
-      </tr>
-      <tr>
-        <td>selector</td>
-        <td>string | false</td>
-        <td>false</td>
-        <td>如果提供了一个选择器，提示框将被委派给指定的目标。在实践中，它让动态添加的HTML内容也能附加提示框。请参阅 <a href="https://github.com/twbs/bootstrap/issues/4215">这里文档</a> 以及 <a href="https://jsbin.com/zopod/1/edit">一个翔实的示例</a>。</td>
-      </tr>
-      <tr>
-        <td>template</td>
-        <td>string</td>
-        <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
-        <td><p>在创建提示框时使用基本HTML。</p>
-          <p>动态提示框的 <code>title</code> 值将被注入到 <code>.popover-header</code>中。</p>
-          <p>动态提示框的 <code>content</code> 值将被注入到 <code>.popover-body</code>中。</p>
-          <p><code>.arrow</code> 将变成提示框的箭头。</p>
-          <p>最外层的包裹元素必须拥有<code>.popover</code> class样式定义</p></td>
-      </tr>
-      <tr>
-        <td>title</td>
-        <td>string | element | function</td>
-        <td>''</td>
-        <td><p>如果 <code>title</code> 属性不存在，提供默认的title值。</p>
-          <p>如果提供了一个函数，调用这个函数时，函数的 <code>this</code>引用被设置为附加提示框的元素。</p></td>
-      </tr>
-      <tr>
-        <td>trigger</td>
-        <td>string</td>
-        <td>'click'</td>
-        <td>如何触发提示框 - click | hover | focus | manual。你可以传递多个触发器，用空格隔开它们。但是`manual`不能与别的触发器结合使用。</td>
-      </tr>
-      <tr>
-        <td>offset</td>
-        <td>number | string</td>
-        <td>0</td>
-        <td>提示框相对于目标的偏移，欲知更多请查询 <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">Tether的偏移文档</a>。</td>
-      </tr>
-      <tr>
-        <td>fallbackPlacement</td>
-        <td>string | array</td>
-        <td>'flip'</td>
-        <td>指定动态提示框在回调时使用哪个位置，有关更多信息请参阅 Popper.js 的 <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">行为属性文档</a>。</td>
-      </tr>
-    </tbody>
-  </table>
+ <table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Name</th>
+      <th style="width: 100px;">Type</th>
+      <th style="width: 50px;">Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>animation</td>
+      <td>boolean</td>
+      <td>true</td>
+      <td>Apply a CSS fade transition to the popover</td>
+    </tr>
+    <tr>
+      <td>container</td>
+      <td>string | element | false</td>
+      <td>false</td>
+      <td>
+        <p>Appends the popover to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element -&nbsp;which will prevent the popover from floating away from the triggering element during a window resize.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>string | element | function</td>
+      <td>''</td>
+      <td>
+        <p>Default content value if <code>data-content</code> attribute isn't present.</p>
+        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>delay</td>
+      <td>number | object</td>
+      <td>0</td>
+      <td>
+        <p>Delay showing and hiding the popover (ms) - does not apply to manual trigger type</p>
+        <p>If a number is supplied, delay is applied to both hide/show</p>
+        <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td>html</td>
+      <td>boolean</td>
+      <td>false</td>
+      <td>Insert HTML into the popover. If false, jQuery's <code>text</code> method will be used to insert content into the DOM. Use text if you're worried about XSS attacks.</td>
+    </tr>
+    <tr>
+      <td>placement</td>
+      <td>string | function</td>
+      <td>'right'</td>
+      <td>
+        <p>How to position the popover - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the popover.</p>
+        <p>When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the popover instance.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>selector</td>
+      <td>string | false</td>
+      <td>false</td>
+      <td>If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to enable dynamic HTML content to have popovers added. See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb">an informative example</a>.</td>
+    </tr>
+    <tr>
+      <td>template</td>
+      <td>string</td>
+      <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+      <td>
+        <p>Base HTML to use when creating the popover.</p>
+        <p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
+        <p>The popover's <code>content</code> will be injected into the <code>.popover-body</code>.</p>
+        <p><code>.arrow</code> will become the popover's arrow.</p>
+        <p>The outermost wrapper element should have the <code>.popover</code> class.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>string | element | function</td>
+      <td>''</td>
+      <td>
+        <p>Default title value if <code>title</code> attribute isn't present.</p>
+        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the popover is attached to.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>trigger</td>
+      <td>string</td>
+      <td>'click'</td>
+      <td>How popover is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space. <code>manual</code> cannot be combined with any other trigger.</td>
+    </tr>
+    <tr>
+      <td>offset</td>
+      <td>number | string</td>
+      <td>0</td>
+      <td>Offset of the popover relative to its target. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..offset.offset">offset docs</a>.</td>
+    </tr>
+    <tr>
+      <td>fallbackPlacement</td>
+      <td>string | array</td>
+      <td>'flip'</td>
+      <td>Allow to specify which position Popper will use on fallback. For more information refer to
+      Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.behavior">behavior docs</a></td>
+    </tr>
+    <tr>
+      <td>boundary</td>
+      <td>string | element</td>
+      <td>'scrollParent'</td>
+      <td>Overflow constraint boundary of the popover. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+    </tr>
+  </tbody>
+</table>
   <div class="bd-callout bd-callout-info">
     <h4 id="data-attributes-for-individual-popovers">单个popovers的数据属性</h4>
     <p>如上所述，可以通过使用数据属性来指定各个提示框的选项。</p>

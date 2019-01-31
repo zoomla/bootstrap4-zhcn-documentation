@@ -164,7 +164,7 @@
     <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
     <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
     <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
-    <li><a href="../components/scrollspy.html"> 滚动监听(Scroll) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
     <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
     <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
     <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
@@ -220,11 +220,11 @@
     <li class="toc-entry toc-h2"><a href="#form-controls">表单控件</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#sizing">大小规格</a></li>
-		<li class="toc-entry toc-h3"><a href="#range-inputs">输入范围</a></li>
         <li class="toc-entry toc-h3"><a href="#readonly">只读属性</a></li>
         <li class="toc-entry toc-h3"><a href="#readonly-plain-text">只读纯文本</a></li>
       </ul>
     </li>
+		<li class="toc-entry toc-h2"><a href="#range-inputs">输入范围</a></li>
     <li class="toc-entry toc-h2"><a href="#checkboxes-and-radios">复选框与单选框</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#default-stacked">默认堆叠</a></li>
@@ -238,32 +238,17 @@
         <li class="toc-entry toc-h3"><a href="#form-grid">表单栅格排列</a>
           <ul>
             <li class="toc-entry toc-h4"><a href="#form-row">表格式排列</a></li>
-            <li class="toc-entry toc-h4"><a href="#horizontal-form">垂直排列表单</a>
-              <ul>
-                <li class="toc-entry toc-h5"><a href="#horizontal-form-label-sizing">垂直排列表单尺寸规格定义</a></li>
-              </ul>
-            </li>
+            <li class="toc-entry toc-h4"><a href="#horizontal-form">垂直排列表单</a> </li>
             <li class="toc-entry toc-h4"><a href="#column-sizing">栅格式列尺寸定义</a></li>
             <li class="toc-entry toc-h4"><a href="#auto-sizing">自动调整大小</a></li>
           </ul>
         </li>
-        <li class="toc-entry toc-h3"><a href="#inline-forms">内联式表单</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#alternatives-to-hidden-labels">隐藏的标签替代</a></li>
-          </ul>
-        </li>
+        <li class="toc-entry toc-h3"><a href="#inline-forms">内联式表单</a></li>
       </ul>
     </li>
-    <li class="toc-entry toc-h2"><a href="#help-text">表单下方文字备注文本</a>
-      <ul>
-        <li class="toc-entry toc-h5"><a href="#associating-help-text-with-form-controls">表单控件下方的文字备注排版粘联</a></li>
-      </ul>
-    </li>
+    <li class="toc-entry toc-h2"><a href="#help-text">表单下方文字备注文本</a></li>
     <li class="toc-entry toc-h2"><a href="#disabled-forms">禁用表单</a>
-      <ul>
-        <li class="toc-entry toc-h4"><a href="#caveat-with-anchors">附加说明与锚</a></li>
-        <li class="toc-entry toc-h4"><a href="#cross-browser-compatibility">跨浏览器兼容性支持</a></li>
-      </ul>
+      
     </li>
     <li class="toc-entry toc-h2"><a href="#validation">验证</a>
       <ul>
@@ -545,6 +530,22 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary mb-2"</span><span class="nt">&gt;</span>Confirm identity<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre>
   </div>
+  <h2 id="range-inputs">输入范围</h2>
+  <p>使用设置水平滚动范围输入<code>.form-control-range</code>。</p>
+  <div class="bd-example">
+<form>
+  <div class="form-group">
+    <label for="formControlRange">Example Range input</label>
+    <input type="range" class="form-control-range" id="formControlRange">
+  </div>
+</form>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>Example Range input<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"form-control-range"</span> <span class="na">id=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
   <h2 id="checkboxes-and-radios">复选框与单选框</h2>
   <p>使用<code class="highlighter-rouge">.form-check </code>可以格式化复选框和单选框按钮，用以<strong>改进它们的默认布局和动作呈现</strong>，复选框用于在列表中选择一个或多个选项，单选框则用于多许多选项中选择一个。</p>
   <p>复选框和单选框也是可以禁用的，只要<code class="highlighter-rouge">not-allowed</code>在父级的悬停上提供定义，<code class="highlighter-rouge">&lt;label&gt;</code>需要将该<code class="highlighter-rouge">.disabled</code> 类添加到父级<code class="highlighter-rouge">.form-check</code>，同时控件也会淡化文字颜色以灰色显示禁用状态。</p>
@@ -1190,11 +1191,11 @@
 <span class="nt">&lt;/form&gt;</span></code></pre>
   </div>
   <p>也支持 <a href="#custom-forms">自定义表单</a> 控件。.</p>
-  <div class="bd-example">
- <form>
+<div class="bd-example">
+<form>
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
       <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
         <option selected="">Choose...</option>
         <option value="1">One</option>
@@ -1213,7 +1214,7 @@
     </div>
   </div>
 </form>
-  </div>
+</div>
   <div class="highlight">
    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-row align-items-center"</span><span class="nt">&gt;</span>

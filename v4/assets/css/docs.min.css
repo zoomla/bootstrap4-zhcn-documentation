@@ -27,6 +27,7 @@
 }
 
 @media (min-width:768px) {
+.bd-placeholder-img-lg {font-size: 3.5rem;}
 @supports ((position:-webkit-sticky) or (position:sticky)) {
 .bd-navbar {
 position:-webkit-sticky;
@@ -77,6 +78,7 @@ z-index:1071
 .carbon-img { float: left; margin-left: -145px }
 .carbon-poweredby { display: block; color: #777!important }
 .bd-content { -ms-flex-order: 1; order: 1 }
+.bd-content-title {pointer-events: auto;}
 .bd-content>h2[id], .bd-content>h3[id], .bd-content>h4[id] { pointer-events: none }
 .bd-content>h2[id]>a, .bd-content>h2[id]>div, .bd-content>h3[id]>a, .bd-content>h3[id]>div, .bd-content>h4[id]>a, .bd-content>h4[id]>div { pointer-events: auto }
 .bd-content>h2[id]::before, .bd-content>h3[id]::before, .bd-content>h4[id]::before { display: block; height: 6rem; margin-top: -6rem; visibility: hidden; content: "" }
@@ -140,7 +142,6 @@ overflow-y:auto
 }
 .section-nav { padding-left: 0; border-left: 1px solid #eee }
 .section-nav ul { padding-left: 1rem }
-.section-nav ul ul { display: none }
 .toc-entry { display: block }
 .toc-entry a { display: block; padding: .125rem 1.5rem; color: #99979c }
 .toc-entry a:hover { color: #007bff; text-decoration: none }
@@ -456,7 +457,7 @@ overflow-y:auto
 .css .nt+.nt, .css .o, .css .o+.nt { color: #999 }
 .language-bash::before, .language-sh::before { color: #009; content: "$ "; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
 .language-powershell::before { color: #009; content: "PM> "; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
-.anchorjs-link { font-weight: 400; color: rgba(0,123,255,.5); transition: color .16s linear }
+.anchorjs-link { font-weight: 400;color: rgba(0,123,255,.5);transition: color .15s ease-in-out,opacity .15s ease-in-out;}
 .anchorjs-link:hover { color: #007bff; text-decoration: none }
 .algolia-autocomplete { display: block!important; -ms-flex: 1; flex: 1 }
 .algolia-autocomplete .ds-dropdown-menu { width: 100%; min-width: 0!important; max-width: none!important; padding: .75rem 0!important; background-color: #fff; background-clip: padding-box; border: 1px solid rgba(0,0,0,.1); box-shadow: 0 .5rem 1rem rgba(0,0,0,.175) }

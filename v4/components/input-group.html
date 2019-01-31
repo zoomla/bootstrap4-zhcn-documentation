@@ -164,7 +164,7 @@
     <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
     <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
     <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
-    <li><a href="../components/scrollspy.html"> 滚动监听(Scroll) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
     <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
     <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
     <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
@@ -212,25 +212,24 @@
 </div>
 </nav>
 </div>
-
-
-
 <div class="d-none d-xl-block col-xl-2 bd-toc">
   <ul class="section-nav">
     <li class="toc-entry toc-h2"><a href="#basic-example">基本示例</a></li>
+	<li class="toc-entry toc-h2"><a href="#wrapping">包装</a></li>
     <li class="toc-entry toc-h2"><a href="#sizing">规格尺寸定义</a></li>
     <li class="toc-entry toc-h2"><a href="#checkboxes-and-radio-addons">勾选或单选框组合</a></li>
+	<li class="toc-entry toc-h2"><a href="#multiple-inputs">多个输入</a></li>
     <li class="toc-entry toc-h2"><a href="#multiple-addons">多类型控件组合</a></li>
     <li class="toc-entry toc-h2"><a href="#button-addons">按钮组合</a></li>
     <li class="toc-entry toc-h2"><a href="#buttons-with-dropdowns">带下拉列表的按钮组合</a></li>
     <li class="toc-entry toc-h2"><a href="#segmented-buttons">分裂式按钮与input组合</a></li>
-    <li class="toc-entry toc-h2"><a href="#accessibility">无障碍浏览提示(易用性)</a></li>
 	 <li class="toc-entry toc-h2"><a href="#custom-forms">自定义表单</a>
 	 <ul>
 		<li class="toc-entry toc-h4"><a href="#custom-select">自定义选择</a></li>
 		<li class="toc-entry toc-h4"><a href="#custom-file-input">自定义文件输入</a></li>
 	  </ul>
 	 </li>
+	 <li class="toc-entry toc-h2"><a href="#accessibility">无障碍浏览提示</a></li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -317,6 +316,25 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">aria-label=</span><span class="s">"With textarea"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="wrapping"><span class="bd-content-title">包装<a class="anchorjs-link " href="#wrapping" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></span></h2>
+<p>默认情况下，输入组通过<code class="highlighter-rouge">flex-wrap: wrap</code> 以便在输入组中容纳自定义表单字段验证.N你可以使用以下命令禁用此功能 <code class="highlighter-rouge">.flex-nowrap</code>.</p>
+<div class="bd-example">
+<div class="input-group flex-nowrap">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="addon-wrapping">@</span>
+  </div>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+</div>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group flex-nowrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span> <span class="na">id=</span><span class="s">"addon-wrapping"</span><span class="nt">&gt;</span>@<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Username"</span> <span class="na">aria-label=</span><span class="s">"Username"</span> <span class="na">aria-describedby=</span><span class="s">"addon-wrapping"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
 
   <h2 id="sizing">规格尺寸定义</h2>
   <p>将相对表单大小的class样式加到 <code class="highlighter-rouge">.input-group</code>中，其内容会自动调整大小，如<code class="highlighter-rouge">.input-group-lg</code>、<code class="highlighter-rouge">.input-group-sm</code>，不需要在每个元素上重重使用样式控制其大小。</p>
