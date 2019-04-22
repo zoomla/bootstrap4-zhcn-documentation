@@ -74,9 +74,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -182,6 +182,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -215,23 +216,23 @@
 </div>
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
-  <ul class="section-nav">
-    <li class="toc-entry toc-h2"><a href="#examples">示例</a>
-      <ul>
-        <li class="toc-entry toc-h4"><a href="#conveying-meaning-to-assistive-technologies">网页中传达辅助技术及其背后的意义</a></li>
-        <li class="toc-entry toc-h3"><a href="#link-color">链接颜色</a></li>
-        <li class="toc-entry toc-h3"><a href="#additional-content">额外附加内容</a></ul></li>
-        <li class="toc-entry toc-h3"><a href="#dismissing">关闭警告（小贴士效果）</a></li>
-      </ul>
-    </li>
-    <li class="toc-entry toc-h2"><a href="#javascript-behavior">JavaScript行为</a>
-      <ul>
-        <li class="toc-entry toc-h3"><a href="#triggers">触发</a></li>
-        <li class="toc-entry toc-h3"><a href="#methods">方法</a></li>
-        <li class="toc-entry toc-h3"><a href="#events">事件</a></li>
-      </ul>
-    </li>
-  </ul>
+
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#examples">示例</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#link-color">链接颜色</a></li>
+<li class="toc-entry toc-h3"><a href="#additional-content">额外附加内容</a></li>
+<li class="toc-entry toc-h3"><a href="#dismissing">关闭警告（小贴士效果）</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#javascript-behavior">JavaScript行为r</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#triggers">触发</a></li>
+<li class="toc-entry toc-h3"><a href="#methods">方法</a></li>
+<li class="toc-entry toc-h3"><a href="#events">事件</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 class="bd-title" id="content">警告提示框(Alert)</h1>
@@ -239,42 +240,57 @@
   <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
   <h2 id="examples">示例</h2>
   <p>警报是一组颜色控件（共八个颜色样式），可用于任何长度的文本，以及可选的关闭按钮，系统提供8个可用的正确的样式（如，<code class="highlighter-rouge">.alert-success</code>），如你还可以使用<a href="#dismissing">jQuery插件方法</a>来解除内联元素。</p>
-  <div class="bd-example">
-    <div class="alert alert-primary" role="alert"> This is a primary alert—check it out! </div>
-    <div class="alert alert-secondary" role="alert"> This is a secondary alert—check it out! </div>
-    <div class="alert alert-success" role="alert"> This is a success alert—check it out! </div>
-    <div class="alert alert-danger" role="alert"> This is a danger alert—check it out! </div>
-    <div class="alert alert-warning" role="alert"> This is a warning alert—check it out! </div>
-    <div class="alert alert-info" role="alert"> This is a info alert—check it out! </div>
-    <div class="alert alert-light" role="alert"> This is a light alert—check it out! </div>
-    <div class="alert alert-dark" role="alert"> This is a dark alert—check it out! </div>
-  </div>
-  <div class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-primary"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a primary alert—check it out!
+<div class="bd-example">
+
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-primary"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
+  A simple primary alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-secondary"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a secondary alert—check it out!
+  A simple secondary alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a success alert—check it out!
+  A simple success alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-danger"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a danger alert—check it out!
+  A simple danger alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a warning alert—check it out!
+  A simple warning alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-info"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a info alert—check it out!
+  A simple info alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-light"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a light alert—check it out!
+  A simple light alert—check it out!
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-dark"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-  This is a dark alert—check it out!
-<span class="nt">&lt;/div&gt;</span></code></pre>
-  </div>
+  A simple dark alert—check it out!
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
   <div class="bd-callout bd-callout-warning">
     <h4 id="conveying-meaning-to-assistive-technologies">网页中传达辅助技术及其背后的意义</h4>
     <p>使用颜色添加意义只提供一个视觉指示，这不会传达给需要辅助技术（如盲人、听力障碍者）的用户，也就决定了诸如屏幕阅读器并不能读出颜色本身的意义。一般推荐确保由颜色表示的信息从内容本身（例如可见文本）中显而易见，或者通过替代方法，例如隐藏在<code class="highlighter-rouge">.sr-only</code>该类中的附加文本来创造更多的辅助传达技术。</p>

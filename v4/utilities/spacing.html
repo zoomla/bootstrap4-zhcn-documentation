@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a></li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 	<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -220,6 +221,7 @@
     <li class="toc-entry toc-h2"><a href="#examples">示例</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#horizontal-centering">水平居中</a></li>
+		<li class="toc-entry toc-h3"><a href="#negative-margin">父级边距属性</a></li>
       </ul>
     </li>
   </ul>
@@ -289,6 +291,27 @@
   Centered element
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
+<h3 id="negative-margin"><span class="bd-content-title">负值边距属性<a class="anchorjs-link " href="#negative-margin" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></span></h3>
+
+<p>在CSS中, <code class="highlighter-rouge">margin</code>性可以使用负值(<code class="highlighter-rouge">padding</code> 不能).截至4.2, 我们为上面列出的每个非零整数大小添加了负边际效用(例如, <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, <code class="highlighter-rouge">3</code>, <code class="highlighter-rouge">4</code>, <code class="highlighter-rouge">5</code>).这些实用程序非常适合跨断点自定义网格列沟槽.</p>
+
+<p>语法与默认的正边距实用程序几乎相同,但在请求的大小之前添加了<code class="highlighter-rouge">n</code>. 这是一个与<code class="highlighter-rouge">.mt-1</code>相反的示例:</p>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.mt-n1</span> <span class="p">{</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">-0</span><span class="mi">.25rem</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>这是一个在中(<code class="highlighter-rouge">md</code>)断点及以上定制Bootstrap网格的示例.我们用<code class="highlighter-rouge">.px-md-5</code>增加了<code class="highlighter-rouge">.col</code>填充,然后在父<code class="highlighter-rouge">.row</code>上用<code class="highlighter-rouge">.mx-md-n5</code>来抵消.</p>
+<div class="bd-example">
+<div class="row mx-md-n5">
+  <div class="col px-md-5"><div class="p-3 border bg-light">Custom column padding</div></div>
+  <div class="col px-md-5"><div class="p-3 border bg-light">Custom column padding</div></div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mx-md-n5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-5"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"p-3 border bg-light"</span><span class="nt">&gt;</span>Custom column padding<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col px-md-5"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"p-3 border bg-light"</span><span class="nt">&gt;</span>Custom column padding<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  
 </main>
 </div>
 </div>

@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -213,13 +214,6 @@
 </div>
 
 
-<div class="d-none d-xl-block col-xl-2 bd-toc">
-  <ul class="section-nav">
-    <li class="toc-entry toc-h2"><a href="#figures-exa">示例</a></li>
-    <li class="toc-entry toc-h2"><a href="#figures-text">文字对齐控制</a></li>
-  </ul>
-</div>
-
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 class="bd-title" id="content">图文框</h1>
   <p class="bd-lead">使用Bootstrap中的<code class="highlighter-rouge">.figure</code>图文框组件组合图象与文本的示例和文档。</p>
@@ -227,30 +221,30 @@
   <p>如果你需要显示的内容区包括了一个图片和一个可选的标题，可使用<code class="highlighter-rouge">.figure</code>样式定义。</p>
   <p>Bootstrap的<code class="highlighter-rouge">.figure</code>以及<code class="highlighter-rouge">.figure-caption</code>类，为HTML5的<code class="highlighter-rouge">&lt;figure&gt;</code>以及<code class="highlighter-rouge">&lt;figcaption&gt;</code>元素提供了一个基准样式处理。默念认的图片系统不会定义明确的大小，因此请务必将该.img-fluid类添加到您的<code class="highlighter-rouge">&lt;img&gt;</code>标签中才能实现与响应式的完美结合。</p>
   <h2 id="figures-exa">示例</h2>
-  <div class="bd-example">
-    <figure class="figure"> <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." />
-      <figcaption class="figure-caption">A caption for the above image.</figcaption>
-    </figure>
-  </div>
-  <div class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt=</span><span class="s">"A generic square placeholder image with rounded corners in a figure."</span><span class="nt">&gt;</span>
+<div class="bd-example">
+<figure class="figure">
+  <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 400x300"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
+  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+</figure>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
   <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"figure-caption"</span><span class="nt">&gt;</span>A caption for the above image.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span></code></pre>
-  </div>
-  <h2 id="figures-text">文字对齐控制</h2>
+<span class="nt">&lt;/figure&gt;</span></code></pre></figure>
+
   <p>结合我们的<a href="../utilities/text.html#text-alignment">文本实用工具</a>可以轻松对齐图文框的说明文字（比如右对齐、左对齐，只要引用<code class="highlighter-rouge">.text-*</code>方法即可-译者注）。</p>
-  <div class="bd-example">
-    <figure class="figure"> <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." />
-      <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
-    </figure>
-  </div>
-  <div class="highlight">
-    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt=</span><span class="s">"A generic square placeholder image with rounded corners in a figure."</span><span class="nt">&gt;</span>
+<div class="bd-example">
+<figure class="figure">
+  <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 400x300"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
+  <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+</figure>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
   <span class="nt">&lt;figcaption</span> <span class="na">class=</span><span class="s">"figure-caption text-right"</span><span class="nt">&gt;</span>A caption for the above image.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span></code></pre>
-  </div>
+<span class="nt">&lt;/figure&gt;</span></code></pre></figure>
 </main>
 </div>
 </div>

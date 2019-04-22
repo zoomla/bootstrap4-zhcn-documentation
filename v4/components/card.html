@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -232,7 +233,7 @@
         <li class="toc-entry toc-h3"><a href="#using-grid-markup">使用栅格系统</a></li>
         <li class="toc-entry toc-h3"><a href="#using-utilities">使用通用全局属性</a></li>
         <li class="toc-entry toc-h3"><a href="#using-custom-css">自定义CSS</a></li>
-		</ul>
+		</ul></li>
 		    <li class="toc-entry toc-h2"><a href="#text-alignment">文本对齐</a></li>
     <li class="toc-entry toc-h2"><a href="#navigation">导航</a></li>
     <li class="toc-entry toc-h2"><a href="#images-1">图片</a>
@@ -241,32 +242,11 @@
         <li class="toc-entry toc-h3"><a href="#image-overlays">图像叠加覆盖</a> </li>
       </ul>
     </li>
+	<li class="toc-entry toc-h2"><a href="#horizontal">水平排列</a></li>
     <li class="toc-entry toc-h2"><a href="#card-styles">卡片样式</a>
       <ul>
-        <li class="toc-entry toc-h3"><a href="#background-and-color">背景和颜色</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#primary-card-title">Primary card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#secondary-card-title">Secondary card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#success-card-title">Success card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#danger-card-title">Danger card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#warning-card-title">Warning card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#info-card-title">Info card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#light-card-title">Light card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#dark-card-title">Dark card title</a></li>
-          </ul>
-        </li>
-        <li class="toc-entry toc-h3"><a href="#border">边框</a>
-          <ul>
-            <li class="toc-entry toc-h4"><a href="#primary-card-title-1">Primary card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#secondary-card-title-1">Secondary card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#success-card-title-1">Success card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#danger-card-title-1">Danger card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#warning-card-title-1">Warning card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#info-card-title-1">Info card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#light-card-title-1">Light card title</a></li>
-            <li class="toc-entry toc-h4"><a href="#dark-card-title-1">Dark card title</a></li>
-          </ul>
-        </li>
+        <li class="toc-entry toc-h3"><a href="#background-and-color">背景和颜色</a></li>
+        <li class="toc-entry toc-h3"><a href="#border">边框</a></li>
         <li class="toc-entry toc-h3"><a href="#mixins-utilities">Mixins 实用程序</a></li>
       </ul>
     </li>
@@ -277,8 +257,6 @@
         <li class="toc-entry toc-h3"><a href="#card-columns">C多列卡片浮动排版</a></li>
       </ul>
     </li>
-  </ul>
-  </li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -824,6 +802,43 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </div>
+  <div class="bd-callout bd-callout-info">
+<p>请注意，内容不应大于图像的高度。 如果内容大于图像，则内容将显示在图像外部.</p>
+</div>
+  <h2 id="horizontal"><span class="bd-content-title">水平排列</span></h2>
+  <p>使用网格和实用程序类的组合，可以以移动友好和响应方式使卡水平。 在下面的示例中，我们使用<code class="highlighter-rouge">.no-gutters</code>删除网格排水沟，并使用<code class="highlighter-rouge">.col-md-*</code> 类使卡在<code class="highlighter-rouge">md</code> 断点处水平。 根据您的卡内容，可能需要进一步调整。</p>
+  <div class="bd-example">
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card mb-3"</span> <span class="na">style=</span><span class="s">"max-width: 540px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row no-gutters"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"card-img"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-md-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Card title<span class="nt">&lt;/h5&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Last updated 3 mins ago<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure> 
+
+  
   <h2 id="card-styles">卡片样式</h2>
   <p>订制卡片、边框 、颜色等方法。</p>
   <h3 id="background-and-color">背景和颜色</h3>

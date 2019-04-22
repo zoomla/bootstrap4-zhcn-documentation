@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -382,7 +383,7 @@
   </div>
   <h3 id="checkbox-and-radio-buttons">复选框和单选框</h3>
   <p>Bootstrap的<code class="highlighter-rouge">.button</code> 样式也可以使用于其它元素，比如<code class="highlighter-rouge">&lt;label&gt;</code>HTML组件上，从而实现单选、复选效果。添加 <code class="highlighter-rouge">data-toggle="buttons"</code> 到<code class="highlighter-rouge">.btn-group</code> 下的元素里，来启用它们的样式切换。</p>
-  <p>这些按钮的检查状态，只能通过 <code class="highlighter-rouge">click</code> 事件</strong> 进行更新，如果你使用其它方法更新输入，用<code class="highlighter-rouge">&lt;input type="reset"&gt;</code> 或手动应用输入 <code class="highlighter-rouge">checked</code> 属性，人为的在<code class="highlighter-rouge">&lt;label&gt;</code> 上增加 <code class="highlighter-rouge">.active</code> 状态。</p>
+  <p>这些按钮的检查状态，<strong>只能通过 <code class="highlighter-rouge">click</code> 事件</strong> 进行更新，如果你使用其它方法更新输入，用<code class="highlighter-rouge">&lt;input type="reset"&gt;</code> 或手动应用输入 <code class="highlighter-rouge">checked</code> 属性，人为的在<code class="highlighter-rouge">&lt;label&gt;</code> 上增加 <code class="highlighter-rouge">.active</code> 状态。</p>
   <p>注意：预先选中的按钮需要你手动将 <code class="highlighter-rouge">.active</code> 定义上，在 <code class="highlighter-rouge">&lt;label&gt;</code>中。</p>
   <div class="bd-example">
     <div class="btn-group" data-toggle="buttons">

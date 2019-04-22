@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -150,8 +150,8 @@
     <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
     <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
     <li><a href="../components/card.html"> 卡片(Card) </a> </li>
-    <li><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
-    <li class="active bd-sidenav-active"><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
+    <li class="active bd-sidenav-active"><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
     <li><a href="../components/dropdowns.html"> 下拉菜单(Dropdown) </a> </li>
     <li><a href="../components/forms.html"> 表单(Form) </a> </li>
     <li><a href="../components/input-group.html"> 输入框(Input-group) </a> </li>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -260,11 +261,20 @@
   <h2 id="how-it-works">工作原理</h2>
   <p>轮播效果是一个幻灯片效果，使用CSS 3D变形转换和一些JAvaScript构建一内容循环播放，它适用于一系列图像、文本或自定义标记，还包括对上一个/下一个图的浏览控制和指令支持。</p>
   <p>在支持 <a href="https://www.w3.org/TR/page-visibility/">Page Visibility API（页面可见性）</a>的浏览器中，当网页对用户不可见时（如浏览器选项卡处于非活动状态、窗口最小化时），轮播效果控件会停止运动，从而节省性能。</p>
+  <div class="bd-callout bd-callout-info">
+<p>此组件的动画效果取决于<code class="highlighter-rouge">prefers-reduced-motion</code> 媒体查询. 请参阅我们的 <a href="/docs/4.3/getting-started/accessibility/#reduced-motion">辅助功能文档的简化动作部分</a>.</p>
+</div>
   <p>轮播组件不支持互相嵌套-本身轮播大多不符合无障碍浏览的标准。</p>
   <p>最后，如果你要自行编译构建JS，记得 <a href="/docs/4.0/getting-started/javascript/#util">需要 <code class="highlighter-rouge">util.js</code></a>。</p>
   <h2 id="example">示例</h2>
   <p>轮播不带幻灯片尺寸标准化处理，因此你可能需要使用其它通用样式可自定义样式来调整其大小使之适当匹配。虽然轮播组件支持上一个/下一个控制和指令，但它们不是必备元素，可根据你的需要添加或自定义（展现不同的效果）。</p>
   <p>通过 <code class="highlighter-rouge">.carousel</code> 命名样式引入轮播组件，同时为此控件设置唯的ID-尤其是当你在同一页面使用多个轮播效果时这是必须的。</p>
+  <div class="bd-callout bd-callout-danger">
+
+    <p>在官方实例中，图片是作为显式<img>标签插入在，但大多数的应用场景推荐站长使用背景background方式置入图片，这样可以让web亲和度更高，并容纳更多的文字展示，效果可见 <a href="http://gongyi.z01.com/" target="_blank"><i class="zi zi_externalLinkalt"></i> gongyi.z01.com</a>。-译者注</p>
+   
+  </div>
+  
   <h3 id="slides-only">经典幻灯片效果</h3>
   <p>这是一个经典的幻灯片示例，请注意轮播上的图像引用了 <code class="highlighter-rouge">.d-block</code> 、 <code class="highlighter-rouge">.w-100</code>两个样式，以修正浏览器预设的图像对齐带来的影响。</p>
 

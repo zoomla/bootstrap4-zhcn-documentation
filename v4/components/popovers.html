@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -269,6 +270,10 @@
     <li>如果从一个跨多行的链接上触发提示冒泡，提示冒泡将居中。在<code class="highlighter-rouge">&lt;a&gt;</code>上使用<code class="highlighter-rouge">white-space: nowrap;</code>可以避免这种情况。</li>
     <li>必须先隐藏弹出提示框，然后才能从DOM中删除相应的元素（以完成弹出关闭完整行为）。</li>
   </ul>
+  <div class="bd-callout bd-callout-info">
+<p>此组件的动画效果取决于<code class="highlighter-rouge">prefers-reduced-motion</code> 媒体查询. 请参阅我们的 <a href="/docs/4.3/getting-started/accessibility/#reduced-motion">辅助功能文档的简化动作部分</a>.</p>
+</div>
+  
   <p>都记住了？非常棒，下面让我们通过一系列的实例来了解其运作机理。</p>
   <h2 id="example-enable-popovers-everywhere">示例：在任意位置启用弹出窗口</h2>
   <p>One way to initialize all popovers on a page would be to select them by their <code class="highlighter-rouge">data-toggle</code> attribute:</p>
@@ -358,6 +363,12 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   </figure>
   <h3 id="options">选项</h3>
   <p>可通过数据属性或JavaScript传递选项参数。对于数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>上，如 <code class="highlighter-rouge">data-animation=""</code>。</p>
+  <div class="bd-callout bd-callout-warning">
+<p>请注意，出于安全原因，无法使用数据属性提供<code class="highlighter-rouge">sanitize</code>, <code class="highlighter-rouge">sanitizeFn</code>和<code class="highlighter-rouge">whiteList</code>选项.</p>
+</div>
+
+请注意，出于安全原因，无法使用数据属性提供sanitize，sanitizeFn和whiteList选项。
+  
  <table class="table table-bordered table-striped">
   <thead>
     <tr>

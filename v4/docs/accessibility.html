@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -180,6 +180,7 @@
             <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
             <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
             <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
             <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
             <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -221,6 +222,7 @@
         <li class="toc-entry toc-h3"><a href="#interactive-components">互动组件</a></li>
         <li class="toc-entry toc-h3"><a href="#color-contrast">颜色对比</a></li>
         <li class="toc-entry toc-h3"><a href="#visually-hidden-content">视觉隐藏内容</a></li>
+        <li class="toc-entry toc-h3"><a href="#reduced-motion">减少动作</a></li>
       </ul>
     </li>
     <li class="toc-entry toc-h2"><a href="#additional-resources">扩展资源</a></li>
@@ -238,7 +240,7 @@
   <h3 id="interactive-components">互动组件</h3>
   <p>Bootstrap的交互式组件（如模态对话框，下拉菜单和自定义工具提示）设计用于触摸，鼠标和键盘用户。通过使用相关的 <a href="https://www.w3.org/WAI/intro/aria"><abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> 角色和属性，这些组件也应该使用辅助技术（如屏幕阅读器）可以理解和操作。</p>
   <p>由于Bootstrap的组件有意设计为相当通用，因此作者可能需要包含进一步的ARIA角色和属性以及JavaScript行为，以更准确地传达其组件的精确性质和功能（通常在文档中注明）。</p>
-  <h3 id="color-contrast">颜色对比contrast</h3>
+  <h3 id="color-contrast">颜色对比</h3>
   <p>目前构成Bootstrap默认调色板的大多数颜色 - 在整个框架中用于诸如按钮变化，警报变化，形式验证指示符之类的功能，导致颜色<em>对比度不足</em>（低于推荐的<a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0色对比度为4.5：1</a>）光背景。作者将需要手动修改/扩展这些默认颜色以确保足够的色彩对比度。</p>
   <h3 id="visually-hidden-content">视觉隐藏内容</h3>
   <p>支持视觉隐藏的内容、但保持可访问的辅助技术，如屏幕阅读器，可以使用<code class="highlighter-rouge">.sr-only</code>类风格。在需要向非视觉用户传达额外的视觉信息或提示（例如通过使用颜色表示的含义）的情况下，这通常很有用。</p>
@@ -252,6 +254,9 @@
   <figure class="highlight">
     <pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"sr-only sr-only-focusable"</span> <span class="na">href=</span><span class="s">"#content"</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span></code></pre>
   </figure>
+  <h3 id="reduced-motion"><span class="bd-content-title">减少动作</span></h3>
+
+  <p>Bootstrap包括对首选减少<a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code class="highlighter-rouge">prefers-reduced-motion</code>媒体功能的支持.</a>.在允许用户指定减少运动的首选项的浏览器/环境中，Bootstrap中的大多数CSS过渡效果（例如，打开或关闭模式对话框时，或轮播中的滑动动画）将被禁用.</p>
   <h2 id="additional-resources">扩展资源</h2>
   <ul>
     <li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines 《WCAG) 2.0(Web内容辅助功能指南（WCAG）2.0》</a></li>

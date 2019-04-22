@@ -74,9 +74,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -179,6 +179,7 @@
             <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
             <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
             <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
             <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
             <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -218,7 +219,7 @@
             <li class="toc-entry toc-h3"><a href="#js">JS</a></li>
           </ul>
         </li>
-        <li class="toc-entry toc-h2"><a href="#starter-template">Hello, World!</a></li>
+        <li class="toc-entry toc-h2"><a href="#starter-template">Hello, World!模板</a></li>
         <li class="toc-entry toc-h2"><a href="#important-globals">重要提示</a>
           <ul>
             <li class="toc-entry toc-h3"><a href="#html5-doctype">HTML5 doctype 头部规范</a></li>
@@ -236,17 +237,17 @@
       <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
       <h2 id="quick-start">快速部署</h2>
       <p>使用 Bootstrap CDN嵌入4行代码就能完成导入！ <a href="download.html">点此这里下载离线包及源码</a>。</p>
-	  <p>这是全新的Bootstrap v4.2.1手册，Zoomla!逐浪CMS官方团队负责维护这一项目的中文译本，如果您需要访问旧版4.0手册可以<a href="../../4.0/index.html">点击这里</a></p>
+	  <p>这是全新的Bootstrap v4.3.1手册，Zoomla!逐浪CMS官方团队负责维护这一项目的中文译本，如果您需要访问旧版4.0手册可以<a href="../../4.0/index.html">点击这里</a></p>
       <h3 id="css">1行 CSS</h3>
       <p>复制下面的 <code class="highlighter-rouge">&lt;link&gt;</code> 样式表粘贴到网页 <code class="highlighter-rouge">&lt;head&gt;</code> 里面，并放在其它CSS文件之前.</p>
-	<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+	<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
 	</figure>
       <h3 id="js">3行 JS</h3>
       <p>全局组件运行在 <a href="https://jquery.com">jQuery</a> 组件上，其中包括 <a href="https://popper.js.org/">Popper.js</a>, 以及系统内置 JavaScript 插件. 建议将 <code class="highlighter-rouge">&lt;script&gt;</code> 的结束放在页面的 <code class="highlighter-rouge">&lt;/body&gt;</code> 之前以符合新移动WEB规范，并遵循下面代码的先后顺序。</p>
       <p>您可以引用 <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery 精简版</a>,兼容完整版，并无二异。</p>
 	 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
       <p>这里列出了需要JQuery、Bootstrap.js、Popper.js组件清单，如果你不熟悉组件可以继续查看本文档的其它部份的示例源码。</p>
       <details>
         <summary class="text-primary mb-3">查看需要JavsScript的组件</summary>
@@ -272,7 +273,7 @@
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span><font></font>
 <font></font>
     <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span><font></font>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span><font></font>
 <font></font>
     <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
@@ -282,8 +283,8 @@
     <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
     <span class="c">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
       <p>拷贝上面代码，然后按照本文档的 <a href="../layout/overview.html"> 布局 </a> 、 <a href="/docs/4.0/examples/"> 示例</a> 来构建你的组件和内容.</p>

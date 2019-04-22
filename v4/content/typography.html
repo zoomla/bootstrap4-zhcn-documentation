@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -225,8 +226,8 @@
     <li class="toc-entry toc-h2"><a href="#lead">Lead中心内容</a></li>
     <li class="toc-entry toc-h2"><a href="#inline-text-elements">文本内联元素</a></li>
     <li class="toc-entry toc-h2"><a href="#text-utilities">文本实用程序</a></li>
-    <li class="toc-entry toc-h2"><a href="#abbreviations">abbr缩略语</a></li>
-    <li class="toc-entry toc-h2"><a href="#blockquotes">blockquote 来源引用与备注</a>
+    <li class="toc-entry toc-h2"><a href="#abbreviations">Abbr缩略语</a></li>
+    <li class="toc-entry toc-h2"><a href="#blockquotes">Blockquote 来源引用与备注</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#naming-a-source">底部备注来源</a></li>
         <li class="toc-entry toc-h3"><a href="#alignment">对齐处理</a></li>
@@ -239,7 +240,7 @@
         <li class="toc-entry toc-h3"><a href="#description-list-alignment">dl表格式水平描述</a></li>
       </ul>
     </li>
-    <li class="toc-entry toc-h2"><a href="#responsive-typography">响应式排版</a></li>
+    <li class="toc-entry toc-h2"><a href="#responsive-font-sizes">响应式字体大小</a></li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -390,7 +391,7 @@
 虽然上面没有明确显示，但我们可以随意使用<code class="highlighter-rouge">&lt;b&gt;</code>>和<code class="highlighter-rouge">&lt;i&gt;</code>等HTML5标签，其中<code class="highlighter-rouge">&lt;b&gt;</code>旨在突出显示单词或短语、而不会增加重要性，<code class="highlighter-rouge">&lt;i&gt;</code>主要用于语音、技术术语等。</p>
   <h2 id="text-utilities">文本实用程序</h2>
   <p>使用Bootstrap提供的 <a href="../utilities/text.html#text-alignment">文本实用程序</a>可更改文本对齐，变换，样式，权重和颜色。</p>
-  <h2 id="abbreviations">abbr缩略语</h2>
+  <h2 id="abbreviations">Abbr缩略语</h2>
   <p>Stylized implementation of HTML’s <code class="highlighter-rouge">&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
   <p>Add <code class="highlighter-rouge">.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
   <div class="bd-example">
@@ -401,7 +402,7 @@
     <pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span></code></pre>
   </div>
-  <h2 id="blockquotes">blockquote 来源备注与引用</h2>
+  <h2 id="blockquotes">Blockquote 来源备注与引用</h2>
   <p>引用文档中另一个来源的内容块，，请在一段HTML外面包裹 <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code>，作为引用。为了显示直接引用，我们推荐使用<code class="highlighter-rouge">p</code>作为子级包裹容器，这在 <abbr title="HyperText Markup Language">HTML</abbr> 规范中也有多个变通方法，下面逐一讲解。</p>
   <div class="bd-example">
     <blockquote class="blockquote">
@@ -574,31 +575,10 @@
   <span class="nt">&lt;/dd&gt;</span>
 <span class="nt">&lt;/dl&gt;</span></code></pre>
   </div>
-  <h2 id="responsive-typography">响应式排版</h2>
-  <p>响应性排版是指通过简单地调整font-size一系列媒体查询中的根元素来缩放文本和组件。Bootstrap不会为您做这个，但是如果需要，它很容易添加。这是实践中的一个例子。选择font-size您想要的任何s和媒体查询。</p>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nt">html</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.2rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.4rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nt">html</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
+  <h2 id="responsive-font-sizes"><span class="bd-content-title">响应式字体大小</span></h2>
+  <p>Bootstrap v4.3附带启用响应字体大小的选项，允许文本在设备和视口大小之间更自然地缩放。 可以通过将 <code class="highlighter-rouge">$enable-responsive-font-sizes</code> Sass 变量更改为<code class="highlighter-rouge">true</code>并重新编译Bootstrap来启用<abbr title="Responsive font sizes">RFS</abbr>.</p>
+  
+  <p>为了支持<abbr title="Responsive font sizes">RFS</abbr>,我们使用Sass mixin来替换我们正常的字体大小属性。 响应式字体大小将编译为<code class="highlighter-rouge">font-size</code>属性. 响应式字体大小将编译为 <code class="highlighter-rouge">calc()</code>函数，混合使用<code class="highlighter-rouge">rem</code>和视口单元以启用响应式缩放行为。 有关<abbr title="Responsive font sizes">RFS</abbr>及其配置的更多信息，请访问其<a href="https://github.com/twbs/rfs">GitHub 存储库</a>.</p>
 </main>
 </div>
 </div>

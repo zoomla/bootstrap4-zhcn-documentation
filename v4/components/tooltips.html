@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -144,7 +144,8 @@
 </div>
 <div class="bd-toc-item active"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
   <ul class="nav bd-sidenav">
-   <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
     <li><a href="../components/breadcrumb.html"> 面包屑导航(Breadcrumb) </a> </li>
     <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
     <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
@@ -180,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -258,6 +260,9 @@
     <li>如果从一个跨多行的链接上触发Tooltip提示冒泡插件，提示冒泡将居中，在你的<code class="highlighter-rouge">&lt;a&gt;</code>上使用<code class="highlighter-rouge">white-space: nowrap;</code> 可避免这种行为（即回归左右对齐）。</li>
     <li>必须先隐藏Tooltip提示冒泡插件，然后才能从DOM中删除相应的元素。</li>
   </ul>
+  <div class="bd-callout bd-callout-info">
+<p>此组件的动画效果取决于<code class="highlighter-rouge">prefers-reduced-motion</code> 媒体查询. 请参阅我们的 <a href="/docs/4.3/getting-started/accessibility/#reduced-motion">辅助功能文档的简化动作部分</a>.</p>
+</div>
   <p>都明白了？很好。让我们来通过一些例子来看它们具体是如何运作的。</p>
   <h2 id="example-enable-tooltips-everywhere">示例：在任何地方启用tooltip提示冒泡插件</h2>
   <p>在网页上初始化所有的tooltip提示冒泡插件一个途径就是用<code class="highlighter-rouge">data-toggle</code> 来选择它们：</p>
@@ -307,6 +312,15 @@
   <figure class="highlight">
     <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span></code></pre>
   </figure>
+  
+  <div class="bd-callout bd-callout-warning">
+<h5 id="overflow-auto-and-scroll">溢出<code class="highlighter-rouge">自动</code>和<code class="highlighter-rouge">滚动</code></h5>
+<p>当父容器溢出时，工具提示位置会尝试自动更改<code class="highlighter-rouge">:自动</code>或 <code class="highlighter-rouge">溢出，</code> 像我们的<code class="highlighter-rouge">.table-responsive</code>一样滚动,但仍保留原始位置的定位. 要解决此问题, 请将<code class="highlighter-rouge">boundary</code>选项设置为默认值, <code class="highlighter-rouge">'scrollParent'</code>,例如<code class="highlighter-rouge">'window'</code>:</p>
+
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#example'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span> <span class="na">boundary</span><span class="p">:</span> <span class="s1">'window'</span> <span class="p">})</span></code></pre></figure>
+
+</div>
+  
   <h3 id="markup">标记</h3>
   <p>工具提示框所需要的标记只是一个<code class="highlighter-rouge">data</code> 元素和你希望拥有一个tooltip提示冒泡HTML元素上的 <code class="highlighter-rouge">title</code> ，tooltip提示冒泡插件的标记很简单，尽管它需要一个位置（默认是 <code class="highlighter-rouge">top</code> 顶部指示）。</p>
   <div class="bd-callout bd-callout-warning">
@@ -340,7 +354,11 @@
 
 </div>
   <h3 id="options">选项</h3>
-  <p>你可以通过数据属性或JavaScript传递选项，如果使用数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>,如 <code class="highlighter-rouge">data-animation=""</code>。</p>
+  <p>你可以通过数据属性或JavaScript传递选项，如果使用数据属性，请将选项名称附加到<code class="highlighter-rouge">data-</code>,如 <code class="highlighter-rouge">data-animation=""</code>.</p>
+  <div class="bd-callout bd-callout-warning">
+<p>请注意，出于安全原因，无法使用数据属性提供<code class="highlighter-rouge">sanitize</code>, <code class="highlighter-rouge">sanitizeFn</code>和<code class="highlighter-rouge">whiteList</code>选项.</p>
+</div>
+  
 <table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>

@@ -1,4 +1,8 @@
 .bd-placeholder-img {font-size: 1.125rem;text-anchor: middle;}
+.rounded-sm {border-radius:0.2rem!important;}
+.rounded-lg {border-radius:0.3rem!important;}
+bd-example>img+img, .bd-example>svg+svg {margin-left:0.5rem;}
+.text-break {word-break: break-word!important;overflow-wrap: break-word!important;}
 .searchbox{display:inline-block;position:relative;width:200px;height:32px!import
 ant;white-space:nowrap;box-sizing:border-box;visibility:visible!important}.searc
 hbox 

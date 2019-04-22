@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -231,6 +232,7 @@
         <li class="toc-entry toc-h3"><a href="#all-breakpoints">覆盖所有设备</a></li>
         <li class="toc-entry toc-h3"><a href="#stacked-to-horizontal">水平堆砌</a></li>
         <li class="toc-entry toc-h3"><a href="#mix-and-match">混合布局</a></li>
+        <li class="toc-entry toc-h3"><a href="#gutters">沟槽</a></li>
       </ul>
     </li>
     <li class="toc-entry toc-h2"><a href="#alignment">对齐</a>
@@ -660,8 +662,27 @@
 <span class="nt">&lt;/div&gt;</span></code></pre>
     </div>
   </div>
-  <h2 id="alignment">对齐</h2>
-  <p>flexbox布局可以轻松的实现DIV空间布局的垂直、水平对齐。</p>
+  <h3 id="gutters"><span class="bd-content-title">沟槽</span></h3>
+  <p>可以通过特定于断点的填充和负边距实用程序类来响应地调整装订线。 要更改给定行中的装订线，请在<code class="highlighter-rouge">.row</code> 上配置负边距实用程序，并在<code class="highlighter-rouge">.col</code>上配对匹配填充实用程序。 可能需要调整<code class="highlighter-rouge">.container</code>或<code class="highlighter-rouge">.container-fluid</code> 父级以避免不必要的溢出，再次使用匹配的填充实用程序.</p>
+<p>这是一个在大(<code class="highlighter-rouge">lg</code>) 断点及以上定制Bootstrap网格的示例。 我们使用<code class="highlighter-rouge">.px-lg-5</code>增加了<code class="highlighter-rouge">.col</code>填充, 在父<code class="highlighter-rouge">.row</code>上使用<code class="highlighter-rouge">.mx-lg-n5</code>进行了抵消，然后使用<code class="highlighter-rouge">.px-lg-5</code> 调整了<code class="highlighter-rouge">.container</code>包装.</p>
+<div class="bd-example">
+<div class="container px-lg-5">
+  <div class="row mx-lg-n5">
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+    <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+  </div>
+</div>
+</div>
+  <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+  <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container px-lg-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mx-lg-n5"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-3 px-lg-5 border bg-light"</span><span class="nt">&gt;</span>Custom column padding<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col py-3 px-lg-5 border bg-light"</span><span class="nt">&gt;</span>Custom column padding<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <h2 id="alignment">对齐</h2> 
+  <p>使用flexbox对齐实用程序垂直和水平对齐列.<strong>Flex容器具有<code class="highlighter-rouge">min-height</code>时，Internet Explorer 10-11不支持弹性项目的垂直对齐，如下所示。 有关详细信息，</strong><a href="https://github.com/philipwalton/flexbugs#flexbug-3">请参阅Flexbugs＃3.</a></p>
+  
   <h3 id="vertical-alignment">垂直对齐示例</h3>
   <div class="bd-example-row bd-example-row-flex-cols">
     <div class="bd-example">
@@ -1125,7 +1146,7 @@
   <span class="n">xl</span><span class="o">:</span> <span class="m">1140px</span>
 <span class="p">);</span></code></pre>
   </figure>
-  <h3 id="mixins">Mixins</h3>
+  <h3 id="mixins">混合</h3>
   <p>MMixins用来联合网格变量，为每个网格列生成语义化的CSS。</p>
   <figure class="highlight">
     <pre><code class="language-scss" data-lang="scss"><span class="c1">// Creates a wrapper for a series of columns </span>

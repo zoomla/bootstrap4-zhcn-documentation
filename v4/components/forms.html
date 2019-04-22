@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -260,6 +261,7 @@
 		<li class="toc-entry toc-h3"><a href="#tooltips">提示</a></li>
       </ul>
     </li>
+	
 	<li class="toc-entry toc-h2"><a href="#custom-forms">自定义表单</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#checkboxes-and-radios-1">复选框和单选框自定义</a>
@@ -275,8 +277,8 @@
 <li class="toc-entry toc-h3"><a href="#range">范围</a></li>
 <li class="toc-entry toc-h3"><a href="#file-browser">文件浏览（文件选取）器</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-scss">Translating or customizing the strings with SCSS</a></li>
-<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-html">Translating or customizing the strings with HTML</a></li>
+<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-scss">使用SCSS翻译或自定义字符串</a></li>
+<li class="toc-entry toc-h4"><a href="#translating-or-customizing-the-strings-with-html">使用HTML翻译或自定义字符串</a></li>
 </ul>
 </li>
 </ul>
@@ -445,23 +447,7 @@
   <span class="nt">&lt;option&gt;</span>Small select<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span></code></pre>
   </div>
-  <h3 id="range-inputs">输入范围</h3>
-  <p>使用设置水平滚动范围输入<code>.form-control-range</code>。</p>
-  <div class="bd-example">
-<form>
-  <div class="form-group">
-    <label for="formControlRange">Example Range input</label>
-    <input type="range" class="form-control-range" id="formControlRange">
-  </div>
-</form>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>Example Range input<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"form-control-range"</span> <span class="na">id=</span><span class="s">"formControlRange"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-  
+
   <h3 id="readonly">只读属性</h3>
   <p>在input控件上增加 <code class="highlighter-rouge">readonly</code> （布尔值）标签定义，以防止修改input中的值。仅能阅读的input控件显示较谈（就象禁用的输入框），但保留鼠标效果。</p>
   <div class="bd-example">
@@ -2279,6 +2265,10 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"custom-range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"5"</span> <span class="na">step=</span><span class="s">"0.5"</span> <span class="na">id=</span><span class="s">"customRange3"</span><span class="nt">&gt;</span></code></pre></figure>
 
   <h3 id="file-browser">文件浏览（文件选取）器</h3>
+  <div class="bd-callout bd-callout-info">
+<p>推荐的自定义文件输入动画插件:<a href="https://www.npmjs.com/package/bs-custom-file-input">bs-custom-file-input</a>,这就是我们目前在文档中使用的内容.</p>
+</div>
+  
   <p>文件浏览（选取）是比较原始粗糙的，它需要额外的JavaScript定义支持，如果你将<em>Choose file…</em>文件选取和所选文件的名称关联。</p>
 	<div class="bd-example">
 	<div class="custom-file">
@@ -2290,38 +2280,42 @@
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-input"</span> <span class="na">id=</span><span class="s">"customFile"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label"</span> <span class="na">for=</span><span class="s">"customFile"</span><span class="nt">&gt;</span>Choose file<span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
-  <p>Here’s how it works:</p>
-  <ul>
-    <li>We wrap the <code class="highlighter-rouge">&lt;input&gt;</code> in a <code class="highlighter-rouge">&lt;label&gt;</code> so the custom control properly triggers the file browser.</li>
-    <li>We hide the default file <code class="highlighter-rouge">&lt;input&gt;</code> via <code class="highlighter-rouge">opacity</code>.</li>
-    <li>We use <code class="highlighter-rouge">::after</code> to generate a custom background and directive (<em>Choose file…</em>).</li>
-    <li>We use <code class="highlighter-rouge">::before</code> to generate and position the <em>Browse</em> button.</li>
-    <li>We declare a <code class="highlighter-rouge">height</code> on the <code class="highlighter-rouge">&lt;input&gt;</code> for proper spacing for surrounding content.</li>
-  </ul>
-  <p>In other words, it’s an entirely custom element, all generated via CSS.</p>
-  <h4 id="translating-or-customizing-the-strings">Translating or customizing the strings</h4>
-  <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang"><code class="highlighter-rouge">:lang()</code> pseudo-class</a> is used to allow for easy translation of the “Browse” and “Choose file…” text into other languages. Simply override or add entries to the <code class="highlighter-rouge">$custom-file-text</code> SCSS variable with the relevant <a href="https://en.wikipedia.org/wiki/IETF_language_tag">language tag</a> and localized strings. The English strings can be customized the same way. For example, here’s how one might add a Spanish translation (Spanish’s language code is <code class="highlighter-rouge">es</code>):</p>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="nv">$custom-file-text</span><span class="p">:</span> <span class="p">(</span>
+<p>我们通过不透明度隐藏默认文件<code class="highlighter-rouge">&lt;input&gt;</code> via <code class="highlighter-rouge">opacity</code>而不是设置<code class="highlighter-rouge">&lt;label&gt;</code>的样式. 生成按钮并使用<code class="highlighter-rouge">::after</code>定位. 最后,我们在<code class="highlighter-rouge">&lt;input&gt;</code> 上声明<code class="highlighter-rouge">width</code>和<code class="highlighter-rouge">height</code>,以获得周围内容的适当间距.</p>
+
+<h4 id="translating-or-customizing-the-strings-with-scss"><span class="bd-content-title">使用SCSS翻译或自定义字符串</span></h4>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:lang"><code class="highlighter-rouge">:lang()</code> 伪类</a>用于允许将“浏览”文本转换为其他语言.  使用相关<a href="https://en.wikipedia.org/wiki/IETF_language_tag">语言标记</a>和本地化字符串覆盖或添加<code class="highlighter-rouge">$custom-file-text</code>变量的条目.  例如，以下是如何添加西班牙语翻译（西班牙语的语言代码为<code class="highlighter-rouge">es</code>):</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$custom-file-text</span><span class="p">:</span> <span class="p">(</span>
   <span class="n">en</span><span class="o">:</span> <span class="s2">"Browse"</span><span class="o">,</span>
   <span class="n">es</span><span class="o">:</span> <span class="s2">"Elegir"</span>
-<span class="p">);</span></code></pre>
-  </figure>
-  <p>Here’s <code class="highlighter-rouge">lang(es)</code> in action on the custom file input for a Spanish translation:</p>
-  <div class="bd-example">
+<span class="p">);</span></code></pre></figure>
+<p>这里是<code class="highlighter-rouge">lang(es)</code> 对西班牙语翻译的自定义文件输入的操作:</p>
+<div class="bd-example">
 <div class="custom-file">
   <input type="file" class="custom-file-input" id="customFileLang" lang="es">
   <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
 </div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-input"</span> <span class="na">id=</span><span class="s">"customFileLang"</span> <span class="na">lang=</span><span class="s">"es"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label"</span> <span class="na">for=</span><span class="s">"customFileLang"</span><span class="nt">&gt;</span>Seleccionar Archivo<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-  <p>You’ll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">the <code class="highlighter-rouge">lang</code> attribute</a> or the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12"><code class="highlighter-rouge">Content-Language</code> HTTP header</a>, among other methods.</p>
-</main>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<p>您需要正确设置文档(或 subtree thereof)的语言才能显示正确的文本. 这可以使用<code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code>元素或<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12"><code class="highlighter-rouge">Content-Language</code> HTTP 标头上的</a><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"><code class="highlighter-rouge">lang</code> </a>属性以及其他方法来完成</p>
+<h4 id="translating-or-customizing-the-strings-with-html"><span class="bd-content-title">使用HTML翻译或自定义字符串</span></h4>
+<p>Bootstrap还提供了一种翻译HTML中“Browse”文本的方法，其中<code class="highlighter-rouge">data-browse</code>属性可以添加到自定义输入标签中（例如荷兰语）:</p>
+<div class="bd-example">
+<div class="custom-file">
+  <input type="file" class="custom-file-input" id="customFileLangHTML">
+  <label class="custom-file-label" for="customFileLangHTML" data-browse="Bestand kiezen">Voeg je document toe</label>
 </div>
-    </div>
+</div>
+ <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-input"</span> <span class="na">id=</span><span class="s">"customFileLangHTML"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label"</span> <span class="na">for=</span><span class="s">"customFileLangHTML"</span> <span class="na">data-browse=</span><span class="s">"Bestand kiezen"</span><span class="nt">&gt;</span>Voeg je document toe<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure> 
+ 
+</main>
+
 <script src="/js/jquery-3.2.1.slim.min.js"></script> 
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
 <script src="../dist/js/popper.min.js"></script> 

@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
     <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
     <li> <a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
@@ -270,37 +271,36 @@
 </span><span class="k">@media</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">1200px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span></code></pre>
   </figure>
   <p>由于我们在Sass中写了源CSS，所有的媒体查询通过Sass mixins都是可用的（SASS的Mixins可以一次性定义功能模块，让你在任何地方调用，并且可以无限制的重用）：</p>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Example usage:
-</span><span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nc">.some-class</span> <span class="p">{</span>
+<span class="c1">// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint</span>
+<span class="nc">.custom-class</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.custom-class</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre>
-  </figure>
+<span class="p">}</span></code></pre></figure>
   <p>偶尔也会使用其它方面的媒体查询（指定屏幕的尺寸或<em>更小</em>）：</p>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 576px) </span>
-<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">575px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Extra small devices (portrait phones, less than 576px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">575</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Small devices (landscape phones, less than 768px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Small devices (landscape phones, less than 768px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">767</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Medium devices (tablets, less than 992px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">991px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Medium devices (tablets, less than 992px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">991</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Large devices (desktops, less than 1200px)
-</span><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1199px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
+<span class="c1">// Large devices (desktops, less than 1200px)</span>
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span> <span class="m">1199</span><span class="mi">.98px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 
-<span class="c1">// Extra large devices (large desktops)
-</span><span class="o">//</span> <span class="nt">No</span> <span class="nt">media</span> <span class="nt">query</span> <span class="nt">since</span> <span class="nt">the</span> <span class="nt">extra-large</span> <span class="nt">breakpoint</span> <span class="nt">has</span> <span class="nt">no</span> <span class="nt">upper</span> <span class="nt">bound</span> <span class="nt">on</span> <span class="nt">its</span> <span class="nt">width</span></code></pre>
-  </figure>
+<span class="c1">// Extra large devices (large desktops)</span>
+<span class="c1">// No media query since the extra-large breakpoint has no upper bound on its width</span></code></pre></figure>
   <div class="bd-callout bd-callout-info">
 <p>请注意，由于浏览器目前不支持 <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">范围方面的查询</a>, 我们解决的局限性 <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code class="highlighter-rouge">min-</code> 和 <code class="highlighter-rouge">max-</code> 前缀</a>和视口带小数的宽度（可下的高DPI设备一定的条件下发生，例如）通过使用值与这些比较高的精度。</p>
 </div>
@@ -370,7 +370,7 @@
 </code></pre>
     </div>
   </div>
-  <p>Background背景元素会忽略z-index属性定义，而普通背景倾向于驻留在较低的位置，而导航和移动使用更高的层次z-index来确保导航层能覆盖其它控件，实现浮动、导航等设计效果。</p>
+  <p>为了处理组件内的重叠边界（例如，输入组中的按钮和输入），我们使用<code class="language-html" data-lang="html">1,2</code>和<code class="language-html" data-lang="html">3</code>的低单位数<code class="language-html" data-lang="html">z-index</code>值来表示默认，悬停和活动状态。 在悬停/焦点/活动时，我们将一个特定元素带到最前面，使用更高的<code class="language-html" data-lang="html">z-index</code>值来显示它们在兄弟元素上的边界。</p>
 </main>
 </div>
 </div>

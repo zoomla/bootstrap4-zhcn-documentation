@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> vgx=9999 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">4.3</a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a></li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 	<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -215,11 +216,17 @@
 
 
 <div class="d-none d-xl-block col-xl-2 bd-toc">
-  <ul class="section-nav">
-    <li class="toc-entry toc-h2"><a href="#border">基本边框</a></li>
-    <li class="toc-entry toc-h2"><a href="#border-color">边框颜色</a></li>
-    <li class="toc-entry toc-h2"><a href="#border-radius">圆角边框</a></li>
-  </ul>
+<ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#border">基本边框</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#additive">添加</a></li>
+<li class="toc-entry toc-h3"><a href="#subtractive">消减</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#border-color">边框颜色</a></li>
+<li class="toc-entry toc-h2"><a href="#border-radius">圆角边框</a></li>
+<li class="toc-entry toc-h2"><a href="#sizes">大小</a></li>
+</ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
   <h1 class="bd-title" id="content">边框(border)</h1>
@@ -227,36 +234,44 @@
   <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
   <h2 id="border">边框</h2>
   <p>使用边框实用程序添加或删除元素的边框.从所有边框中选择，或者一次选择一个.</p>
-  <h2 id="border">基本边框</h2>
+  <h3 id="additive">添加</h3>
     <p>添加边框属性，显示指定边框。</p>
-  <div class="bd-example-border-utils">
-    <div class="bd-example">
-	<span class="border"></span>
-	<span class="border-top"></span>
-	<span class="border-right"></span>
-	<span class="border-bottom"></span>
-	<span class="border-left"></span>
-	</div>
-    <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<div class="bd-example-border-utils">
+
+<div class="bd-example">
+<span class="border"></span>
+<span class="border-top"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+<span class="border-left"></span>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-top"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-bottom"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-left"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
-  </div>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-left"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
+
+</div>
+  
+  <h3 id="subtractive"><span class="bd-content-title">消减</span></h3>
+  
   <p>在一个空间上定义边框-删除或显示特定边框定义方法。</p>
-  <div class="bd-example-border-utils">
-    <div class="bd-example"> <span class="border"></span> <span class="border-0"></span> <span class="border-top-0"></span> <span class="border-right-0"></span> <span class="border-bottom-0"></span> <span class="border-left-0"></span>
-	</div>
-    <div class="highlight">
-      <pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-0"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<div class="bd-example-border-utils bd-example-border-utils-0">
+
+<div class="bd-example">
+<span class="border-0"></span>
+<span class="border-top-0"></span>
+<span class="border-right-0"></span>
+<span class="border-bottom-0"></span>
+<span class="border-left-0"></span>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-0"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-top-0"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-right-0"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-bottom-0"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-left-0"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre>
-    </div>
-  </div>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"border-left-0"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></figure>
 
+</div>
   
   <h2 id="border-color">边框颜色</h2>
   <p>使用我们的主题颜色类方法，定义边框颜色。</p>
@@ -286,6 +301,14 @@
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded-circle"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded-pill"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded-0"</span><span class="nt">&gt;</span></code></pre></figure>
+<h2 id="sizes"><span class="bd-content-title">大小</span></h2>
+
+<p>使用<code class="highlighter-rouge">.rounded-lg</code> 或<code class="highlighter-rouge">.rounded-sm</code>可以获得更大或更小的边界半径.</p>
+<div class="bd-example bd-example-images"><svg class="bd-placeholder-img rounded-sm" width="75" height="75" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Example small rounded image: 75x75"><title>Example small rounded image</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">75x75</text></svg><svg class="bd-placeholder-img rounded-lg" width="75" height="75" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Example large rounded image: 75x75"><title>Example large rounded image</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">75x75</text></svg></div>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded-sm"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="na">alt=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"rounded-lg"</span><span class="nt">&gt;</span></code></pre></figure>
+
 </main>
 </div>
 </div>

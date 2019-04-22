@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -226,16 +227,11 @@
       <ul>
         <li class="toc-entry toc-h3"><a href="#address">Address地址控件</a></li>
         <li class="toc-entry toc-h3"><a href="#blockquote">Blockquote引用块效果</a></li>
-        <li class="toc-entry toc-h3"><a href="#inline-elements">addr内联元素</a></li>
+        <li class="toc-entry toc-h3"><a href="#inline-elements">Addr内联元素</a></li>
 		<li class="toc-entry toc-h3"><a href="#summary">概要</a></li>	
       </ul>
     </li>
-    <li class="toc-entry toc-h2"><a href="#html5-hidden-attribute">HTML5 [hidden]属性</a>
-      <ul>
-        <li class="toc-entry toc-h4"><a href="#jquery-incompatibility">jQuery冲突</a></li>
-      </ul>
-    </li>
-    <li class="toc-entry toc-h2"><a href="#click-delay-optimization-for-touch">点击触摸的延迟优化</a></li>
+    <li class="toc-entry toc-h2"><a href="#html5-hidden-attribute">HTML5 [hidden]属性</a></li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -527,14 +523,7 @@
     <h4 id="jquery-incompatibility">jQuery冲突</h4>
     <p><code class="highlighter-rouge">[hidden]</code>与jQuery的两个方法不兼容，分别是：<code class="highlighter-rouge">$(...).hide()</code>、<code class="highlighter-rouge">$(...).show()</code>，目前还没有特别好的<code class="highlighter-rouge">[hidden]</code>其他管理<code class="highlighter-rouge">display</code>元素的技术。</p>
   </div>
-  <p>仅仅切换元素的可见性，这意味着其<code class="highlighter-rouge">display</code>不被修改和元素还会影响文档的流程，使用<a href="/docs/4.0/utilities/visibility/"> <code class="highlighter-rouge">.invisible</code></a>类来代替。</p>
-  <h2 id="click-delay-optimization-for-touch">点击触摸的延迟优化</h2>
-  <p>传统上，触摸屏设备上的浏览器在“点击”结束（手指/手写笔从屏幕提起的那一刻）和<a href="https://developer.mozilla.org/en-US/docs/Web/Events/click"><code class="highlighter-rouge">click事件</code> </a>被触发之间延迟大约300ms 。这种延迟对于这些浏览器正确处理“双击放大”手势是必要的，而不会在第一个“点击”之后过早触发动作或链接，但它可能会使您的网站感到轻微迟钝和无响应。</p>
-  <p>大多数移动浏览器会自动优化远程使用该width=device-width属性的站点的300ms延迟，作为其响应元标记的一部分（以及禁用缩放的站点，例如user-scalable=no，尽管这种做法对于可访问性和可用性原因非常不鼓励）。这里最大的例外是Windows Phone 8.1上的IE11和iOS 9.3之前的 iOS Safari（以及任何其他基于iOS WebView的浏览器）。</p>
-  <p>在触摸式笔记本电脑/桌面设备上，IE11和Microsoft Edge目前是唯一具有“双击缩放”功能的浏览器。由于响应式元标记被所有桌面浏览器忽略，所以使用width=device-width将对这里的300ms延迟没有影响。</p>
-  <p>为了在IE11和桌面上的Microsoft Edge以及Windows Phone 8.1上的IE11中解决此问题，Bootstrap显式地在所有交互式元素（如按钮和链接）上使用<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action"><code class="highlighter-rouge">touch-action:manipulation</code> CSS 私有</a>属性。该属性基本上禁用了这些元素的双击功能，从而消除了300ms的延迟。</p>
-   <p>在旧的iOS版本（9.3之前）的情况下，建议的方法是使用其他脚本，如<a href="https://github.com/ftlabs/fastclick">FastClick</a>来明确解决延迟。</p>
-  <p>更多信息请参阅 <a href="https://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay">触摸屏交互300秒延迟问题</a>。</p>
+  <p>仅仅切换元素的可见性，这意味着其<code class="highlighter-rouge">display</code>不被修改和元素还会影响文档的流程，使用<a href="/docs/4.3/utilities/visibility/"> <code class="highlighter-rouge">.invisible</code></a>类来代替。</p>
 </main>
 </div>
 </div>

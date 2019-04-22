@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3</a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -250,6 +251,10 @@
   <li>打印时，导航栏默认隐藏。如果需要打印显示，可以加入<code class="highlighter-rouge">.d-print</code> 样式到 <code class="highlighter-rouge">.navbar</code>中，点此参阅 <a href="/docs/4.0/utilities/display/">display块元素</a> 通用 class定义。</li>
   <li>使用<code class="highlighter-rouge">&lt;nav&gt;</code>导航通用元素来确保可访问性（易用性），或者如果使用更通用的元素，例如<code class="highlighter-rouge">&lt;div&gt;</code>添加一个<code class="highlighter-rouge">role="navigation"</code>，可以为使用者的辅助浏览提供明确标识。</li>
 </ul>
+<div class="bd-callout bd-callout-info">
+<p>此组件的动画效果取决于<code class="highlighter-rouge">prefers-reduced-motion</code> 媒体查询. 请参阅我们的 <a href="/docs/4.3/getting-started/accessibility/#reduced-motion">辅助功能文档的简化动作部分</a>.</p>
+</div>
+
 <p>继续阅读以获取支持的子组件的示例和列表。</p>
   <h2 id="supported-content">支持的内容</h2>
   <p>Navbar导航栏内置支持少量子组件。根据需要从以下选择：:</p>

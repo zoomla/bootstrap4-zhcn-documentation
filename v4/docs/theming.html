@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -180,6 +180,7 @@
             <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
             <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
             <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
             <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
             <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -219,8 +220,17 @@
     <li class="toc-entry toc-h2"><a href="#sass">Sass定义</a>
       <ul>
         <li class="toc-entry toc-h3"><a href="#file-structure">文件结构</a></li>
+		<li class="toc-entry toc-h3"><a href="#importing">输入</a></li>
         <li class="toc-entry toc-h3"><a href="#variable-defaults">变量缺省值</a></li>
-        <li class="toc-entry toc-h3"><a href="#maps-and-loops">Map定义与loops循环定义</a></li>
+        <li class="toc-entry toc-h3"><a href="#maps-and-loops">Map定义与loops循环定义</a>
+		<ul>
+<li class="toc-entry toc-h4"><a href="#modify-map">修改map</a></li>
+<li class="toc-entry toc-h4"><a href="#add-to-map">添加map</a></li>
+<li class="toc-entry toc-h4"><a href="#remove-from-map">移除map</a></li>
+<li class="toc-entry toc-h4"><a href="#required-keys">必需的键值</a></li>
+</ul>
+		
+		</li>
         <li class="toc-entry toc-h3"><a href="#functions">函数</a></li>
         <li class="toc-entry toc-h3"><a href="#color-contrast">色彩对比</a></li>
       </ul>
@@ -269,29 +279,42 @@
         ├── js
         └── scss</code></pre>
   </figure>
+  <p>如果您已经下载了我们的源文件而没有使用包管理器，那么您需要手动设置类似于该结构的东西，将Bootstrap的源文件与您自己的文件分开.</p>
+  <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+  <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">your-project/
+├── scss
+│   └── custom.scss
+└── bootstrap/
+    ├── js
+    └── scss</code></pre></figure>
   <p>
-  <code class="highlighter-rouge">custom.scss</code>是你将导入Bootstrap的源Sass文件。您有两个选项：定义整个Bootstrap、或选择您需要的部分。我们鼓励使用后者，进行个性化定制。注意我们的组件有一些要求和依赖。您还需要为我们的插件添加一些JavaScript。</p>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-    // Option A: Include all of Bootstrap </span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre>
-  </figure>
-  <figure class="highlight">
-    <pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
-    // Option B: Include parts of Bootstrap </span>
-<span class="c1">// Required
-</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+  <h3 id="importing"><span class="bd-content-title">输入</span></h3>
 
-<span class="c1">// Optional
-</span><span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/type"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/images"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/code"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/grid"</span><span class="p">;</span></code></pre>
-  </figure>
-  <p>使用该设置，您可以开始修改任何Sass变量和映射<code class="highlighter-rouge">custom.scss</code>。您还可以根据<code class="highlighter-rouge">// Optional</code>需要开始在该部分下添加Bootstrap的部分。</p>
+   在<code class="highlighter-rouge">custom.scss</code>中，您将导入Bootstrap的源Sass文件。 您有两个选择：包括所有Bootstrap，或选择您需要的部件。 我们鼓励后者，但要注意我们的组件有一些要求和依赖。 您还需要为我们的插件添加一些JavaScript。</p>
+ <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+ <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option A: Include all of Bootstrap</span>
+
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option A: Include all of Bootstrap</span>
+
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></pre></figure>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss</span>
+<span class="c1">// Option B: Include parts of Bootstrap</span>
+
+<span class="c1">// Required</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/variables"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/mixins"</span><span class="p">;</span>
+
+<span class="c1">// Optional</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/reboot"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/type"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/images"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/code"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/grid"</span><span class="p">;</span></code></pre></figure>
+
+<p>使用该设置，您可以开始修改任何Sass变量和映射<code class="highlighter-rouge">custom.scss</code>。您还可以根据<code class="highlighter-rouge">//Optional</code>需要开始在该部分下添加Bootstrap的部分。我们建议使用<code class="highlighter-rouge">bootstrap.scss</code>文件中的完整导入堆栈作为起点。</p>
   <h3 id="variable-defaults">变量缺省值</h3>
   <p>Bootstrap 4中的每个Sass变量都包含<code class="highlighter-rouge">!default</code>标签，这是允许您在自己的Sass中覆盖变量的默认值，而无需修改Bootstrap的源代码。根据需要复制和粘贴变量，修改其值，并删除<code class="highlighter-rouge">!default</code>标志。如果已经分配了一个变量，那么它将不会被Bootstrap中的默认值重新分配。</p>
 <p>相同Sass文件中的变量覆盖可以在默认变量之前或之后。但是，当覆盖Sass文件时，您的覆盖必须在导入Bootstrap的Sass文件之前。</p>
@@ -309,13 +332,16 @@
   <p>Sass的第三个版本给我们带来了新的数据类型，叫做<code class="highlighter-rouge">map</code>。虽然你可以不知道这个名称，但在其他的语言中我们使用过map，通常就是关联数组。换句话说，Sass的<code class="highlighter-rouge">map</code>就是用关键名匹配对应值的一个数组(这里译者为大家提供了一个技术普及帖：<a href="http://www.z01.com/help/web/3208.shtml" target="_blank">《使用Sass Maps 的技术普及知识》http://www.z01.com/help/web/3208.shtml</a>)</p>
   <p>Bootstrap 4包括一些Sass map定义，使得更容易产生相关CSS的家庭。我们使用Sass map作为我们的颜色、网格、断点等关键了定义，这就如同Sass变量一样，所有Sass映射都包含<code class="highlighter-rouge">!default</code>标志，可以被覆盖并扩展。</p>
   <p>下面是改变了一个例子<code class="highlighter-rouge">background-color</code> ，并<code class="highlighter-rouge">color</code> 为<code class="highlighter-rouge">body</code> 进口，并通过NPM编译引导时：</p>
-  <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides</span>
-<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
-<span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span><font></font>
-<font></font>
-<span class="c1">// Bootstrap and its default variables</span>
-<span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+ 
   
+<figure class="highlight">
+<pre><code class="language-scss" data-lang="scss"><span class="c1">// Your variable overrides</span>
+<span class="nv">$body-bg</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
+
+<span class="c1">// Bootstrap and its default variables</span>
+<span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/bootstrap"</span><span class="p">;</span></code></pre></figure>
+   <h4 id="modify-map"><span class="bd-content-title">修改 map</span></h4>
 <p>例如，要修改我们<code class="highlighter-rouge">$theme-colors</code> map的现有颜色，请将以下内容添加到您的自定义Sass文件中：</p>
   <figure class="highlight">
     <pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
@@ -323,6 +349,7 @@
   <span class="s2">"danger"</span><span class="o">:</span> <span class="mh">#ff4136</span>
 <span class="p">);</span></code></pre>
   </figure>
+  <h4 id="add-to-map"><span class="bd-content-title">添加map</span></h4>
   <p>添加一个新的颜色<code class="highlighter-rouge">$theme-colors</code>、新的键和值：</p>
   <figure class="highlight">
     <pre><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="p">:</span> <span class="p">(</span>
@@ -330,8 +357,8 @@
 
 <span class="p">);</span></code></pre>
   </figure>
-  
-  <p>要从<code class="highlighter-rouge">$theme-colors</code>任何其他地图中删除颜色，请使用map-remove：</p>
+  <h4 id="remove-from-map"><span class="bd-content-title">移除map<a class="anchorjs-link " href="#remove-from-map" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></span></h4>
+  <p>要从<code class="highlighter-rouge">$theme-colors</code>任何其他画布删除颜色，请使用map-remove：</p>
   <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Required</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"node_modules/bootstrap/scss/variables"</span><span class="p">;</span>

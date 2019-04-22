@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -180,6 +180,7 @@
             <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
             <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
             <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
             <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
             <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -233,6 +234,7 @@
       </ul>
     </li>
     <li class="toc-entry toc-h2"><a href="#util">Util方法</a></li>
+	<li class="toc-entry toc-h2"><a href="#sanitizer">清理器</a></li>
   </ul>
 </div>
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
@@ -240,7 +242,8 @@
   <p class="bd-lead">Bootstrap 包括一些 JavaScript 帮助用户做出更加充满生机、活动的项目。欢迎学习更多关于如何去调用动态事件、灵活展示的数据和编程性的API选项等。</p>
   <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
   <h2 id="individual-or-compiled">单个引用或者编译</h2>
-  <p>一个页面只要使用一个Boostrap的单个<code class="highlighter-rouge">*.js</code>文件，一次性使用<code class="highlighter-rouge">bootstrap.js</code>或压缩精简的<code class="highlighter-rouge">bootstrap.min.js</code>（不要两个都调用），单个JS插件可以被包含调用之。</p>
+  <p>插件可以单独包含（使用Bootstrap的单独<code class="highlighter-rouge">js/dist/*.js）</code>，也可以使用<code class="highlighter-rouge">bootstrap.js</code>或缩小的<code class="highlighter-rouge">bootstrap.min.js</code>（不包括两者）一次性包含。</p>
+  <p>如果使用bundler（Webpack，Rollup ...），则可以使用UMD就绪的<code class="highlighter-rouge">/js/dist/*.js</code>文件。</p>
     <h2 id="dependencies">依赖关系</h2>
     <p>一些插件和CSS组件依赖于其它插件，这在系统中是被允许的。如果你要单个调用插件，请先在文档中检查它们的依赖关系。还要注意，所有插件都依赖于<strong>jQuery</strong>（即<strong>jQuery</strong>必须在所有JS插件文件之前调用）。参考 <a href="https://github.com/twbs/bootstrap/blob/v4.0.0-beta.2/package.json">Consult our <code class="highlighter-rouge">package.json</code></a>可以以了解哪些详尽版本的jQuery是被支持的。<br/>
 比如下拉菜单dropdowns、提示组件popovers、冒泡组件等都提依赖于<a href="https://popper.js.org/">Popper.js</a>。</p>
@@ -260,7 +263,9 @@
   <p>所有不定式事件都提供<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code class="highlighter-rouge">preventDefault()</code></a>功能，从而使开发者设计一个动作开始之前就能终止它的执行。从事件处理程序返回false同样也是自动调用<code class="highlighter-rouge">preventDefault()</code>功能。</p>
   <figure class="highlight">
     <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
+  <span class="p">}</span>
 <span class="p">})</span></code></pre>
   </figure>
   <h2 id="programmatic-api">编程化的API</h2>
@@ -296,7 +301,8 @@
   <h3 id="default-settings">默认设置</h3>
   <p>用户可以通过修改插件的 <code class="highlighter-rouge">Constructor.Default</code>对象来更改插件的默认设置：</p>
   <figure class="highlight">
-    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// changes default for the modal plugin's `keyboard` option to false</span></code></pre>
+    <pre><code class="language-js" data-lang="js"><span class="c1">// changes default for the modal plugin's `keyboard` option to false</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
   </figure>
   <h2 id="no-conflict">无冲突处理</h2>
   <p>有时，必须使用Bootstrap插件和其他UI框架。在这种情况下，偶尔会发生命名空间冲突。如果发生这种情况，您可以调用<code class="highlighter-rouge">.noConflict</code>恢复插件的值：</p>
@@ -307,7 +313,7 @@
   <h2 id="version-numbers">版本管理</h2>
   <p>每个Bootstrap的jQuery插件的版本都可以通过<code class="highlighter-rouge">VERSION</code>插件的构造函数的属性访问。如对于<code class="highlighter-rouge">tooltip</code>工具提示插件：</p>
   <figure class="highlight">
-    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "4.0.0-beta.2"</span></code></pre>
+    <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "4.3.1"</span></code></pre>
   </figure>
   <h2 id="no-special-fallbacks-when-javascript-is-disabled">当JavaScript被禁用时，没有特殊的回调机制</h2>
   <p>Bootstrap插件在JavaScript被禁用时没有特殊的回调方式。如果你比较关心用户体验的话，可用<code class="highlighter-rouge">&lt;noscript&gt;</code>向你的用户解释情况（以及指引如何重新开启 JavaScript），然后/或者添加自定义回调机制。</p>
@@ -318,6 +324,66 @@
   <h2 id="util">Util方法</h2>
   <p>默认<code class="highlighter-rouge">bootstrap.js</code>（预编译与精简版）都已经包含了<code class="highlighter-rouge">util.js</code>，因为Bootstrap所有JavaScript行为都依赖于<code class="highlighter-rouge">util.js</code>函数。</p>
   <p><code class="highlighter-rouge">util.js</code>包括效用函数和<code class="highlighter-rouge">transitionEnd</code>事件的基本帮助器以及CSS转换仿真器。它被其他插件用于检查CSS过渡支持并捕获挂起的过渡。</p>
+  <h2 id="sanitizer"><span class="bd-content-title">清理器</span></h2>
+  <p>工具提示和弹出窗口使用我们的内置清理器来清理接受HTML的选项。</p>
+  <p>默认的<code class="highlighter-rouge">whiteList</code>值如下:</p>
+  <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+  <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span> <span class="o">=</span> <span class="sr">/^aria-</span><span class="se">[\w</span><span class="sr">-</span><span class="se">]</span><span class="sr">*$/i</span>
+<span class="kd">var</span> <span class="nx">DefaultWhitelist</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">// Global attributes allowed on any supplied element below.</span>
+  <span class="s1">'*'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'class'</span><span class="p">,</span> <span class="s1">'dir'</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">,</span> <span class="s1">'lang'</span><span class="p">,</span> <span class="s1">'role'</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
+  <span class="na">a</span><span class="p">:</span> <span class="p">[</span><span class="s1">'target'</span><span class="p">,</span> <span class="s1">'href'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'rel'</span><span class="p">],</span>
+  <span class="na">area</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">b</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">br</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">col</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">code</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">div</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">em</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">hr</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h1</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h2</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h3</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h4</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h5</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">h6</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">i</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">img</span><span class="p">:</span> <span class="p">[</span><span class="s1">'src'</span><span class="p">,</span> <span class="s1">'alt'</span><span class="p">,</span> <span class="s1">'title'</span><span class="p">,</span> <span class="s1">'width'</span><span class="p">,</span> <span class="s1">'height'</span><span class="p">],</span>
+  <span class="na">li</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">ol</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">p</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">pre</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">s</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">small</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">span</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">sub</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">sup</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">strong</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">u</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">ul</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span></code></pre></figure>
+<p>如果要向此默认<code class="highlighter-rouge">whiteList</code>添加新值，可以执行以下操作:</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myDefaultWhiteList</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">whiteList</span>
+
+<span class="c1">// To allow table elements</span>
+<span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">// To allow td elements and data-option attributes on td elements</span>
+<span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'data-option'</span><span class="p">]</span>
+
+<span class="c1">// You can push your custom regex to validate your attributes.</span>
+<span class="c1">// Be careful about your regular expressions being too lax</span>
+<span class="kd">var</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-</span><span class="se">[\w</span><span class="sr">-</span><span class="se">]</span><span class="sr">+/</span>
+<span class="nx">myDefaultWhiteList</span><span class="p">[</span><span class="s1">'*'</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">myCustomRegex</span><span class="p">)</span></code></pre><p>If you want to add new values to this default <code class="highlighter-rouge">whiteList</code> you can do the following:</p></figure>
+<p>如果您想绕过我们的清理器,例如<a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>,则应执行以下操作:</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#yourTooltip'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="na">sanitizeFn</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">content</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
+
 </main>
 </div>
 </div>

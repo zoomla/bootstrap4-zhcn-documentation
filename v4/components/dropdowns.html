@@ -73,9 +73,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3</a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +181,7 @@
     <li><a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
     <li><a href="../utilities/float.html"> Float浮动属性 </a> </li>
     <li><a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+	<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
     <li><a href="../utilities/position.html"> Position固顶(底)及定位 </a> </li>
     <li><a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders)</a></li>
     <li><a href="../utilities/shadows.html"> 阴影(shadows)</a></li>
@@ -214,7 +215,6 @@
 </div>
 
 
-
 <div class="d-none d-xl-block col-xl-2 bd-toc">
   <ul class="section-nav">
     <li class="toc-entry toc-h2"><a href="#overview">概览</a></li>
@@ -226,12 +226,13 @@
       </ul>
     </li>
     <li class="toc-entry toc-h2"><a href="#sizing">尺寸大小定义</a>
-	<ul>
-	 <li class="toc-entry toc-h3"><a href="#dropup-variation">变形-向上展开</a></li>
-	<li class="toc-entry toc-h3"><a href="#dropright-variation">Dropright右指向下拉菜单</a></li>
-	<li class="toc-entry toc-h3"><a href="#dropleft-variation">Droprleft左指向下拉菜单</a></li>
-	</ul>
-	</li>
+	<li class="toc-entry toc-h2"><a href="#directions">方向</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dropup">方向向上</a></li>
+<li class="toc-entry toc-h3"><a href="#dropright">方向向右</a></li>
+<li class="toc-entry toc-h3"><a href="#dropleft">方向向左</a></li>
+</ul>
+</li>
    
     <li class="toc-entry toc-h2"><a href="#menu-items">菜单项</a>
 	<ul>
@@ -533,7 +534,8 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
-  <h2 id="dropup-variation">变形-向上展开</h2>
+  <h2 id="directions"><span class="bd-content-title">方向</span></h2>
+  <h3 id="dropup"><span class="bd-content-title">方向向上</span></h3>
   <p>增加<code class="highlighter-rouge">.dropup</code> 样式，使下拉菜单向上展开。</p>
   <div class="bd-example">
     <div class="btn-group dropup">
@@ -574,7 +576,7 @@
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
   
-   <h2 id="dropright-variation">Dropright 右指向下拉菜单</h2>
+   <h3 id="dropright"><span class="bd-content-title">方向向右</span></h3>
   <p>通过将 <code class="highlighter-rouge">.dropright</code>添加到父元素来触发元素左侧的下拉菜单。</p>
   <div class="bd-example">
    <div class="btn-group dropright">
@@ -630,7 +632,7 @@
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
   
-     <h2 id="dropleft-variation">Droprleft 左指向下拉菜单</h2>
+    <h3 id="dropleft"><span class="bd-content-title">方向向左</span></h3>
   <p>通过将 <code class="highlighter-rouge">.dropleft </code>添加到父元素来触发元素左侧的下拉菜单。</p>
   <div class="bd-example">
  <div class="btn-group dropleft">

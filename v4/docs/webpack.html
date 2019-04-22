@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿
+<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -73,9 +74,9 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.2 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
-        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.x)</a>
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
         <a class="dropdown-item" href="/Sass/">Sass语言</a>
         <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
@@ -181,6 +182,7 @@
             <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
             <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
             <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
             <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
             <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
 			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
@@ -242,31 +244,9 @@
     <pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'bootstrap'</span><span class="p">;</span></code></pre>
   </figure>
   <p>或者，您可以根据需要 <strong>单独导入插件</strong>:</p>
-  <figure class="highlight">
-    <pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'bootstrap/js/dist/util'</span><span class="p">;</span>
-<span class="k">import</span> <span class="s1">'bootstrap/js/dist/dropdown'</span><span class="p">;</span>
-<span class="p">...</span></code></pre>
-  </figure>
-  <p>Bootstrap依赖于 <a href="https://jquery.com/">jQuery</a> 和 <a href="https://popper.js.org/">Popper.js</a>，所以如果需要，npm将为您安装它们，它们必须由webpack显式提供，将以下代码添加到<code class="highlighter-rouge">plugins</code>配置文件中：</p>
-  <figure class="highlight">
-    <pre><code class="language-js" data-lang="js">  <span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">...</span>
-      <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">ProvidePlugin</span><span class="p">({</span>
-        <span class="na">$</span><span class="p">:</span> <span class="s1">'jquery'</span><span class="p">,</span>
-        <span class="na">jQuery</span><span class="p">:</span> <span class="s1">'jquery'</span><span class="p">,</span>
-        <span class="s1">'window.jQuery'</span><span class="p">:</span> <span class="s1">'jquery'</span><span class="p">,</span>
-        <span class="na">Popper</span><span class="p">:</span> <span class="p">[</span><span class="s1">'popper.js'</span><span class="p">,</span> <span class="s1">'default'</span><span class="p">],</span>
-        <span class="c1">// In case you imported plugins individually, you must also require them here:</span>
-        <span class="na">Util</span><span class="p">:</span> <span class="s2">"exports-loader?Util!bootstrap/js/dist/util"</span><span class="p">,</span>
-        <span class="na">Dropdown</span><span class="p">:</span> <span class="s2">"exports-loader?Dropdown!bootstrap/js/dist/dropdown"</span><span class="p">,</span>
-        <span class="p">...</span>
-      <span class="p">})</span>
-    <span class="p">...</span>
-  <span class="p">]</span></code></pre>
-  </figure>
-  <div class="bd-callout bd-callout-warning">
-    <p>注意，如果您选择<strong>单独导入插件</strong>，还必须安装<a href="https://github.com/webpack-contrib/exports-loader">导出加载程序</a>。</p>
-  </div>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">import</span> <span class="s1">'bootstrap/js/dist/util'</span><span class="p">;</span>
+<span class="k">import</span> <span class="s1">'bootstrap/js/dist/alert'</span><span class="p">;</span>
+<span class="p">...</span></code></pre></figure>
   <h2 id="importing-styles">导入样式</h2>
   <h3 id="importing-precompiled-sass">导入预编译的Sass</h3>
   <p>要充分发挥Bootstrap的潜力，并根据您的需求进行定制，请使用源文件作为项目捆绑过程的一部分。</p>
