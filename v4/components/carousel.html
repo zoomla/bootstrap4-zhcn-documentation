@@ -608,16 +608,13 @@
   <p> 使用数据属性可以轻松控制转盘的位置。<code class="highlighter-rouge">data-slide</code>接受关键字， <code class="highlighter-rouge">prev</code>或者 <code class="highlighter-rouge">next</code>改变相对于其当前位置的滑动位置。或者，使用<code class="highlighter-rouge">data-slide-to</code>将原始幻灯片索引传递到<code class="highlighter-rouge">data-slide-to="2"</code>，将幻灯片位置转换到以0开始的特定索引。</p>
   <p>该<code class="highlighter-rouge">data-ride="carousel"</code> 属性用于将轮播标记为从页面加载开始的动画，它<strong>不能与同一转盘的（冗余和不必要）显式JavaScript初始化结合使用</strong>。</p>
   <h3 id="via-javascript">通过JavaScript</h3>
-  <p>通过下面方法使用JS控制轮播：</p>
+  <p>通过下面方法使用JS控制轮播(实现自动滚动)：</p>
   <figure class="highlight">
     <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.carousel'</span><span class="p">).</span><span class="nx">carousel</span><span class="p">()</span></code></pre>
   </figure>
   <h3 id="options">选项</h3>
   <p>
-  
-  可以透過資料屬性或 JavaScript 調整選項。對於資料屬性，將選項名稱附加到 data-，如 data-interval=""。
-
-可以通过数据属性或JavaScript调整（传递）选项，对于数据属性，选项名称追加到<code class="highlighter-rouge">data-</code>，如<code class="highlighter-rouge">data-interval=""</code>。</p>
+  可以通过<code class="highlighter-rouge">data-</code>方法，定义此轮播组件的属性，方法是<code class="highlighter-rouge">data-interval=""</code>，实现JavaScript属性的注入，订制此组件的各种形态。</p>
   <table class="table table-bordered table-striped table-responsive">
     <thead>
       <tr>
@@ -632,13 +629,13 @@
         <td>interval</td>
         <td>number</td>
         <td>5000</td>
-        <td>自动循环项目之间的延迟时间（即滚动时间），。果为false，则传送带不会滚动。</td>
+        <td>自动循环项目之间的延迟时间（即滚动时间），如果为false，则整个轮播组件不会自动滚动（仅支持手动滚动）-在调试CSS样式时这很实用。</td>
       </tr>
       <tr>
         <td>keyboard</td>
         <td>boolean</td>
         <td>true</td>
-        <td>旋转木马是否应对键盘事件作出反应。</td>
+        <td>是否应对键盘事件作出反应，如果选择true则可以通过键盘上的左<kbd>&lt;-</kbd>右<kbd>-&gt;</kbd>方向键进行切换控制。</td>
       </tr>
       <tr>
         <td>pause</td>
