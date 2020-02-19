@@ -74,7 +74,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -85,6 +85,7 @@
         <a class="dropdown-item" href="http://v.z01.com/mb/" target="_blank">免费模板</a>
         <a class="dropdown-item" href="http://v.z01.com/" target="_blank">H5移动创作</a>
         <a class="dropdown-item" href="http://www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+        <a class="dropdown-item" href="vscode.html" target="_blank">vs code技巧</a>        
 		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome奥森图标</a>
 </div>
     </li>
@@ -220,7 +221,7 @@
           </ul>
         </li>
         <li class="toc-entry toc-h2"><a href="#starter-template">Hello, World!模板</a></li>
-        <li class="toc-entry toc-h2"><a href="#important-globals">重要提示</a>
+        <li class="toc-entry toc-h2"><a href="#important-globals">全局规范</a>
           <ul>
             <li class="toc-entry toc-h3"><a href="#html5-doctype">HTML5 doctype 头部规范</a></li>
             <li class="toc-entry toc-h3"><a href="#responsive-meta-tag">响应式meta标签</a></li>
@@ -237,7 +238,7 @@
       <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
       <h2 id="quick-start">快速部署</h2>
       <p>使用 Bootstrap CDN嵌入4行代码就能完成导入！ <a href="download.html">点此这里下载离线包及源码</a>。</p>
-	  <p>这是全新的Bootstrap v4.3.1手册，Zoomla!逐浪CMS官方团队负责维护这一项目的中文译本，如果您需要访问旧版4.0手册可以<a href="../../4.0/index.html">点击这里</a></p>
+	  <p>这是全新的Bootstrap v4.4手册，Zoomla!逐浪CMS官方团队负责维护这一项目的中文译本，如果您需要访问旧版4.0手册可以<a href="../../4.0/index.html">点击这里</a></p>
       <h3 id="css">1行 CSS</h3>
       <p>复制下面的 <code class="highlighter-rouge">&lt;link&gt;</code> 样式表粘贴到网页 <code class="highlighter-rouge">&lt;head&gt;</code> 里面，并放在其它CSS文件之前.</p>
 	<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
@@ -288,10 +289,10 @@
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
       <p>拷贝上面代码，然后按照本文档的 <a href="../layout/overview.html"> 布局 </a> 、 <a href="/docs/4.0/examples/"> 示例</a> 来构建你的组件和内容.</p>
-      <h2 id="important-globals">重要提示</h2>
-      <p>Bootstrap 推荐全局样式和设置统一，使之标准化，让我们深入了解它们。</p>
+      <h2 id="important-globals">全局规范</h2>
+      <p>Bootstrap 推荐全局样式和设置统一，使之标准化，这些样式设置（比如root设置-译者注）会影响全局，支持跨浏览器和标准化，让我们来学习它</p>
       <h3 id="html5-doctype">HTML5 doctype头部规范</h3>
-      <p>HTML5标准的 doctype 头部定义是首要的，否则会导致样式失真（中国码农往往直接抄国外站点将lang写成en的小细节也要注意以免贻笑大方)。</p>
+      <p>HTML5标准的 doctype 头部定义是首要的，否则会导致样式失真（中国码农往往直接抄国外站点将lang写成en-正确中文站点应该用zh-CN，这些小细节也要注意，以免贻笑大方-译者注)。</p>
       <figure class="highlight">
         <pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-cn"</span><span class="nt">&gt;</span>

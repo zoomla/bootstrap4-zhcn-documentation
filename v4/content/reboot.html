@@ -410,69 +410,90 @@
     <li><code class="highlighter-rouge">&lt;textarea&gt;</code>被修改为只能竖直方向上调整大小，因为水平方向上调整大小经常会“破坏”页面布局。</li>
   </ul>
   <p>可以从下面方示例控件品味细节：</p>
-  <form class="bd-example">
-    <fieldset>
-      <legend>Example legend</legend>
-      <p>
-        <label for="input">Example input</label>
-        <input type="text" id="input" placeholder="Example input" />
-      </p>
-      <p>
-        <label for="select">Example select</label>
-        <select id="select">
-          <option value="">Choose...</option>
-          <optgroup label="Option group 1">
+ 
+<form class="bd-example">
+  <fieldset>
+    <legend>Example legend</legend>
+
+    <p>
+      <label for="input">Example input</label>
+      <input type="text" id="input" placeholder="Example input" />
+    </p>
+
+    <p>
+      <label for="select">Example select</label>
+      <select id="select">
+        <option value="">Choose...</option>
+        <optgroup label="Option group 1">
           <option value="">Option 1</option>
           <option value="">Option 2</option>
           <option value="">Option 3</option>
-          </optgroup>
-          <optgroup label="Option group 2">
+        </optgroup>
+        <optgroup label="Option group 2">
           <option value="">Option 4</option>
           <option value="">Option 5</option>
           <option value="">Option 6</option>
-          </optgroup>
-        </select>
-      </p>
-      <p>
-        <label>
-          <input type="checkbox" value="" />
-          Check this checkbox </label>
-      </p>
-      <p>
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
-          Option one is this and that </label>
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-          Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls. </label>
-        <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="" />
-          Option three is disabled </label>
-      </p>
-      <p>
-        <label for="textarea">Example textarea</label>
-        <textarea id="textarea" rows="3"></textarea>
-      </p>
-      <p>
-        <label for="time">Example temporal</label>
-        <input type="datetime-local" id="time" />
-      </p>
-      <p>
-        <label for="output">Example output</label>
-        <output name="result" id="output">100</output>
-      </p>
-      <p>
-        <button type="submit">Button submit</button>
-        <input type="submit" value="Input submit button" />
-        <input type="button" value="Input button" />
-      </p>
-      <p>
-        <button type="submit" disabled="">Button submit</button>
-        <input type="submit" value="Input submit button" disabled="" />
-        <input type="button" value="Input button" disabled="" />
-      </p>
-    </fieldset>
-  </form>
+        </optgroup>
+      </select>
+    </p>
+
+    <p>
+      <label>
+        <input type="checkbox" value="" />
+        Check this checkbox
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
+        Option one is this and that
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+        Option two is something else that's also super long to demonstrate the wrapping of these fancy form controls.
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="" />
+        Option three is disabled
+      </label>
+    </p>
+
+    <p>
+      <label for="textarea">Example textarea</label>
+      <textarea id="textarea" rows="3"></textarea>
+    </p>
+
+    <p>
+      <label for="date">Example date</label>
+      <input type="date" id="date" />
+    </p>
+
+    <p>
+      <label for="time">Example time</label>
+      <input type="time" id="time" />
+    </p>
+
+    <p>
+      <label for="output">Example output</label>
+      <output name="result" id="output">100</output>
+    </p>
+
+    <p>
+      <button type="submit">Button submit</button>
+      <input type="submit" value="Input submit button" />
+      <input type="reset" value="Input reset button" />
+      <input type="button" value="Input button" />
+    </p>
+
+    <p>
+      <button type="submit" disabled="">Button submit</button>
+      <input type="submit" value="Input submit button" disabled="" />
+      <input type="reset" value="Input reset button" disabled="" />
+      <input type="button" value="Input button" disabled="" />
+    </p>
+  </fieldset>
+</form>
   <h2 id="misc-elements">其它杂项</h2>
   <h3 id="address">Address地址控件</h3>
   <p>

@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -258,6 +258,11 @@
   <figure class="highlight">
     <pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.alert.data-api'</span><span class="p">)</span></code></pre>
   </figure>
+  <div class="bd-callout bd-callout-warning">
+<h2 id="selectors">选择器</h2>
+
+<p>出于性能的考虑，为了能够准确查询DOM元素，我们使用原生的<code class="highlighter-rouge">querySelector</code> 和 <code class="highlighter-rouge">querySelectorAll</code> 方法，因此你必须使用 <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">valid selectors</a>。如果使用特殊的选择器，如 <code class="highlighter-rouge">collapse:Example</code>注意将其转义，避免与JQuery方法冲突。</p>
+</div>
   <h2 id="events">JS事件(Event)</h2>
   <p>Bootstrap为大多数插件的独一无二的行为提供了自定义事件。通常情况下，这里会有动词不定式和过去分词形式—如果在事件的开始触发了它的动词不定式（如<code class="highlighter-rouge">show</code>），而shown在完成某个动作后触发其过去分词形式（如<code class="highlighter-rouge">shown</code>）。</p>
   <p>所有不定式事件都提供<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code class="highlighter-rouge">preventDefault()</code></a>功能，从而使开发者设计一个动作开始之前就能终止它的执行。从事件处理程序返回false同样也是自动调用<code class="highlighter-rouge">preventDefault()</code>功能。</p>

@@ -329,12 +329,13 @@
   </tbody>
 </table>
 
+<p>下面两个div空间在不同的屏幕下显示是不同的，请注意观察：</p>
 	<div class="bd-example">
-	<div class="d-lg-none">hide on screens wider than lg</div>
-	<div class="d-none d-lg-block">hide on screens smaller than lg</div>
+	<div class="d-lg-none">大于lg屏幕尺寸时隐藏</div>
+	<div class="d-none d-lg-block">小于lg屏幕时隐藏</div>
 	</div>
-	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-lg-none"</span><span class="nt">&gt;</span>hide on screens wider than lg<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>hide on screens smaller than lg<span class="nt">&lt;/div&gt;</span></code></pre></div>
+	<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-lg-none"</span><span class="nt">&gt;</span>大于lg屏幕尺寸时隐藏<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>小于lg屏幕时隐藏<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
   <h2 id="display-in-print">面向打印的显示属性控制处理</h2>
   <p>在处理打印样式时，通过<code class="highlighter-rouge">display</code>通用样式来改变相应值处理呈现效果。</p>
@@ -349,15 +350,15 @@
   <li><code class="highlighter-rouge">.d-print-flex</code></li>
   <li><code class="highlighter-rouge">.d-print-inline-flex</code></li>
 </ul>
-<p>印刷和显示课程可以合并。</p>
+<p>屏幕与打印显示可以并列设置，下面有三段代码，请注意观察它们在不同屏幕大小的显示。</p>
 <div class="bd-example">
-<div class="d-print-none">Screen Only (Hide on print only)</div>
-<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
-<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+<div class="d-print-none">仅屏幕显示 (不可打印)</div>
+<div class="d-none d-print-block">仅支持打印显示(不可在屏幕上显示)</div>
+<div class="d-none d-lg-block d-print-block">显示在中等屏幕（不支持大屏幕显示）, 支持打印输出</div>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-print-none"</span><span class="nt">&gt;</span>Screen Only (Hide on print only)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-print-block"</span><span class="nt">&gt;</span>Print Only (Hide on screen only)<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block d-print-block"</span><span class="nt">&gt;</span>Hide up to large on screen, but always show on print<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-print-none"</span><span class="nt">&gt;</span>仅屏幕显示 (不可打印)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-print-block"</span><span class="nt">&gt;</span>P仅支持打印显示(不可在屏幕上显示)<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-none d-lg-block d-print-block"</span><span class="nt">&gt;</span>显示在中等屏幕（不支持大屏幕显示）, 支持打印输出<span class="nt">&lt;/div&gt;</span></code></pre></div>
 </main>
 </div>
 </div>

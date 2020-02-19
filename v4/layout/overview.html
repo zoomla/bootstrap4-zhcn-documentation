@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -216,7 +216,12 @@
 <div class="d-none d-xl-block col-xl-2 bd-toc">
   <ul class="section-nav">
     <li class="toc-entry toc-h2"><a href="#containers">Container容器</a></li>
-    <li class="toc-entry toc-h2"><a href="#responsive-breakpoints">响应式的分界点</a></li>
+    <ul>
+    <li class="toc-entry toc-h3"><a href="#all-in-one">一个容器中定义</a></li>
+    <li class="toc-entry toc-h3"><a href="#fluid">流式布局</a></li>
+    <li class="toc-entry toc-h3"><a href="#responsive">响应式外部容器</a></li>
+    </ul>    
+    <li class="toc-entry toc-h2"><a href="#responsive-breakpoints">响应式的断点</a></li>
     <li class="toc-entry toc-h2"><a href="#z-index">Z-index 堆叠顺序属性</a></li>
   </ul>
 </div>
@@ -226,6 +231,120 @@
   <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
   <h2 id="containers">Container容器</h2>
   <p>Container容器是窗口布局的最基本元素，我们推荐所有样式都定义在<code class="highlighter-rouge">.container</code>或<code class="highlighter-rouge">.container-fluid</code>容器之中-- <strong>这是启用整个栅格系统必不可少的前置条件</strong>，它们分别对应选择一个响应式的、固定宽度的容器，或者选择一个流式自适应浏览器或容器最大合法宽度的窗口（意味着任何时候它的宽度总是<code class="highlighter-rouge">100%</code>）。</p>
+  <p>Bootstrap原生带三种container宽度规范：</p>
+    <ul>
+      <li><code class="highlighter-rouge">.container</code>, 居中，适配不同的断的 <code class="highlighter-rouge">max-width</code> 尺寸。</li>
+      <li><code class="highlighter-rouge">.container-fluid</code>, 全屏，适配屏幕的 <code class="highlighter-rouge">width: 100%</code> 尺寸。</li>
+      <li><code class="highlighter-rouge">.container-{断点规格}</code>（见下表，如.container-sm), 在指定规格断上<code class="highlighter-rouge">width: 100%</code> 尺寸。</li>
+    </ul>
+<p>下在的表格描述了 container在不同的屏幕的 <code class="highlighter-rouge">max-width</code> 规范，以及 <code class="highlighter-rouge">.container</code> 、 <code class="highlighter-rouge">.container-fluid</code> 的断点区别。</p>
+<p>我们也可以点击这个 <a href="../examples/grid/#containers">布局网格示例加深理解</a>.</p>
+<table class="table text-left">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        超小屏幕<br />
+        <span class="font-weight-normal">&lt;576px</span>
+      </th>
+      <th>
+        小屏幕<br />
+        <span class="font-weight-normal">&ge;576px</span>
+      </th>
+      <th>
+        中等屏幕<br />
+        <span class="font-weight-normal">&ge;768px</span>
+      </th>
+      <th>
+        大屏幕<br />
+        <span class="font-weight-normal">&ge;992px</span>
+      </th>
+      <th>
+        超大屏幕<br />
+        <span class="font-weight-normal">&ge;1200px</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.container</code></td>
+      <td class="text-muted">100%</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><code>.container-sm</code></td>
+      <td class="text-muted">100%</td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><code>.container-md</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><code>.container-lg</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td>960px</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><code>.container-xl</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td>1140px</td>
+    </tr>
+    <tr>
+      <td><code>.container-fluid</code></td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+      <td class="text-muted">100%</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 id="all-in-one">All-in-one（一个容器中定义）</h3>
+
+<p>默认的<code class="highlighter-rouge">.container</code> class 是一个响应式容器，它有固定宽度和最<code class="highlighter-rouge">max-width</code> 设置，并支持响应式断点，你应该用它作为整个DIV的最外层容器，如下。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- 网页内容写在这里面 --&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="fluid">流式布局</h3>
+
+<p> <code class="highlighter-rouge">.container-fluid</code> 则支持全屏的流式布局，如下使用：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="responsive">响应式外部容器</h3>
+
+<p>Bootstrap v4.4带来了一组全新的响应式外部容器，它允许在指定的屏幕下定义 100%宽（这更适合移动等场景-译者注） <code class="highlighter-rouge">max-width</code>属性会在不断的断点有表现不同，比如<code class="highlighter-rouge">.container-sm</code> 则只在sm屏幕下显示100%宽,其它断点包括<code class="highlighter-rouge">.container-md</code>、 <code class="highlighter-rouge">.container-lg</code>、 <code class="highlighter-rouge">.containerxl</code>，代码示任免：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm"</span><span class="nt">&gt;</span>100% wide until small breakpoint<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-md"</span><span class="nt">&gt;</span>100% wide until medium breakpoint<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-lg"</span><span class="nt">&gt;</span>100% wide until large breakpoint<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-xl"</span><span class="nt">&gt;</span>100% wide until extra large breakpoint<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+
   <p><code class="highlighter-rouge">.container</code>容器<em>可以</em>被嵌套，但是大多数布局并不需要这么做（最少层次的嵌套构建出的网页更优雅-译者注），其呈现效果和使用方法如下所示：</p>
   <div class="bd-example">
     <div class="bd-example-container">
@@ -252,7 +371,7 @@
   ...
 <span class="nt">&lt;/div&gt;</span></code></pre>
   </figure>
-  <h2 id="responsive-breakpoints">响应式的分界点</h2>
+  <h2 id="responsive-breakpoints">响应式的断点</h2>
   <p>Bootstrap是基于移动优先的原则开发的，使用了一系列的媒体查询（<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> ）方法，为我们的布局和界面创建自适应的的分界点。这些分界点主要是基于视口宽度的最小值，并且当窗口视图改变的时候允许元素缩放。</p>
   <p>在Bootstrap的源Sass文件中，为了实现布局、网格系统以及组件，首先使用下面的媒体查询范围(可以理解为将不同宽度的网页进行拆分并分别载入CSS样式处理构建）：</p>
   <figure class="highlight">

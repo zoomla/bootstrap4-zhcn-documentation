@@ -9,6 +9,11 @@
 1. v4.0版     发布时间：2018-2-10  文档地址：[http://code.z01.com/4.0/index.html](http://code.z01.com/4.0/index.html "http://code.z01.com/4.0/index.html")
 2. v4.1.1.版  发布日期：2018-6-11  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
 3. v4.2.1.版  发布日期：2019-1-25  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
+4. v4.4.1.版  发布日期：2020-2-20  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
+>更新提示：v4.4.1增加row-cols、.container-sm|md|lg|xl等属性、可以更好的支持移动配置，欢迎大家欣赏，新增栅格部份可见 http://code.z01.com/v4/layout/overview.html 及 http://code.z01.com/v4/layout/grid.html#row-columns
+
+
+
 
 
 # 维护团队

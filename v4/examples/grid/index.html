@@ -16,6 +16,19 @@ h3 { margin-top: 2rem; }
 .row .row { margin-top: 1rem; margin-bottom: 0; }
 [class*="col-"] { padding-top: 1rem; padding-bottom: 1rem; background-color: rgba(86,61,124,.15); border: 1px solid rgba(86,61,124,.2); }
 hr { margin-top: 2rem; margin-bottom: 2rem; }
+.themed-grid-col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+.themed-container {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 123, 255, .15);
+  border: 1px solid rgba(0, 123, 255, .2);
+}
 </style>
 </head>
 <body>
@@ -115,6 +128,20 @@ hr { margin-top: 2rem; margin-bottom: 2rem; }
     <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
   </div>
 </div>
+
+
+<div class="container" id="containers">
+  <h2 class="mt-4">Containers</h2>
+  <p>Bootstrap V4.4新增的类-Additional classes added in Bootstrap v4.4 allow containers that are 100% wide until a particular breakpoint.</p>
+</div>
+
+<div class="container themed-container">.container</div>
+<div class="container-sm themed-container">.container-sm</div>
+<div class="container-md themed-container">.container-md</div>
+<div class="container-lg themed-container">.container-lg</div>
+<div class="container-xl themed-container">.container-xl</div>
+<div class="container-fluid themed-container">.container-fluid</div>
+
 <!-- /container -->
 
 <!-- Bootstrap 核心 JavaScript --> 

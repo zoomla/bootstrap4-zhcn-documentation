@@ -73,7 +73,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.3 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
         <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -235,6 +235,8 @@
         <li class="toc-entry toc-h3"><a href="#color-contrast">色彩对比</a></li>
       </ul>
     </li>
+    <li class="toc-entry toc-h2"><a href="#escape-svg">SVG转义规范</a></li>
+    <li class="toc-entry toc-h2"><a href="#add-and-subtract-functions">加减函数</a></li>
     <li class="toc-entry toc-h2"><a href="#sass-options">Sass选项</a></li>
     <li class="toc-entry toc-h2"><a href="#color">颜色</a>
       <ul>
@@ -438,6 +440,41 @@
   <span class="nl">color</span><span class="p">:</span> <span class="nf">color-yiq</span><span class="p">(</span><span class="nf">theme-color</span><span class="p">(</span><span class="s2">"dark"</span><span class="p">));</span> <span class="c1">// returns `color: #fff`
 </span><span class="p">}</span></code></pre>
   </figure>
+   <h2 id="escape-svg">SVG转义规范</h2>
+  <p>我们使用<code class="highlighter-rouge">escape-svg</code>方法对<code class="highlighter-rouge">&lt;</code>、<code class="highlighter-rouge">&gt;</code>、<code class="highlighter-rouge">#</code>对svg进行转义，在定义背景字体的时候，因而在IE中需要转义才能正确显示,。</p>
+    <h2 id="add-and-subtract-functions">加减函数</h2>
+  <p>我们使用<code class="highlighter-rouge">add</code>、<code class="highlighter-rouge">subtract</code>来封装CSS，使用这些函数的目的是避免把0值传递给算式，比如<code class="highlighter-rouge">calc(10px - 0)</code> 尽管在数学中是正确的，但在所有浏览器中都会返回错误。</p>
+  <p>下面是有一个合法有效的CSS公式计算示例：</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="p">:</span> <span class="mi">.25rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output calc(.25rem - 1px) is valid</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output the same calc(.25rem - 1px) as above</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>下面则是一个无效的非法CSS公式计算示例（因为$border-width:0输出了一个0值-译者注）:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="p">:</span> <span class="mi">.25rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output calc(.25rem - 0) is invalid</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Output .25rem</span>
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>  
+  
+  
   <h2 id="sass-options">Sass选项</h2>
   <p>使用内置的自定义变量文件定制Bootstrap 4，并轻松地使用新的 <code class="highlighter-rouge">$enable-*</code> Sass变量切换全局CSS首选项。覆盖变量的值并根据需要<code class="highlighter-rouge">npm run test</code>重新编译。</p>
   <p>您可以在<code class="highlighter-rouge">_variables.scss</code> 文件中找到并自定义这些变量，用于关键全局选项。</p>

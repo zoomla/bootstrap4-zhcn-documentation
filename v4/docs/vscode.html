@@ -1,0 +1,497 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll v3.6.0">
+<title>基于vscode编译Scss和Souce map协议 &middot; Zoomla!逐浪CMS团队</title>
+<!--IE兼容组件-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+<!-- Bootstrap 核心CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- 本文档额外专用css -->
+<link href="../assets/css/docsearch.min.css" rel="stylesheet">
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons图标定义 -->
+<link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../favicon.ico">
+<meta name="msapplication-config" content="../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Meta关键字定义 -->
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<!-- Twitter -->
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction">
+<meta name="twitter:description" content="Contents Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta name="twitter:image" content="../assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/4.0/getting-started/introduction/">
+<meta property="og:title" content="Introduction">
+<meta property="og:description" content="Contents Bootstrap to get the compiled CSS and JavaScript, source code, or include it with your favorite package managers like npm, RubyGems, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:secure_url" content="../assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>p,ul{margin-bottom: 0}</style>
+</head>
+<body>
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+<div class="container"> <span class="skiplink-text">跳到主体内容</span> </div>
+</a>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar"> <a class="navbar-brand mr-0 mr-md-2" href="../" aria-label="Bootstrap">
+  <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <title>Bootstrap</title>
+    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+  </svg>
+  </a>
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item"><a class="nav-link " href="../">首页</a></li>
+      <li class="nav-item"><a class="nav-link active" href="../../v4/docs/">中文手册</a></li>
+      <li class="nav-item"><a class="nav-link " href="../../v4/examples/">实例</a></li>
+      <li class="nav-item dropdown">
+<a class="nav-item nav-link dropdown-toggle mr-md-2" id="bd-versions" aria-expanded="false" aria-haspopup="true" href="#" data-toggle="dropdown"> 主题模板 </a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+<a class="dropdown-item" href="../../V4/themes/" target="_blank">主题门户</a>
+<a class="dropdown-item" href="../../V4/themes/live.html">精选模板</a>
+</div>
+</li>
+      <li class="nav-item"><a class="nav-link" href="//ico.z01.com" target="_blank" rel="noopener">zico图标系统</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://expo.getbootstrap.com" target="_blank" rel="noopener">优站精选</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://blog.getbootstrap.com" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+  </div>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions"> 
+        <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
+        <a class="dropdown-item" href="/Boot/">v3.3.7</a>
+        <a class="dropdown-item" href="/Sass/">Sass语言</a>
+        <a class="dropdown-item" href="/Emmet/">Emmet语法</a>
+        <a class="dropdown-item" href="//www.z01.com/tool/" target="_blank">IIS站长工具</a>
+        <a class="dropdown-item" href="//ad.z01.com/" target="_blank">广告源码</a>
+        <a class="dropdown-item" href="//v.z01.com/mb/" target="_blank">免费模板</a>
+        <a class="dropdown-item" href="//v.z01.com/" target="_blank">H5移动创作</a>
+        <a class="dropdown-item" href="//www.z01.com/help/web/3234.shtml" target="_blank">Flexbox布局</a>
+		<a class="dropdown-item" href="/boot/font.html" target="_blank">Font Awesome</a>
+		</div>
+    </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="//zoomla.github.io/bootstrap4-zhcn-documentation" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg class="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 499.36" focusable="false">
+        <title>GitHub</title>
+        <path d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z" fill="currentColor" fill-rule="evenodd"/>
+      </svg>
+      </a> </li>
+    <li class="nav-item"> <a class="nav-link p-2" href="http://www.z01.com/blog/ren/3214.shtml" target="_blank" rel="noopener" aria-label="Slack">译者说</a></li>
+  </ul>
+  <a class="btn btn-bd-yellow d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="download.html">下载 Bootstrap</a> </header>
+<div class="container-fluid">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <form class="bd-search d-flex align-items-center">
+        <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+          <title>Menu</title>
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+        </button>
+      </form>
+
+      <nav class="collapse bd-links" id="bd-docs-nav">
+        <div class="bd-toc-item active"> <a class="bd-toc-link" href="../../v4/docs/">快速入门</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../../v4/docs/">关于</a></li>
+            <li><a href="../../v4/docs/download.html">下载</a></li>
+            <li class="active bd-sidenav-active"><a href="contents.html">目录结构</a></li>
+            <li><a href="browsers-devices.html">浏览器与设备调优</a></li>
+            <li><a href="javascript.html">JavaScript脚本</a></li>
+            <li><a href="theming.html">主题化</a></li>
+            <li><a href="build-tools.html">编译工具</a></li>
+            <li><a href="webpack.html"> Webpack模块化</a></li>
+            <li><a href="accessibility.html">无障碍浏览</a></li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../layout/overview.html">布局</a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../layout/overview.html">概览</a></li>
+            <li><a href="../layout/grid.html">栅格</a></li>
+            <li><a href="../layout/utilities-for-layout.html"> 布局实施建议 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../content/reboot.html">内容 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../content/reboot.html"> 初始化与CSS重置 </a> </li>
+            <li> <a href="../content/typography.html"> 排版 </a> </li>
+            <li> <a href="../content/code.html"> 代码 </a> </li>
+            <li> <a href="../content/images.html"> 图片 </a> </li>
+            <li> <a href="../content/tables.html"> 表格 </a> </li>
+            <li> <a href="../content/figures.html"> 图文框 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../components/alerts.html"> 组件 </a>
+          <ul class="nav bd-sidenav">
+    <li><a href="../components/alerts.html"> 警告提示框(Alerts) </a> </li>
+    <li><a href="../components/badge.html"> 徽章(Badge) </a> </li>
+    <li><a href="../components/breadcrumb.html"> 面包屑导航(Breadcrumb) </a> </li>
+    <li><a href="../components/buttons.html"> 按钮(Button) </a> </li>
+    <li><a href="../components/button-group.html"> 按钮组(Button-group) </a> </li>
+    <li><a href="../components/card.html"> 卡片(Card) </a> </li>
+    <li><a href="../components/carousel.html">  轮播效果(Carousell) </a> </li>
+    <li><a href="../components/collapse.html"> 折叠面板(Collapse) </a> </li>
+    <li><a href="../components/dropdowns.html"> 下拉菜单(Dropdown) </a> </li>
+    <li><a href="../components/forms.html"> 表单(Form) </a> </li>
+    <li><a href="../components/input-group.html"> 输入框(Input-group) </a> </li>
+    <li><a href="../components/jumbotron.html"> Hero大块屏(Jumbotron) </a> </li>
+    <li><a href="../components/list-group.html"> 列表组(List-group) </a> </li>
+    <li><a href="../components/media-object.html"> 媒体对象/图文混排(Media-object) </a> </li>
+    <li><a href="../components/modal.html"> 弹出模态框(Modal) </a> </li>
+    <li><a href="../components/navs.html"> 导航/滑动门(Nav) </a> </li>
+    <li><a href="../components/navbar.html"> 导航栏(Navbar) </a> </li>
+    <li><a href="../components/pagination.html"> 分页(Pagination) </a> </li>
+    <li><a href="../components/popovers.html"> POP提示(Popover) </a> </li>
+    <li><a href="../components/progress.html"> 进度条(Progress) </a> </li>
+    <li><a href="../components/scrollspy.html"> 滚动监听(Scrollspy) </a> </li>
+    <li><a href="../components/spinners.html"> 旋转特效(Spinners) </a> </li>
+    <li><a href="../components/toasts.html"> 弹出提示框(Toasts) </a> </li>
+    <li><a href="../components/tooltips.html"> 提示冒泡(Tooltip) </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../utilities/borders.html"> 公共样式 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../utilities/borders.html"> 边框(border) </a> </li>
+            <li> <a href="../utilities/clearfix.html"> 清动浮动(clearfix) </a> </li>
+            <li> <a href="../utilities/close-icon.html"> 关闭图标(close icon) </a> </li>
+            <li> <a href="../utilities/colors.html"> 颜色(color) </a> </li>
+            <li> <a href="../utilities/display.html"> Display显示属性 </a> </li>
+            <li> <a href="../utilities/embed.html"> 嵌入(embed) </a> </li>
+            <li> <a href="../utilities/flex.html"> Flex弹性布局 </a> </li>
+            <li> <a href="../utilities/float.html"> Float浮动属性 </a> </li>
+            <li> <a href="../utilities/image-replacement.html"> 图像替换 </a> </li>
+			<li><a href="../utilities/overflow.html"> 溢出 </a> </li>
+            <li> <a href="../utilities/position.html"> 固顶(底）及定位 </a> </li>
+            <li> <a href="../utilities/screenreaders.html"> 读屏器 (Screenreaders) </a> </li>
+			<li><a href="../utilities/shadows.html"> 阴影(shadows) </a> </li>
+            <li> <a href="../utilities/sizing.html"> 规格(sizi) </a> </li>
+            <li> <a href="../utilities/spacing.html"> 间隔(spacing) </a> </li>
+            <li> <a href="../utilities/text.html"> 文本处理 </a> </li>
+            <li> <a href="../utilities/vertical-align.html"> 垂直对齐(vertical align) </a> </li>
+            <li> <a href="../utilities/visibility.html"> Visibility显示或隐藏(能见度)处理 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../extend/approach.html"> 延伸 </a>
+          <ul class="nav bd-sidenav">
+            <li><a href="../extend/approach.html"> 方法论 </a> </li>
+            <li> <a href="../extend/icons.html"> 图标 </a> </li>
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../migration/"> 迁移 </a>
+          <ul class="nav bd-sidenav">
+          </ul>
+        </div>
+        <div class="bd-toc-item"> <a class="bd-toc-link" href="../about/history.html"> 关于 </a>
+          <ul class="nav bd-sidenav">
+            <li> <a href="../about/history.html"> 成长历史 </a> </li>
+            <li> <a href="../about/team.html"> 项目团队 </a> </li>
+            <li> <a href="../about/brand.html"> 品牌标志 </a> </li>
+            <li> <a href="../about/license.html"> 许可授权 </a> </li>
+            <li> <a href="../about/translations.html"> 翻译 </a> </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+<div class="d-none d-xl-block col-xl-2 bd-toc">
+  <ul class="section-nav">
+    <li class="toc-entry toc-h2"><a href="#precompiled-bootstrap">安装ruby与sass环境</a></li>
+    <li class="toc-entry toc-h2"><a href="#sass-buid">Sass编译基本设定</a></li>
+    <li class="toc-entry toc-h2"><a href="#sass-buid-any">Sass编译参数选择</a>
+      <ul>
+        <li class="toc-entry toc-h3"><a href="#watch">1、--wath伺服侦测自动编译程式</a></li>
+        <li class="toc-entry toc-h3"><a href="#css-any">2、输出Css代码样式选择</a></li>
+        <li class="toc-entry toc-h3"><a href="#cn">3、支持中文变量</a></li>
+        <li class="toc-entry toc-h3"><a href="#Source-map">3、Source map输出支持</a></li>        
+      </ul>    
+    <li class="toc-entry toc-h2"><a href="#vs-code">启动Visual Studio Code</a>
+    <ul>
+        <li class="toc-entry toc-h3"><a href="#vs-code-quit">1、vs code自动换行</a></li>
+        <li class="toc-entry toc-h3"><a href="#vs-code-cj">2、推荐几个vs code插件</a></li>
+        <li class="toc-entry toc-h3"><a href="#vs-code-all">3、vs code技巧大全</a></li>
+      </ul>     
+    </li>
+    </li>    
+  </ul>
+</div>
+    
+<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+  <h1 class="bd-title" id="content">基于Visual Studio Code 编译Scss和Souce map协议</h1>
+  <p class="bd-lead">微软公司发布的著名软件，开源、跨平台，已经日益成为开发者最偏爱的工具，我们来指引使用vs code进行Scss编译。</p>
+  <script type="text/javascript" src="/v4/assets/js/pupCMS.js"></script>
+  <h2 id="precompiled-bootstrap">安装ruby与sass环境</h2>
+  <p>诚然，vs code中提供了丰富的插件，都能提供scss的编译，但是如果追求性能并同步生成source map，则部署ruby是关键一环，关于什么是Source map请<a href="//www.z01.com/help/web/3207.shtml">移步这里</a>浏览。</p>
+  <p>sass依赖于ruby环境，所以装sass之前先确认装了ruby，从而支持实时编译与更新sass。ruby官网下载地址：<a href="http://rubyinstaller.org/downloads/" target="_blank">http://rubyinstaller.org/downloads/</a>，直接下载“WITH DEVKIT”的版本，或在我的网盘下载（64位）：<a href="https://share.weiyun.com/53Fvb8Y">https://share.weiyun.com/53Fvb8Y</a>，安装完成弹出命令行窗口，选择3回车就能完成安装，安装完整教程<a href="//www.z01.com/help/web/3481.shtml">可点此浏览</a>，接下来三步操作。</p>
+  <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too. -->
+  
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#1-查看是否安装成功,如能正确显示ruby版本号，表明安装成功:
+ruby -v</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#2-安装ruby环境运行的gem源淘宝镜像:
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#3-安装sass:
+gem install sass
+gem install compass</code></pre>
+  </figure>  
+  <p>安装成功后，同样可通过sass -v检测是否安装成功，若能显示版本号则表示安装成功。</p>
+  <h2 id="sass-buid">Sass编译基本设定</h2>
+  <p>这步是实现.scss向.css格式转换的关键。进入到编译文件所在的目录底下，编译命令如下：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">sass input.scss output.css</code></pre>
+  </figure>  
+<img src="../../img/sass01.png" class="img-fluid" alt="sass编译" />
+<h2 id="sass-buid-any">Sass编译参数选择</h2>
+<p>你可能需要更加能的模式，比如自动侦测伺服，自动加上各种参数，不要急下面为你一一道来。</p>
+<h3 id="watch">1、wath伺服侦测自动编译程式</h3>
+<p>动态编译（即当.scss改变就会马上编译成.css文件），需要增加<code class="highlighter-rouge">--watch</code>参数，启用伺服器，编译命令如下：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext"> sass --watch input.scss:output.css</code></pre>
+  </figure>  
+<img src="../../img/sass02.png" class="img-fluid" alt="动态编译" />
+<p>多文件或目录伺服式编译：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#从aa目录自动编译到dd目录覆盖全目录
+sass --watch aa:dd
+
+#从aa目录自动编译到cc目录只输出output.css文件
+sass --watch aa:cc/output.css</code></pre>
+  </figure>  
+<img src="../../img/sass03.png" class="img-fluid" alt="多文件或目录伺服式编译-全目录覆盖" />
+<img src="../../img/sass04.png" class="img-fluid" alt="从aa目录自动编译到cc目录只输出output.css文件" />
+<h3 id="css-any">2、输出Css代码样式选择</h3>  
+<p>众所周知css代码可以有多种形式，如一行一个属性，或是大站模式的多属性合并一行，甚至整个css样式表合为一行以做到最大化压缩。<br/>
+其四种模式：
+编辑出来的文件有四种排版可配置，分别是nested、expanded、compact和compressed。以expanded为例，配置时只需在命令行末尾加入<code class="highlighter-rouge">--style expanded</code>即可。
+</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">sass --watch input.scss:output.css --style expanded</code></pre>
+  </figure>
+<img src="../../img/sass05.png" class="img-fluid" alt="nested模式" />
+<p>↑ nested：嵌套模式，每个属性占一行，会有嵌套缩进规范，默认程式。</p>
+<img src="../../img/sass06.png" class="img-fluid" alt="expanded模式" />
+<p>↑ expanded：扩展模式，没有任何缩进。</p>
+<img src="../../img/sass07.png" class="img-fluid" alt="compact模式" />
+<p>↑ compact：紧凑模式，每条规则占用一行，不区分属性占用一行，一般推荐此模式。</p>
+<img src="../../img/sass08.png" class="img-fluid" alt="compressed模式" />
+<p>↑ compressed：压缩模式，尽可能的占用最小空间。</p>
+<h3 id="cn">3、支持中文变量</h3>
+<p>默认ruby是不支持中文变量的，需要找到ruby目录（默认在C:\Ruby26-x64\lib\ruby\gems\2.6.0\gems\sass-3.7.4\lib\）,用编辑器打开sass.ruby文件，在require XXXX 之后添加一行代码：</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">Encoding.default_external = Encoding.find('utf-8')</code></pre>
+  </figure>
+<img src="../../img/sass09.jpg" class="img-fluid border" alt="支持中文变量" />
+<h3 id="Source-map">3、Source map输出支持</h3>
+<p>仅仅支持sass编译其实作用有限，如果结合source map，则可以进行定点跟踪分析，效率就大大提升了。</p>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#自动侦测伺服编译指定文件，会产生source map文件不需要另加参
+sass --watch system.scss:system.css --style compact</code></pre>
+  </figure>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">#自动侦测伺服编译当前目录，会产生source map文件不需要另加参
+sass --watch ..\:..\</code></pre>
+  </figure>
+  <p>关于Source map技术可以点此了解：<br/>
+  <a href="http://www.z01.com/help/web/3207.shtml">什么是Source map?.Map文件是什么,它的作用是什么?JQurey中的Source map使用技术放送 www.z01.com/help/web/3207.shtml</a></p>  
+  <h2 id="vs-code">启动Visual Studio Code</h2>
+  <p>依赖于微软精湛的软件集成技术，其Visual Studio Code工具一推出，就以开源、开放、跨平台、性能卓越赢得广大开发者的心声，成为热门的开发工具，开发者只要访问<a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>就能快速下载部署，启动开发。</p>
+<h3 id="vs-code-quit">1、vs code自动换行</h3>  
+<p>vs code如何换行？</p>
+<p>文件  -> 首选项 -> 设置 -> 编辑器</p>
+<p>找到
+// 控制折行方式。可以选择： - “off” （禁用折行），
+- “on” （视区折行）， - “wordWrapColumn”（在“editor.wordWrapColumn”处折行）
+或 - “bounded”（在视区与“editor.wordWrapColumn”两者的较小者处折行）。
+"editor.wordWrap": "off",
+
+在右侧把off换成on.
+</p>
+<h3 id="vs-code-cj">2、推荐几个vs code插件</h3>  
+  <p><strong>vscode-icons:</strong>显示文件图标的插件工具。<br/>
+  <strong>SFTP:</strong>FTP管理文件插件。<br/>
+  <strong>Sass:</strong>如果你不需要输出source map，用这个插件完全可以解决sass编译问题。<br/>
+  <strong>Easy Sass：</strong>同上。<br/>
+  <strong>Debugger for Chrome:</strong>使用了 Debugger for Chrome 后，当代码在 Chrome 中运行后，你可以直接在 VSCode 中加上断点，点击运行后，Chrome 中的页面继续运行，执行到你在 VSCode 中添加的断点后，你可以直接在 VSCode 中进行单步调试.<br/>
+  <strong>TODO Highlight：</strong>备忘插件，简而言之你可以设置关键字所在的行高亮显示，用于备忘或演示代码有所裨益。
+</p>
+  <h3 id="#vs-code-all">3、vs code技巧大全</h3>
+  <strong>启动命令行面板</strong>
+  <p>
+  在命令面板中你可以输入命令进行搜索(中英文都可以)，然后执行。<br/>
+  命名面板中可以执行各种命令，包括编辑器自带的功能和插件提供的功能。
+  所以一定要记住它的快捷键Cmd+Shift+P</p>
+  <div class="bd-callout bd-callout-warning">命令面板是vscode快捷键的主要交互界面，可使用f1或者Cmd+Shift+P(win Ctrl+Shift+P)打开。</div>
+  <img src="../../img/sass10.jpg" class="img-fluid" alt="启动命令行面板" />
+  <strong>用命令打开文件或文件夹</strong>
+  <figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">code 文件夹地址</code>  # vscode会在新窗口中打开该文件夹</code></pre>
+  </figure>
+<figure class="highlight">
+    <pre><code class="language-plaintext" data-lang="plaintext">code 文件名称 -r  # vscode打开该文件开始编辑</code></pre>
+  </figure>  
+ <img src="../../img/sass11.gif" class="img-fluid" alt="用命令打开文件或文件夹" />
+ <strong>光标的移动</strong>
+ <p>基础</p>
+<ol>
+<li>移动到行首 Cmd+左方向键 (win Home)</li>
+<li>移动到行尾 Cmd+右方向键 (win End)</li>
+<li>移动到文档的开头和末尾 Cmd+上下方向键 （win Ctrl+Home/End）</li>
+<li>在花括号{}左边右边之间跳转 Cmd+Shift+ (win Ctrl+Shift+)</li>
+</ol>
+<p>进阶</p>
+<ol>
+<li>回到上一个光标的位置，Cmd+U(win Ctrl+U) 非常有用，有时候vue文件，你改了html，需要去下面改js，改完js又需要回去，这时候Cmd+U直接回</li>
+<li>在不同的文件之间回到上一个光标的位置 Control+- (win 没测试，不知道)，你改了a文件，改了b文件之后想回到a文件继续编辑，mac使用controls+-</li>
+</ol>
+<strong>文件选择</strong>
+<ol>
+<li>你只需要多按一个shift键就可以在光标移动的时候选中文本</li>
+<li>选中单词 Cmd+D 下面要讲的多光标也会讲到Cmd+D</li>
+<li>对于代码块的选择没有快捷键，可以使用cmd+shift+p打开命令面板，输入选择括号所有内容,待会说下如何添加快捷键</li>
+</ol>
+<img src="../../img/sass12.gif" class="img-fluid d-block" alt="光标操作" />  
+<strong>快速删除文本内容</strong>
+<ol>
+<li>你可以选中了代码之后再删除，再按Backpack(是backpack吗)或者delete删除,但是那样做太low了</li>
+<li>所以，最Geek的删除方式是Cmd+Shift+K (win Ctrl+Shift+K),想删多少删多少，当前你可以使用ctrl+x剪切，效果一样的 </li>
+</ol>
+<img src="../../img/sass13.gif" class="img-fluid  d-block" alt="快速删除文本内容" />  
+<strong>代码块移动</strong>  
+<ul><li>Option+上下方向键(win: Alt+上下)</li></ul>
+<img src="../../img/sass14.gif" class="img-fluid" alt="代码块移动" />  
+<ul><li>代码移动的同时按住shift就可以实现代码复制 Option+Shift+上下</li></ul>
+<img src="../../img/sass15.gif" class="img-fluid d-block" alt="代码块移动时复制" />  
+<strong>添加注释</strong>
+注释有两种形式，单行注释和块注释(在js中，单行注释//,块注释/**/)<br/>
+<ol>
+<li>单行注释 Cmd+/ （win Ctrl +/）</li>
+<li>块注释 Option+Shift+A</li>
+</ol>
+<strong>代码格式化</strong>
+<ul>
+<li>对整个文档进行格式化：Option+Shift+F (win Alt+Shift+F),vscode会根据你使用的语言，使用不同的插件进行格式化，记得要下载相应格式化的插件</li>
+<li>对选中代码进行格式化： Cmd+K Cmk+F win(Ctrl+K Ctrl+F)</li>
+</ul>
+<strong>代码缩进</strong>
+<ul>
+<li>整个文档进行缩进调节，使用Cmd+Shift+P打开命令面板，输入缩进,然后选择相应的命令</li>
+<li>选中代码缩进调节：Cmd+] Cmd+[ 分别是减小和增加缩进(win：ctrl+[ ctrl+])</li>
+</ul>
+<strong>调整字符的大小写</strong>
+<p>选中要调整的代码，然后在命令面板输入转化为大写或者转化为小写</p>
+<img src="../../img/sass16.gif" class="img-fluid d-block" alt="调整字符的大小写" />  
+<strong>合并代码行</strong>
+<p>合并代码行，多行代码合并为一行，Cmd+J(win下未绑定)</p>
+<img src="../../img/sass17.gif" class="img-fluid d-block" alt="合并代码行" />  
+<strong>行排序</strong>
+<p>行排序，将代码行按照字母顺序进行排序，无快捷键，调出命令面板，输入按升序排序或者按降序排序</p>
+<img src="../../img/sass18.gif" class="img-fluid d-block" alt="行排序" />  
+<strong>使用鼠标控制多光标</strong>
+<p>按住Option(win Alt),然后用鼠标点，鼠标点在哪里哪里就会出现一个光标<br/>
+注意：有的mac电脑上是按住Cmd，然后用鼠标点才可以。</p>
+<img src="../../img/sass19.gif" class="img-fluid d-block" alt="使用鼠标控制多光标" />  
+<strong>快速选词</strong>
+<p>Cmd+D (win Ctrl+D) 第一次按下时，它会选中光标附近的单词；第二次按下时，它会找到这个单词第二次出现的位置，创建一个新的光标，并且选中它。(注：cmd-k cmd-d 跳过当前的选择)。这相当于双击鼠标选择一个词。</p>
+<img src="../../img/sass20.gif" class="img-fluid d-block" alt="快速选词" />  
+<strong>快速定义光标到行尾</strong>
+<p>Option+Shift+i (win Alt+Shift+i) 首先你要选中多行代码，然后按Option+Shift+i,这样做的结果是：每一行后面都会多出来一个光标。这样你就可以在行尾进行编辑，也可以按Home键跳到行首编辑。</p>
+<img src="../../img/sass21.gif" class="img-fluid d-block" alt="快速定义光标到行尾" />  
+<p>撤销上面的光标，只要按下ESC或鼠标点任意一处。</p>
+<strong>快速打开文件</strong>
+<p>Cmd+P （win Ctrl+P）输入你要打开的文件名,回车打开.</p>
+<img src="../../img/sass22.gif" class="img-fluid d-block" alt="快速打开文件" />  
+<p>这里有个小技巧，选中你要打开的文件后，按Cmd+Enter,就会在一个新的编辑器窗口打开(窗口管理，见下文)</p>
+<img src="../../img/sass23.gif" class="img-fluid d-block" alt="就会在一个新的编辑器窗口打开" />  
+<strong>行跳转</strong>
+<p>Ctrl+g 输入行号</p>
+<img src="../../img/sass24.gif" class="img-fluid d-block" alt="行跳转" />  
+<strong>编辑指定文件特定行</strong>
+<p>如果你想跳转到某个文件的某一行，你只需要先按下 “Cmd + P”，输入文件名，然后在这之后加上 “:”和指定行号即可。</p>
+<img src="../../img/sass25.gif" class="img-fluid d-block" alt="编辑指定文件特定行" />  
+<strong>符号跳转</strong>
+<p>符号可以是文件名、函数名，可以是css的类名<br/>
+Cmd+Shift+O(win Ctrl+Shift+o) 输入你要跳转的符号，回车进行跳转<br/>
+win下输入Ctrl+T，可以在不同文件的符号间进行搜索跳转</p>
+<img src="../../img/sass26.gif" class="img-fluid d-block" alt="编辑指定文件特定行" />  
+<strong>定义(definition)和实现(implementation)处</strong>
+<ul>
+<li>f12跳到函数的定义处</li>
+<li>Cmd+f12(win Ctrl+f12)跳转到函数的实现处</li>
+</ul>
+<img src="../../img/sass27.gif" class="img-fluid d-block" alt="定义(definition)和实现(implementation)处" />  
+<strong>引用跳转</strong>
+<p>很多时候，除了要知道一个函数或者类的定义和实现以外，你可能还希望知道它们被谁引用了，以及在哪里被引用了。这时你只需要将光标移动到函数或者类上面，然后按下 Shift + F12，VS Code 就会打开一个引用列表和一个内嵌的编辑器。在这个引用列表里，你选中某个引用，VS Code 就会把这个引用附近的代码展示在这个内嵌的编辑器里。</p>
+<img src="../../img/sass28.gif" class="img-fluid d-block" alt="引用跳转" />  
+<strong>代码重构</strong>
+<p>当我们想修改一个函数或者变量的名字时候，我们只需把光标放到函数或者变量名上，然后按下 F2，这样这个函数或者变量出现的地方就都会被修改，一次全搞定。</p>
+<img src="../../img/sass29.gif" class="img-fluid d-block" alt="代码重构" />  
+</main>
+</div>
+</div>
+
+<script src="/js/jquery-3.2.1.slim.min.js"></script> 
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script> 
+<script src="../dist/js/popper.min.js"></script> 
+<script src="../dist/js/bootstrap.min.js"></script> 
+<script src="../assets/js/docs.min.js"></script> 
+<script src="../assets/js/ie-emulation-modes-warning.js"></script> 
+<script src="../assets/js/docsearch.min.js"></script> 
+<script>
+  docsearch({
+    appId: 'PRR89ISST8',
+    apiKey: '95044d57d4d7bb744f322d1f18ed607f',
+    indexName: 'z01-bootstrapV4',
+	inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url;
+      url = suggestion.isLvl1 ? url.split('#')[0]: url;
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url;
+    },
+    transformData: function (hits) {
+      return hits.map(function (hit) {
+        hit.url = hit.url.replace('https://v4-alpha.getbootstrap.com', '/docs/4.0');
+        return hit;
+      });
+    },
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
+</script> 
+<script>
+  Holder.addTheme('gray', {
+    bg: '#777',
+    fg: 'rgba(255,255,255,.75)',
+    font: 'Helvetica',
+    fontweight: 'normal'
+  });
+</script>
+</body>
+</html>
