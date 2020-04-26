@@ -1,5 +1,58 @@
-# Web不死，Zoomla!逐浪CMS筑力中国web开发进程！
+
+<!-- TOC -->
+
+- [Bootstrap-移动优先|全球最流行的响应式前端设计框架！](#bootstrap-移动优先全球最流行的响应式前端设计框架)
+- [更新信息](#更新信息)
+    - [状态标识](#状态标识)
+- [维护团队](#维护团队)
+- [图标与webfont引用](#图标与webfont引用)
+- [发行说明](#发行说明)
+- [匠者用心临砥上流-Bootstrap v4 前端架构翻译手记(基于bootstrapv4.0最新的中文简体手册)](#匠者用心临砥上流-bootstrap-v4-前端架构翻译手记基于bootstrapv40最新的中文简体手册)
+- [匠者用心临砥上流-Bootstrap v4 前端架构翻译手记](#匠者用心临砥上流-bootstrap-v4-前端架构翻译手记)
+
+<!-- /TOC -->
+
+
+
+
+# Bootstrap-移动优先|全球最流行的响应式前端设计框架！
+
+
+
+
+<p align="center">
+  <a href="http://code.z01.com/v4">
+    <img src="http://code.z01.com/v4/assets/img/bootstrap-stack.png" width="300">
+  </a>
+  <p><a href="http://code.z01.com/v4">点此进入Bootstrap 4中文站</a></p>
+</p>
+<br>
+
+
+
+
 # 更新信息
+
+
+## 状态标识
+
+[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
+[![Build Status](https://github.com/twbs/bootstrap/workflows/Tests/badge.svg)](https://github.com/twbs/bootstrap/actions?workflow=Tests)
+[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
+[![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
+[![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue.svg)](https://atmospherejs.com/twbs/bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap.svg)](https://packagist.org/packages/twbs/bootstrap)
+[![NuGet](https://img.shields.io/nuget/vpre/bootstrap.svg)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
+[![peerDependencies Status](https://img.shields.io/david/peer/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=peer)
+[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=dev)
+[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/master.svg)](https://coveralls.io/github/twbs/bootstrap?branch=master)
+[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/master/dist/css/bootstrap.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/twbs/bootstrap/tree/master/dist/css/bootstrap.min.css)
+[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/master/dist/js/bootstrap.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/twbs/bootstrap/tree/master/dist/js/bootstrap.min.js)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)](https://www.browserstack.com/automate/public-build/SkxZcStBeExEdVJqQ2hWYnlWckpkNmNEY213SFp6WHFETWk2bGFuY3pCbz0tLXhqbHJsVlZhQnRBdEpod3NLSDMzaHc9PQ==--3d0b75245708616eb93113221beece33e680b229)
+[![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap.svg)](#backers)
+[![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap.svg)](#sponsors)
+
+
 本文档在线浏览地址：
 1. [http://code.z01.com/](http://code.z01.com/ "http://code.z01.com/")
 2. [http://github.z01.com/bootstrap4-zhcn-documentation/](http://github.z01.com/bootstrap4-zhcn-documentation/ "http://github.z01.com/bootstrap4-zhcn-documentation/")
@@ -19,6 +72,17 @@
 # 维护团队
 由Zoomla!逐浪CMS团队维护
 我们是一个有着14年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
+
+
+
+QQ交流群号：
+[![加入QQ群](https://img.shields.io/badge/一群-541450128-blue.svg?style=for-the-badge&logo=appveyor)](https://jq.qq.com/?_wv=1027&k=5qIayyX)  [![加入QQ群](https://img.shields.io/badge/二群-541450128-blue.svg?style=for-the-badge&logo=appveyor)](https://jq.qq.com/?_wv=1027&k=5Ephzpq)   [![加入QQ群](https://img.shields.io/badge/三群-601781959-blue.svg?style=for-the-badge&logo=appveyor)](https://jq.qq.com/?_wv=1027&k=50a28BK) 
+
+
+官方QQ客服：
+[![官方QQ客服1](https://img.shields.io/badge/官方QQ客服1-524979923-red.svg?style=for-the-badge&logo=appveyor)](http://wpa.qq.com/msgrd?v=3&uin=745151353&site=qq&menu=yes)  [![官方QQ客服2](https://img.shields.io/badge/官方QQ客服2-1799661890-red.svg?style=for-the-badge&logo=appveyor)](http://wpa.qq.com/msgrd?v=3&uin=1799661890&site=qq&menu=yes) 
+
+
 
 # 图标与webfont引用
 基于zico（一个专为中国开发者而生的跨平台图标解决方案)，官网[ico.z01.com](http://ico.z01.com "ico.z01.com").
@@ -122,3 +186,34 @@ Bootstrap V4中文镜像：http://code.z01.com/v4
 2019年1月，更新为Bootstrap 4.2.1
 
 2019年4月，更新为Bootstrap 4.3.1
+
+2020年4月，更新文档和使用指引。
+
+ ## Web不死，Zoomla!逐浪CMS筑力中国web开发进程
+ ### Zoomla!逐浪CMS团队卓越出品
+**CMS+AI智能+字库+图库全栈生态-->做中国最优秀的全栈门户服务商**
+
+Zoomla!逐浪CMS：中文业界alexa排名第一的CMS系统|专注.net与windows平台企业级研发，集成内容管理、webfont、商城、店铺、黄页、教育、考试、3D、三维全景、混合现实、CRM、ERP、OA、论坛、贴吧等为一体，打造国内高端的CMS产品典范。
+
+官网：http://www.z01.com
+
+免费下载：http://www.z01.com/mb
+
+视频教程：http://www.z01.com/mtv
+
+模板资源：http://www.z01.com/mb
+
+zico中文图标库：http://ico.z01.com
+
+Uni全球字码表：http://www.ziti163.com/uni
+
+webfont： http://www.ziti163.com/webfont
+
+字典： http://zd.ziti163.com
+
+在线智写做字库： http://v.ziti163.com
+
+方言语音项目： http://a.ziti163.com
+
+智图： http://p.ziti163.com
+
