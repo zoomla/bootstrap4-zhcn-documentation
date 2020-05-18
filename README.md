@@ -63,6 +63,7 @@
 2. v4.1.1.版  发布日期：2018-6-11  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
 3. v4.2.1.版  发布日期：2019-1-25  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
 4. v4.4.1.版  发布日期：2020-2-20  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
+4. v4.5.0.版  发布日期：2020-5-18  文档地址：[http://code.z01.com/v4/](http://code.z01.com/v4/ "http://code.z01.com/v4/")
 >更新提示：v4.4.1增加row-cols、.container-sm|md|lg|xl等属性、可以更好的支持移动配置，欢迎大家欣赏，新增栅格部份可见 http://code.z01.com/v4/layout/overview.html 及 http://code.z01.com/v4/layout/grid.html#row-columns
 
 
@@ -71,7 +72,7 @@
 
 # 维护团队
 由Zoomla!逐浪CMS团队维护
-我们是一个有着14年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
+我们是一个有着16年历史的本土web开发团队和企业级CMS研发组织，官网[www.z01.com](http://www.z01.com "www.z01.com")
 
 
 
