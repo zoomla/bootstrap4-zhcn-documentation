@@ -75,7 +75,7 @@
     </ul>
   </div>
   <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.4 </a>
+    <li class="nav-item dropdown"> <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> v4.5 </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
 	    <a class="dropdown-item active" href="/docs/4.0/">Latest (4.3.x)</a>
         <a class="dropdown-item" href="/Boot/">v3.3.7</a>
@@ -107,8 +107,17 @@
         <h1 class="mb-3 bd-text-purple-bright">Bootstrap 4</h1>
         <p class="lead"> Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局、移动设备优先的 WEB 项目。 </p>
         <p class="lead mb-4"> Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用我们提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为你的想法开发出原型或者构建整个 app 。 </p>
-		<div class="d-flex flex-column flex-md-row lead mb-3"> <a href="docs/" class="btn btn-lg btn-bd-purple mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">快速入门</a> <a href="docs/download.html" class="btn btn-lg btn-outline-secondary  mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 4.0.0');">下载 Bootstrap</a> <a href="//tool.73ic.com/tool/boot.html"  class="btn btn-outline-success">Bootstrap建模工具</a> </div>
-        <p class="text-muted mb-0"> 当前版本：v4.4.1 | 文档更新于：2020-2-20<br>
+		<div class="d-flex flex-column flex-md-row lead mb-3">
+        <a href="docs/" class="btn btn-lg btn-bd-purple mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">快速入门</a>
+        <a href="docs/download.html" class="btn btn-lg btn-outline-secondary  mb-3 mb-md-0 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 4.0.0');">下载 Bootstrap</a>
+        </div>
+        <p class="text-muted mb-0"> 
+        <a href="//tool.73ic.com/tool/boot.html"  class="w-auto btn btn-outline-success btn-sm"><i class="zi zi_tmZ zi_2x" style="line-height: 1.94rem;"></i> Bootstrap建模工具</a>
+        <a href="http://code.z01.com/bootstrap-vue/"  class="w-auto btn btn-outline-success btn-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 953 953" width="32" height="32" version="1.1" shape-rendering="geometricPrecision" fill-rule="evenodd" clip-rule="evenodd" focusable="false" role="img" class="" data-v-38a6c4bd=""><title data-v-38a6c4bd="">BootstrapVue</title> <path fill="currentColor" d="M92 0h769c50 0 92 42 92 92v769c0 50-42 92-92 92H92c-50 0-92-42-92-92V92C0 42 42 0 92 0zm216 710c100 0 160-50 160-133 0-62-44-107-108-113v-3c48-8 86-52 86-102 0-71-55-117-140-117H111v468h197zM195 307h90c50 0 78 23 78 64 0 44-33 68-91 68h-77V307zm0 338V499h90c64 0 98 25 98 73s-33 73-94 73h-94zm503 65l163-468h-90L652 621h-2L531 242h-92l163 468h96z" data-v-38a6c4bd=""></path></svg>
+        BootstrapVue</a>
+        <div class="clearfix d-block"></div>
+        当前版本：v4.5.0 | 文档更新于：2020-5-18<br>
           翻译整理：Zoomla!逐浪CMS团队</p>
       </div>
     </div>
@@ -127,8 +136,10 @@
       <pre><code class="language-sh" data-lang="sh">npm install bootstrap</code></pre>
     </figure>
     <figure class="highlight">
-      <pre><code class="language-sh" data-lang="sh">gem <span class="nb">install </span>bootstrap <span class="nt">-v</span> 4.4.1</code></pre>
-	  
+      <pre><code class="language-sh" data-lang="sh">gem <span class="nb">install </span>bootstrap <span class="nt">-v</span> 4.5.0</code></pre>
+    </figure>
+    <figure class="highlight">
+      <pre><code class="language-sh" data-lang="sh">yarn <span class="nb">add </span>bootstrap@v4.5.0</code></pre>
     </figure>
     <hr class="half-rule">
     <a class="btn btn-outline-primary" href="docs/download.html">阅读手册</a> </div>
@@ -141,12 +152,12 @@
     <h3>Bootstrap CDN</h3>
     <p>如果你只是需要将预编译的 CSS 或 JS 文件引入你的页面，可以直接使用 Bootstrap CDN。</p>
     <h5>CSS only</h5>
-	<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
+	<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre>
 	</figure>
     <h5>JS, Popper.js, and jQuery</h5>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
     <h5>Zoomla!逐浪CMS官方的国服版(含zico图标系统)：</h5>
     <figure class="highlight">
       <pre><code class="language-html" data-lang="html">

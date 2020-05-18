@@ -5,7 +5,7 @@
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
- @import url("https://code.z01.com/Zfont.css");
+ @import url("https://code.z01.com/Zfonts.css");
  @import url("patch.css");
 .zlogo1, .zlogo2, .zlogo3 { float: left; font-family: "ZoomlaICO" !important; cursor: pointer; }
 .zlogo1 { margin-top: -1.82rem; margin-left: -10px; height: 26px; font-size: 4.3em; color: #ccc; }
